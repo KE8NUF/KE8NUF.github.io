@@ -1,9 +1,13 @@
 body {
-  margin: 0;
+  margin: 26;
   background: #262626;
   color: #FFA226;
   text-align: center;
   font-family: 'Roboto Mono';
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 10px;
 }
 
 .img-epacertification {
