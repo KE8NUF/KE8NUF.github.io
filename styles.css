@@ -1,7 +1,11 @@
 body {
   margin: 0;
-  background: grey;
+  background: #262626;
   color: #fff;
   text-align: center;
   font-family: 'Ubuntu Mono';
+}
+
+.img-epacertification {
+  width: 600px;
 }
