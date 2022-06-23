@@ -1,6 +1,6 @@
 body {
   margin: 26;
-  background: #262626;
+  background-image: url('background.jpg');
   color: #FFA226;
   text-align: center;
   font-family: 'Roboto Mono';
@@ -10,6 +10,26 @@ body {
   padding-bottom: 10px;
 }
 
+.gif-hotdogflip {
+  width: 100px;
+}
+
+.gif-dogelove {
+  width: 100px;
+}
+
 .img-epacertification {
   width: 600px;
+}
+
+.img-radiosetup {
+  width: 600px;
+}
+
+.img-yaesuft840 {
+  width: 600px;
+}
+
+.gif-senkolove {
+  width: 75px;
 }
