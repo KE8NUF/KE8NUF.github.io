@@ -10,34 +10,16 @@ body {
   padding-bottom: 10px;
 }
 
-* {
-  cursor: url(cursor.cur), default;
-}
+h1, h2 {font-family: 'Trebuchet MS';}
 
-h1, h2 {
-  font-family: 'Trebuchet MS';
-}
+.gif-hotdogflip {width: 100px;}
 
-.gif-hotdogflip {
-  width: 100px;
-}
+.gif-dogelove {width: 100px;}
 
-.gif-dogelove {
-  width: 100px;
-}
+.img-epacertification {width: 600px;}
 
-.img-epacertification {
-  width: 600px;
-}
+.img-radiosetup {width: 600px;}
 
-.img-radiosetup {
-  width: 600px;
-}
+.img-yaesuft840 {width: 600px;}
 
-.img-yaesuft840 {
-  width: 600px;
-}
-
-.gif-senkolove {
-  width: 75px;
-}
+.gif-senkolove {width: 75px;}
