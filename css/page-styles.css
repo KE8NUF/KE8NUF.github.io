@@ -998,13 +998,17 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 	display: none;
 }
 
+#bar-scroll-mobile-logo.desktop-menu-logo {
+	display: block;
+}
+
 #bar-scroll-mobile-logo a {
 	margin: 0;
 	padding: 0;
 }
 
-#bar-scroll-mobile-logo img {
-	display: none;
+#bar-scroll-mobile-logo.desktop-menu-logo img {
+	display: block;
 	/* test */
 	border: 0px solid transparent;
 	margin: 0px auto;
