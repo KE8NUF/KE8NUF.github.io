@@ -1544,7 +1544,7 @@ only screen and (max-device-width : 1024px) {
 @media only screen and (max-width : 980px), /* 980px */
 only screen and (max-device-width : 980px) {
 	
-	img {
+	.body-images img {
 		max-width: 85%!important;
 		margin: 10px auto!important;
 		display: block!important;
