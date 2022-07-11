@@ -1568,6 +1568,10 @@ only screen and (max-device-width : 980px) {
 		transform: translateX(0%) translateY(0%);
 	}
 	
+	#nav-menu-toggle {
+		min-height: 55px;
+	}
+	
 	.mobile-menu-logo,
 	.mobile-menu-logo a.active-visible {
 		display: inline-block!important;
@@ -1588,7 +1592,6 @@ only screen and (max-device-width : 980px) {
 	
 	.mobile-menu-logo img {
 		display: none;
-		min-height: 55px;
 	}
 	
 	#bar-scroll-mobile-logo.mobile-menu-logo a.active-visible,
