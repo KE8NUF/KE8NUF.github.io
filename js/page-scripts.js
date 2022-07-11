@@ -101,6 +101,11 @@ function equalContentHeight() {
 							el.addClass('sticky');
 							$('.desktop-menu-logo, .desktop-menu-logo a').addClass('active-visible');
 							$('.mobile-menu-logo, .mobile-menu-logo a').addClass('active-visible');
+							
+							if( $(window).width() <= 980 ) {
+								var navigationHeight = $('#nav').height();
+								$('#hero-container').css('min-height', navigationHeight + 350 + "px");
+							}
 						}
 					//}
 				} else {
@@ -109,6 +114,11 @@ function equalContentHeight() {
 					el.removeClass('sticky');
 					$('.desktop-menu-logo, .desktop-menu-logo a').removeClass('active-visible');
 					$('.mobile-menu-logo, .mobile-menu-logo a').removeClass('active-visible');
+					
+					if( $(window).width() <= 980 ) {
+						var navigationHeight = $('#nav').height();
+						$('#hero-container').css('min-height', navigationHeight + 350 + "px");
+					}
 				}
 			});
 		});
