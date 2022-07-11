@@ -1581,10 +1581,13 @@ only screen and (max-device-width : 980px) {
 	
 	#bar-scroll-mobile-logo.mobile-menu-logo,
 	.mobile-menu-logo a	{
-		opacity: 0!important;
+		opacity: 1!important;
 		display: inline-block!important;
 		height: auto!important;
 	}
+	
+	.mobile-menu-logo img {
+		display: 
 	
 	#bar-scroll-mobile-logo.mobile-menu-logo a.active-visible,
 	#bar-scroll-mobile-logo.mobile-menu-logo a.active-visible img {
