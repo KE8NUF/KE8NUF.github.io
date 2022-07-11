@@ -1587,7 +1587,8 @@ only screen and (max-device-width : 980px) {
 	}
 	
 	.mobile-menu-logo img {
-		display: 
+		display: inline-block;
+	}
 	
 	#bar-scroll-mobile-logo.mobile-menu-logo a.active-visible,
 	#bar-scroll-mobile-logo.mobile-menu-logo a.active-visible img {
@@ -1602,7 +1603,7 @@ only screen and (max-device-width : 980px) {
 		position: relative;
 		top: 0;
 		left: 0;
-}
+	}
 
 	#nav #nav-menu-toggle {
 		display: block;
