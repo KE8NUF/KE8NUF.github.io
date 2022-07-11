@@ -1599,7 +1599,7 @@ only screen and (max-device-width : 980px) {
 		padding: 0px;
 		height: auto!important;
 		max-height: 55px!important;
-		position: absolute;
+		position: relative;
 		top: 0;
 		left: 0;
 }
