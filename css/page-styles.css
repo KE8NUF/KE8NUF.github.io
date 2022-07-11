@@ -1037,20 +1037,6 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 	opacity: 0;
 }
 
-#bar-scroll-mobile-logo.mobile-menu-logo a.active-visible,
-#bar-scroll-mobile-logo.mobile-menu-logo a.active-visible img {
-	display: inline-block!important;
-	opacity: 1!important;
-	
-	border: 0px solid transparent;
-	margin: 0px auto;
-	padding: 0px;
-	height: 100%!important;
-	max-height: 55px!important;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
 
 #bar-scroll-mobile-logo.active-visible a.active-visible #scroll-logo1:hover {
 	opacity: 0;
@@ -1584,6 +1570,21 @@ only screen and (max-device-width : 980px) {
 	.desktop-menu-logo a.active-visible {
 		display: none!important;
 	}
+	
+	#bar-scroll-mobile-logo.mobile-menu-logo a.active-visible,
+	#bar-scroll-mobile-logo.mobile-menu-logo a.active-visible img {
+		display: inline-block!important;
+		opacity: 1!important;
+	
+		border: 0px solid transparent;
+		margin: 0px auto;
+		padding: 0px;
+		height: 100%!important;
+		max-height: 55px!important;
+		position: absolute;
+		top: 0;
+		left: 0;
+}
 
 	#nav #nav-menu-toggle {
 		display: block;
