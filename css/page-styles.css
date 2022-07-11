@@ -1652,7 +1652,7 @@ only screen and (max-device-width : 980px) {
 	}
 	
 	#hero-container {
-		min-height: 330px;
+		min-height: 350px;
 	}
 	
 	#hero-container:after {
