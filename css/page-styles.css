@@ -1037,9 +1037,8 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 	opacity: 0;
 }
 
-#bar-scroll-mobile-logo a.active-visible,
-#bar-scroll-mobile-logo.active-visible,
-#bar-scroll-mobile-logo a.active-visible img {
+#bar-scroll-mobile-logo.mobile-menu-logo a.active-visible,
+#bar-scroll-mobile-logo.mobile-menu-logo a.active-visible img {
 	display: inline-block!important;
 	opacity: 1!important;
 	
