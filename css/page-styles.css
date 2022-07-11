@@ -1008,7 +1008,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 	padding: 0;
 }
 
-#bar-scroll-mobile-logo.desktop-menu-logo img {
+#bar-scroll-mobile-logo.desktop-menu-logo a.active-visible img {
 	display: block;
 	/* test */
 	border: 0px solid transparent;
@@ -1019,7 +1019,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 	opacity: 1;
 }
 
-#bar-scroll-mobile-logo.desktop-menu-logo img {
+#bar-scroll-mobile-logo.desktop-menu-logo a.active-visible img {
 	display: block;
 	border: 0px solid transparent;
 	margin: 0px auto;
