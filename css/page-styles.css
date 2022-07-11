@@ -759,12 +759,12 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 
 @-webkit-keyframes slide-in {
   to { transform: translateY(0); }
-  100% { animation: growBoxCenter 600ms; ) }
+  100% { animation: growBoxCenter 600ms; }
 }
 
 @keyframes slide-in {
   to { transform: translateY(0); }
-  100% { animation: growBoxCenter 600ms; ) }
+  100% { animation: growBoxCenter 600ms; }
 }
 
 #nav ul {
@@ -994,6 +994,10 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 	transition: all 200ms ease-in-out;
 }
 
+#bar-scroll-mobile-logo {
+	display: none;
+}
+
 #bar-scroll-mobile-logo a {
 	margin: 0;
 	padding: 0;
@@ -1002,7 +1006,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 #bar-scroll-mobile-logo img {
 	display: block;
 	border: 0px solid transparent;
-	marging: 0px auto;
+	margin: 0px auto;
 	padding: 0px;
 	max-height: 55px;
 }
@@ -1010,7 +1014,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 #bar-scroll-mobile-logo.desktop-menu-logo img {
 	display: block;
 	border: 0px solid transparent;
-	marging: 0px auto;
+	margin: 0px auto;
 	padding: 0px;
 	max-height: 55px;
 	position: absolute;
