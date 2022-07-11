@@ -1753,7 +1753,7 @@ only screen and (max-device-width : 360px) {
 only screen and (max-device-width : 320px) {
 	
 	#hero-container::after {
-	  margin-bottom: -44px;
+	  margin-bottom: -3px;
 	}
 	
 }
