@@ -1004,7 +1004,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 }
 
 #bar-scroll-mobile-logo img {
-	display: block;
+	display: none;
 	border: 0px solid transparent;
 	margin: 0px auto;
 	padding: 0px;
