@@ -1,51 +1,585 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Damien Millard's Homepage</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Trebuchet+MS:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-  </head>
+<html lang="en">
+	<head>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="cache-control" content="public" />
+			<!-- 10 minutes in seconds = 600 -->
+			<!-- 20 minutes in seconds = 1200 -->
+			<!-- 1 day in seconds = 86400 -->
+			<!-- 1 week in seconds = 604800 -->
+			<!-- 1 month in seconds = 2629000 -->
+			<!-- 1 year in seconds = 31536000 (effectively infinite on internet time) -->
+		<meta http-equiv="expires" content="600">
+		<meta http-equiv="pragma" content="public" />
+		
+		<!--
+		php cache control < ?php header('Cache-Control: max-age=600'); ?> -->
 
-  <body>
-    <h1>Welcome to my Website!</h1>
-      <h3>My name is <strong>Damien Millard</strong>, builder of this website and a Heating, Ventilation, and Air Conditioning/Refrigeration Technician.</h3> <img class="gif-hotdogflip" src="images/gifs/hotdogflip.gif" alt="Flipping a hotdog"> <img class="gif-dogelove" src="images/gifs/dogelove.gif" alt="This Doge loves his tiny Cheems!">
-    <h2>-----</h2>
-      <audio controls autoplay loop>
-        <source src="rockytheme.mp3" type="audio/mpeg">
-      </audio>
-    <h2>----------------------------------------</h2>
-      <h2><a style="text-decoration: none; color: #FFA226" href="easteregg.html">Navigation</a></h2>
-        <h3><a href="index.html">Home</a>  <a href="more_contact.html">More/Contact</a></h3>
-    <h2>--------------------</h2>
-      <h2>Whats New:</h2>
-        <p>[Jun 28, 2022] Field Day 2022 just ended, lots of contacts and lots of fun with the MARC club members, can't wait to do it again next year! <a href="https://w8np.net/index.php?view=article&id=17:field-day-2022-photos&catid=2">View more about it here!</a></p>
-    <h2>--------------------</h2>
-      <h2>About Me</h2>
-        <p>I like electronics, knives, radios, and watches. I am <strong>EPA-608 Universal Certified</strong>, and I am a Technician Amateur Radio Operator, my callsign is <a href="https://qrz.com/db/ke8nuf">KE8NUF</a></p>
-    <h2>--------------------</h2>
-      <h2>Proud Member of the Massillon Amateur Radio Club (MARC) W8NP 147.180</h2>
-      <sub>Click the image to view more</sub>
-        <a href="https://w8np.net"><img class="img-marc_page_info" src="images/marc_page_info.png" alt="MARC Page Info"></a>
-    <h2>--------------------</h2>
-      <h2>My Daily Carry Knives Are:</h2>
-        <ul>
-          <li><a href="https://www.bladehq.com/item--Bear-Ops-Bear-Song-VIII-Butterfly--102070">Bear Ops Bear Song VIII Tanto Butterfly Knife</a></li>
-          <li><a href="https://www.bladehq.com/item--Spyderco-Delica-4-Knife-Flat-Ground--48918">Spyderco Delica 4 Flat Ground Zome Green</a></li>
-        </ul>
-    <h2>--------------------</h2>
-      <p>Yaesu makes the best quality compared to price radios I know!</p>
-      <p>People say that I own too many knives and I am constantly breaking any code I make somehow, but I am having fun in all of it!</p>
-    <h2>--------------------</h2>
-      <img class="img-epacertification" src="images/epacertification.jpg" alt="EPA-608 Universal Certification">
-      <p><i>EPA-608 Universal Certificate</i></p>
-    <h2>--------------------</h2>
-      <img class="img-radiosetup" src="images/radiosetup.jpg" alt="My radio setup"> <img class="img-yaesuft840" src="images/yaesuft840.jpg" alt="Yaesu FT-840">
-    <h2>--------------------</h2>
-      <h2><a href="https://www.hamqsl.com/solar.html" title="Band Conditions"><img src="https://www.hamqsl.com/solarbc.php"></a></h2>
-      <img class="gif-senkolove" src="images/gifs/senkolove.gif" alt="Senko loves my webpage">
-  <body>
-    
+		<title>Damien Millard Welcome To My Site</title>
+		<!-- enter viewport meta tag call for responsive content -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		
+		<!--
+		WordPress Server Tutorials based upon host
+		https://github.com/WordPress/servehappy-resources/blob/master/tutorials/hosting-specific/tutorials-en.md
+		-->
+
+		<meta name="Damien Millard" content="Damien Millard" />
+		<meta name="keywords" content="Damien Millard, Damien, personal, portfolio" />
+		<meta name="description" content="Welcome to Damien Millard's personal portfolio website." />
+		<meta name="author" content="Charles Millard" />
+
+		<!-- <link rel="stylesheet" href="template_styles.css" media="screen and (max-width: 667px)" />
+		<link rel="stylesheet" href="template_media_styles.css" media="screen and (max-width: 667px)" />
+		<link rel="stylesheet" href="template_styles_fixed.css" media="screen and (min-width: 668px)" /> -->
+		
+		<!-- async style sheet load https://www.giftofspeed.com/defer-loading-css/ -->
+		
+		<!--- Convert Fonts
+		https://everythingfonts.com/
+		
+		To Web
+		https://transfonter.org/
+		-->
+		
+		<script>
+			//async js load for css
+			function loadStylesAsync(href, stylesLoaded) {
+				var linkStyle = document.createElement('link');
+				var cssFiles = [
+					'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;900&display=swap',
+					'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css',
+					'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0',
+					'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css',
+					'css/animate.css',
+					'css/page-styles.css'
+				];
+				for( var i = 0; i < cssFiles.length; i++ ){
+					var linkMultiple = linkStyle.cloneNode(true);
+					linkMultiple.rel = 'stylesheet';
+					linkMultiple.type = 'text/css';
+					linkMultiple.href = cssFiles[i];
+					if( stylesLoaded ) { linkMultiple.onload = function() { stylesLoaded(); } }
+					//var linkStyleDefer = document.getElementsByTagName('link')[0];
+					//linkStyleDefer.parentNode.insertBefore(linkMultiple, linkStyleDefer);
+					var documentHead = document.getElementsByTagName('head')[0];
+					documentHead.appendChild(linkMultiple);
+				}
+			}
+			loadStylesAsync();
+		</script>
+		<noscript>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;900&display=swap" media="none" onload="if(media!='all')media='all'" />
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" media="none" onload="if(media!='all')media='all'" />
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" media="none" onload="if(media!='all')media='all'" />
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="none" onload="if(media!='all')media='all'" />
+			<!-- https://fontawesome.com/icons -->
+			<!-- https://cdnjs.com/libraries/font-awesome -->
+			
+			<!-- <link rel="stylesheet" href="css/animate.css" media="screen" /> -->
+			<!-- reference https://animate.style/ -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="none" onload="if(media!='all')media='all'" />
+			<link rel="stylesheet" href="css/page-styles.css" media="none" onload="if(media!='all')media='all'" />
+		</noscript>
+		<!-- end async style sheet load -->
+		
+		<script>
+			document.write('<scr'+'ipt src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></scr'+'ipt>');
+			document.write('<scr'+'ipt src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></scr'+'ipt>');
+		</script>
+		
+		<script>
+			//appends css to end of body copy for loading
+			//document.addEventListener('DOMContentLoaded', function() {
+			document.onreadystatechange = function () {
+				//"loading" document is still loading
+				//"interactive" document has finished loading. We can access DOM elements
+				//"complete" document page has finished completely and fully loaded
+				if (document.readyState === 'interactive') {
+					var noscriptContainerCSS = document.getElementById('async-stylesheets');
+					if (noscriptContainerCSS != null) {
+						//inserts style to body
+						var containerCSS = document.createElement('div');
+						containerCSS.className = 'style-sheet-load';
+						containerCSS.innerHTML = noscriptContainerCSS.textContent;
+						//document.body.appendChild(containerCSS);
+						document.body.prepend(containerCSS);
+						
+						//appends to head
+						//var containedStyles = noscriptContainerCSS.textContent;
+						//var containedStyles = noscriptContainerCSS.innerHTML;
+						//var containedStyles = noscriptContainerCSS.innerText;
+						//var htmlHead = document.getElementsByTagName('head')[0];
+						//htmlHead.appendChild(containedStyles);
+						//htmlHead.append(containedStyles);
+					}
+				//}, false);
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+	
+		<div class="outer-page-wrapper" style="margin:0px;">
+			<!-- START header area content -->
+			<div id="header-content-container">
+				<nav id="nav">
+					<div id="bar-scroll-mobile-logo" class="mobile-menu-logo">
+						<a href="/" title="Click here to return home.">
+							<img id="scroll-logo1" src="./images/damien-site-logo-four-bw.svg" alt="Damien Site Logo" />
+						</a>
+					</div>
+					<div id="nav-menu-toggle"><span class="material-symbols-outlined" style="vertical-align: middle; display:table;">menu</span></div>
+					
+					<ul id="nav-left" class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" href="#" title="">
+								<!-- old <span class="material-symbols-outlined" style="vertical-align: middle; display:table;">home</span> -->
+								<span><i class="fa-solid fa-house" style="font-size:22px; vertical-align: middle; display:table;"></i></span>
+							</a>
+						</li>
+						<!-- <li class="nav-item"><a class="nav-link" href="#" title="">Contact</a></li> -->
+						<!-- <li class="nav-item"><a class="nav-link" href="#" title="">Calendar</a></li> -->
+						
+						<!--
+						<li>
+						<div class="search">
+						<span class="icon-magnifier material-symbols-outlined" style="vertical-align: middle; display:inline-block;">search</span>
+						<input type="text" name="search-link" placeholder="Search Site" aria-label="Search" autocomplete="off">
+							--><!-- <span placeholder="Sample Search">Sample Search</span> -->
+						<!-- </div>
+						</li> -->
+						
+					</ul>
+					
+					<div id="bar-scroll-mobile-logo" class="desktop-menu-logo">
+						<a href="/" title="Click here to return home.">
+							<img id="scroll-logo1" src="./images/damien-site-logo-four-bw.svg" alt="Damien Site Logo" />
+							<img id="scroll-logo2" src="./images/damien-site-logo-four.svg" alt="Damien Site Logo" />
+						</a>
+					</div>
+					
+					<ul id="nav-right" class="navbar-nav">
+						<li class="nav-item"><a class="nav-link" href="#" title="">Contact</a></li>
+						<!-- <li class="nav-item"><a class="nav-link" href="#" title="">Messages</a></li> -->
+						<!-- <li class="nav-item"><a class="nav-link" href="#" title="">Contact</a></li> -->
+					</ul>
+				</nav>
+				
+				<header id="header">
+					<div id="hero-container">
+						<div id="hero-image" class="hero-image">
+						</div>
+						
+						<!-- <div class="waves-back"></div> -->
+						
+						<div class="hero-bar">
+							<div class="hero-bar-logo">
+								<a href="#" title="Click here to return home."><img src="./images/damien-site-logo-four.svg" alt="Damien Site Logo" /></a>
+							</div>
+						</div>
+						
+					</div>
+				</header>
+			</div>
+			<!-- END header area content -->
+		</div> <!-- END HEADER AND MENU BAR AREAS -->
+		
+		<!-- NOT NEEDED CHANGED COLOR SVG
+		<div class="outer-page-wrapper padding-20-tb">
+			<div class="content-center-wrapper">
+				<div class="section group">
+					<div class="col span-1-of-1">
+						<div class="content-container">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> --><!-- USED FOR CLEAR SPACE DON'T REMOVE / DON'T USE -->
+		
+		<div class="outer-page-wrapper section-gray padding-20-tb six-fix-header" style="margin-bottom:0px; margin-top:-21px;">
+			<div class="content-center-wrapper">
+				<div class="section group match-height">
+					<div class="col span-2-of-3">
+						<div class="content-container" style="text-align: center;">
+							<img src="./images/hotdogflip.gif" alt="Hot Dog Flip Image" style="border:0; padding:0; margin:0px 10px; display:inline-block; width: 100%; max-width: 30%; height: auto;" />
+							<img src="./images/dogelove.gif" alt="Doge Love Image" style="border:0; padding:0; margin:0px 10px; display:inline-block; width: 100%; max-width: 30%; height: auto;" />
+						</div>
+					</div>
+					
+					<div class="col span-1-of-3">
+						<div class="content-container">
+							<span><h1 class="teal-text" style="font-weight:bold; font-size:45px; margin: 20px auto;">Welcome to my Website!</h1></span>
+							<span style="font-size:19px;">My name is Damien Millard, owner of this website and I am studying to become Heating, 
+							Ventilation, and Air Conditioning/Refrigeration Technician. Have fun on my site, and get to learn a little about
+							me!</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- END WELCOME AREA TEXT -->
+		
+		<div class="outer-page-wrapper section-white padding-40-tb" style="margin-top:0;margin-bottom:0;">
+			<div class="content-center-wrapper">
+				<div class="section group match-height">
+					<div class="col span-1-of-2">
+						<div class="content-container center-items">
+							<span><h1 class="gray-text" style="font-weight:bold; font-size:45px; margin: 20px auto;">? What's New ?</h1></span>
+							<span style="font-size:19px;">[Jun 28, 2022] Field Day 2022 just ended, lots of contacts and lots of fun with the MARC club members, 
+							can't wait to do it again next year! <a href="https://w8np.net/index.php?view=article&id=17:field-day-2022-photos&catid=2" title="See more from Massillon Raido Club." target="_blank">See more about it here!</a></span>
+						</div>
+					</div>
+					
+					<div class="col span-1-of-2">
+						<div class="content-container center-items" style="text-align: center;">
+							<img src="./images/Announcement.png" alt="What's New Image" style="border:0; padding:0; margin:0px 10px; display:inline-block; width: 100%; max-width: 60%; height: auto;" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- END NEW NEWS SECTION/ANNOUNCEMENTS -->
+		
+		<div class="outer-page-wrapper section-gray padding-40-tb" style="margin-top:0;margin-bottom:0;">
+			<div class="content-center-wrapper">
+				<div class="section group">
+					<div class="col span-1-of-1">
+						<div class="content-container">
+							<span><h1 class="drkorange-text" style="font-weight:bold; font-size:45px; margin: 20px auto;">A Little About Me and From Me</h1></span>
+							<span style="font-size:19px;"><p>I like electronics, knives, radios, and watches. I am EPA-608 Universal Certified, and I am 
+							a Technician Amateur Radio Operator, my callsign is <a href="https://www.qrz.com/db/ke8nuf" title="Click here to see my QRZ information." target="_blank">KE8NUF</a></p></span>
+							<br />
+							<br />
+							<span style="font-size:19px;"><p>People say that I own too many knives and I am constantly breaking any code I make somehow, but I am having fun in all of it!</p></span>
+							<br />
+							<br />
+							<span style="font-size:19px;">
+								<h2 style="font-weight:bold; font-size:30px; margin: 20px auto;">My Daily Carry Knives Are:</h2>
+								<span>&bull;&nbsp;&nbsp;<a href="https://www.bladehq.com/item--Bear-Ops-Bear-Song-VIII-Butterfly--102070" title="Click here to see this." target="_blank">Bear Ops Bear Song VIII Tanto Butterfly Knife</a></span>
+								<br />
+								<span>&bull;&nbsp;&nbsp;<a href="https://www.bladehq.com/item--Spyderco-Delica-4-Knife-Flat-Ground--48918" title="Click here to see this." target="_blank">Spyderco Delica 4 Flat Ground Zome Green</a></span>
+							</span>
+							<br />
+							<br />
+							<span style="font-size:19px;"><p>In my opinion Yaesu makes the best quality compared to price radios I know!</p></span>
+							<br />
+							<br />
+							<span style="font-size:19px;">
+								<figure style="margin:0;">
+									<figcaption class="teal-text">Rocky Audio:</figcaption>
+									<audio controls src="./audio/rockytheme.mp3">
+										Your browser does not support the
+										<code>audio</code> element.
+									</audio>
+								</figure>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- END ABOUT ME SECTION -->
+		
+		<div class="outer-page-warpper section-black-lighter padding-40-tb margin-50-b" style="margin-top:0px;">
+			<div class="content-center-wrapper">
+				<div class="section group">
+					<div class="col span-1-of-1">
+						<div class="content-container center-text">
+							<span><h2 class="yellow-text" style="font-weight:bold; font-size:38px; margin: 20px auto;">Proud to be a Member of the Massillon Amateur Radio Club (MARC) W8NP 147.180</h2></span>
+						</div>
+					</div>
+				</div>
+					
+				<div class="section group match-height">
+					<div class="col span-1-of-2">
+						<div class="content-container">
+							<img src="./images/marc-logo-2022-ctm-two.png" alt="Massillon Radio Club Logo" style="border:0; padding:0; margin:0px 10px; display:inline-block; width: 100%; max-width: 70%; height: auto;" />
+							<!-- <img src="./images/marc-logo-2022-diamond-ctm.png" alt="Massillon Radio Club Logo" style="border:0; padding:0; margin:0px 10px; display:inline-block; width: 100%; max-width: 70%; height: auto;" /> -->
+						</div>
+					</div>
+					
+					<div class="col span-1-of-2">
+						<div class="content-container center-text">
+							<span><h1 class="yellow-text" style="font-weight:bold; font-size:45px; margin: 20px auto;">Massillon Amateur <br />Radio Club</h1></span>
+							<span><h2 class="teal-text" style="font-weight:bold; font-size:30px; margin: 20px auto;">W8NP</h2></span>
+							<span style="font-size:19px;" class="text-on-black"><p>P.O. Box 73, Massillon, OH 44648</p></span>
+							<span style="font-size:19px;" class="text-on-black"><p>Serving the Massillon community since 1927</p></span>
+							<div class="orange-button"><span class="orange-button-inside"><a href="https://w8np.net/" title="Click here to learn more about Massillon Amateur Radio Club." target="_blank">Visit MARC</a></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- END MASSILLON RADIO SECTION -->
+		
+		<div class="outer-page-wrapper">
+			<div class="content-center-wrapper">
+				<div class="section group match-height">
+					<div class="col span-1-of-3">
+						<div class="content-container">
+							<img src="./images/epacertification.jpg" alt="My EPA-608 Universal Certificate." style="display:inline-block; margin:10px auto; padding:0; border:0; position:relative; min-width: 65%; max-width:95%; top:55%; left:50%; transform: translate(-50%, -0%);" />
+							<span>EPA-608 Universal Certificate</span>
+						</div>
+					</div>
+					
+					<div class="col span-1-of-3">
+						<div class="content-container">
+							<img src="./images/radiosetup.jpg" alt="One of my radio setups." style="display:inline-block; margin:10px auto; padding:0; border:0; position:relative; min-width: 65%;  max-width:95%; top:55%; left:50%; transform: translate(-50%, -0%);" />
+						</div>
+					</div>
+					
+					<div class="col span-1-of-3">
+						<div class="content-container">
+							<img src="./images/yaesuft840.jpg" alt="Another of my radio setups." style="display:inline-block; margin:10px auto; padding:0; border:0; position:relative; min-width: 65%;  max-width:95%; top:55%; left:50%; transform: translate(-50%, -0%);" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="section group match-height">
+					<div class="col span-1-of-3">
+						<div class="content-container">
+							<h2 style="font-weight:bold; font-size:45px; margin: 20px auto;"><a href="https://www.hamqsl.com/solar.html" title="Band Conditions Chart" target="_blank"><img src="https://www.hamqsl.com/solarbc.php" alt="Band Conditions Chart" style="display:inline-block; margin:10px auto; padding:0; border:0; position:relative; min-width: 65%; max-width:95%; top:55%; left:50%; transform: translate(-50%, -0%);"></a></h2>
+						</div>
+					</div>
+					
+					<div class="col span-1-of-3">
+						<div class="content-container">
+							<img src="./images/senkolove.gif" alt="Senko Love Image." style="display:inline-block; margin:10px auto; padding:0; border:0; position:relative; min-width: 65%; max-width:95%; top:55%; left:50%; transform: translate(-50%, -0%);" />
+						</div>
+					</div>
+					
+					<div class="col span-1-of-3">
+						<div class="content-container">
+							<img src="./images/61qtFF1qyqL._AC_SX569_.jpg" alt="Another of my radio setups." style="display:inline-block; margin:10px auto; padding:0; border:0; position:relative; min-width: 65%; max-width:95%; top:55%; left:50%; transform: translate(-50%, -0%);" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- END IMAGES SECTION ON PAGE -->
+	
+		<!-- 
+		<div class="outer-page-wrapper">
+			<div class="content-center-wrapper">
+				
+				<div class="section group match-height">
+					<div class="col span-1-of-2 section-white">
+						<div class="content-container">
+							This is column 1 <br />This is column 1 <br />This is column 1
+							This is column 1 <br />This is column 1 <br />This is column 1
+							This is column 1 <br />This is column 1 <br />This is column 1
+							This is column 1 <br />This is column 1 <br />This is column 1
+							This is column 1 <br />This is column 1 <br />This is column 1
+						</div>
+					</div>
+					
+					<div class="col span-1-of-2">
+						<div class="content-container">This is column 2</div> -->
+						<!-- OLD NOT USED <div class="yellow-button">Yellow Button Test</div>
+						OLD NOT USED <div class="green-button"><span class="green-button-inside">Green Button Test</span></div>
+						OLD NOT USED <div class="pale-button"><span class="pale-button-inside">Pale Button Test</span></div> -->
+						<!-- <div class="orange-button"><span class="orange-button-inside">Orange Button</span></div>
+						
+						<div id="radio-tower-wrapper">
+							<div id="radio-tower">
+								<div id="radio-bulb"></div>
+								
+								<img src="./images/tower-shape-animation-base.png" style="margin:0; padding:0; border:0; position:absolute; max-height:100%; top:55%; left:50%; transform: translate(-50%, -0%);" />
+								
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"> -->
+									<!-- OLD NOT USED <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path> -->
+								<!-- </svg>	
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="section group match-height">
+					<div class="col span-1-of-1">
+						<div class="content-container">
+						 Single Column
+						</div>
+					</div>
+				</div>
+				
+				<div class="section group match-height">
+					<div class="col span-2-of-3">
+						<div class="content-container">
+						 Single Column
+						</div>
+					</div>
+					
+					<div class="col span-1-of-3">
+						<div class="content-container">
+						 Single Column
+						</div>
+					</div>
+				</div>
+					
+			</div>--> <!-- END CONTENT CENTER WRAPPER FOR SECTION -->
+		<!-- </div> --><!-- END OUT CONTENT WRAPPER -->
+		
+		<!-- <div class="outer-page-wrapper section-white padding-20">
+			<div class="content-center-wrapper">
+				<div class="section group">
+					<div class="col span-1-of-1">
+						<div class="content-container">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		
+		<div class="outer-page-wrapper section-black-lighter padding-40-tb" style="margin:0px; padding-bottom:0px; background: radial-gradient(circle at top right,#24292c, #2d3336, #24292c, #24292c); box-shadow: inset 0px 20px 10px -20px rgba(0, 0, 0, 0.40);">
+			<div class="content-center-wrapper">
+				<div class="section group">
+					<div class="col span-1-of-1">
+						<div class="content-container">
+							<div id="footer-content-container">
+								<div id="footer-top-content">
+									<div class="content-center-wrapper">
+										<div>
+											<!-- icon reference
+											https://thesabbir.github.io/simple-line-icons/ -->
+											<!-- reference and free if needed to fill gaps
+												https://icons8.com/icon/set/logos/fluency-systems-regular
+												https://icons8.com/icon/set/popular/fluency-systems-regular
+											-->
+											<!--
+											 old
+											<a href="" title="Find me on Facebook." target="_blank"> -->
+												<!-- NOT USED <span class="icon-social-facebook" style="font-size:2em; margin-right:8px;"></span> -->
+												<!--<style>
+													#footer-top-content span svg:hover {
+														fill: #f4620c!important;
+													}
+												</style>
+												<span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48" style=" fill:#ffffff;"><path d="M 24 4 C 12.972066 4 4 12.972074 4 24 C 4 35.027926 12.972066 44 24 44 C 35.027934 44 44 35.027926 44 24 C 44 12.972074 35.027934 4 24 4 z M 24 7 C 33.406615 7 41 14.593391 41 24 C 41 32.380773 34.967178 39.306373 27 40.720703 L 27 29 L 30.625 29 C 31.129 29 31.555188 28.623047 31.617188 28.123047 L 31.992188 25.123047 C 32.028188 24.839047 31.938047 24.553891 31.748047 24.337891 C 31.559047 24.122891 31.287 24 31 24 L 27 24 L 27 20.5 C 27 19.397 27.897 18.5 29 18.5 L 31 18.5 C 31.552 18.5 32 18.053 32 17.5 L 32 14.125 C 32 13.607 31.604844 13.174906 31.089844 13.128906 C 31.030844 13.123906 29.619984 13 27.833984 13 C 23.426984 13 21 15.616187 21 20.367188 L 21 24 L 17 24 C 16.448 24 16 24.447 16 25 L 16 28 C 16 28.553 16.448 29 17 29 L 21 29 L 21 40.720703 C 13.032822 39.306373 7 32.380773 7 24 C 7 14.593391 14.593385 7 24 7 z"></path></svg></span>
+											</a> -->
+											<!-- NOT USED <span class="icon-social-instagram white-text" style="font-size:2em; margin-right:8px;"></span>
+											NOT USED <span class="icon-social-twitter white-text" style="font-size:2em; margin-right:8px;"></span> -->
+											<!-- <a href="mailto:damienmillard05@icloud.com" title="Shoot me an email." target="_blank"> -->
+												<!-- NOT USED <span class="icon-envelope-letter" style="font-size:2em; margin-right: 0px;"></span> -->
+												<!-- <span class="material-symbols-outlined" style="font-size:32px;">mail</span>
+											</a> -->
+											
+											<ul id="contact-social">
+												<!-- icon reference
+												https://fontawesome.com/icons
+												-->
+												<li><a class="steam" href="https://steamcommunity.com/id/gunfighterman101/" target="_blank" title="Click here to visit me on Steam."><i class="fa-brands fa-steam-symbol" aria-hidden="true"></i></a></li>
+												<li><a class="github" href="https://github.com/GunFighterMan101" target="_blank" title="Click here to visit me on Git."><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+												<li><a class="discord" href="#" target="_blank" title="Click here to visit me on Discord."><i class="fa-brands fa-discord" aria-hidden="true"></i></a></li>
+												
+												<!--
+												<li><a class="facebook" href="#" target="_blank" title="Click here to visit me on Facebook."><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+												<li><a class="twitter" href="#" target="_blank" title="Click here to follow me on Twitter."><i class="fa-brands fa-twitter" aria-hidden="true"></i></a></li>
+												<li><a class="googleplus" href="#" target="_blank" title="Click here to visit me on Google Plus."><i class="fa-brands fa-google-plus-g" aria-hidden="true"></i></a></li>
+												<li><a class="linkedin" href="#" target="_blank" title="Click here to add me on LinkedIn."><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+												<li><a class="instagram" href="#" target="_blank" title="Click here to see me on Instagram."><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+												-->
+												<li><a class="youtube" href="https://www.youtube.com/channel/UCf79sdnAeHB_A1s1_lABkrw/featured" target="_blank" title="Click here to see my YouTube channel."><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+												<li><a class="sendmail" href="mailto:damienmillard05@icloud.com" target="_blank" title="Click here to email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+									
+								<!-- <div id="footer-bottom-content">
+									<div class="content-center-wrapper">
+										<div class="footer-copy white-text">
+											<span>&copy; Copyright <script>document.write(new Date().getFullYear())</script> Damien Millard All rights reserved.</span>
+										</div>
+									</div>
+								</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="footer-content-container" class="footer-wide">
+				<div id="footer-bottom-content">
+					<div class="content-center-wrapper">
+						<div class="footer-copy white-text">
+							<span style="color:#000;">&copy; Copyright <script>document.write(new Date().getFullYear())</script> Damien Millard All rights reserved.</span>
+							<br />
+							<span style="font-size:12px; color:#000;">&bull; Site built by Charles Millard &bull; 2022</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- END FOOTER ON PAGE -->
+		
+		
+		<style>
+			#toTop {
+				padding: 0px;
+			}
+		</style>
+		<div id="toTop" data-webicon="stroke7:angle-up"><span class="material-symbols-outlined" style="cursor:pointer; vertical-align:middle; font-weight:800; font-size:40px;">expand_less</span><span class="icon-arrow-up" style="cursor:pointer; vertical-align:middle; font-weight:800; font-size:15px;"></span></div>
+
+		
+		<script src="js/page-scripts.js"></script>
+		<!-- <script>
+		(function($){
+			$(function(){
+				// calls in document ready and no conflict states
+
+				//
+			});
+		})(jQuery);
+		</script> -->
+		
+		<!-- 
+		jQuery.noConflict()(function($){
+			$(document).ready(function() {
+			});
+		});
+		-->
+		
+		<script>
+			/* css file load async */
+			// include in "head" for devices that do not support Javascript will still load
+			//<noscript>
+			//<link rel="stylesheet" href="" media="screen" />
+			//</noscript>
+			
+			// removed put in head
+			//var cssDeferOne = document.createElement('link');
+			//cssDeferOne.rel = 'stylesheet';
+			//cssDeferOne.href = 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+			//cssDeferOne.type = 'text/css';
+				//var deferThisStyle = document.getElementsByTagName('link')[0];
+			//var deferThisStyle = document.getElementsByTagName('body')[0];
+				//deferThisStyle.parentNode.insertBefore(cssDeferOne, deferThisStyle);
+			//deferThisStyle.prepend(cssDeferOne);
+		</script>
+		
+		<!-- html 5 reference
+			<header> - Defines a header for a document or a section
+			<nav> - Defines a container for navigation links
+			<section> - Defines a section in a document
+			<article> - Defines an independent self-contained article
+			<aside> - Defines content aside from the content (like a sidebar)
+			<footer> - Defines a footer for a document or a section
+			<details> - Defines additional details
+			<summary> - Defines a heading for the <details> element
+		-->
+		
+		<!-- Site colors:
+		Dark Purple accent color: #2c234c - rgba(44, 35, 76)
+		Section Lt Gray: #fffbfb - rgba(255, 251, 251)
+		light gray text/borders: #949494 - rgba(148, 148, 148)
+		blacks/notblack: #181818 - rgba(24, 24, 24)
+		general text color: #4c5267 - rgba(76, 82, 103)
+		oranges main color: #f4620c - rgba(244, 98, 12)
+		my red: #7F002A - rgba(127, 0, 42)
+		teal: #169edc - rgba(22, 158, 220)
+		light yellow: #fdec18 - rgba(253, 236, 24)
+		yellow: #fecf1b - rgba(254, 207, 27)
+		red orange: #ef4931 - rgba(239, 73, 49)
+		
+		sample: https://jupiterx.artbees.net/aero-club/
+		-->
+	</body>
 </html>
