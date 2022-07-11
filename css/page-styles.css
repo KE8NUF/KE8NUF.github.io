@@ -1583,7 +1583,7 @@ only screen and (max-device-width : 980px) {
 	.mobile-menu-logo a	{
 		opacity: 1!important;
 		display: inline-block!important;
-		height: 100%!important;
+		height: auto!important;
 	}
 	
 	#bar-scroll-mobile-logo.mobile-menu-logo a.active-visible,
@@ -1594,7 +1594,7 @@ only screen and (max-device-width : 980px) {
 		border: 0px solid transparent;
 		margin: 0px auto;
 		padding: 0px;
-		height: 100%!important;
+		height: auto!important;
 		max-height: 55px!important;
 		position: absolute;
 		top: 0;
