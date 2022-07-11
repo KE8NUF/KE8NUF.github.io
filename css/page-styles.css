@@ -1025,6 +1025,10 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 	left: 0;
 }
 
+#bar-scroll-mobile-logo.desktop-menu-logo a.active-visible {
+	display: block!important;
+}
+
 .mobile-menu-logo {
 	display: none!important;
 }
