@@ -1587,7 +1587,7 @@ only screen and (max-device-width : 980px) {
 	}
 	
 	.mobile-menu-logo img {
-		display: inline-block;
+		display: none;
 	}
 	
 	#bar-scroll-mobile-logo.mobile-menu-logo a.active-visible,
