@@ -1005,6 +1005,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 
 #bar-scroll-mobile-logo img {
 	display: none;
+	/* test */
 	border: 0px solid transparent;
 	margin: 0px auto;
 	padding: 0px;
@@ -1613,7 +1614,7 @@ only screen and (max-device-width : 980px) {
 	}
 	
 	#hero-container:after {
-		margin-bottom: -36px;
+		margin-bottom: -3px;
 	}
 	
 	.hero-image {
@@ -1688,7 +1689,7 @@ only screen and (max-device-width : 600px) {
 	}
 	
 	#hero-container::after {
-	  margin-bottom: -38px;
+	  margin-bottom: -3px;
 	}
 	
 	.six-fix-header {
@@ -1709,7 +1710,7 @@ only screen and (max-device-width : 568px){
 only screen and (max-device-width : 550px){
 	
 	#hero-container::after {
-	  margin-bottom: -40px;
+	  margin-bottom: -3px;
 	}
 }
 
@@ -1725,7 +1726,7 @@ only screen and (max-device-width : 540px){
 only screen and (max-device-width : 480px) {
 	
 	#hero-container::after {
-	  margin-bottom: -44px;
+	  margin-bottom: -3px;
 	}
 	
 	#footer-bottom-content {
