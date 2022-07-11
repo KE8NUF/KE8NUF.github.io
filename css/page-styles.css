@@ -1000,6 +1000,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 
 #bar-scroll-mobile-logo.desktop-menu-logo {
 	display: block;
+	opacity: 1;
 }
 
 #bar-scroll-mobile-logo a {
@@ -1015,7 +1016,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 	padding: 0px;
 	height: 0;
 	max-height: 55px;
-	opacity: 0;
+	opacity: 1;
 }
 
 #bar-scroll-mobile-logo.desktop-menu-logo img {
