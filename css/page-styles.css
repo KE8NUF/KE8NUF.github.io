@@ -1567,6 +1567,9 @@ only screen and (max-device-width : 980px) {
 		-o-transform: translateX(0%) translateY(0%);
 		transform: translateX(0%) translateY(0%);
 	}
+	.hero-bar-logo {
+		width: 80%;
+	}
 	
 	#nav-menu-toggle {
 		min-height: 55px;
