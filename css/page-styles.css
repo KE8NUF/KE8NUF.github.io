@@ -1579,7 +1579,8 @@ only screen and (max-device-width : 980px) {
 		display: none!important;
 	}
 	
-	#bar-scroll-mobile-logo.mobile-menu-logo {
+	#bar-scroll-mobile-logo.mobile-menu-logo,
+	.mobile-menu-logo a	{
 		opacity: 1!important;
 		display: inline-block!important;
 		height: 100%!important;
