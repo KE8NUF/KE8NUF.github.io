@@ -1029,6 +1029,14 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 	opacity: 1;
 }
 
+.mobile-menu-logo {
+	display: none!important;
+}
+
+.mobile-menu-logo a {
+	opacity: 0;
+}
+
 #bar-scroll-mobile-logo.active-visible a.active-visible #scroll-logo1:hover {
 	opacity: 0;
 }
@@ -1041,14 +1049,6 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 #bar-scroll-mobile-logo.active-visible a.active-visible #scroll-logo2:hover {
 	opacity: 1;
 	height: 100%;
-}
-
-.mobile-menu-logo {
-	display: none!important;
-}
-
-.mobile-menu-logo a {
-	opacity: 0;
 }
 
 @-webkit-keyframes growBoxCenter {
