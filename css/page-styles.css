@@ -1035,10 +1035,12 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 
 #bar-scroll-mobile-logo.active-visible a.active-visible #scroll-logo2 {
 	opacity: 0;
+	height: 0;
 }
 
 #bar-scroll-mobile-logo.active-visible a.active-visible #scroll-logo2:hover {
 	opacity: 1;
+	height: 100%;
 }
 
 .mobile-menu-logo {
