@@ -178,7 +178,188 @@
 						
 						<div class="hero-bar">
 							<div class="hero-bar-logo">
+								<!-- old non animated logo
 								<a href="https://damienmillard.net/" title="Click here to return home."><img src="./images/damien-site-logo-four.svg" alt="Damien Site Logo" /></a>
+								-->
+								
+								<!-- new animated logo -->
+								<style>
+									#ring-pulse-logo-wrapper {
+										width: 100%;
+										max-width: 96%;
+										height: 100%;
+										max-height: 275px;
+										margin: 0px auto;
+										padding: 0px;
+										position: relative;
+										overflow: visible;
+									}
+									
+									#ring-pulse-logo-inside {
+										/*
+										position: absolute;
+										top: 50%;
+										left: 50%;
+										transform: translate(-50%, -50%);
+										*/
+									}
+									
+									#ring-pulse-logo-inside a {
+										width: 100%;
+										height: 100%;
+										display: block;
+									}
+									
+									#pulse-rings {
+										position: absolute;
+										left: 23.8%;
+										top: 26%;
+										z-index: 5;
+									}
+									
+									#pulse-rings .rings {
+										position: absolute;
+										top: 50%;
+										left: 50%;
+										transform: translate(-50%,-50%);
+										width: 0px;
+										height: 0px;
+										border-radius: 100%;
+										opacity: 0;
+										border: 5px solid rgba(239, 73, 49, 1.0);
+										animation: anim 4s infinite linear;
+										margin: 6px;
+										
+										box-shadow: 20px 20px 60px var(--darkenTower), -20px -20px 60px var(--lightenTower);
+									}
+									
+									#pulse-rings .rings:after {
+										content: "";
+										width: 0px;
+										height: 0px;
+										box-shadow: inset 20px 20px 60px var(--darkenTower), inset -20px -20px 60px var(--lightenTower);
+									}
+									
+									#pulse-rings .clear-rings {
+										position:absolute;
+										top: 50%;
+										left: 50%;
+										transform: translate(-50%,-50%);
+										width: 0px;
+										height: 0px;
+										border-radius: 100%;
+										opacity: 0;
+										border: 5px solid rgba(255, 255, 255, 0.0);
+										animation: anim 3s infinite linear;
+										margin: 6px;
+									}
+									
+									@keyframes anim {
+										0% {
+											opacity: 0.0;
+											width: 0vmin;
+											height: 0vmin;
+										}
+										10% {
+											opacity: 0.2;
+										}
+										100% {
+											opacity: 0.75;
+											width: 100vmin;
+											height: 100vmin;
+										}
+									}
+
+									#pulse-rings .rings:nth-child(1) { animation-delay:200ms; }
+									#pulse-rings .rings:nth-child(2) { animation-delay:400ms; }
+									#pulse-rings .rings:nth-child(3) { animation-delay:600ms; }
+									#pulse-rings .rings:nth-child(4) { animation-delay:800ms; }
+									#pulse-rings .rings:nth-child(5) { animation-delay:1000ms; }
+									#pulse-rings .rings:nth-child(6) { animation-delay:1200ms; }
+									#pulse-rings .rings:nth-child(7) { animation-delay:1400ms; }
+									#pulse-rings .rings:nth-child(8) { animation-delay:1600ms; }
+									#pulse-rings .rings:nth-child(9) { animation-delay:1800ms; }
+									
+									#fixed-dot {
+										width: 25px;
+										height: 25px;
+										background: none repeat rgba(239, 73, 49, 1.0);
+										background: none repeat rgba(255, 138, 0, 1.0);
+										border-radius: 100%;
+										position: absolute;
+										left: 22.8%;
+										top: 23%;
+										z-index: 15;
+									}
+									
+									@media only screen and (max-width : 800px),
+									only screen and (max-device-width : 800px) {
+									
+										#pulse-rings {
+											left: 23.6%;
+										}
+									
+										#fixed-dot {
+											left: 22.4%;
+										}
+									}
+									
+									@media only screen and (max-width : 428px),
+									only screen and (max-device-width : 428px) {
+										
+										#pulse-rings {
+											left: 23%;
+										}
+										
+										#fixed-dot {
+											width: 18px;
+											height: 18px;
+											left: 21.8%;
+											top: 23%;
+										}
+									}
+									
+									@media only screen and (max-width : 384px),
+									only screen and (max-device-width : 384px) {
+									
+										#fixed-dot {
+											width: 18px;
+											height: 18px;
+											left: 21.8%;
+											top: 23%;
+										}
+									}
+								</style>
+
+								<div id="ring-pulse-logo-wrapper">
+									<div id="ring-pulse-logo-inside">
+										<a href="https://damienmillard.net/" title="Click here to return home.">
+											<span id="pulse-rings">
+													<span class="rings"></span>
+													<span class="clear-rings"></span>
+													<span class="rings"></span>
+													<span class="rings"></span>
+													<span class="clear-rings"></span>
+													
+													<span class="rings"></span>
+													<span class="clear-rings"></span>
+													<span class="rings"></span>
+													<span class="clear-rings"></span>
+													<!-- <span class="rings"></span>
+													<span class="rings"></span>
+													<span class="rings"></span>
+													<span class="rings"></span>
+													<span class="rings"></span>
+													<span class="rings"></span> -->
+											</span>
+											<span id="fixed-dot"></span>
+												
+											<img src="./images/damien-site-logo-four-A.svg" style="position:relative; z-index: 10;" />
+										</a>
+									</div>
+								</div>
+								<!-- end new animated logo -->
+								
 							</div>
 						</div>
 						
