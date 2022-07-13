@@ -45,7 +45,7 @@ function equalContentHeight() {
 				//var $viewportWidth = window.innerWidth;
 				var $viewportHeight = window.outerHeight;
 				var $viewportWidth = window.outerWidth;
-				$('body').prepend('<div id="viewport-size" style="position:fixed; bottom:10px; left:10px; display:block; z-index:9999; padding:10px; text-align:center; font-size: 1.0em; background:rgba(35, 35, 35, 0.75); color:#fff;">W: '+ $viewportWidth +' <br /> H: '+ $viewportHeight +'</div>');
+				$('body').prepend('<div id="viewport-size" style="position:fixed; bottom:10px; left:10px; display:none; z-index:9999; padding:10px; text-align:center; font-size: 1.0em; background:rgba(35, 35, 35, 0.75); color:#fff;">W: '+ $viewportWidth +' <br /> H: '+ $viewportHeight +'</div>');
 				$(window).on('resize', function() {
 					var $viewportHeight = window.outerHeight;
 					var $viewportWidth = window.outerWidth;
@@ -184,7 +184,7 @@ function equalContentHeight() {
 		});
 		
 		//start tower blink css animation creation
-		const $tower = document.querySelector('#radio-bulb');
+		// const $tower = document.querySelector('#radio-bulb');
 
 		let debounce = false;
 		$tower.addEventListener('click', () => {
