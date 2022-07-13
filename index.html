@@ -227,7 +227,7 @@
 										border-radius: 100%;
 										opacity: 0;
 										border: 5px solid rgba(239, 73, 49, 1.0);
-										animation: anim 4s infinite linear;
+										animation: ringPulse 4s infinite linear;
 										margin: 6px;
 										
 										box-shadow: 20px 20px 60px var(--darkenTower), -20px -20px 60px var(--lightenTower);
@@ -250,12 +250,12 @@
 										border-radius: 100%;
 										opacity: 0;
 										border: 5px solid rgba(255, 255, 255, 0.0);
-										animation: anim 5s infinite alternate;
+										animation: ringPulse 5s infinite linear;
 										animation-delay: 200ms;
 										margin: 6px;
 									}
 									
-									@keyframes anim {
+									@keyframes ringPulse {
 										0% {
 											opacity: 0.0;
 											width: 0vmin;
@@ -263,19 +263,26 @@
 										}
 										10% {
 											opacity: 0.2;
+										}
+										40% {
+											opacity: 0.80;
+											width: 40vmin;
+											height: 40vmin;
+										}
+										60% {
+											opacity: 0.4;
+											width: 60vmin;
+											height: 60vmin;
+										}
+										75% {
+											opacity: 0.2;
+											width: 75vmin;
+											height: 75vmin;
 										}
 										100% {
-											opacity: 0.80;
-											width: 80vmin;
-											height: 80vmin;
-										}
-										10% {
-											opacity: 0.2;
-										}
-										0% {
 											opacity: 0.0;
-											width: 0vmin;
-											height: 0vmin;
+											width: 100vmin;
+											height: 100vmin;
 										}
 									}
 
