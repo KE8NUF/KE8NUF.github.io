@@ -212,8 +212,8 @@
 									
 									#pulse-rings {
 										position: absolute;
-										left: 23.8%;
-										top: 26%;
+										left: 23.7%;
+										top: 23%;
 										z-index: 5;
 									}
 									
@@ -250,7 +250,8 @@
 										border-radius: 100%;
 										opacity: 0;
 										border: 5px solid rgba(255, 255, 255, 0.0);
-										animation: anim 3s infinite linear;
+										animation: anim 5s infinite linear;
+										animation-delay: 200ms;
 										margin: 6px;
 									}
 									
@@ -264,7 +265,7 @@
 											opacity: 0.2;
 										}
 										100% {
-											opacity: 0.75;
+											opacity: 0.80;
 											width: 100vmin;
 											height: 100vmin;
 										}
@@ -281,15 +282,24 @@
 									#pulse-rings .rings:nth-child(9) { animation-delay:1800ms; }
 									
 									#fixed-dot {
-										width: 25px;
-										height: 25px;
+										width: 15px;
+										height: 15px;
 										background: none repeat rgba(239, 73, 49, 1.0);
 										background: none repeat rgba(255, 138, 0, 1.0);
 										border-radius: 100%;
 										position: absolute;
-										left: 22.6%;
+										left: 23.1%;
 										top: 23%;
 										z-index: 15;
+									}
+									
+									@media only screen and (max-width : 896px),
+									only screen and (max-device-width : 896px) {
+									
+										#pulse-rings {
+											left: 23.6%;
+											top: 22%;
+										}
 									}
 									
 									@media only screen and (max-width : 800px),
@@ -297,10 +307,44 @@
 									
 										#pulse-rings {
 											left: 23.6%;
+											top: 22%;
 										}
 									
 										#fixed-dot {
+											width: 10px;
+											height: 10px;
 											left: 22.4%;
+										}
+									}
+									
+									@media only screen and (max-width : 768px),
+									only screen and (max-device-width : 768px) {
+									
+										#fixed-dot {
+											left: 23.5%;
+										}
+									}
+									
+									@media only screen and (max-width : 740px),
+									only screen and (max-device-width : 740px) {
+										
+										#fixed-dot {
+											left: 23.5%;
+										}
+									}
+									
+									@media only screen and (max-width : 667px),
+									only screen and (max-device-width : 667px) {
+									
+										#pulse-rings {
+											left: 23%;
+											top: 22%;
+										}
+									
+										#fixed-dot {
+											width: 10px;
+											height: 10px;
+											left: 23.4%;
 										}
 									}
 									
@@ -312,10 +356,34 @@
 										}
 										
 										#fixed-dot {
-											width: 18px;
-											height: 18px;
-											left: 21.8%;
+											width: 10px;
+											height: 10px;
+											left: 22.5%;
 											top: 23%;
+										}
+									}
+									
+									@media only screen and (max-width : 412px),
+									only screen and (max-device-width : 412px) {
+										
+										#fixed-dot {
+											left: 22.7%;
+										}
+									}
+									
+									@media only screen and (max-width : 393px),
+									only screen and (max-device-width : 393px) {
+										
+										#fixed-dot {
+											left: 22.7%;
+										}
+									}
+									
+									@media only screen and (max-width : 390px),
+									only screen and (max-device-width : 390px) {
+									
+										#fixed-dot {
+											left: 22.7%;
 										}
 									}
 									
@@ -323,10 +391,30 @@
 									only screen and (max-device-width : 384px) {
 									
 										#fixed-dot {
-											width: 18px;
-											height: 18px;
+											width: 10px;
+											height: 10px;
 											left: 21.8%;
 											top: 23%;
+										}
+									}
+									
+									@media only screen and (max-width : 360px),
+									only screen and (max-device-width : 360px) {
+									
+										#fixed-dot {
+											left: 22.8%;
+										}
+									}
+									
+									@media only screen and (max-width : 280px),
+									only screen and (max-device-width : 280px) {
+										
+										#pulse-rings {
+											left: 22%;
+										}
+									
+										#fixed-dot {
+											left: 22.3%;
 										}
 									}
 								</style>
@@ -343,7 +431,6 @@
 													
 													<span class="rings"></span>
 													<span class="clear-rings"></span>
-													<span class="rings"></span>
 													<span class="clear-rings"></span>
 													<!-- <span class="rings"></span>
 													<span class="rings"></span>
