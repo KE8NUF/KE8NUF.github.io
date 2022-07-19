@@ -265,6 +265,44 @@
 										margin: 6px;
 									}
 									
+									/*
+									* Prefixed by https://autoprefixer.github.io
+									* PostCSS: v8.4.14,
+									* Autoprefixer: v10.4.7
+									* Browsers: last 4 version
+									*/
+
+									@-webkit-keyframes ringPulse {
+										0% {
+											opacity: 0.0;
+											width: 0vmin;
+											height: 0vmin;
+										}
+										10% {
+											opacity: 0.2;
+										}
+										40% {
+											opacity: 0.80;
+											width: 40vmin;
+											height: 40vmin;
+										}
+										60% {
+											opacity: 0.4;
+											width: 60vmin;
+											height: 60vmin;
+										}
+										75% {
+											opacity: 0.2;
+											width: 75vmin;
+											height: 75vmin;
+										}
+										100% {
+											opacity: 0.0;
+											width: 100vmin;
+											height: 100vmin;
+										}
+									}
+
 									@keyframes ringPulse {
 										0% {
 											opacity: 0.0;
@@ -320,15 +358,30 @@
 										animation: fadeInPulse 2s infinite alternate;
 									}
 									
+									@-webkit-keyframes fadeInPulse { 
+										0% {
+											background: rgba(255,255,255,0.2);
+											-webkit-box-shadow: inset 0px 0px 10px 2px rgba(255,138,0,0.5), 0px 0px 5px 2px rgba(255,150,0,0.2);
+												box-shadow: inset 0px 0px 10px 2px rgba(255,138,0,0.5), 0px 0px 5px 2px rgba(255,150,0,0.2);
+										}
+										100% {
+											background: rgba(255,255,255,1);
+											-webkit-box-shadow: inset 0px 0px 10px 2px rgba(255,150,0,0.5), 0px 0px 15px 2px rgba(255,138,0,1);
+												box-shadow: inset 0px 0px 10px 2px rgba(255,150,0,0.5), 0px 0px 15px 2px rgba(255,138,0,1);
+										} 
+									} 
+									
 									@keyframes fadeInPulse { 
-									  0% {
-										background: rgba(255,255,255,0.2);
-										box-shadow: inset 0px 0px 10px 2px rgba(255,138,0,0.5), 0px 0px 5px 2px rgba(255,150,0,0.2);
-									  }
-									  100% {
-										background: rgba(255,255,255,1);
-										box-shadow: inset 0px 0px 10px 2px rgba(255,150,0,0.5), 0px 0px 15px 2px rgba(255,138,0,1);
-									  } 
+										0% {
+											background: rgba(255,255,255,0.2);
+											-webkit-box-shadow: inset 0px 0px 10px 2px rgba(255,138,0,0.5), 0px 0px 5px 2px rgba(255,150,0,0.2);
+												box-shadow: inset 0px 0px 10px 2px rgba(255,138,0,0.5), 0px 0px 5px 2px rgba(255,150,0,0.2);
+										}
+										100% {
+											background: rgba(255,255,255,1);
+											-webkit-box-shadow: inset 0px 0px 10px 2px rgba(255,150,0,0.5), 0px 0px 15px 2px rgba(255,138,0,1);
+												box-shadow: inset 0px 0px 10px 2px rgba(255,150,0,0.5), 0px 0px 15px 2px rgba(255,138,0,1);
+										} 
 									}
 									
 									@media only screen and (max-width : 896px),

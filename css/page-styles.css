@@ -761,13 +761,13 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 }
 
 @-webkit-keyframes slide-in {
-  to { transform: translateY(0); }
-  100% { animation: growBoxCenter 600ms; }
+  to { -webkit-transform: translateY(0); transform: translateY(0); }
+  100% { -webkit-animation: growBoxCenter 600ms; animation: growBoxCenter 600ms; }
 }
 
 @keyframes slide-in {
-  to { transform: translateY(0); }
-  100% { animation: growBoxCenter 600ms; }
+  to { -webkit-transform: translateY(0); transform: translateY(0); }
+  100% { -webkit-animation: growBoxCenter 600ms; animation: growBoxCenter 600ms; }
 }
 
 #nav ul {
@@ -966,37 +966,47 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 
 @-webkit-keyframes field1 {
 	0% {
-		transform: translate3d(100%, 0, 0);
+		-webkit-transform: translate3d(100%, 0, 0);
+		        transform: translate3d(100%, 0, 0);
 	}
 	25% {
-		transform: translate3d(50%, 10%, 0);
+		-webkit-transform: translate3d(50%, 10%, 0);
+		        transform: translate3d(50%, 10%, 0);
 	}
 	50% {
-		transform: translate3d(50%, 10%, 0);
+		-webkit-transform: translate3d(50%, 10%, 0);
+		        transform: translate3d(50%, 10%, 0);
 	}
 	75% {
-		transform: translate3d(100%, 0, 0);
+		-webkit-transform: translate3d(100%, 0, 0);
+		        transform: translate3d(100%, 0, 0);
 	}
 	100% {
-		transform: translate3d(50%, 0, 0);
+		-webkit-transform: translate3d(50%, 0, 0);
+		        transform: translate3d(50%, 0, 0);
 	}
 }
 
 @keyframes field1 {
 	0% {
-		transform: translate3d(100%, 0, 0);
+		-webkit-transform: translate3d(100%, 0, 0);
+		        transform: translate3d(100%, 0, 0);
 	}
 	25% {
-		transform: translate3d(50%, 10%, 0);
+		-webkit-transform: translate3d(50%, 10%, 0);
+		        transform: translate3d(50%, 10%, 0);
 	}
 	50% {
-		transform: translate3d(50%, 10%, 0);
+		-webkit-transform: translate3d(50%, 10%, 0);
+		        transform: translate3d(50%, 10%, 0);
 	}
 	75% {
-		transform: translate3d(100%, 0, 0);
+		-webkit-transform: translate3d(100%, 0, 0);
+		        transform: translate3d(100%, 0, 0);
 	}
 	100% {
-		transform: translate3d(50%, 0, 0);
+		-webkit-transform: translate3d(50%, 0, 0);
+		        transform: translate3d(50%, 0, 0);
 	}
 }
 
@@ -1010,37 +1020,47 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 
 @-webkit-keyframes field2 {
 	0% {
-		transform: translate3d(100%, 0, 0);
+		-webkit-transform: translate3d(100%, 0, 0);
+		        transform: translate3d(100%, 0, 0);
 	}
 	25% {
-		transform: translate3d(50%, 0, 0) rotate(0);
+		-webkit-transform: translate3d(50%, 0, 0) rotate(0);
+		        transform: translate3d(50%, 0, 0) rotate(0);
 	}
 	50% {
-		transform: translate3d(0, 10%, 0) rotate(100deg);
+		-webkit-transform: translate3d(0, 10%, 0) rotate(100deg);
+		        transform: translate3d(0, 10%, 0) rotate(100deg);
 	}
 	75% {
-		transform: translate3d(50%, 0, 0);
+		-webkit-transform: translate3d(50%, 0, 0);
+		        transform: translate3d(50%, 0, 0);
 	}
 	100% {
-		transform: translate3d(100%, 0, 0);
+		-webkit-transform: translate3d(100%, 0, 0);
+		        transform: translate3d(100%, 0, 0);
 	}
 }
 
 @keyframes field2 {
 	0% {
-		transform: translate3d(100%, 0, 0);
+		-webkit-transform: translate3d(100%, 0, 0);
+		        transform: translate3d(100%, 0, 0);
 	}
 	25% {
-		transform: translate3d(50%, 0, 0) rotate(0);
+		-webkit-transform: translate3d(50%, 0, 0) rotate(0);
+		        transform: translate3d(50%, 0, 0) rotate(0);
 	}
 	50% {
-		transform: translate3d(0, 10%, 0) rotate(100deg);
+		-webkit-transform: translate3d(0, 10%, 0) rotate(100deg);
+		        transform: translate3d(0, 10%, 0) rotate(100deg);
 	}
 	75% {
-		transform: translate3d(50%, 0, 0);
+		-webkit-transform: translate3d(50%, 0, 0);
+		        transform: translate3d(50%, 0, 0);
 	}
 	100% {
-		transform: translate3d(100%, 0, 0);
+		-webkit-transform: translate3d(100%, 0, 0);
+		        transform: translate3d(100%, 0, 0);
 	}
 }
 
@@ -1054,37 +1074,47 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 
 @-webkit-keyframes field3 {
 	0% {
-		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
 	}
 	25% {
-		transform: translate3d(50%, 50%, 0);
+		-webkit-transform: translate3d(50%, 50%, 0);
+		        transform: translate3d(50%, 50%, 0);
 	}
 	50% {
-		transform: translate3d(100%, 10%, 0);
+		-webkit-transform: translate3d(100%, 10%, 0);
+		        transform: translate3d(100%, 10%, 0);
 	}
 	75% {
-		transform: translate3d(50%, 0, 0);
+		-webkit-transform: translate3d(50%, 0, 0);
+		        transform: translate3d(50%, 0, 0);
 	}
 	100% {
-		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
 	}
 }
 
 @keyframes field3 {
 	0% {
-		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
 	}
 	25% {
-		transform: translate3d(50%, 50%, 0);
+		-webkit-transform: translate3d(50%, 50%, 0);
+		        transform: translate3d(50%, 50%, 0);
 	}
 	50% {
-		transform: translate3d(100%, 10%, 0);
+		-webkit-transform: translate3d(100%, 10%, 0);
+		        transform: translate3d(100%, 10%, 0);
 	}
 	75% {
-		transform: translate3d(50%, 0, 0);
+		-webkit-transform: translate3d(50%, 0, 0);
+		        transform: translate3d(50%, 0, 0);
 	}
 	100% {
-		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
 	}
 }
 
@@ -1098,37 +1128,47 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 
 @-webkit-keyframes field4 {
 	0% {
-		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
 	}
 	25% {
-		transform: translate3d(0, 20%, 0) rotate(0);
+		-webkit-transform: translate3d(0, 20%, 0) rotate(0);
+		        transform: translate3d(0, 20%, 0) rotate(0);
 	}
 	50% {
-		transform: translate3d(10%, 60%, 0) rotate(100deg);
+		-webkit-transform: translate3d(10%, 60%, 0) rotate(100deg);
+		        transform: translate3d(10%, 60%, 0) rotate(100deg);
 	}
 	75% {
-		transform: translate3d(50%, 0, 0);
+		-webkit-transform: translate3d(50%, 0, 0);
+		        transform: translate3d(50%, 0, 0);
 	}
 	100% {
-		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
 	}
 }
 
 @keyframes field4 {
 	0% {
-		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
 	}
 	25% {
-		transform: translate3d(0, 20%, 0) rotate(0);
+		-webkit-transform: translate3d(0, 20%, 0) rotate(0);
+		        transform: translate3d(0, 20%, 0) rotate(0);
 	}
 	50% {
-		transform: translate3d(10%, 60%, 0) rotate(100deg);
+		-webkit-transform: translate3d(10%, 60%, 0) rotate(100deg);
+		        transform: translate3d(10%, 60%, 0) rotate(100deg);
 	}
 	75% {
-		transform: translate3d(50%, 0, 0);
+		-webkit-transform: translate3d(50%, 0, 0);
+		        transform: translate3d(50%, 0, 0);
 	}
 	100% {
-		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
 	}
 }
 
@@ -1142,37 +1182,47 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 
 @-webkit-keyframes field5 {
 	0% {
-		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
 	}
 	25% {
-		transform: translate3d(50%, 40%, 0);
+		-webkit-transform: translate3d(50%, 40%, 0);
+		        transform: translate3d(50%, 40%, 0);
 	}
 	50% {
-		transform: translate3d(80%, 0, 0) rotate(0deg);
+		-webkit-transform: translate3d(80%, 0, 0) rotate(0deg);
+		        transform: translate3d(80%, 0, 0) rotate(0deg);
 	}
 	75% {
-		transform: translate3d(50%, 40%, 0) rotate(200deg);
+		-webkit-transform: translate3d(50%, 40%, 0) rotate(200deg);
+		        transform: translate3d(50%, 40%, 0) rotate(200deg);
 	}
 	100% {
-		transform: translate3d(0, 0, 0) rotate(360deg);
+		-webkit-transform: translate3d(0, 0, 0) rotate(360deg);
+		        transform: translate3d(0, 0, 0) rotate(360deg);
 	}
 }
 
 @keyframes field5 {
 	0% {
-		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
 	}
 	25% {
-		transform: translate3d(50%, 40%, 0);
+		-webkit-transform: translate3d(50%, 40%, 0);
+		        transform: translate3d(50%, 40%, 0);
 	}
 	50% {
-		transform: translate3d(80%, 0, 0) rotate(0deg);
+		-webkit-transform: translate3d(80%, 0, 0) rotate(0deg);
+		        transform: translate3d(80%, 0, 0) rotate(0deg);
 	}
 	75% {
-		transform: translate3d(50%, 40%, 0) rotate(200deg);
+		-webkit-transform: translate3d(50%, 40%, 0) rotate(200deg);
+		        transform: translate3d(50%, 40%, 0) rotate(200deg);
 	}
 	100% {
-		transform: translate3d(0, 0, 0) rotate(360deg);
+		-webkit-transform: translate3d(0, 0, 0) rotate(360deg);
+		        transform: translate3d(0, 0, 0) rotate(360deg);
 	}
 }
 
@@ -1311,14 +1361,21 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 	max-height: 55px;
 }
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @-webkit-keyframes growBoxCenter {
-  0% { transform: scale(0); }
-  100% { transform: scale(1); }
+  0% { -webkit-transform: scale(0); transform: scale(0); }
+  100% { -webkit-transform: scale(1); transform: scale(1); }
 }
 
 @keyframes growBoxCenter {
-  0% { transform: scale(0); }
-  100% { transform: scale(1); }
+  0% { -webkit-transform: scale(0); transform: scale(0); }
+  100% { -webkit-transform: scale(1); transform: scale(1); }
 }
 
 #bar-scroll-mobile-logo a.active-visible img {
@@ -1598,6 +1655,13 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 }
 
 /** One of my worst keyframes, animate width & height.. */
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @-webkit-keyframes outside_grow {
 	from {
 		width: 20px;
@@ -1630,6 +1694,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 		height: 880px;
 	}
 }
+
 @keyframes inside_grow {
 	from {
 		width: 0px;
@@ -1679,49 +1744,59 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 
 @-webkit-keyframes shadowFadeIn {
 	0% {
-		box-shadow: var(--insetTower);
+		-webkit-box-shadow: var(--insetTower);
+		        box-shadow: var(--insetTower);
 	}
 	50% {
-		box-shadow: none;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
 	}
 	100% {
-		box-shadow: var(--shadowTower);
+		-webkit-box-shadow: var(--shadowTower);
+		        box-shadow: var(--shadowTower);
 	}
 }
-
 @keyframes shadowFadeIn {
 	0% {
-		box-shadow: var(--insetTower);
+		-webkit-box-shadow: var(--insetTower);
+		        box-shadow: var(--insetTower);
 	}
 	50% {
-		box-shadow: none;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
 	}
 	100% {
-		box-shadow: var(--shadowTower);
+		-webkit-box-shadow: var(--shadowTower);
+		        box-shadow: var(--shadowTower);
 	}
 }
 
 @-webkit-keyframes shadowFadeOut {
 	0% {
-		box-shadow: var(--shadowTower);
+		-webkit-box-shadow: var(--shadowTower);
+		        box-shadow: var(--shadowTower);
 	}
 	50% {
-		box-shadow: none;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
 	}
 	100% {
-		box-shadow: var(--insetTower);
+		-webkit-box-shadow: var(--insetTower);
+		        box-shadow: var(--insetTower);
 	}
 }
-
 @keyframes shadowFadeOut {
 	0% {
-		box-shadow: var(--shadowTower);
+		-webkit-box-shadow: var(--shadowTower);
+		        box-shadow: var(--shadowTower);
 	}
 	50% {
-		box-shadow: none;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
 	}
 	100% {
-		box-shadow: var(--insetTower);
+		-webkit-box-shadow: var(--insetTower);
+		        box-shadow: var(--insetTower);
 	}
 }
 
