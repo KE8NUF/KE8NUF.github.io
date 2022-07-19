@@ -742,6 +742,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 	overflow: hidden;
 	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.20);
 	background: none repeat scroll #fff;
+	border-top: 5px solid var(--teal);
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
