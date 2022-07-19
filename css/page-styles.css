@@ -929,6 +929,8 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 .hero-image-animated {
 	min-height: 100vh;
 	min-width: 100vw;
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	z-index: 0;
 	background-image: none;
@@ -936,19 +938,6 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 	background: linear-gradient(to right top, #172347, #015268, #025385, #038298) center/cover no-repeat;
 	/* multi color base */
 	background: linear-gradient(to right top, #e80028, #fa4f21, #007bb7, #0043b4) center/cover no-repeat;
-}
-
-.hero-image-animated h1 {
-	display: grid;
-	place-items: center;
-	z-index: 1000;
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	font-family: "My Soul", cursive;
-	color: black;
-	font-weight: 400;
-	font-size: clamp(4rem, 5vw + 0.25rem, 8.625rem);
 }
 
 .hero-image-animated .aurora {
