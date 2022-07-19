@@ -169,7 +169,9 @@ a {
 
 a:hover,
 a span:hover,
-a span:active {
+a span:active,
+span a:hover,
+span a:active {
 	color: var(--orange);
 }
 
