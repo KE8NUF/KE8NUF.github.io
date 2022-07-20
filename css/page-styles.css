@@ -959,7 +959,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 .hero-image-animated .aurora .field-1 {
 	/* lighter teal to dark */
 	background-image: radial-gradient(ellipse at top, #04e2b7, #172347);
-	background-image: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.25));
+	background-image: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.35));
 	mix-blend-mode: overlay;
 	animation: field1 40000ms linear infinite;
 }
@@ -1013,7 +1013,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 .hero-image-animated .aurora .field-2 {
 	/* mid teal to light teal */
 	background-image: radial-gradient(ellipse at left, #025385, #0ef3c5);
-	background-image: radial-gradient(ellipse at left, rgba(22, 17, 107, 0.35), rgba(255, 255, 255, 0.45));
+	background-image: radial-gradient(ellipse at left, rgba(22, 17, 107, 0.35), rgba(255, 255, 255, 0.55));
 	mix-blend-mode: color-burn;
 	animation: field2 40000ms linear infinite;
 }
@@ -1067,7 +1067,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 .hero-image-animated .aurora .field-3 {
 	/* dark to mid */
 	background-image: radial-gradient(ellipse at center, #172347, #025385);
-	background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.25));
+	background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.35));
 	mix-blend-mode: hard-light;
 	animation: field3 40000ms linear infinite;
 }
@@ -1121,7 +1121,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 .hero-image-animated .aurora .field-4 {
 	/* bright to mid */
 	background-image: radial-gradient(ellipse at bottom, #04e2b7, #038298);
-	background-image: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.55), rgba(0, 0, 0, 0.15));
+	background-image: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.55), rgba(0, 0, 0, 0.30));
 	mix-blend-mode: hard-light;
 	animation: field4 40000ms linear infinite;
 }
@@ -1175,7 +1175,7 @@ linear-gradient(140deg, #00C4CC 25%, #6E44BD)
 .hero-image-animated .aurora .field-5 {
 	/* dark to bright */
 	background-image: radial-gradient(ellipse at right, #172347, #0ef3c5);
-	background-image: radial-gradient(ellipse at right, rgba(0, 0, 0, 0.40), rgba(255, 255, 255, 0.40));
+	background-image: radial-gradient(ellipse at right, rgba(0, 0, 0, 0.40), rgba(255, 255, 255, 0.60));
 	mix-blend-mode: multiply;
 	animation: field5 40000ms linear infinite;
 }
