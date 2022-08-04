@@ -185,7 +185,8 @@ function equalContentHeight() {
 		
 		//start tower blink css animation creation
 		// const $tower = document.querySelector('#radio-bulb');
-
+		
+		var $tower;
 		let debounce = false;
 		$tower.addEventListener('click', () => {
 			if (debounce) return;
