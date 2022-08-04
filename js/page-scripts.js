@@ -188,12 +188,12 @@ function equalContentHeight() {
 		
 		var $tower;
 		var debounce = false;
-		$tower.addEventListener('click', () => {
-			if (debounce) return;
-			debounce = true;
-			buttonAnimate();
-			createWave();
-		});
+		//$tower.addEventListener('click', () => {
+			//if (debounce) return;
+			//debounce = true;
+			//buttonAnimate();
+			//createWave();
+		//});
 
 		const buttonAnimate = () => {
 			$tower.classList.add('clicked');
