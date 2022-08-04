@@ -187,7 +187,7 @@ function equalContentHeight() {
 		// const $tower = document.querySelector('#radio-bulb');
 		
 		var $tower;
-		let debounce = false;
+		var debounce = false;
 		$tower.addEventListener('click', () => {
 			if (debounce) return;
 			debounce = true;
@@ -212,7 +212,7 @@ function equalContentHeight() {
 			setTimeout(() => waveTower.remove(), 7000);
 		};
 
-		let clicks = 0;
+		var clicks = 0;
 		  
 		function addClick() {
 			clicks = clicks + 1;
