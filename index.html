@@ -124,6 +124,57 @@
 	</head>
 
 	<body>
+		<!-- INSERT CSS LOADER -->
+		<div id="loading-wrapper">
+			<div class="loader-outer">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100px" height="100px" id="circle-gradient">
+					<defs>
+						<linearGradient id="GradientColorFill">
+							<stop offset="0%" stop-color="#f9c856" />
+							<stop offset="100%" stop-color="#f77f28" />
+						</linearGradient>
+					</defs>
+					<filter id="inset-shadow" x="-50%" y="-50%" width="200%" height="200%">
+						<feComponentTransfer in=SourceAlpha>
+						<feFuncA type="table" tableValues="1 0" />
+						</feComponentTransfer>
+						<feGaussianBlur stdDeviation="4"/>
+						<feOffset dx="0" dy="5" result="offsetblur"/>
+						<feFlood flood-color="rgb(0, 0, 0, 0.55)" result="color"/>
+						<feComposite in2="offsetblur" operator="in"/>
+						<feComposite in2="SourceAlpha" operator="in" />
+						<feMerge>
+							<feMergeNode in="SourceGraphic" />
+							<feMergeNode />
+						</feMerge>
+					</filter>
+					<filter id="inset-shadow-2" x="-50%" y="-50%" width="200%" height="200%">
+						<feComponentTransfer in=SourceAlpha>
+						<feFuncA type="table" tableValues="1 0" />
+						</feComponentTransfer>
+						<feGaussianBlur stdDeviation="4"/>
+						<feOffset dx="0" dy="-5" result="offsetblur"/>
+						<feFlood flood-color="rgb(255, 255, 255, 0.55)" result="color"/>
+						<feComposite in2="offsetblur" operator="in"/>
+						<feComposite in2="SourceAlpha" operator="in" />
+						<feMerge>
+							<feMergeNode in="SourceGraphic" />
+							<feMergeNode />
+						</feMerge>
+					</filter>
+					
+					<g filter="url(#inset-shadow)">
+						<circle cx="50" cy="50" r="40" stroke-linecap="round" filter="url(#inset-shadow-2)" />
+					</g>
+					
+				</svg>
+			
+				<div class="loader-inner">
+					<div id="countNumberText"></div>
+				</div>
+			</div>
+		</div>
+		<!-- END INSERT CSS LOADER -->
 	
 		<div class="outer-page-wrapper" style="margin:0px;">
 			<!-- START header area content -->
