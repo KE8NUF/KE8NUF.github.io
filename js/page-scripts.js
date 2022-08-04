@@ -228,5 +228,105 @@ function equalContentHeight() {
 		// Simulate a click every second
 		setInterval(clickButtonTower, 2500);
 		
+		// Styles needed CSS Loader
+		// var countPercent = document.getElementById("countNumberText");
+		// var counterNumber = 0;
+		// setInterval(() => {
+			// if(counterNumber == 250) {
+				// clearInterval();
+			// } else {
+				// counterNumber += 1;
+				// countPercent.innerHTML = counterNumber + '%';
+			// }
+		// }, 20);
+		
+		
+		var maxWidthStroke = 250;
+		var perfData = window.performance.timing; // The PerformanceTiming interface represents timing-related performance information for the given page.
+		//var EstimatedTime = (perfData.loadEventEnd - perfData.navigationStart);
+		var EstimatedTime = (perfData.domContentLoadedEventEnd - perfData.navigationStart);
+		// var hrs = ~~(duration / 3600);
+		// var mins = ~~((duration % 3600) / 60);
+		// var secs = ~~duration % 60;
+		//var time = parseInt((EstimatedTime/1000)%60)*100;
+		
+		var time = parseInt((EstimatedTime/1000)%60);
+		
+		//var time = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+		
+		// new time
+		var startTime = new Date().getTime();
+		var time;
+		function onLoadTime() {
+		  var nowTime = new Date().getTime();
+		  //var latency = nowTime - startTime;
+		  var latency = (nowTime - startTime) / 1000;
+		  var time = latency;
+		}
+		$(window).on('load', function() {
+			onLoadTime();
+			console.log(time);
+		});
+		
+		var StrokeID = $('#circle-gradient circle'),
+				strokeStart = 250,
+				strokeEnd = 0,
+				strokeDuration = time;
+				animateStroke(StrokeID, strokeStart, strokeEnd, strokeDuration);
+				
+		function animateStroke(id, strokeStart, strokeEnd, strokeDuration) {
+		  
+			var strokeRange = strokeStart - strokeEnd,
+			  strokeCurrent = strokeStart,
+			  strokeIncrement = strokeStart > strokeEnd? 1 : -1,
+			  strokeStepTime = Math.abs(Math.floor(strokeDuration / strokeRange)),
+			  strokeObj = $(id);
+			
+			var timerStroke = setInterval(function() {
+				strokeCurrent += strokeIncrement;
+				$(strokeObj).css({
+					'stroke-dashoffset': strokeCurrent,
+					'stroke-width': '20px',
+					'animation': 'spinLoader ' + strokeIncrement * 1.73 + 's linear forwards'
+				});
+				//obj.innerHTML = current;
+				if (strokeCurrent == strokeEnd) {
+					clearInterval(timerStroke);
+				}
+			}, strokeStepTime);
+			
+			console.log(strokeIncrement);
+		}
+
+		// Percentage Increment Animation
+		var PercentageID = $('#countNumberText'),
+				start = 0,
+				end = 100,
+				durataion = time;
+				animateValue(PercentageID, start, end, durataion);
+				
+		function animateValue(id, start, end, duration) {
+		  
+			var range = end - start,
+			  current = start,
+			  increment = end > start? 1 : -1,
+			  stepTime = Math.abs(Math.floor(duration / range)),
+			  obj = $(id);
+			
+			var timer = setInterval(function() {
+				current += increment;
+				$(obj).text(current + '%');
+			  //obj.innerHTML = current;
+				if (current == end) {
+					clearInterval(timer);
+				}
+			}, stepTime);
+		}
+
+		// Fading Out Loadbar on Finised
+		setTimeout(function(){
+		  $('#loading-wrapper').fadeOut(300);
+		}, time);
+		
 	});
 })(jQuery);
