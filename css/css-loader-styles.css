@@ -1,0 +1,93 @@
+#loading-wrapper {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #f4f4f4;
+}
+
+#loading-wrapper .loader-outer {
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color:#f4f4f4;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 1.0); 
+	margin: 0 auto;
+	border-radius: 50%;
+	overlow: hidden;
+}
+
+#loading-wrapper .loader-outer:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	border-radius: 50%;
+	/* gradient added in */
+	/* 
+	background: -moz-linear-gradient(180deg, rgba(250,200,87,1) 0%, rgba(247,127,40,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(250,200,87,1) 0%, rgba(247,127,40,1) 100%);
+	background: linear-gradient(180deg, rgba(250,200,87,1) 0%, rgba(247,127,40,1) 100%); 
+	*/
+	box-shadow: 0px sold transparent;
+}
+
+#loading-wrapper .loader-outer: after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	border-radius: 50%;
+	box-shadow: 9px 9px 20px rgba(187, 191, 200, 0.85), -9px -9px 20px rgba(255, 255, 255, 0.65), inset 9px 9px 20px rgba(187, 191, 200, 0.85), inset -9px -9px 20px rgba(255, 255, 255, 0.65);
+	box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.45), inset -1px -1px 3px rgba(255, 255, 255, 0.75);
+}
+
+#loading-wrapper .loader-inner {
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	background-color:#f4f4f4;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45), -1px -1px 3px rgba(255, 255, 255, 75); 
+	margin: 20px;
+	border-radius: 50%;
+}
+
+#countNumberText {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: lighter;
+	color: #72737b;
+}
+
+#circle-gradient {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#circle-gradient circle {
+	fill:transparent;
+	stroke: url(#GradientColorFill);
+	stroke-width: 20px;
+	stroke-width: 0px;
+	stroke-dasharray: 250; /* complete */
+	stroke-dashoffset: 250; /* percent to fill */
+	animation: spinLoader 1.5s linear forwards;
+}
+
+@keyframes spinLoader {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
