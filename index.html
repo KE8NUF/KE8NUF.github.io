@@ -760,7 +760,7 @@
 								}
 								console.log(frameCode);
 								
-								$(window).on('load resize', function () {
+								$(window).on('load resize orientationchange', function () {
 									if($(window).width() <= 592) {
 										var iframe = document.getElementById('frame-badge');
 										var styleAdd = document.createElement('style');
