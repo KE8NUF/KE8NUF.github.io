@@ -741,9 +741,8 @@
 								border: 0;
 							}
 							
-							@media only screen and (max-width : 592px), /* 592px */
-							only screen and (max-device-width : 592px){
-								.resp-iframe > .card-front img {
+							@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){
+								.card-front img {
 									max-height: 283px;
 								}
 							}
@@ -753,13 +752,26 @@
 							$(document).ready(function (){
 								if($(window).width() <= 592) {
 									//code to execute
-									var frameCode = '<div class="resp-container"><iframe class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v2.html" width="283" height="283" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+									var frameCode = '<div class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v2.html" width="283" height="283" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 									$('#badge-frame-insert').append(frameCode);
 								} else {
-									var frameCode = '<div class="resp-container"><iframe class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v2.html" width="450" height="453" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+									var frameCode = '<div class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v2.html" width="450" height="453" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 									$('#badge-frame-insert').append(frameCode);
 								}
 								console.log(frameCode);
+								
+								$(window).on('load', function () {
+									var iframe = document.getElementById('frame-badge');
+									var styleAdd = document.createElement('style');
+									styleAdd.textContent =
+									  '@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+									  '.card-front img {' +
+									  'max-height: 283px;' +
+									  '}' +
+									  '}' 
+									;
+									iframe.contentDocument.head.appendChild(styleAdd);
+								});
 							});
 							</script>
 							
