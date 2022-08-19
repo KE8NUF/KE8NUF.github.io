@@ -1010,7 +1010,17 @@
 		</style>
 		<div id="toTop" data-webicon="stroke7:angle-up"><span class="material-symbols-outlined" style="cursor:pointer; vertical-align:middle; font-weight:800; font-size:40px;">expand_less</span><span class="icon-arrow-up" style="cursor:pointer; vertical-align:middle; font-weight:800; font-size:15px;"></span></div>
 		
+		<script src="./js/jquery.ui.touch-punch.min.js"></script>
 		<script src="js/page-scripts.js"></script>
+		
+		<script>
+		document.addEventListener('dragover', function(e){
+			e = e || window.event;
+			var dragX = e.pageX, dragY = e.pageY;
+
+			console.log("X: "+dragX+" Y: "+dragY);
+		}, false);
+		</script>
 		<!-- <script>
 		(function($){
 			$(function(){
