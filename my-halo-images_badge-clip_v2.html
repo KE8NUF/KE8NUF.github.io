@@ -456,19 +456,25 @@
 		</svg>
 		
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-		<script src="https://code.jquery.com/ui/1.8.17/jquery-ui.min.js"></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
 		<script src="./js/jquery.touch.min.js"></script>
 		<script src="./js/get-rotate-angle.js"></script>
 		<script src="./js/tilt.jquery.js"></script>
 		<script src="./js/hoverontouch.js"></script>
-		<script src="./js/jquery.ui.touch-punch.min.js"></script>
 		
 		<script>
 			var $cards = $('.card-wrapper');
 			var $cardsClass = $('.card-wrapper, .card-shine, .card-glare');
+			
 			//var $style = $('.styles');
 			$cards.bind('mousemove touchmove touchme touchstart drag dragEnter dragOver', function(e) {
+				$cards.addEventListener("touchstart", dragStart, false);
+				$cards.addEventListener("touchend", dragEnd, false);
+				$cards.addEventListener("touchmove", drag, false);
+
+				$cards.addEventListener("mousedown", dragStart, false);
+				$cards.addEventListener("mouseup", dragEnd, false);
+				$cards.addEventListener("mousemove", drag, false);
 				// needed variables
 				//--mx: ${a.x}%;
 				//--my: ${a.y}%;
