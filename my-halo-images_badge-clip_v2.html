@@ -451,6 +451,7 @@
 		
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+		<script src="./jquery.finger.min.js"></script>
 		<script src="./js/get-rotate-angle.js"></script>
 		<script src="./js/tilt.jquery.js"></script>
 		
@@ -458,7 +459,7 @@
 			var $cards = $('.card-wrapper');
 			var $cardsClass = $('.card-wrapper, .card-shine, .card-glare');
 			//var $style = $('.styles');
-			$cards.on('mousemove touchmove', function(e) {
+			$cards.on('mousemove touchmove touchme', function(e) {
 				// needed variables
 				//--mx: ${a.x}%;
 				//--my: ${a.y}%;
