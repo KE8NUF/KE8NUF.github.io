@@ -458,7 +458,7 @@
 			var $cards = $('.card-wrapper');
 			var $cardsClass = $('.card-wrapper, .card-shine, .card-glare');
 			//var $style = $('.styles');
-			$cards.on('mousemove', function(e) {
+			$cards.on('mousemove touchmove', function(e) {
 				// needed variables
 				//--mx: ${a.x}%;
 				//--my: ${a.y}%;
@@ -498,7 +498,7 @@
 				$cardsClass.addClass('active');
 				//$style.html(style);
 				$('.card-wrapper').attr('style', '--mx:' + xPercent + '%; --my:' + yPercent + '%; --posx:' + posy + 'px; --posy:' + posx + 'px; --tx:' + posx + 'px; --ty:' + posy + 'px; --rx:' + tiltX + 'deg; --ry:' + tiltY + 'deg; --pos:' + xPercent + '% ' +  yPercent + '%; --hyp:' + hyp + ';');
-			}).on('mouseleave', function() {
+			}).on('mouseleave touchend', function() {
 				$cardsClass.removeClass('active');
 			});
 			
