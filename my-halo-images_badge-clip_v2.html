@@ -466,7 +466,7 @@
 			var $cards = $('.card-wrapper');
 			var $cardsClass = $('.card-wrapper, .card-shine, .card-glare');
 			//var $style = $('.styles');
-			$cards.on('mousemove touchmove touchme touchstart', function(e) {
+			$cards.bind('mousemove touchmove touchme touchstart', function(e) {
 				// needed variables
 				//--mx: ${a.x}%;
 				//--my: ${a.y}%;
