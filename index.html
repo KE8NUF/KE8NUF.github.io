@@ -742,9 +742,22 @@
 								border: 0;
 							}
 							</style>
-							<div class="resp-container">
-								<iframe class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v2.html" width="283" height="283" scrolling="no" frameborder="0" allowfullscreen></iframe>
-							</div>
+							
+							<script>
+							$(document).ready(function (){
+								if($(window).width() <= 592) {
+									//code to execute
+									var frameCode = '<div class="resp-container"><iframe class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v2.html" width="283" height="283" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+									$('#badge-frame-insert').append(frameCode);
+								} else {
+									var frameCode = '<div class="resp-container"><iframe class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v2.html" width="500" height="500" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+									$('#badge-frame-insert').append(frameCode);
+								}
+								console.log(frameCode);
+							});
+							</script>
+							
+							<div id="badge-frame-insert"></div>
 							<!-- END INSERT FOR FOIL BADGE -->
 							
 							<!-- BADGE ME GOOD REDONE REMOVED
