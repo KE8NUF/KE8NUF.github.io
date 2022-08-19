@@ -510,17 +510,25 @@
 				$cardsClass.removeClass('active');
 			});
 			
-			$(".card-front").tilt({
+			$('.card-front').tilt({
 				max: 30,
 				speed: 400,
 				perspective: 500,
 			});
 			
-			if ("ontouchstart" in document.documentElement) {
-			  document.documentElement.className += " touch";
-			  console.log("   supports touch");
+			$('.card-front').bind('drag', function() {
+				$('.card-front').tilt({
+					max: 30,
+					speed: 400,
+					perspective: 500,
+				});
+			});
+			
+			if ('ontouchstart' in document.documentElement) {
+			  document.documentElement.className += ' touch';
+			  console.log('   supports touch');
 			} else {
-			  console.log("   does NOT support touch");
+			  console.log('   does NOT support touch');
 			}
 			$('.touch .card-wrapper').each(function() {
 			  $('*').not(this).on('mouseover', function() {});
