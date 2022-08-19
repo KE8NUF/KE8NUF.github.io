@@ -220,14 +220,14 @@ function equalContentHeight() {
 		}
 		  
 		// Simulate click function
-		function clickButtonTower() {
-			click_event = new CustomEvent('click');
-			btn_element = document.querySelector('#radio-bulb');
-			btn_element.dispatchEvent(click_event);
-		}
+		//function clickButtonTower() {
+			//var click_event = new CustomEvent('click');
+			//var btn_element = document.querySelector('#radio-bulb');
+			//btn_element.dispatchEvent(click_event);
+		//}
 		  
 		// Simulate a click every second
-		setInterval(clickButtonTower, 2500);
+		//setInterval(clickButtonTower, 2500);
 		
 		// Styles needed CSS Loader
 		// var countPercent = document.getElementById("countNumberText");
