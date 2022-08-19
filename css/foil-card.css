@@ -1,0 +1,144 @@
+/* START DEFINED ROOT STYLES */
+ :root {
+     --mx: 50%;
+     --my: 50%;
+     --s: 1;
+     --o: 0;
+     --tx: 0px;
+     --ty: 0px;
+     --rx: 0deg;
+     --ry: 0deg;
+     --pos: 50% 50%;
+     --posx: 50%;
+     --posy: 50%;
+     --hyp: 0;
+}
+/* END DEFINED ROOT STYLES */
+ html, body {
+     height: 100vh;
+}
+/*  html {
+     box-sizing: border-box;
+}
+ body {
+     background: #393c42;
+}
+ *, *::after, *::before {
+     box-sizing: inherit;
+     -webkit-font-smoothing: antialiased;
+} */
+ * {
+	box-sizing: border-box;
+}
+/* START NEEDED CARD STYLES */
+ .card-wrapper {
+     --radius: 4.55% / 3.5%;
+    /* z-index: calc(var(--s) * 100);
+     */
+     transform: translateZ(.1px);
+     will-change: transform,visibility;
+     transform-style: preserve-3d;
+     position: relative;
+     display: inline-block;
+     display: table;
+     margin: 20px auto;
+}
+ .card-front {
+     opacity: 1;
+     transition: opacity .2s ease-out;
+     position: relative;
+}
+ .card-front img {
+     height: 100%;
+     max-height: 450px;
+     margin: 0px;
+     padding: 0px;
+     border: 0px solid transparent;
+     position: relative;
+     z-index: 1;
+}
+ .card-shine {
+     opacity: 1;
+     --red: #f80e7b;
+     --yel: #eedf10;
+     --gre: #21e985;
+     --blu: #0dbde9;
+     --vio: #c929f1;
+     --grain: url("data:image/svg+xml;
+    base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCI+CjxmaWx0ZXIgaWQ9Im4iPgo8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjciIG51bU9jdGF2ZXM9IjEwIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIj48L2ZlVHVyYnVsZW5jZT4KPC9maWx0ZXI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjMDAwIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWx0ZXI9InVybCgjbikiIG9wYWNpdHk9IjAuMyI+PC9yZWN0Pgo8L3N2Zz4=");
+     --h: 21;
+     --s: 70%;
+     --l: 50%;
+     --bars: 24px;
+     --bar-color: rgba(255, 255, 255, 0.6);
+     --bar-bg: rgb(10, 10, 10);
+}
+ .card-shine {
+     --space: 5%;
+     --angle: -22deg;
+     --imgsize: 200% 400%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     content: "";
+     width: 100%;
+     height: 100%;
+     opacity: 0;
+     overflow: hidden;
+     transform: translateZ(1px);
+     z-index: 10;
+     clip-path: inset(2.8% 4% round 2.55% / 1.5%);
+     -webkit-clip-path: url(#star-clip-path);
+     clip-path: url(#star-clip-path);
+     -o-object-fit: cover;
+     object-fit: cover;
+     mix-blend-mode: multiply;
+     background-image: repeating-linear-gradient( var(--angle), rgba(174, 102, 202, 0.75) calc(var(--space)*1), rgba(228, 77, 72, 0.75) calc(var(--space)*2), rgba(216, 197, 55, 0.75) calc(var(--space)*3), rgba(124, 201, 62, 0.75) calc(var(--space)*4), rgba(80, 177, 170, 0.75) calc(var(--space)*5), rgba(136, 160, 255, 0.75) calc(var(--space)*6), rgba(176, 105, 204, 0.75) calc(var(--space)*7) );
+     background-blend-mode: color-dodge;
+     background-size: var(--imgsize), 300%, 200%;
+     background-position: 0% calc(var(--posy) * 1), var(--posx) var(--posy);
+     filter: brightness(calc((var(--hyp)*0.06) + 0.6)) contrast(3.0) saturate(1.1);
+}
+ .card-wrapper.active .card-shine:before, .card-shine:hover {
+     opacity: var(--s);
+}
+ .card-shine:after {
+     --space: 5%;
+     --angle: -22deg;
+     --imgsize: 200% 400%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     content: "";
+     opacity: 1;
+     background-image: radial-gradient( farthest-corner ellipse at calc( ((var(--mx)) * 0.5) + 25% ) calc( ((var(--my)) * 0.5) + 25% ), rgb(255, 255, 255) 5%, rgba(55, 0, 55, .6) 25%, rgb(55, 55, 55) 90% );
+     background-position: center;
+     background-size: 100% 100%;
+     filter: brightness(calc((var(--hyp)*0.2) + 0.4)) contrast(.85) saturate(1.1);
+     mix-blend-mode: exclusion;
+}
+ .card-glare {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     clip-path: inset(2.8% 4% round 2.55% / 1.5%);
+     -webkit-clip-path: url(#star-clip-path);
+     clip-path: url(#star-clip-path);
+     -o-object-fit: cover;
+     object-fit: cover;
+     content: "";
+     mix-blend-mode: color-burn;
+     opacity: var(--o);
+     opacity: 0;
+     transform: translateZ(1px);
+     z-index: 11;
+     background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.8) 75%);
+}
+ .card-glare:hover {
+     opacity: 1 
+}
+/* END NEEDED CARD STYLES */
