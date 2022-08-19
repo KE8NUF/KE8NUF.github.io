@@ -466,7 +466,7 @@
 			var $cards = $('.card-wrapper');
 			var $cardsClass = $('.card-wrapper, .card-shine, .card-glare');
 			//var $style = $('.styles');
-			$cards.bind('mousemove touchmove touchme touchstart drag', function(e) {
+			$cards.bind('mousemove touchmove touchme touchstart drag dragEnter dragOver', function(e) {
 				// needed variables
 				//--mx: ${a.x}%;
 				//--my: ${a.y}%;
@@ -506,7 +506,7 @@
 				$cardsClass.addClass('active');
 				//$style.html(style);
 				$('.card-wrapper').attr('style', '--mx:' + xPercent + '%; --my:' + yPercent + '%; --posx:' + posy + 'px; --posy:' + posx + 'px; --tx:' + posx + 'px; --ty:' + posy + 'px; --rx:' + tiltX + 'deg; --ry:' + tiltY + 'deg; --pos:' + xPercent + '% ' +  yPercent + '%; --hyp:' + hyp + ';');
-			}).on('mouseleave touchend', function() {
+			}).on('mouseleave touchend dragLeave', function() {
 				$cardsClass.removeClass('active');
 			});
 			
@@ -516,7 +516,7 @@
 				perspective: 500,
 			});
 			
-			$('.card-front').bind('drag', function() {
+			$('.card-front').bind('drag dragEnter dragOver', function() {
 				$('.card-front').tilt({
 					max: 30,
 					speed: 400,
