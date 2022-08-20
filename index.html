@@ -760,17 +760,31 @@
 								}
 								console.log(frameCode);
 								
-								$(window).on('load resize orientationchange', function () {
+								$(window).on('load resize', function () {
+									window.addEventListener("orientationchange", function() {
+										if($(window).width() <= 592) {
+											var iframe = document.getElementById('frame-badge');
+											var styleAdd = document.createElement('style');
+											styleAdd.textContent =
+											  '@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+											  '.card-front img {' +
+											  'max-height: 283px;' +
+											  '}' +
+											  '}' 
+											;
+											iframe.contentDocument.head.appendChild(styleAdd);
+										}
+									}, false);
 									if($(window).width() <= 592) {
 										var iframe = document.getElementById('frame-badge');
 										var styleAdd = document.createElement('style');
 										styleAdd.textContent =
-										  '@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
-										  '.card-front img {' +
-										  'max-height: 283px;' +
-										  '}' +
-										  '}' 
-										;
+											'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+											'.card-front img {' +
+											'max-height: 283px;' +
+											'}' +
+											'}' 
+											;
 										iframe.contentDocument.head.appendChild(styleAdd);
 									}
 								});
