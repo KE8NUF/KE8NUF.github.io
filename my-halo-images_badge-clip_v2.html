@@ -122,7 +122,7 @@
 				filter: brightness(calc((var(--hyp)*0.06) + 0.6)) contrast(3.0) saturate(1.1);
 			}
 			
-			.card-wrapper.active .card-shine:before,
+			.card-wrapper.active,
 			.card-shine:hover,
 			.hoverontouch--aktiv .card-shine {
 				opacity: var(--s);
@@ -167,6 +167,7 @@
 			}
 			
 			.card-glare:hover,
+			.card-glare.active,
 			.hoverontouch--aktiv .card-glare {
 				opacity: 1
 			}
@@ -177,8 +178,8 @@
 
 	<body>
 	
-		<div id="foil-card" class="card-wrapper hoverontouch" onclick="void(0)">
-			<div class="card-front">
+		<div id="foil-card" class="card-wrapper">
+			<div id="front-of-card" class="card-front">
 				<img src="./images/badge-shaped-color-sample_marc.png" alt="Card Front Image" />
 				<div class="card-shine"></div>
 				<div class="card-glare"></div>
@@ -467,14 +468,7 @@
 			var $cardsClass = $('.card-wrapper, .card-shine, .card-glare');
 			
 			//var $style = $('.styles');
-			$cards.bind('mousemove touchmove touchme touchstart drag dragEnter dragOver', function(e) {
-				$cards.addEventListener("touchstart", dragStart, false);
-				$cards.addEventListener("touchend", dragEnd, false);
-				$cards.addEventListener("touchmove", drag, false);
-
-				$cards.addEventListener("mousedown", dragStart, false);
-				$cards.addEventListener("mouseup", dragEnd, false);
-				$cards.addEventListener("mousemove", drag, false);
+			$cards.on('mousemove touchmove touchme touchstart drag click', function(e) {
 				// needed variables
 				//--mx: ${a.x}%;
 				//--my: ${a.y}%;
@@ -524,14 +518,6 @@
 				perspective: 500,
 			});
 			
-			$('.card-front').bind('drag dragEnter dragOver', function() {
-				$('.card-front').tilt({
-					max: 30,
-					speed: 400,
-					perspective: 500,
-				});
-			});
-			
 			if ('ontouchstart' in document.documentElement) {
 			  document.documentElement.className += ' touch';
 			  console.log('   supports touch');
@@ -548,6 +534,55 @@
 
 				console.log("X: "+dragX+" Y: "+dragY);
 			}, false);
+			
+			function simulateTouchEvents(oo,bIgnoreChilds) {
+				if( !$(oo)[0] ) { 
+					return false; 
+				}
+
+				if( !window.__touchTypes ) {
+					window.__touchTypes  = {touchstart:'mousedown',touchmove:'mousemove',touchend:'mouseup'};
+					window.__touchInputs = {INPUT:1,TEXTAREA:1,SELECT:1,OPTION:1,'input':1,'textarea':1,'select':1,'option':1};
+				}
+
+				$(oo).bind('touchstart touchmove touchend', function(ev) {
+					var bSame = (ev.target == this);
+					
+					if( bIgnoreChilds && !bSame ) { 
+						return;
+					}
+
+					var b = (!bSame && ev.target.__ajqmeclk), // Get if object is already tested or input type
+						e = ev.originalEvent;
+					
+					if( b === true || !e.touches || e.touches.length > 1 || !window.__touchTypes[e.type]  ) {
+						return;
+					} //allow multi-touch gestures to work
+
+					var oEv = ( !bSame && typeof b != 'boolean')?$(ev.target).data('events'):false,
+						b = (!bSame)?(ev.target.__ajqmeclk = oEv?(oEv['click'] || oEv['mousedown'] || oEv['mouseup'] || oEv['mousemove']):false ):false;
+
+					if( b || window.__touchInputs[ev.target.tagName] ) { 
+						return;
+					} //allow default clicks to work (and on inputs)
+
+					// https://developer.mozilla.org/en/DOM/event.initMouseEvent for API
+					var touch = e.changedTouches[0], newEvent = document.createEvent("MouseEvent");
+					newEvent.initMouseEvent(window.__touchTypes[e.type], true, true, window, 1,
+						touch.screenX, touch.screenY,
+						touch.clientX, touch.clientY, false, false, false, false, 0, null);
+
+					touch.target.dispatchEvent(newEvent);
+					e.preventDefault();
+					ev.stopImmediatePropagation();
+					ev.stopPropagation();
+					ev.preventDefault();
+				});
+				return true;
+			}
+			
+			simulateTouchEvents('.card-wrapper');
+			//simulateTouchEvents('.card-wrapper', true); // ignore events on childs
 		</script>
 	</body>
 </html>
