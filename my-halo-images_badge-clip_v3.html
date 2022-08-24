@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+		<style>
+			/* START DEFINED ROOT STYLES */
+			:root {
+			--mx: 50%;
+			--my: 50%;
+			--s: 1;
+			--o: 0;
+			--tx: 0px;
+			--ty: 0px;
+			--rx: 0deg;
+			--ry: 0deg;
+			--pos: 50% 50%;
+			--posx: 50%;
+			--posy: 50%;
+			--hyp: 0;
+			}
+			/* END DEFINED ROOT STYLES */
+			
+			html, body {
+				height: 100vh;
+			}
+			
+			html {
+				box-sizing: border-box;
+			}
+			
+			body {
+				/* background: #393c42; */
+			}
+
+			*, *::after, *::before {
+				box-sizing: inherit;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			/* START NEEDED CARD STYLES */
+			.card-wrapper {
+				--radius: 4.55% / 3.5%;
+				/* z-index: calc(var(--s) * 100); */
+				transform: translateZ(.1px);
+				will-change: transform,visibility;
+				transform-style: preserve-3d;
+				position: relative;
+				display: inline-block;
+				display: table;
+				margin: 20px auto;
+			}
+			
+			.card-wrapper:hover {
+				cursor: pointer;
+			}
+			
+			.card-front {
+				opacity: 1;
+				transition: opacity .2s ease-out;
+				position: relative;
+			}
+			
+			.card-front img {
+				height: 100%;
+				max-height: 450px;
+				/* max-height: 283px; */
+				margin: 0px;
+				padding: 0px;
+				border: 0px solid transparent;
+				position: relative;
+				z-index: 1;
+			}
+			
+			.card-shine {
+				opacity: 1;
+				--red: #f80e7b;
+				--yel: #eedf10;
+				--gre: #21e985;
+				--blu: #0dbde9;
+				--vio: #c929f1;
+				--grain: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCI+CjxmaWx0ZXIgaWQ9Im4iPgo8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjciIG51bU9jdGF2ZXM9IjEwIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIj48L2ZlVHVyYnVsZW5jZT4KPC9maWx0ZXI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjMDAwIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWx0ZXI9InVybCgjbikiIG9wYWNpdHk9IjAuMyI+PC9yZWN0Pgo8L3N2Zz4=");
+				--h: 21;
+				--s: 70%;
+				--l: 50%;
+				--bars: 24px;
+				--bar-color: rgba(255, 255, 255, 0.6);
+				--bar-bg: rgb(10, 10, 10);
+			}
+			
+			.card-shine {
+				--space: 5%;
+				--angle: -22deg;
+				--imgsize: 200% 400%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: "";
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				overflow: hidden;
+				transform: translateZ(1px);
+				z-index: 10;
+
+				clip-path: inset(2.8% 4% round 2.55% / 1.5%);
+				-webkit-clip-path: url(#star-clip-path);
+				clip-path: url(#star-clip-path);
+				-o-object-fit: cover;
+				   object-fit: cover;
+				mix-blend-mode: color-dodge;
+
+				background-image: repeating-linear-gradient( var(--angle), rgba(174, 102, 202, 0.75) calc(var(--space)*1), rgba(228, 77, 72, 0.75) calc(var(--space)*2), rgba(216, 197, 55, 0.75) calc(var(--space)*3), rgba(124, 201, 62, 0.75) calc(var(--space)*4), rgba(80, 177, 170, 0.75) calc(var(--space)*5), rgba(136, 160, 255, 0.75) calc(var(--space)*6), rgba(176, 105, 204, 0.75) calc(var(--space)*7) );
+				background-blend-mode: overlay;
+				background-size: var(--imgsize), 300%, 200%;
+				background-position: 0% calc(var(--posy) * 1), var(--posx) var(--posy);
+				filter: brightness(calc((var(--hyp)*0.06) + 0.6)) contrast(3.0) saturate(1.1);
+			}
+			
+			.card-wrapper.active,
+			.card-shine:hover,
+			.hoverontouch--aktiv .card-shine {
+				opacity: var(--s);
+			}
+			
+			.card-shine:after {
+				--space: 5%;
+				--angle: -22deg;
+				--imgsize: 200% 400%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				content: "";
+				opacity: 1;
+				background-image: radial-gradient( farthest-corner ellipse at calc( ((var(--mx)) * 0.5) + 25% ) calc( ((var(--my)) * 0.5) + 25% ), rgb(255, 255, 255) 5%, rgba(55, 0, 55, .6) 25%, rgb(55, 55, 55) 90% );
+				background-position: center;
+				background-size: 100% 100%;
+				filter: brightness(calc((var(--hyp)*0.2) + 0.4)) contrast(.85) saturate(1.1);
+				mix-blend-mode: hard-light;
+			}
+			
+			.card-glare {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				clip-path: inset(2.8% 4% round 2.55% / 1.5%);
+				-webkit-clip-path: url(#star-clip-path);
+				clip-path: url(#star-clip-path);
+				-o-object-fit: cover;
+				   object-fit: cover;
+				content: "";
+				mix-blend-mode: color-burn;
+				opacity: var(--o);
+				opacity: 0;
+				transform: translateZ(1px);
+				z-index: 11;
+				background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.6) 10%,rgba(255,255,255,.6) 10%,rgba(0,0,0,0.45) 70%)
+			}
+			
+			.card-glare:hover,
+			.card-glare.active,
+			.hoverontouch--aktiv .card-glare {
+				opacity: 1
+			}
+			/* END NEEDED CARD STYLES */
+		</style>
+		
+	</head>
+
+	<body>
+	
+		<div id="foil-card" class="card-wrapper">
+			<div id="front-of-card" class="card-front">
+				<img src="./images/MARC-Badge-Design_v4.png" alt="Card Front Image" />
+				<div class="card-shine"></div>
+				<div class="card-glare"></div>
+			</div>
+		</div>
+		
+		<div class="styles"></div>
+		
+		<svg width="100%" height="100%" preserveAspectRatio="none" viewbox="0 0 400 400">
+			<defs>
+				<clippath id="star-clip-path" clipPathUnits="objectBoundingBox" transform="scale(0.000834,0.0008339)">
+					<path fill-rule="evenodd" clip-rule="evenodd" stroke="#000000" stroke-width="2" d="M1099.068,316.838
+						c-0.017-1.891-0.066-3.782-0.117-5.674c-0.06-2.241-0.116-4.357-0.116-6.467v-13.701l-12.991,4.353
+						c-10.2,3.418-21.794,5.967-35.443,7.792c-12.488,1.67-24.339,2.094-35.287,1.265c-3.122-0.236-6.148-0.588-9.091-1.036
+						c-2.914-14.423-8.506-27.911-18.935-34.252c0,0,16.627-11.209,55.549-6.925c0,0-21.494-46.754-91.039-67.664
+						c0.738-4.771,1.619-9.58,2.645-14.408c0.669-3.152,1.347-6.042,2.075-8.837l0.028-0.109c1.737-6.627-1.999-10.435-4.378-12.112
+						c-0.874-0.617-1.689-1.111-2.409-1.546l-0.266-0.162c-1.313-0.797-2.656-1.719-4.08-2.694c-0.889-0.608-1.776-1.216-2.672-1.807
+						c-2.712-1.79-5.437-3.565-8.17-5.322c-1.225-0.787-2.471-1.568-3.705-2.352v-7.924c0,0,1.008-14.613-25.695-21.161
+						c-9.439-2.315-25.627-8.031-51.054-14.497c-18.188-9.231-37.087-18.139-56.391-26.551c-23.483-10.232-47.915-19.905-72.617-28.752
+						c-24.858-8.902-49.937-16.959-74.537-23.95c-13.71-3.895-26.149-7.162-38.031-9.986c-3.534-0.84-6.64-1.548-9.489-2.163
+						c-0.96-0.207-1.953-0.313-2.951-0.313c-1.916,0-3.474,0.38-4.504,0.632l-0.454,0.108c-1.64,0.364-3.277,0.74-4.913,1.12
+						c-5.867,1.365-12.084,2.904-19.007,4.705c-24.13,6.275-49.375,13.844-75.034,22.495c-24.71,8.331-49.285,17.522-73.042,27.318
+						c-24.31,10.022-48.092,20.818-70.685,32.086c-7.191,3.586-14.297,7.251-21.323,10.97c-10.211,3.035-17.777,5.457-23.154,6.776
+						c-24.991,6.127-25.711,19.317-25.701,20.984c-10.233,6.248-20.321,12.688-30.009,19.189l-0.825,0.562
+						c-0.542,0.37-1.053,0.72-1.462,0.96l-0.211,0.119c-0.972,0.542-2.781,1.55-4.365,3.458c-1.128,1.367-3.504,5.078-1.635,10.469
+						c0.147,0.573,0.289,1.147,0.428,1.719c0.379,1.561,0.74,3.128,1.087,4.696c1.321,5.972,2.447,12.135,3.347,18.316
+						c0.105,0.723,0.194,1.425,0.292,2.14c-59.713,22.361-78.612,63.485-78.612,63.485c38.922-4.284,55.548,6.925,55.548,6.925
+						c-9.691,5.894-15.205,17.96-18.274,31.213c-1.716,0.512-3.465,0.999-5.282,1.432c-10.116,2.413-21.135,3.379-33.734,2.968
+						c-11.582-0.382-23.644-1.899-35.85-4.509c-5.247-1.122-12.104-2.689-18.622-4.873l-12.504-4.19l-0.481,13.178
+						c-0.506,13.856-0.306,27.785-0.079,39.753c0.245,12.824,0.715,26.126,1.398,39.537c1.325,26.044,3.445,52.505,6.302,78.647
+						c2.882,26.368,6.542,52.618,10.879,78.021c4.484,26.264,9.78,52.133,15.741,76.89c6.219,25.833,13.314,51.077,21.089,75.032
+						c8.316,25.62,17.504,50.092,27.311,72.736c8.949,20.665,19.494,42.871,33.186,69.882c12.677,25.013,24.779,47.335,37,68.242
+						c1.524,2.608,3.038,5.166,4.544,7.693l-26.041,23.379c0,0,23.521,11.258,55.323,22.327c2.754,3.961,5.499,7.813,8.241,11.559
+						c8.451,11.544,16.396,21.457,24.287,30.307c7.901,8.857,17.528,19.004,29.028,27.098c1.575,1.109,2.934,2.003,4.268,2.809
+						l0.124,0.078c2.793,1.782,5.372,3.258,8.639,3.258c2.782,0,5.461-1.148,7.351-3.151c1.326-1.405,1.998-2.87,2.336-3.645
+						c0.246-0.427,0.495-0.853,0.748-1.272c0.674-1.122,1.388-2.235,2.122-3.314c2.868-4.217,6.158-8.084,9.776-11.491
+						c6.846-6.443,14.539-10.122,21.661-10.357c0.246-0.008,0.493-0.012,0.738-0.012c7.236,0,15.311,3.554,22.154,9.752
+						c2.959,2.679,4.992,5.578,5.88,8.383c1.107,3.499,0.36,7.04-0.462,9.396c-1.598,4.579-4.728,9.247-9.849,14.689
+						c-5.412,5.75-10.987,10.444-16.57,13.954l-9.865,6.199l7.747,8.702c8.755,9.836,18.726,18.629,28.196,26.665
+						c9.522,8.081,19.731,16.024,30.342,23.61c20.563,14.701,42.58,28.037,65.44,39.638c10.633,5.396,21.601,10.486,32.596,15.128
+						c5.526,2.334,11.191,4.608,16.834,6.758c2.907,1.108,5.885,2.212,8.853,3.279c1.5,0.54,3.002,1.073,4.506,1.599l0.456,0.166
+						c0.394,0.146,0.881,0.325,1.444,0.504c0.989,0.495,2.787,1.271,5.12,1.271c0.027,0,0.054,0,0.082,0
+						c0.087,0.002,0.174,0.003,0.261,0.003c2.358,0,4.204-0.779,5.36-1.383c0.144-0.044,0.288-0.091,0.432-0.141
+						c1.596-0.553,3.19-1.115,4.779-1.684c2.973-1.063,6.035-2.191,9.104-3.354c6.122-2.323,12.271-4.792,18.272-7.338
+						c11.827-5.016,23.624-10.553,35.062-16.458c22.823-11.784,44.749-25.28,65.168-40.112c10-7.263,19.626-14.839,28.613-22.52
+						c9.067-7.751,18.611-16.222,26.98-25.636l7.65-8.605l-9.681-6.234c-4.227-2.722-8.459-6.067-12.576-9.939
+						c-4.101-3.858-7.142-7.24-9.57-10.644c-3.016-4.224-7.544-12.377-3.993-19.523c1.424-2.865,3.889-5.64,7.534-8.48
+						c3.656-2.848,7.563-4.961,11.61-6.282c4.24-1.383,8.623-1.71,12.755-0.95c3.973,0.732,8.022,2.521,12.034,5.317
+						c3.644,2.541,7.233,5.866,10.671,9.885c1.605,1.876,3.146,3.887,4.579,5.974l0.598,0.866c1.041,1.502,2.117,3.056,2.592,4.199
+						c2.009,4.831,6.256,6.553,9.561,6.554c0,0,0,0,0.001,0c1.484,0,2.955-0.321,4.401-0.966c0.996-0.448,1.887-0.925,2.465-1.241
+						c1.486-0.813,2.999-1.746,4.772-2.941c2.604-1.762,5.229-3.741,8.029-6.055c4.626-3.825,9.295-8.171,14.274-13.284
+						c15.521-15.938,28.756-33.463,39.454-48.842c34.348-11.598,60.404-24.07,60.404-24.07l-28.573-25.651
+						c5.438-9.181,10.947-18.815,16.578-29.005c11.841-21.427,23.529-44.022,35.732-69.078c13.266-27.238,23.254-49.693,31.434-70.667
+						c9.113-23.371,17.533-48.182,25.024-73.742c7.128-24.323,13.578-49.872,19.17-75.936c5.37-25.02,10.076-51.089,13.986-77.483
+						c3.796-25.642,6.901-51.98,9.23-78.284c2.347-26.518,3.913-52.979,4.656-78.651c0.255-8.837,0.408-17.555,0.455-25.907
+						C1099.112,325.303,1099.106,320.96,1099.068,316.838z"/>
+				</clippath>
+			</defs>
+		</svg>
+		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+		<script src="./js/jquery.touch.min.js"></script>
+		<script src="./js/get-rotate-angle.js"></script>
+		<script src="./js/tilt.jquery.js"></script>
+		<script src="./js/hoverontouch.js"></script>
+		
+		<script>
+			var $cards = $('.card-wrapper');
+			var $cardsClass = $('.card-wrapper, .card-shine, .card-glare');
+			
+			//var $style = $('.styles');
+			$cards.on('mousemove touchmove touchme touchstart drag click', function(e) {
+				// needed variables
+				//--mx: ${a.x}%;
+				//--my: ${a.y}%;
+				//--tx: ${N.x}px;
+				//--ty: ${N.y}px;
+				//--rx: ${y.x+n.x}deg;
+				//--ry: ${y.y+n.y}deg;
+				//--pos: ${c.x}% ${c.y}%;
+				//--posx: ${c.x}%;
+				//--posy: ${c.y}%;
+				//--hyp: ${Math.sqrt((a.y-50)*(a.y-50)+(a.x-50)*(a.x-50))/50};
+				var $card = $(this);
+				var l = e.offsetX;
+				var t = e.offsetY;
+				var h = $card.height();
+				var w = $card.width();
+				var lp = Math.abs(Math.floor(100 / w * l)-100);
+				var tp = Math.abs(Math.floor(100 / h * t)-100);
+				
+				// pointer position in px
+				var posx = e.clientX;
+				var posy = e.clientY;
+				// pointer position in percent
+				// Do math
+				var xPercent = parseInt(e.pageX / window.innerWidth * 100);
+				var yPercent = parseInt(e.pageY / window.innerHeight * 100);
+				//var tiltAngle = Math.atan2(e.clientX - (this.left + this.width / 2), -(e.clientY - (this.top + this.height / 2))) * (180 / Math.PI);
+				var mAngle = getcsstransform($(this));
+				var tiltX = mAngle.rotateX;
+				var tiltY = mAngle.rotateY;
+				// get hype
+				var hyp = Math.sqrt( (posy-50)*(posy-50) + (posx-50) * (posx-50) ) /50;
+				
+				//var bg = `background-position: ${lp}% ${tp}%;`
+				//var style = `.card.active:before { ${bg} }`
+				$cardsClass.removeClass('active');
+				$cardsClass.addClass('active');
+				//$style.html(style);
+				$('.card-wrapper').attr('style', '--mx:' + xPercent + '%; --my:' + yPercent + '%; --posx:' + posy + 'px; --posy:' + posx + 'px; --tx:' + posx + 'px; --ty:' + posy + 'px; --rx:' + tiltX + 'deg; --ry:' + tiltY + 'deg; --pos:' + xPercent + '% ' +  yPercent + '%; --hyp:' + hyp + ';');
+			}).on('mouseleave touchend dragLeave', function() {
+				$cardsClass.removeClass('active');
+			});
+			
+			$('.card-front').tilt({
+				max: 30,
+				speed: 400,
+				perspective: 500,
+			});
+			
+			if ('ontouchstart' in document.documentElement) {
+			  document.documentElement.className += ' touch';
+			  console.log('   supports touch');
+			} else {
+			  console.log('   does NOT support touch');
+			}
+			$('.touch .card-wrapper').each(function() {
+			  $('*').not(this).on('mouseover', function() {});
+			});
+			
+			document.addEventListener('dragover', function(e){
+				e = e || window.event;
+				var dragX = e.pageX, dragY = e.pageY;
+
+				console.log("X: "+dragX+" Y: "+dragY);
+			}, false);
+			
+			function simulateTouchEvents(oo,bIgnoreChilds) {
+				if( !$(oo)[0] ) { 
+					return false; 
+				}
+
+				if( !window.__touchTypes ) {
+					window.__touchTypes  = {touchstart:'mousedown',touchmove:'mousemove',touchend:'mouseup'};
+					window.__touchInputs = {INPUT:1,TEXTAREA:1,SELECT:1,OPTION:1,'input':1,'textarea':1,'select':1,'option':1};
+				}
+
+				$(oo).bind('touchstart touchmove touchend', function(ev) {
+					var bSame = (ev.target == this);
+					
+					if( bIgnoreChilds && !bSame ) { 
+						return;
+					}
+
+					var b = (!bSame && ev.target.__ajqmeclk), // Get if object is already tested or input type
+						e = ev.originalEvent;
+					
+					if( b === true || !e.touches || e.touches.length > 1 || !window.__touchTypes[e.type]  ) {
+						return;
+					} //allow multi-touch gestures to work
+
+					var oEv = ( !bSame && typeof b != 'boolean')?$(ev.target).data('events'):false,
+						b = (!bSame)?(ev.target.__ajqmeclk = oEv?(oEv['click'] || oEv['mousedown'] || oEv['mouseup'] || oEv['mousemove']):false ):false;
+
+					if( b || window.__touchInputs[ev.target.tagName] ) { 
+						return;
+					} //allow default clicks to work (and on inputs)
+
+					// https://developer.mozilla.org/en/DOM/event.initMouseEvent for API
+					var touch = e.changedTouches[0], newEvent = document.createEvent("MouseEvent");
+					newEvent.initMouseEvent(window.__touchTypes[e.type], true, true, window, 1,
+						touch.screenX, touch.screenY,
+						touch.clientX, touch.clientY, false, false, false, false, 0, null);
+
+					touch.target.dispatchEvent(newEvent);
+					e.preventDefault();
+					ev.stopImmediatePropagation();
+					ev.stopPropagation();
+					ev.preventDefault();
+				});
+				return true;
+			}
+			
+			simulateTouchEvents('.card-wrapper');
+			//simulateTouchEvents('.card-wrapper', true); // ignore events on childs
+		</script>
+	</body>
+</html>
