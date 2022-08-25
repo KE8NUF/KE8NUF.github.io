@@ -118,7 +118,7 @@
 				background-image: repeating-linear-gradient( var(--angle), rgba(174, 102, 202, 0.75) calc(var(--space)*1), rgba(228, 77, 72, 0.75) calc(var(--space)*2), rgba(216, 197, 55, 0.75) calc(var(--space)*3), rgba(124, 201, 62, 0.75) calc(var(--space)*4), rgba(80, 177, 170, 0.75) calc(var(--space)*5), rgba(136, 160, 255, 0.75) calc(var(--space)*6), rgba(176, 105, 204, 0.75) calc(var(--space)*7) );
 				background-blend-mode: color-dodge;
 				background-size: var(--imgsize), 300%, 200%;
-				background-position: 0% calc(var(--posy) * 1), var(--posx) var(--posy);
+				background-position: 0% calc(var(--hyp) * 1), var(--posx) var(--posy);
 				/* filter: brightness(calc((var(--hyp)*0.3) + 0.6)) contrast(2.3) saturate(1.1); */
 			}
 			
@@ -139,7 +139,7 @@
 				height: 100%;
 				content: "";
 				opacity: 1;
-				background-image: radial-gradient( farthest-corner ellipse at calc( ((var(--mx)) * 0.5) + 25% ) calc( ((var(--my)) * 0.5) + 25% ), rgb(255, 255, 255) 5%, rgba(55, 0, 55, .6) 25%, rgb(55, 55, 55) 90% );
+				background-image: radial-gradient( farthest-corner circle at var(--mx) var(--my), rgb(255, 255, 255) 5%, rgba(55, 0, 55, .6) 25%, rgb(55, 55, 55) 90% );
 				background-position: center;
 				background-size: 200% 200%;
 				/* filter: brightness(calc((var(--hyp)*0.2) + 0.4)) contrast(.85) saturate(1.1); */
@@ -168,14 +168,14 @@
 				opacity: var(--o);
 				opacity: 0;
 				transform: translateZ(1px);
-				z-index: 10;
+				z-index: 11;
 				background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 			}
 			
 			.card-glare:hover,
 			.card-glare.active,
 			.hoverontouch--aktiv .card-glare {
-				opacity: calc(var(--s)*.15);
+				opacity: calc(var(--s)*.75);
 			}
 			/* END NEEDED CARD STYLES */
 		</style>
@@ -187,8 +187,8 @@
 		<div id="foil-card" class="card-wrapper">
 			<div id="front-of-card" class="card-front">
 				<img src="./images/MARC-Badge-Design_v4.png" alt="Card Front Image" />
-				<div class="card-glare"></div>
 				<div class="card-shine"></div>
+				<div class="card-glare"></div>
 			</div>
 		</div>
 		
