@@ -258,7 +258,6 @@
 			var $cards = $('.card-wrapper');
 			var $cardsClass = $('.card-wrapper, .card-shine, .card-glare');
 			
-			//var $style = $('.styles');
 			$cards.on('mousemove touchmove touchme touchstart drag click', function(e) {
 				// needed variables
 				//--mx: ${a.x}%;
@@ -271,6 +270,7 @@
 				//--posx: ${c.x}%;
 				//--posy: ${c.y}%;
 				//--hyp: ${Math.sqrt((a.y-50)*(a.y-50)+(a.x-50)*(a.x-50))/50};
+				//--angle: set to for background compared to element
 				var $card = $(this);
 				var l = e.offsetX;
 				var t = e.offsetY;
@@ -278,7 +278,6 @@
 				var w = $card.width();
 				var lp = Math.abs(Math.floor(100 / w * l)-100);
 				var tp = Math.abs(Math.floor(100 / h * t)-100);
-				
 				// pointer position in px
 				var posx = e.clientX;
 				var posy = e.clientY;
@@ -290,7 +289,14 @@
 				var mAngle = getcsstransform($(this));
 				var tiltX = mAngle.rotateX;
 				var tiltY = mAngle.rotateY;
-				// get hype
+				//get angle for element variable
+				var width = $(this).outerWidth();
+				var height = $(this).outerHeight();
+				var left = $(this).offset().left;
+				var top = $(this).offset().top;
+				var objAngle = Math.atan2(e.pageX - (left+width/2),- (e.pageY - (top+height/2)) )*(180/Math.PI);
+				// console.log(objAngle);
+				// get hype for high point variable
 				var hyp = Math.sqrt( (posy-50)*(posy-50) + (posx-50) * (posx-50) ) /50;
 				
 				//var bg = `background-position: ${lp}% ${tp}%;`
@@ -298,17 +304,17 @@
 				$cardsClass.removeClass('active');
 				$cardsClass.addClass('active');
 				//$style.html(style);
-				$('.card-wrapper').attr('style', '--mx:' + xPercent + '%; --my:' + yPercent + '%; --posx:' + posy + 'px; --posy:' + posx + 'px; --tx:' + posx + 'px; --ty:' + posy + 'px; --rx:' + tiltX + 'deg; --ry:' + tiltY + 'deg; --pos:' + xPercent + '% ' +  yPercent + '%; --hyp:' + hyp + ';');
+				$('.card-wrapper').attr('style', '--mx:' + xPercent + '%; --my:' + yPercent + '%; --posx:' + posy + 'px; --posy:' + posx + 'px; --tx:' + posx + 'px; --ty:' + posy + 'px; --rx:' + tiltX + 'deg; --ry:' + tiltY + 'deg; --pos:' + xPercent + '% ' +  yPercent + '%; --hyp:' + hyp + '; --angle:' + objAngle + 'deg;');
 			}).on('mouseleave touchend dragLeave', function() {
 				$cardsClass.removeClass('active');
 			});
-			
+			//set the tilt perspective for our cards
 			$('.card-front').tilt({
 				max: 30,
 				speed: 400,
-				perspective: 500,
+				perspective: 600,
 			});
-			
+			//see if element supports touch for mobile and return true if does.
 			if ('ontouchstart' in document.documentElement) {
 			  document.documentElement.className += ' touch';
 			  console.log('   supports touch');
@@ -318,14 +324,20 @@
 			$('.touch .card-wrapper').each(function() {
 			  $('*').not(this).on('mouseover', function() {});
 			});
-			
+			// drag function monitor.
 			document.addEventListener('dragover', function(e){
 				e = e || window.event;
 				var dragX = e.pageX, dragY = e.pageY;
 
 				console.log("X: "+dragX+" Y: "+dragY);
 			}, false);
+			//function to get css transform and set angle.
 			
+			//$('#front-of-card').on('mousemove touchmove touchstart drag click', function() {
+				//getRotationDegrees('#front-of-card');
+			//});
+			
+			//function to take mobile and instead of taps and clicks make act like mouseover hover.
 			function simulateTouchEvents(oo,bIgnoreChilds) {
 				if( !$(oo)[0] ) { 
 					return false; 
@@ -371,7 +383,6 @@
 				});
 				return true;
 			}
-			
 			simulateTouchEvents('.card-wrapper');
 			//simulateTouchEvents('.card-wrapper', true); // ignore events on childs
 		</script>
