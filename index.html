@@ -793,7 +793,7 @@
 									} else if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 										iPadOrientation();
 										window.onorientationchange = iPadOrientation;
-										function iPadOrientation (e) {
+										function iPadOrientation () {
 											if($(window).width() <= 592) {
 												//code to execute
 												var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
@@ -821,7 +821,7 @@
 											//$("#resp-frame-container").html($("#resp-frame-container").html());
 											console.log('frame has been refreshed');
 											console.log(orient);
-											e.stopPropagation();
+											$(this).stopPropagation();
 										}
 									}
 									//$(window).trigger('orientationchange');
