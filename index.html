@@ -761,7 +761,7 @@
 								console.log(frameCode);
 								
 								$(window).on('load resize', function () {
-									window.addEventListener("orientationchange", function() {
+									window.addEventListener('orientationchange', function() {
 										if($(window).width() <= 592) {
 											var iframe = document.getElementById('frame-badge');
 											var styleAdd = document.createElement('style');
@@ -789,7 +789,7 @@
 									}
 								});
 								//orientation detection
-								window.addEventListener("detectOrientation", function() {
+								window.addEventListener('detectOrientation resize', function() {
 									if( orientation == 0 ) {
 										console.log('Portrait Mode, Home Button Bottom');
 									} else if( orientation == 90 ) {
