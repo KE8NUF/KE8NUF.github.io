@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+
+		<meta charset="UTF-8">
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+		<style>
+			/* START DEFINED ROOT STYLES */
+			:root {
+			--mx: 50%;
+			--my: 50%;
+			--s: 1;
+			--o: 0;
+			--tx: 0px;
+			--ty: 0px;
+			--rx: 0deg;
+			--ry: 0deg;
+			--pos: 50% 50%;
+			--posx: 50%;
+			--posy: 50%;
+			--hyp: 0;
+			}
+			/* END DEFINED ROOT STYLES */
+			
+			html, body {
+				height: 100vh;
+			}
+			
+			html {
+				box-sizing: border-box;
+			}
+			
+			body {
+				/* background: #393c42; */
+			}
+
+			*, *::after, *::before {
+				box-sizing: inherit;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			/* START NEEDED CARD STYLES */
+			.card-wrapper {
+				--radius: 4.55% / 3.5%;
+				/* z-index: calc(var(--s) * 100); */
+				transform: translateZ(.1px);
+				will-change: transform,visibility;
+				transform-style: preserve-3d;
+				position: relative;
+				display: inline-block;
+				display: table;
+				margin: 20px auto;
+			}
+			
+			.card-wrapper:hover {
+				cursor: pointer;
+			}
+			
+			.card-front {
+				opacity: 1;
+				transition: opacity .2s ease-out;
+				position: relative;
+			}
+			
+			.card-front img {
+				height: 100%;
+				max-height: 450px;
+				/* max-height: 283px; */
+				margin: 0px;
+				padding: 0px;
+				border: 0px solid transparent;
+				position: relative;
+				z-index: 1;
+			}
+			
+			.card-shine {
+				opacity: 1;
+				--red: #f80e7b;
+				--yel: #eedf10;
+				--gre: #21e985;
+				--blu: #0dbde9;
+				--vio: #c929f1;
+				--grain: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCI+CjxmaWx0ZXIgaWQ9Im4iPgo8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjciIG51bU9jdGF2ZXM9IjEwIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIj48L2ZlVHVyYnVsZW5jZT4KPC9maWx0ZXI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjMDAwIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWx0ZXI9InVybCgjbikiIG9wYWNpdHk9IjAuMyI+PC9yZWN0Pgo8L3N2Zz4=");
+				--h: 21;
+				--s: 70%;
+				--l: 50%;
+				--bars: 24px;
+				--bar-color: rgba(255, 255, 255, 0.6);
+				--bar-bg: rgb(10, 10, 10);
+				
+				mix-blend-mode: color-dodge; /* original */
+				mix-blend-mode: multiply;
+			}
+			
+			.card-shine {
+				--space: 6%;
+				--angle: 133deg;
+				--imgsize: 60% 30%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: "";
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				overflow: hidden;
+				transform: translateZ(1px);
+				z-index: 10;
+
+				clip-path: inset(2.8% 4% round 2.55% / 1.5%); /* original square card clip path */
+				-webkit-clip-path: url(#star-clip-path);
+				clip-path: url(#star-clip-path);
+				-o-object-fit: cover;
+				   object-fit: cover;
+				
+				background-image: url("./images/vmaxbg.webp"), 
+					repeating-linear-gradient(-33deg, rgba(169,176,184)calc(var(--space)*1), rgba(158,171,178) calc(var(--space)*2), rgba(215,219,222) calc(var(--space)*3), rgba(230,230,230) calc(var(--space)*4), rgba(206,210,213) calc(var(--space)*5), rgba(158,171,178) calc(var(--space)*6), rgba(208,213,219) calc(var(--space)*7), rgba(130,140,150) calc(var(--space)*8)),
+					repeating-linear-gradient(var(--angle), rgba(68,54,44,1) 0%, rgba(233,242,255,1) 17%, rgba(247,247,247,1) 37%, rgba(131,126,124,1) 57%, rgba(233,242,255,1) 85%, rgba(97,89,83,1) 100%),
+					radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
+				background-blend-mode: luminosity, color-dodge, color-dodge, overlay;
+				background-size: var(--imgsize), 1100% 1100%, 600% 600%, 200% 200%;
+				background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
+				filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+			}
+			
+			.card-shine:hover {
+				opacity: calc(var(--hyp)*.019);
+				/* opacity: calc(var(--hyp)*.66); */
+			}
+			
+			.card-shine:after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				content: "";
+				opacity: 1;
+				
+				background-image: url("./images/vmaxbg.webp"), 
+					repeating-linear-gradient(-33deg, rgba(169,176,184)calc(var(--space)*1), rgba(158,171,178) calc(var(--space)*2), rgba(215,219,222) calc(var(--space)*3), rgba(230,230,230) calc(var(--space)*4), rgba(206,210,213) calc(var(--space)*5), rgba(158,171,178) calc(var(--space)*6), rgba(208,213,219) calc(var(--space)*7), rgba(130,140,150) calc(var(--space)*8)),
+					repeating-linear-gradient(var(--angle), rgba(68,54,44,1) 0%, rgba(233,242,255,1) 17%, rgba(247,247,247,1) 37%, rgba(131,126,124,1) 57%, rgba(233,242,255,1) 85%, rgba(97,89,83,1) 100%),
+					radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
+				background-blend-mode: luminosity, color-burn, color-burn, overlay;
+				background-size: var(--imgsize), 1100% 1100%, 600% 600%, 200% 200%;
+				background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
+				filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+				mix-blend-mode: multiply;
+			}
+			
+			.card-glare {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				clip-path: inset(2.8% 4% round 2.55% / 1.5%);
+				-webkit-clip-path: url(#star-clip-path);
+				clip-path: url(#star-clip-path);
+				-o-object-fit: cover;
+				   object-fit: cover;
+				content: "";
+				mix-blend-mode: overlay; /* original */
+				mix-blend-mode: overlay;
+				opacity: var(--o);
+				opacity: 0;
+				transform: translateZ(1px);
+				z-index: 11;
+				z-index: 10;
+				background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
+				background-blend-mode: color-burn;
+			}
+			
+			.card-glare:hover,
+			.card-glare.active,
+			.hoverontouch--aktiv .card-glare {
+				opacity: calc(var(--hyp)*.66);
+			}
+			/* END NEEDED CARD STYLES */
+		</style>
+		
+	</head>
+
+	<body>
+	
+		<div id="foil-card" class="card-wrapper">
+			<div id="front-of-card" class="card-front">
+				<img src="./images/MARC-Badge-Design_v4_metal.png" alt="Card Front Image" />
+				<div class="card-glare"></div>
+				<div class="card-shine"></div>
+			</div>
+		</div>
+		
+		<div class="styles"></div>
+		
+		<svg width="100%" height="100%" preserveAspectRatio="none" viewbox="0 0 400 400">
+			<defs>
+				<clippath id="star-clip-path" clipPathUnits="objectBoundingBox" transform="scale(0.000835,0.000829)">
+					<path fill-rule="evenodd" clip-rule="evenodd" stroke="#000000" stroke-width="1.9389" d="M1083.818,326.767
+					c-0.015-1.833-0.063-3.667-0.113-5.5c-0.058-2.172-0.112-4.224-0.112-6.27v-13.283l-12.594,4.22
+					c-9.889,3.313-21.129,5.785-34.361,7.555c-12.106,1.619-23.595,2.03-34.209,1.227c-3.026-0.229-5.96-0.57-8.813-1.004
+					c-2.825-13.982-8.246-27.059-18.356-33.207c0,0,16.118-10.867,53.853-6.713c0,0-20.839-45.326-88.259-65.598
+					c0.716-4.625,1.569-9.287,2.563-13.968c0.648-3.056,1.306-5.857,2.013-8.568l0.026-0.105c1.685-6.424-1.938-10.116-4.244-11.742
+					c-0.847-0.599-1.638-1.077-2.336-1.5l-0.257-0.157c-1.272-0.772-2.575-1.666-3.956-2.611c-0.861-0.59-1.722-1.179-2.59-1.752
+					c-2.629-1.735-5.271-3.456-7.921-5.16c-1.187-0.763-2.395-1.52-3.592-2.28v-7.682c0,0,0.978-14.167-24.91-20.514
+					c-9.15-2.244-24.844-7.785-49.494-14.054c-17.631-8.949-35.954-17.585-54.668-25.74c-22.767-9.919-46.452-19.297-70.399-27.874
+					c-24.099-8.63-48.411-16.441-72.26-23.219c-13.291-3.775-25.351-6.942-36.87-9.681c-3.426-0.814-6.437-1.501-9.199-2.097
+					c-0.931-0.201-1.893-0.303-2.861-0.303c-1.856,0-3.367,0.368-4.366,0.612l-0.44,0.105c-1.589,0.353-3.177,0.717-4.763,1.086
+					c-5.688,1.324-11.715,2.815-18.426,4.561c-23.393,6.083-47.867,13.421-72.743,21.808c-23.955,8.077-47.779,16.987-70.811,26.483
+					c-23.567,9.716-46.623,20.183-68.526,31.106c-6.971,3.477-13.86,7.03-20.671,10.635c-9.899,2.942-17.234,5.291-22.446,6.569
+					c-24.227,5.94-24.925,18.728-24.916,20.344c-9.92,6.057-19.7,12.301-29.093,18.603l-0.8,0.544c-0.525,0.359-1.021,0.698-1.417,0.931
+					l-0.205,0.116c-0.942,0.524-2.697,1.502-4.232,3.353c-1.094,1.325-3.397,4.923-1.585,10.149c0.143,0.556,0.28,1.112,0.415,1.667
+					c0.368,1.514,0.717,3.033,1.054,4.553c1.281,5.79,2.373,11.764,3.245,17.756c0.102,0.702,0.188,1.382,0.283,2.076
+					c-57.889,21.678-76.211,61.545-76.211,61.545c37.733-4.154,53.852,6.713,53.852,6.713c-9.396,5.714-14.74,17.412-17.716,30.26
+					c-1.664,0.496-3.359,0.968-5.121,1.388c-9.807,2.339-20.49,3.276-32.704,2.878c-11.228-0.371-22.921-1.842-34.754-4.372
+					c-5.086-1.087-11.735-2.607-18.053-4.725l-12.122-4.062l-0.467,12.776c-0.49,13.433-0.296,26.936-0.076,38.539
+					c0.237,12.432,0.694,25.328,1.356,38.329c1.284,25.249,3.34,50.901,6.11,76.245c2.793,25.562,6.342,51.011,10.547,75.637
+					c4.347,25.461,9.481,50.541,15.26,74.541c6.029,25.044,12.908,49.517,20.445,72.741c8.062,24.837,16.969,48.561,26.477,70.514
+					c8.675,20.034,18.898,41.562,32.172,67.747c12.29,24.249,24.022,45.89,35.869,66.158c1.478,2.528,2.945,5.009,4.406,7.458
+					l-25.246,22.665c0,0,22.802,10.914,53.633,21.646c2.669,3.84,5.331,7.574,7.989,11.205c8.193,11.191,15.895,20.802,23.545,29.381
+					c7.66,8.587,16.993,18.423,28.141,26.271c1.527,1.075,2.844,1.941,4.137,2.722l0.12,0.076c2.708,1.728,5.208,3.158,8.375,3.158
+					c2.696,0,5.294-1.113,7.126-3.055c1.285-1.363,1.936-2.782,2.265-3.533c0.238-0.414,0.479-0.826,0.725-1.234
+					c0.654-1.087,1.345-2.166,2.057-3.213c2.78-4.088,5.97-7.837,9.478-11.14c6.636-6.247,14.094-9.813,20.999-10.042
+					c0.239-0.008,0.478-0.011,0.716-0.011c7.015,0,14.843,3.445,21.477,9.454c2.869,2.597,4.84,5.408,5.701,8.127
+					c1.074,3.393,0.35,6.824-0.448,9.109c-1.549,4.439-4.583,8.965-9.548,14.24c-5.246,5.575-10.651,10.125-16.064,13.527l-9.563,6.011
+					l7.51,8.437c8.488,9.535,18.154,18.06,27.335,25.851c9.231,7.834,19.129,15.534,29.415,22.889
+					c19.935,14.253,41.28,27.181,63.442,38.427c10.309,5.231,20.941,10.167,31.6,14.666c5.358,2.263,10.85,4.468,16.32,6.551
+					c2.819,1.075,5.706,2.145,8.583,3.18c1.454,0.524,2.91,1.04,4.368,1.55l0.441,0.161c0.382,0.142,0.854,0.315,1.4,0.488
+					c0.959,0.479,2.702,1.232,4.964,1.232c0.026,0,0.053,0,0.079,0c0.084,0.002,0.169,0.003,0.253,0.003c2.285,0,4.075-0.756,5.196-1.34
+					c0.139-0.043,0.279-0.089,0.419-0.137c1.547-0.536,3.092-1.081,4.633-1.632c2.881-1.03,5.852-2.125,8.826-3.253
+					c5.936-2.252,11.896-4.646,17.715-7.113c11.466-4.862,22.902-10.229,33.99-15.955c22.126-11.424,43.382-24.509,63.177-38.888
+					c9.694-7.04,19.026-14.385,27.74-21.831c8.79-7.515,18.043-15.727,26.156-24.853l7.416-8.343l-9.385-6.044
+					c-4.098-2.639-8.201-5.882-12.191-9.636c-3.976-3.74-6.924-7.019-9.278-10.318c-2.924-4.095-7.313-11.999-3.872-18.928
+					c1.382-2.776,3.771-5.467,7.306-8.221c3.544-2.761,7.331-4.81,11.255-6.09c4.111-1.341,8.359-1.658,12.365-0.922
+					c3.852,0.71,7.777,2.444,11.667,5.154c3.532,2.464,7.012,5.688,10.344,9.583c1.558,1.818,3.051,3.769,4.44,5.791l0.579,0.84
+					c1.01,1.457,2.052,2.963,2.513,4.072c1.947,4.683,6.064,6.353,9.269,6.354c0,0,0,0,0.001,0c1.438,0,2.864-0.312,4.267-0.937
+					c0.966-0.436,1.829-0.896,2.39-1.203c1.44-0.789,2.907-1.693,4.627-2.853c2.524-1.708,5.069-3.627,7.783-5.869
+					c4.485-3.709,9.012-7.922,13.839-12.879c15.047-15.451,27.877-32.44,38.249-47.35c33.298-11.243,58.56-23.335,58.56-23.335
+					l-27.701-24.867c5.273-8.901,10.613-18.241,16.072-28.119c11.479-20.773,22.811-42.679,34.641-66.969
+					c12.86-26.406,22.544-48.175,30.474-68.509c8.835-22.657,16.997-46.709,24.26-71.489c6.91-23.58,13.163-48.349,18.585-73.616
+					c5.205-24.256,9.768-49.528,13.559-75.117c3.68-24.859,6.69-50.393,8.948-75.893c2.275-25.708,3.794-51.361,4.514-76.249
+					c0.247-8.567,0.396-17.019,0.441-25.116C1083.862,334.973,1083.856,330.762,1083.818,326.767z"/>
+				</clippath>
+			</defs>
+		</svg>
+		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+		<script src="./js/jquery.touch.min.js"></script>
+		<script src="./js/get-rotate-angle.js"></script>
+		<script src="./js/tilt.jquery.js"></script>
+		<script src="./js/hoverontouch.js"></script>
+		
+		<script>
+			var $cards = $('.card-wrapper');
+			var $cardsClass = $('.card-wrapper, .card-shine, .card-glare');
+			
+			$cards.on('mousemove touchmove touchme touchstart drag click mouseenter', function(e) {
+				// needed variables
+				//--mx: ${a.x}%;
+				//--my: ${a.y}%;
+				//--tx: ${N.x}px;
+				//--ty: ${N.y}px;
+				//--rx: ${y.x+n.x}deg;
+				//--ry: ${y.y+n.y}deg;
+				//--pos: ${c.x}% ${c.y}%;
+				//--posx: ${c.x}%;
+				//--posy: ${c.y}%;
+				//--hyp: ${Math.sqrt((a.y-50)*(a.y-50)+(a.x-50)*(a.x-50))/50};
+				//--angle: set to for background compared to element
+				var $card = $(this);
+				var l = e.offsetX;
+				var t = e.offsetY;
+				var h = $card.height();
+				var w = $card.width();
+				var lp = Math.abs(Math.floor(100 / w * l)-100);
+				var tp = Math.abs(Math.floor(100 / h * t)-100);
+				// pointer position in px
+				var posx = e.clientX;
+				var posy = e.clientY;
+				// pointer position in percent
+				// Do math
+				var xPercent = parseInt(e.pageX / window.innerWidth * 100);
+				var yPercent = parseInt(e.pageY / window.innerHeight * 100);
+				//var tiltAngle = Math.atan2(e.clientX - (this.left + this.width / 2), -(e.clientY - (this.top + this.height / 2))) * (180 / Math.PI);
+				var mAngle = getcsstransform($(this));
+				var tiltX = mAngle.rotateX;
+				var tiltY = mAngle.rotateY;
+				//get angle for element variable
+				var width = $(this).outerWidth();
+				var height = $(this).outerHeight();
+				var left = $(this).offset().left;
+				var top = $(this).offset().top;
+				var objAngle = Math.atan2(e.pageX - (left+width/2),- (e.pageY - (top+height/2)) )*(180/Math.PI);
+				// console.log(objAngle);
+				// get hype for high point variable
+				var hyp = Math.sqrt( (posy-50)*(posy-50) + (posx-50) * (posx-50) ) /50;
+				
+				//var bg = `background-position: ${lp}% ${tp}%;`
+				//var style = `.card.active:before { ${bg} }`
+				$cardsClass.removeClass('active');
+				$cardsClass.addClass('active');
+				//$style.html(style);
+				$('.card-wrapper').attr('style', '--mx:' + xPercent + '%; --my:' + yPercent + '%; --posx:' + posy + 'px; --posy:' + posx + 'px; --tx:' + posx + 'px; --ty:' + posy + 'px; --rx:' + tiltX + 'deg; --ry:' + tiltY + 'deg; --pos:' + xPercent + '% ' +  yPercent + '%; --hyp:' + hyp + '; --angle:' + objAngle + 'deg;');
+			}).on('mouseleave touchend dragLeave', function() {
+				$cardsClass.removeClass('active');
+			});
+			//set the tilt perspective for our cards
+			$('.card-front').tilt({
+				max: 30,
+				speed: 400,
+				perspective: 600,
+			});
+			//see if element supports touch for mobile and return true if does.
+			if ('ontouchstart' in document.documentElement) {
+			  document.documentElement.className += ' touch';
+			  console.log('   supports touch');
+			} else {
+			  console.log('   does NOT support touch');
+			}
+			$('.touch .card-wrapper').each(function() {
+			  $('*').not(this).on('mouseover', function() {});
+			});
+			// drag function monitor.
+			document.addEventListener('dragover', function(e){
+				e = e || window.event;
+				var dragX = e.pageX, dragY = e.pageY;
+
+				console.log("X: "+dragX+" Y: "+dragY);
+			}, false);
+			//function to get css transform and set angle.
+			
+			//$('#front-of-card').on('mousemove touchmove touchstart drag click', function() {
+				//getRotationDegrees('#front-of-card');
+			//});
+			
+			//function to take mobile and instead of taps and clicks make act like mouseover hover.
+			function simulateTouchEvents(oo,bIgnoreChilds) {
+				if( !$(oo)[0] ) { 
+					return false; 
+				}
+
+				if( !window.__touchTypes ) {
+					window.__touchTypes  = {touchstart:'mousedown',touchmove:'mousemove',touchend:'mouseup'};
+					window.__touchInputs = {INPUT:1,TEXTAREA:1,SELECT:1,OPTION:1,'input':1,'textarea':1,'select':1,'option':1};
+				}
+
+				$(oo).bind('touchstart touchmove touchend', function(ev) {
+					var bSame = (ev.target == this);
+					
+					if( bIgnoreChilds && !bSame ) { 
+						return;
+					}
+
+					var b = (!bSame && ev.target.__ajqmeclk), // Get if object is already tested or input type
+						e = ev.originalEvent;
+					
+					if( b === true || !e.touches || e.touches.length > 1 || !window.__touchTypes[e.type]  ) {
+						return;
+					} //allow multi-touch gestures to work
+
+					var oEv = ( !bSame && typeof b != 'boolean')?$(ev.target).data('events'):false,
+						b = (!bSame)?(ev.target.__ajqmeclk = oEv?(oEv['click'] || oEv['mousedown'] || oEv['mouseup'] || oEv['mousemove']):false ):false;
+
+					if( b || window.__touchInputs[ev.target.tagName] ) { 
+						return;
+					} //allow default clicks to work (and on inputs)
+
+					// https://developer.mozilla.org/en/DOM/event.initMouseEvent for API
+					var touch = e.changedTouches[0], newEvent = document.createEvent("MouseEvent");
+					newEvent.initMouseEvent(window.__touchTypes[e.type], true, true, window, 1,
+						touch.screenX, touch.screenY,
+						touch.clientX, touch.clientY, false, false, false, false, 0, null);
+
+					touch.target.dispatchEvent(newEvent);
+					e.preventDefault();
+					ev.stopImmediatePropagation();
+					ev.stopPropagation();
+					ev.preventDefault();
+				});
+				return true;
+			}
+			simulateTouchEvents('.card-wrapper');
+			//simulateTouchEvents('.card-wrapper', true); // ignore events on childs
+		</script>
+	</body>
+</html>
