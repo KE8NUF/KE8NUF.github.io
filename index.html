@@ -761,21 +761,23 @@
 								console.log(frameCode);
 								
 								$(window).on('load resize', function () {
-									window.addEventListener('orientationchange', function() {
-										if($(window).width() <= 592) {
-											var iframe = document.getElementById('frame-badge');
-											var styleAdd = document.createElement('style');
-											styleAdd.textContent =
-											  '@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
-											  '.card-front img {' +
-											  'max-height: 283px;' +
-											  '}' +
-											  '}' 
-											;
-											iframe.contentDocument.head.appendChild(styleAdd);
-											console.log('orientation change from event listener');
-										}
-									}, false);
+									//START OLD ORENTATION
+									//window.addEventListener('orientationchange', function() {
+										//if($(window).width() <= 592) {
+											//var iframe = document.getElementById('frame-badge');
+											//var styleAdd = document.createElement('style');
+											//styleAdd.textContent =
+											  //'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+											  //'.card-front img {' +
+											  //'max-height: 283px;' +
+											  //'}' +
+											  //'}' 
+											//;
+											//iframe.contentDocument.head.appendChild(styleAdd);
+											//console.log('orientation change from event listener');
+										//}
+									//}, false);
+									//END OLD ORIENTATION
 									if($(window).width() <= 592) {
 										var iframe = document.getElementById('frame-badge');
 										var styleAdd = document.createElement('style');
@@ -789,8 +791,6 @@
 										iframe.contentDocument.head.appendChild(styleAdd);
 										console.log('added iFrame in general run/rules');
 									}
-									$(window).trigger('orientationchange');
-									
 									iPadOrientation();
 									window.onorientationchange = iPadOrientation;
 									function iPadOrientation () {
@@ -814,6 +814,7 @@
 										console.log('frame has been refreshed');
 										console.log(orient);
 									}
+									$(window).trigger('orientationchange');
 								});
 							});
 							</script>
