@@ -790,29 +790,38 @@
 											;
 										iframe.contentDocument.head.appendChild(styleAdd);
 										console.log('added iFrame in general run/rules');
-									}
-									iPadOrientation();
-									window.onorientationchange = iPadOrientation;
-									var iPadOrientation = function () {
-										var orient = Math.abs(window.orientation) === 90 ? 'landscape' : 'portrait';
-										// alert(orient);
-										/*Place your orientation related code here*/
-										if($(window).width() <= 592) {
-											var iframe = document.getElementById('frame-badge');
-											var styleAdd = document.createElement('style');
-											styleAdd.textContent =
-												'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
-												'.card-front img {' +
-												'max-height: 283px;' +
-												'}' +
-												'}' 
-												;
-											iframe.contentDocument.head.appendChild(styleAdd);
-											console.log('orientation change from iPadOrentation function');
+									} else if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+										iPadOrientation();
+										window.onorientationchange = iPadOrientation;
+										function iPadOrientation () {
+											if($(window).width() <= 592) {
+												//code to execute
+												var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+												$('#badge-frame-insert').append(frameCode);
+											} else {
+												var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+												$('#badge-frame-insert').append(frameCode);
+											}
+											var orient = Math.abs(window.orientation) === 90 ? 'landscape' : 'portrait';
+											// alert(orient);
+											/*Place your orientation related code here*/
+											if($(window).width() <= 592) {
+												var iframe = document.getElementById('frame-badge');
+												var styleAdd = document.createElement('style');
+												styleAdd.textContent =
+													'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+													'.card-front img {' +
+													'max-height: 283px;' +
+													'}' +
+													'}' 
+													;
+												iframe.contentDocument.head.appendChild(styleAdd);
+												console.log('orientation change from iPadOrentation function');
+											}
+											//$("#resp-frame-container").html($("#resp-frame-container").html());
+											console.log('frame has been refreshed');
+											console.log(orient);
 										}
-										$("#resp-frame-container").html($("#resp-frame-container").html()).iPadOrientation();
-										console.log('frame has been refreshed');
-										console.log(orient);
 									}
 									//$(window).trigger('orientationchange');
 								});
