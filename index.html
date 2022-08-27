@@ -790,6 +790,14 @@
 										console.log('orientation change general');
 									}
 									$(window).trigger('orientationchange');
+									
+									iPadOrientation();
+									window.onorientationchange = iPadOrientation;
+									function iPadOrientation () {
+										var orient = Math.abs(window.orientation) === 90 ? 'landscape' : 'portrait';
+										alert(orient);
+										/*Place your orientation related code here*/
+									}
 								});
 							});
 							</script>
