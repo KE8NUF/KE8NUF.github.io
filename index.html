@@ -773,7 +773,7 @@
 											  '}' 
 											;
 											iframe.contentDocument.head.appendChild(styleAdd);
-											console.log('orientation change from function');
+											console.log('orientation change from event listener');
 										}
 									}, false);
 									if($(window).width() <= 592) {
@@ -787,7 +787,7 @@
 											'}' 
 											;
 										iframe.contentDocument.head.appendChild(styleAdd);
-										console.log('orientation change general');
+										console.log('added iFrame in general run/rules');
 									}
 									$(window).trigger('orientationchange');
 									
@@ -795,8 +795,21 @@
 									window.onorientationchange = iPadOrientation;
 									function iPadOrientation () {
 										var orient = Math.abs(window.orientation) === 90 ? 'landscape' : 'portrait';
-										alert(orient);
+										// alert(orient);
 										/*Place your orientation related code here*/
+										if($(window).width() <= 592) {
+											var iframe = document.getElementById('frame-badge');
+											var styleAdd = document.createElement('style');
+											styleAdd.textContent =
+												'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+												'.card-front img {' +
+												'max-height: 283px;' +
+												'}' +
+												'}' 
+												;
+											iframe.contentDocument.head.appendChild(styleAdd);
+											console.log('orientation change from iPadOrentation function');
+										}
 									}
 								});
 							});
