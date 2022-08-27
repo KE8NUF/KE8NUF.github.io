@@ -789,7 +789,7 @@
 									}
 								});
 								//orientation detection
-								window.addEventListener('detectOrientation load resize', function(orientation) {
+								window.addEventListener('detectOrientation load resize') = function(orientation) {
 									if( orientation == 0 ) {
 										console.log('Portrait Mode, Home Button Bottom');
 									} else if( orientation == 90 ) {
