@@ -752,10 +752,10 @@
 							$(document).ready(function (){
 								if($(window).width() <= 592) {
 									//code to execute
-									var frameCode = '<div class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+									var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 									$('#badge-frame-insert').append(frameCode);
 								} else {
-									var frameCode = '<div class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+									var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 									$('#badge-frame-insert').append(frameCode);
 								}
 								console.log(frameCode);
@@ -810,7 +810,7 @@
 											iframe.contentDocument.head.appendChild(styleAdd);
 											console.log('orientation change from iPadOrentation function');
 										}
-										$("#frame-badge").html($("#frame-badge").html());
+										$("#resp-frame-container").html($("#resp-frame-container").html());
 										console.log('frame has been refreshed');
 										console.log(orient);
 									}
