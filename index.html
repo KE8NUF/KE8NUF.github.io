@@ -806,7 +806,7 @@
 										console.log('added iFrame in general run/rules');
 									} else if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 										$(window).bind("orientationchange",function(){
-											$('#resp-frame-container').remove();
+											$('.resp-container').remove();
 											console.log("The orientation has changed!");
 											if($(window).width() <= 592) {
 												//code to execute
@@ -816,19 +816,22 @@
 												var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 												$('#badge-frame-insert').append(frameCode);
 											}
-											if($(window).width() <= 592) {
-												var iframe = document.getElementById('frame-badge');
-												var styleAdd = document.createElement('style');
-												styleAdd.textContent =
-													'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
-													'.card-front img {' +
-													'max-height: 283px;' +
-													'}' +
-													'}' 
-													;
-												iframe.contentDocument.head.appendChild(styleAdd);
-												console.log('orientation change from iPadOrentation function');
-											}
+											setTimeout(
+											function() {
+												if($(window).width() <= 592) {
+													var iframe = document.getElementById('frame-badge');
+													var styleAdd = document.createElement('style');
+													styleAdd.textContent =
+														'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+														'.card-front img {' +
+														'max-height: 283px;' +
+														'}' +
+														'}' 
+														;
+													iframe.contentDocument.head.appendChild(styleAdd);
+													console.log('orientation change from iPadOrentation function');
+												}
+											}, 2000);
 										 }); 
 									}
 									//$(window).trigger('orientationchange');
