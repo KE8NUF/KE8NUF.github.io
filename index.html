@@ -788,6 +788,18 @@
 										iframe.contentDocument.head.appendChild(styleAdd);
 									}
 								});
+								//orientation detection
+								window.addEventListener("detectOrientation", function() {
+									if( orientation == 0 ) {
+										console.log('Portrait Mode, Home Button Bottom');
+									} else if( orientation == 90 ) {
+										console.log('Landscape Mode, Home Button Right');
+									} else if( orientation == -90 ) {
+										console.log('Landcape Mode, Home Button Left');
+									} else if( orientation == 180 ) {
+										console.log('Portrait Mode, Home Button Top');
+									}
+								}, false);
 							});
 							</script>
 							
