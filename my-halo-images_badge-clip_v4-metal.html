@@ -93,7 +93,7 @@
 				--bar-bg: rgb(10, 10, 10);
 				
 				mix-blend-mode: color-dodge; /* original */
-				mix-blend-mode: multiply;
+				mix-blend-mode: overlay;
 			}
 			
 			.card-shine {
@@ -117,22 +117,20 @@
 				-o-object-fit: cover;
 				   object-fit: cover;
 				
-				background-image: url("./images/vmaxbg.webp"), 
-					repeating-linear-gradient(-33deg, rgba(169,176,184)calc(var(--space)*1), rgba(158,171,178) calc(var(--space)*2), rgba(215,219,222) calc(var(--space)*3), rgba(230,230,230) calc(var(--space)*4), rgba(206,210,213) calc(var(--space)*5), rgba(158,171,178) calc(var(--space)*6), rgba(208,213,219) calc(var(--space)*7), rgba(130,140,150) calc(var(--space)*8)),
-					repeating-linear-gradient(var(--angle), rgba(68,54,44,1) 0%, rgba(233,242,255,1) 17%, rgba(247,247,247,1) 37%, rgba(131,126,124,1) 57%, rgba(233,242,255,1) 85%, rgba(97,89,83,1) 100%),
-					radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
-				background-blend-mode: luminosity, color-dodge, color-dodge, overlay;
+				background-image: url("./images/vmaxbg.webp"), repeating-linear-gradient( -33deg, rgb(206, 42, 36) calc(var(--space)*1), rgb(157, 170, 223) calc(var(--space)*2), rgb(45, 153, 146) calc(var(--space)*3), rgb(29, 151, 36) calc(var(--space)*4), rgb(181, 64, 228) calc(var(--space)*5), rgb(206, 42, 36) calc(var(--space)*6) ), repeating-linear-gradient( var(--angle), rgba(14, 21, 46, 0.5) 0%, hsl(180, 10%, 50%) 2.5%, hsl(83, 50%, 35%) 5%, hsl(180, 10%, 50%) 7.5%, rgba(14, 21, 46, 0.5) 10% , rgba(14, 21, 46, 0.5) 15% ), radial-gradient( farthest-corner circle at var(--mx) var(--my), rgba(6, 218, 255, 0.6) 0%, rgba(38, 235, 127, 0.6) 25%, rgba(155, 78, 228, 0.6) 50%, rgba(228, 78, 90, 0.6) 75% );
+				background-blend-mode: multiply, hue, hue;
 				background-size: var(--imgsize), 1100% 1100%, 600% 600%, 200% 200%;
 				background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
-				filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+				filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(.6);
 			}
 			
 			.card-shine:hover {
 				opacity: calc(var(--hyp)*.019);
+				opacity: calc(var(--hyp)*.03);
 				/* opacity: calc(var(--hyp)*.66); */
 			}
 			
-			.card-shine:after {
+			.card-glare:after {
 				position: absolute;
 				top: 0;
 				left: 0;
