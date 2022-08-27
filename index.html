@@ -793,7 +793,7 @@
 									}
 									iPadOrientation();
 									window.onorientationchange = iPadOrientation;
-									function iPadOrientation () {
+									var iPadOrientation = function () {
 										var orient = Math.abs(window.orientation) === 90 ? 'landscape' : 'portrait';
 										// alert(orient);
 										/*Place your orientation related code here*/
@@ -810,7 +810,7 @@
 											iframe.contentDocument.head.appendChild(styleAdd);
 											console.log('orientation change from iPadOrentation function');
 										}
-										$("#resp-frame-container").html($("#resp-frame-container").html()).window.onorientationchange;
+										$("#resp-frame-container").html($("#resp-frame-container").html()).iPadOrientation();
 										console.log('frame has been refreshed');
 										console.log(orient);
 									}
