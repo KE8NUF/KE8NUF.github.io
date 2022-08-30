@@ -196,7 +196,9 @@
 				}
 				
 				.card-shine {
-					background-position: cover, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
+					background-image: repeating-linear-gradient( var(--angle), rgb(42, 208, 202) 0%, rgb(225, 246, 100) 17%, rgb(254, 176, 254) 31%, rgb(171, 179, 252) 59%, rgb(93, 247, 164) 82%, rgb(88, 196, 246) 100%), repeating-linear-gradient( var(--angle), rgb(255, 255, 255) 0%, rgb(0, 0, 0) 17%, rgb(255, 255, 255) 31%, rgb(0, 0, 0) 59%, rgb(255, 255, 255) 82%, rgb(0, 0, 0) 100% );
+					background-blend-mode: multiply, color-dodge;
+					background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
 				}
 			}
 			/* END NEEDED CARD STYLES */
