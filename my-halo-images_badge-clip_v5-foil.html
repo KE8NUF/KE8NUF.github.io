@@ -186,6 +186,15 @@
 			.hoverontouch--aktiv .card-glare {
 				opacity: calc(var(--hyp)*.66);
 			}
+			
+			@media only screen and (max-width : 592px), /* 592px */
+			only screen and (max-device-width : 592px) {
+			
+				.card-shine,
+				.card-glare:after {
+					background-repeat: no-repeat;
+				}
+			}
 			/* END NEEDED CARD STYLES */
 		</style>
 		
