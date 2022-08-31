@@ -282,10 +282,94 @@
 		<script src="./js/hoverontouch.js"></script>
 		
 		<script>
+			var cardAnimationSampleRun;
+			//right shift sample animation
+			var shiftRight = function shiftRight() {
+				$('card-wrapper').attr('style', '');
+				$('.card-wrapper, .card-glare, .card-shine').addClass('active');
+				$('.card-glare, .card-shine').addClass('sampleshow');
+				$('.card-wrapper').attr('style', '--mx: 70%; --my: 46%; --posx: 308px; --posy: 493px; --tx: 493px; --ty: 308px; --rx: 0deg; --ry: 0deg; --pos: 70% 46%;  --hyp: 10.253058080397281; --angle: 112.0083895313392deg;');
+				$('.card-front').attr('style', 'will-change: transform; transform: perspective(800px) rotateX(0.52deg) rotateY(-6.96deg) scale3d(1, 1, 1);');
+				$('.card-shine').attr('style', 'opacity: calc(var(--hyp)*.06);');
+				$('.chard-glare').attr('style', 'opacity: calc(var(--hyp)*.66);');
+				//clearInterval(setNormal);
+				//setTimeout(shiftLeft, 2000);
+				//console.log('Shift Sample Right');
+			}
+			//left shift sample animation
+			var shiftLeft = function shiftLeft() {
+				$('card-wrapper').attr('style', '');
+				$('.card-wrapper').attr('style', '--mx: 57%; --my: 10%; --posx: 68px; --posy: 401px; --tx: 401px; --ty: 68px; --rx: 0deg; --ry: 0deg; --pos: 57% 10%; --hyp: 7.029224708315988; --angle: 18.21861989109755deg;');
+				$('.card-front').attr('style', 'will-change: transform; transform: persepctive(800px) rotateX(-7.51deg) rotateY(-2.84deg) scale3d(1, 1, 1);');
+				//console.log('Shift Sample Left');
+			}
+			//set shift back to normal
+			var shiftNormal = function shiftNormal() {
+				$('.card-wrapper').attr('style', ' ');
+				$('.card-front').attr('style', 'will-change: transform; transform: perspective(800px), rotateX(0deg), rotateY(0deg);');
+				$('.card-shine').attr('style', ' ');
+				$('.chard-glare').attr('style', ' ');
+				$('.card-wrapper, .card-glare, .card-shine').removeClass('active');
+				//console.log('Shift Sample Set Normal');
+			}
+			//shake function
+			var shakeImage = function shakeImage() {
+				var shakeTimeValue = 80;
+				$('.card-wrapper').attr('style', 'will-change: transform; transform: translate3d(-2px, 0, 0);');
+				setTimeout(function() {
+					$('.card-wrapper').attr('style', 'will-change: transform; transform: translate3d(4px, 0, 0);');
+					setTimeout(function() {
+						$('.card-wrapper').attr('style', 'will-change: transform; transform: translate3d(-6px, 0, 0);');
+						setTimeout(function() {
+							$('.card-wrapper').attr('style', 'will-change: transform; transform: translate3d(6px, 0, 0);');
+						}, shakeTimeValue);
+						setTimeout(function() {
+							$('.card-wrapper').attr('style', 'will-change: transform; transform: translate3d(0, 0, 0);');
+						}, shakeTimeValue);
+					}, shakeTimeValue);
+				}, shakeTimeValue);
+			}
+			//function for sample move
+			function cardAnimationSample() {
+				//check if element is active
+				if( $('.card-wrapper').not('.active') ) {
+					if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+						//$('.card-glare').css('z-index', '12');
+						console.log('mobile device detected')
+					}
+					var rightTimeShift = 600;
+					var leftTimeShift = 600;
+					var normalTimeShift = 600;
+					var shakeTime = 2000;
+					//shake
+					setTimeout(function() {
+						//shift right
+						setTimeout(function() {
+							//shift left
+							setTimeout(function(){
+								//return to normal
+								setTimeout(function() {
+									shiftNormal();
+								}, normalTimeShift);
+								//end return to normal
+								shiftLeft();
+								//end shift left
+							}, leftTimeShift);
+							shiftRight();
+							//end shift right
+						}, rightTimeShift);
+						shakeImage();
+						//end shake
+					}, shakeTime);
+				//end if
+				}
+			}
+			var cardAnimationSampleRun = setInterval(cardAnimationSample, 8000);
+			//start cards needed animations
 			var $cards = $('.card-wrapper');
 			var $cardsClass = $('.card-wrapper, .card-shine, .card-glare');
 			
-			$cards.on('mousemove touchmove touchme touchstart drag mouseenter hover', function(e) {
+			$cards.bind('mousemove touchmove touchme touchstart drag mouseenter', function(e) {
 				// needed variables
 				//--mx: ${a.x}%;
 				//--my: ${a.y}%;
@@ -332,9 +416,10 @@
 				$cardsClass.addClass('active');
 				//$style.html(style);
 				$('.card-wrapper').attr('style', '--mx:' + xPercent + '%; --my:' + yPercent + '%; --posx:' + posy + 'px; --posy:' + posx + 'px; --tx:' + posx + 'px; --ty:' + posy + 'px; --rx:' + tiltX + 'deg; --ry:' + tiltY + 'deg; --pos:' + xPercent + '% ' +  yPercent + '%; --hyp:' + hyp + '; --angle:' + objAngle + 'deg;');
-				clearInterval(cardAnimationSample);
-			}).on('mouseleave touchend dragLeave', function() {
+				clearInterval(cardAnimationSampleRun);
+			}).bind('mouseleave touchend dragLeave', function() {
 				$cardsClass.removeClass('active');
+				var cardAnimationSampleRun = setInterval(cardAnimationSample, 8000);
 			});
 			//set the tilt perspective for our cards
 			$('.card-front').tilt({
@@ -413,8 +498,6 @@
 			}
 			simulateTouchEvents('.card-wrapper');
 			//simulateTouchEvents('.card-wrapper', true); // ignore events on childs
-			//function for sample move
-			
 		</script>
 	</body>
 </html>
