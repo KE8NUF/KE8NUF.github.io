@@ -52,7 +52,7 @@
 				transform-style: preserve-3d;
 				position: relative;
 				display: inline-block;
-				/* display: table; */
+				display: table;
 				margin: 20px auto;
 			}
 			
@@ -131,6 +131,7 @@
 				filter: brightness(calc((var(--hyp)*0.8) + 0.5)) contrast(0.8) saturate(1.0);
 			}
 			
+			.card-shine.active,
 			.card-shine:hover {
 				opacity: calc(var(--hyp)*.019);
 				opacity: calc(var(--hyp)*.06);
@@ -331,6 +332,7 @@
 				$cardsClass.addClass('active');
 				//$style.html(style);
 				$('.card-wrapper').attr('style', '--mx:' + xPercent + '%; --my:' + yPercent + '%; --posx:' + posy + 'px; --posy:' + posx + 'px; --tx:' + posx + 'px; --ty:' + posy + 'px; --rx:' + tiltX + 'deg; --ry:' + tiltY + 'deg; --pos:' + xPercent + '% ' +  yPercent + '%; --hyp:' + hyp + '; --angle:' + objAngle + 'deg;');
+				clearInterval(cardAnimationSample);
 			}).on('mouseleave touchend dragLeave', function() {
 				$cardsClass.removeClass('active');
 			});
@@ -411,6 +413,8 @@
 			}
 			simulateTouchEvents('.card-wrapper');
 			//simulateTouchEvents('.card-wrapper', true); // ignore events on childs
+			//function for sample move
+			
 		</script>
 	</body>
 </html>
