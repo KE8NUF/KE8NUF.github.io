@@ -602,23 +602,47 @@
 			} else {
 				function cardAnimationSample() {
 					//if( $('.card-wrapper').not('.active') ) {
-					if(!$('.card-wrapper').hasClass("active")) {
+					$animationWrapper = $('.card-wrapper');
+					if(!$($animationWrapper).hasClass("active")) {
 						setTimeout(function() {
-							$('.card-wrapper').toggleClass('shake');
+							$animationWrapper.toggleClass('shake');
 							setTimeout(function() {
-								$('.card-wrapper').toggleClass('cardInactiveSample');
+								$animationWrapper.toggleClass('cardInactiveSample');
 								$('.card-glare').toggleClass('active');
 								$('.card-shine').toggleClass('active');
 							}, 400);
 						}, 1000);
 					} else {
-						$('.card-wrapper').removeClass('shake');
-						$('.card-wrapper').removeClass('cardInactiveSample');
+						$animationWrapper.removeClass('shake');
+						$animationWrapper.removeClass('cardInactiveSample');
 						$('.card-glare').removeClass('active');
 						$('.card-shine').removeClass('active');
 					}
+					$animationWrapper.on('mousemove touchmove touchstart drag mouseenter hover', function(e) {
+						clearTimeout(cardAnimationSample);
+						clearInterval(cardAnimationSampleRun);
+					}).on('mouseleave touchend dragLeave', function() {
+						if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+						//done run on mobile
+						} else {
+							//var cardAnimationSampleRun = setInterval(cardAnimationSample, 19000);
+							setTimeout(function() {
+								clearTimeout(cardAnimationSample);
+								clearInterval(cardAnimationSampleRun);
+								var cardAnimationSampleRun = setTimeout(cardAnimationSample, 12000);
+							}, 12000);
+						}
+					});
+					console.log('ran animation');
+					clearTimeout(cardAnimationSample);
+					clearInterval(cardAnimationSampleRun);
+					var cardAnimationSampleRun = setTimeout(cardAnimationSample, 12000);
+					//var cardAnimationSampleRun = setTimeout(cardAnimationSample, 12000);
 				}
-				var cardAnimationSampleRun = setInterval(cardAnimationSample, 10000);
+				setTimeout(function() {
+					cardAnimationSample();
+				}, 12000);
+				//var cardAnimationSampleRun = setInterval(cardAnimationSample, 10000);
 			}
 			//start cards needed animations
 			var $cards = $('.card-wrapper');
@@ -667,7 +691,9 @@
 				
 				//var bg = `background-position: ${lp}% ${tp}%;`
 				//var style = `.card.active:before { ${bg} }`
-				clearInterval(cardAnimationSampleRun);
+				//clearTimeout(cardAnimationSample);
+				//clearTimeout(cardAnimationSampleRun);
+				//clearInterval(cardAnimationSampleRun);
 				$('.card-wrapper').removeClass('shake');
 				$cardsClass.removeClass('active');
 				$('.card-wrapper').removeClass('cardInactiveSample');
@@ -684,7 +710,6 @@
 				if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 				//done run on mobile
 				} else {
-					var cardAnimationSampleRun = setInterval(cardAnimationSample, 19000);
 				}
 			});
 			//set the tilt perspective for our cards
