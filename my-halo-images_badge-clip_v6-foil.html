@@ -211,37 +211,18 @@
 			.cardInactiveSample .card-glare {
 				animation: delay-animation 7s linear 1, inactiveCardWrapperGlare 8s linear 1;
 				will-change: contents;
+				transition: all;
 			}
 			
 			.cardInactiveSample .card-glare:after {
-				background-image: url("./images/patterns/abstract-pattern-hex.jpg"), 
-					repeating-linear-gradient(-33deg, rgba(169,176,184)calc(var(--space)*1), rgba(158,171,178) calc(var(--space)*2), rgba(215,219,222) calc(var(--space)*3), rgba(230,230,230) calc(var(--space)*4), rgba(206,210,213) calc(var(--space)*5), rgba(158,171,178) calc(var(--space)*6), rgba(208,213,219) calc(var(--space)*7), rgba(130,140,150) calc(var(--space)*8)),
-					repeating-linear-gradient(var(--angle), rgba(68,54,44,1) 0%, rgba(233,242,255,1) 17%, rgba(247,247,247,1) 37%, rgba(131,126,124,1) 57%, rgba(233,242,255,1) 85%, rgba(97,89,83,1) 100%),
-					radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
-				background-blend-mode: luminosity, color-burn, color-burn, overlay;
-				background-size: var(--imgsize), 1100% 1100%, 600% 600%, 200% 200%;
-				background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
-				-webkit-filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
-				filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+				animation: delay-animation 7s linear 1, inactiveCardWrapperGlareAfter 8s ease-in-out 1;
+				will-change: contents;
 			}
 			
 			@keyframes inactiveCardWrapperShine {
 				0% {
-					--mx: 50%;
-					--my: 50%;
-					--s: 1;
-					--o: 0;
-					--tx: 0px;
-					--ty: 0px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 50% 50%;
-					--posx: 50%;
-					--posy: 50%;
-					--hyp: 0;
-					--space: 6%;
-					--angle: 133deg;
-					--imgsize: 40% 40%;
+					--mx: 50%; --my: 50%; --s: 1; --o: 0; --tx: 0px; --ty: 0px; --rx: 0deg; --ry: 0deg;
+					--pos: 50% 50%; --posx: 50%; --posy: 50%; --hyp: 0; --space: 6%; --angle: 133deg; --imgsize: 40% 40%;
 					opacity: calc(var(--hyp)*.06);
 					background-image: url("./images/patterns/abstract-pattern-hex.jpg"), repeating-linear-gradient( var(--angle), rgb(42, 208, 202) 0%, rgb(225, 246, 100) 17%, rgb(254, 176, 254) 31%, rgb(171, 179, 252) 59%, rgb(93, 247, 164) 82%, rgb(88, 196, 246) 100%), repeating-linear-gradient( var(--angle), rgb(255, 255, 255) 0%, rgb(0, 0, 0) 17%, rgb(255, 255, 255) 31%, rgb(0, 0, 0) 59%, rgb(255, 255, 255) 82%, rgb(0, 0, 0) 100% );
 					background-position: center center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
@@ -250,19 +231,8 @@
 				}
 				20% {
 					/* rotate down */
-					--mx: 48%;
-					--my: 66%;
-					--posx: 442px;
-					--posy: 357px;
-					--tx: 357px;
-					--ty: 442px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 48% 66%;
-					--hyp: 9.958172523108846;
-					--angle: 133deg;
-					--space: 6%;
-					--imgsize: 40% 40%;
+					--mx: 48%; --my: 66%; --posx: 442px; --posy: 357px; --tx: 357px; --ty: 442px; --rx: 0deg; --ry: 0deg;
+					--pos: 48% 66%; --hyp: 9.958172523108846; --angle: 133deg; --space: 6%; --imgsize: 40% 40%;
 					opacity: calc(var(--hyp)*.06);
 					background-image: url("./images/patterns/abstract-pattern-hex.jpg"), repeating-linear-gradient( var(--angle), rgb(42, 208, 202) 0%, rgb(225, 246, 100) 17%, rgb(254, 176, 254) 31%, rgb(171, 179, 252) 59%, rgb(93, 247, 164) 82%, rgb(88, 196, 246) 100%), repeating-linear-gradient( var(--angle), rgb(255, 255, 255) 0%, rgb(0, 0, 0) 17%, rgb(255, 255, 255) 31%, rgb(0, 0, 0) 59%, rgb(255, 255, 255) 82%, rgb(0, 0, 0) 100% );
 					background-position: center center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
@@ -271,19 +241,8 @@
 				}
 				40% {
 					/* rotate up */
-					--mx: 49%;
-					--my: 6%;
-					--posx: 40px;
-					--posy: 361px;
-					--tx: 361px;
-					--ty: 40px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 49% 6%;
-					--hyp: 6.223214603402329;
-					--angle: 133deg;
-					--space: 6%;
-					--imgsize: 40% 40%;
+					--mx: 49%; --my: 6%; --posx: 40px; --posy: 361px; --tx: 361px; --ty: 40px; --rx: 0deg; --ry: 0deg;
+					--pos: 49% 6%; --hyp: 6.223214603402329; --angle: 133deg; --space: 6%; --imgsize: 40% 40%;
 					opacity: calc(var(--hyp)*.06);
 					background-image: url("./images/patterns/abstract-pattern-hex.jpg"), repeating-linear-gradient( var(--angle), rgb(42, 208, 202) 0%, rgb(225, 246, 100) 17%, rgb(254, 176, 254) 31%, rgb(171, 179, 252) 59%, rgb(93, 247, 164) 82%, rgb(88, 196, 246) 100%), repeating-linear-gradient( var(--angle), rgb(255, 255, 255) 0%, rgb(0, 0, 0) 17%, rgb(255, 255, 255) 31%, rgb(0, 0, 0) 59%, rgb(255, 255, 255) 82%, rgb(0, 0, 0) 100% );
 					background-position: center center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
@@ -292,19 +251,8 @@
 				}
 				60% {
 					/* rotate left */
-					--mx: 26%;
-					--my: 27%;
-					--posx: 184px;
-					--posy: 192px;
-					--tx: 192px;
-					--ty: 184px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 26% 27%;
-					--hyp: 3.90486875579705;
-					--angle: 133deg;
-					--space: 6%;
-					--imgsize: 40% 40%;
+					--mx: 26%; --my: 27%; --posx: 184px; --posy: 192px; --tx: 192px; --ty: 184px; --rx: 0deg; --ry: 0deg;
+					--pos: 26% 27%; --hyp: 3.90486875579705; --angle: 133deg; --space: 6%; --imgsize: 40% 40%;
 					opacity: calc(var(--hyp)*.06);
 					background-image: url("./images/patterns/abstract-pattern-hex.jpg"), repeating-linear-gradient( var(--angle), rgb(42, 208, 202) 0%, rgb(225, 246, 100) 17%, rgb(254, 176, 254) 31%, rgb(171, 179, 252) 59%, rgb(93, 247, 164) 82%, rgb(88, 196, 246) 100%), repeating-linear-gradient( var(--angle), rgb(255, 255, 255) 0%, rgb(0, 0, 0) 17%, rgb(255, 255, 255) 31%, rgb(0, 0, 0) 59%, rgb(255, 255, 255) 82%, rgb(0, 0, 0) 100% );
 					background-position: center center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
@@ -313,19 +261,8 @@
 				}
 				80% {
 					/* rotate right */
-					--mx: 72%;
-					--my: 34%;
-					--posx: 230px;
-					--posy: 533px;
-					--tx: 533px;
-					--ty: 230px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 72% 34%;
-					--hyp: 10.30900577165422;
-					--angle: 133deg;
-					--space: 6%;
-					--imgsize: 40% 40%;
+					--mx: 72%; --my: 34%; --posx: 230px; --posy: 533px; --tx: 533px; --ty: 230px; --rx: 0deg; --ry: 0deg;
+					--pos: 72% 34%; --hyp: 10.30900577165422; --angle: 133deg; --space: 6%; --imgsize: 40% 40%;
 					opacity: calc(var(--hyp)*.06);
 					background-image: url("./images/patterns/abstract-pattern-hex.jpg"), repeating-linear-gradient( var(--angle), rgb(42, 208, 202) 0%, rgb(225, 246, 100) 17%, rgb(254, 176, 254) 31%, rgb(171, 179, 252) 59%, rgb(93, 247, 164) 82%, rgb(88, 196, 246) 100%), repeating-linear-gradient( var(--angle), rgb(255, 255, 255) 0%, rgb(0, 0, 0) 17%, rgb(255, 255, 255) 31%, rgb(0, 0, 0) 59%, rgb(255, 255, 255) 82%, rgb(0, 0, 0) 100% );
 					background-position: center center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
@@ -333,21 +270,8 @@
 					filter: brightness(calc((var(--hyp)*0.8) + 0.5)) contrast(0.8) saturate(1.0);
 				}
 				100% {
-					--mx: 50%;
-					--my: 50%;
-					--s: 1;
-					--o: 0;
-					--tx: 0px;
-					--ty: 0px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 50% 50%;
-					--posx: 50%;
-					--posy: 50%;
-					--hyp: 0;
-					--space: 6%;
-					--angle: 133deg;
-					--imgsize: 40% 40%;
+					--mx: 50%; --my: 50%; --s: 1; --o: 0; --tx: 0px; --ty: 0px; --rx: 0deg; --ry: 0deg;
+					--pos: 50% 50%; --posx: 50%; --posy: 50%; --hyp: 0; --space: 6%; --angle: 133deg; --imgsize: 40% 40%;
 					opacity: calc(var(--hyp)*.06);
 					background-image: url("./images/patterns/abstract-pattern-hex.jpg"), repeating-linear-gradient( var(--angle), rgb(42, 208, 202) 0%, rgb(225, 246, 100) 17%, rgb(254, 176, 254) 31%, rgb(171, 179, 252) 59%, rgb(93, 247, 164) 82%, rgb(88, 196, 246) 100%), repeating-linear-gradient( var(--angle), rgb(255, 255, 255) 0%, rgb(0, 0, 0) 17%, rgb(255, 255, 255) 31%, rgb(0, 0, 0) 59%, rgb(255, 255, 255) 82%, rgb(0, 0, 0) 100% );
 					background-position: center center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
@@ -358,180 +282,170 @@
 			
 			@keyframes inactiveCardWrapperGlare {
 				0% {
-					--mx: 50%;
-					--my: 50%;
-					--s: 1;
-					--o: 0;
-					--tx: 0px;
-					--ty: 0px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 50% 50%;
-					--posx: 50%;
-					--posy: 50%;
-					--hyp: 0;
+					--mx: 50%; --my: 50%; --s: 1; --o: 0; --tx: 0px; --ty: 0px; 
+					--rx: 0deg; --ry: 0deg; --pos: 50% 50%; --posx: 50%; --posy: 50%; --hyp: 0;
 					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				10% {
 					/* middle */
-					--mx: 49%;
-					--my: 36%;
-					--posx: 244px;
-					--posy: 363px;
-					--tx: 363px;
-					--ty: 244px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 49% 36%;
-					--hyp: 7.3649168359187875;
-					--angle: 48.71533139429036deg;
+					--mx: 49%; --my: 36%; --posx: 244px; --posy: 363px; --tx: 363px; --ty: 244px;
+					--rx: 0deg; --ry: 0deg; --pos: 49% 36%; --hyp: 7.3649168359187875; --angle: 48.71533139429036deg;
 					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				20% {
 					/* rotate down */
-					--mx: 48%;
-					--my: 66%;
-					--posx: 442px;
-					--posy: 357px;
-					--tx: 357px;
-					--ty: 442px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 48% 66%;
-					--hyp: 9.958172523108846;
-					--angle: -179.24099924357898deg;
+					--mx: 48%; --my: 66%; --posx: 442px; --posy: 357px; --tx: 357px; --ty: 442px;
+					--rx: 0deg; --ry: 0deg; --pos: 48% 66%; --hyp: 9.958172523108846; --angle: -179.24099924357898deg;
 					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				30% {
 					/* middle */
-					--mx: 49%;
-					--my: 36%;
-					--posx: 244px;
-					--posy: 363px;
-					--tx: 363px;
-					--ty: 244px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 49% 36%;
-					--hyp: 7.3649168359187875;
-					--angle: 48.71533139429036deg;
+					--mx: 49%; --my: 36%; --posx: 244px; --posy: 363px; --tx: 363px; --ty: 244px;
+					--rx: 0deg; --ry: 0deg; --pos: 49% 36%; --hyp: 7.3649168359187875; --angle: 48.71533139429036deg;
 					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				40% {
 					/* rotate up */
-					--mx: 49%;
-					--my: 6%;
-					--posx: 40px;
-					--posy: 361px;
-					--tx: 361px;
-					--ty: 40px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 49% 6%;
-					--hyp: 6.223214603402329;
-					--angle: 0.39211616022276097deg;
+					--mx: 49%; --my: 6%; --posx: 40px; --posy: 361px; --tx: 361px; --ty: 40px;
+					--rx: 0deg; --ry: 0deg; --pos: 49% 6%; --hyp: 6.223214603402329; --angle: 0.39211616022276097deg;
 					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				50% {
 					/* middle */
-					--mx: 49%;
-					--my: 36%;
-					--posx: 244px;
-					--posy: 363px;
-					--tx: 363px;
-					--ty: 244px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 49% 36%;
-					--hyp: 7.3649168359187875;
-					--angle: 48.71533139429036deg;
+					--mx: 49%; --my: 36%; --posx: 244px; --posy: 363px; --tx: 363px; --ty: 244px;
+					--rx: 0deg; --ry: 0deg; --pos: 49% 36%; --hyp: 7.3649168359187875; --angle: 48.71533139429036deg;
 					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				60% {
 					/* rotate left */
-					--mx: 26%;
-					--my: 27%;
-					--posx: 184px;
-					--posy: 192px;
-					--tx: 192px;
-					--ty: 184px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 26% 27%;
-					--hyp: 3.90486875579705;
-					--angle: -69.39713374013435deg;
+					--mx: 26%; --my: 27%; --posx: 184px; --posy: 192px; --tx: 192px; --ty: 184px;
+					--rx: 0deg; --ry: 0deg; --pos: 26% 27%; --hyp: 3.90486875579705; --angle: -69.39713374013435deg;
 					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				70% {
 					/* middle */
-					--mx: 49%;
-					--my: 36%;
-					--posx: 244px;
-					--posy: 363px;
-					--tx: 363px;
-					--ty: 244px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 49% 36%;
-					--hyp: 7.3649168359187875;
-					--angle: 48.71533139429036deg;
+					--mx: 49%; --my: 36%; --posx: 244px; --posy: 363px; --tx: 363px; --ty: 244px;
+					--rx: 0deg; --ry: 0deg; --pos: 49% 36%; --hyp: 7.3649168359187875; --angle: 48.71533139429036deg;
 					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				80% {
 					/* rotate right */
-					--mx: 72%;
-					--my: 34%;
-					--posx: 230px;
-					--posy: 533px;
-					--tx: 533px;
-					--ty: 230px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 72% 34%;
-					--hyp: 10.30900577165422;
-					--angle: 84.40119554661753deg;
+					--mx: 72%; --my: 34%; --posx: 230px; --posy: 533px; --tx: 533px; --ty: 230px;
+					--rx: 0deg; --ry: 0deg; --pos: 72% 34%; --hyp: 10.30900577165422; --angle: 84.40119554661753deg;
 					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				90% {
 					/* middle */
-					--mx: 49%;
-					--my: 36%;
-					--posx: 244px;
-					--posy: 363px;
-					--tx: 363px;
-					--ty: 244px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 49% 36%;
-					--hyp: 7.3649168359187875;
-					--angle: 48.71533139429036deg;
+					--mx: 49%; --my: 36%; --posx: 244px; --posy: 363px; --tx: 363px; --ty: 244px;
+					--rx: 0deg; --ry: 0deg; --pos: 49% 36%; --hyp: 7.3649168359187875; --angle: 48.71533139429036deg;
 					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				100% {
-					--mx: 50%;
-					--my: 50%;
-					--s: 1;
-					--o: 0;
-					--tx: 0px;
-					--ty: 0px;
-					--rx: 0deg;
-					--ry: 0deg;
-					--pos: 50% 50%;
-					--posx: 50%;
-					--posy: 50%;
-					--hyp: 0;
+					--mx: 50%; --my: 50%; --s: 1; --o: 0; --tx: 0px; --ty: 0px;
+					--rx: 0deg; --ry: 0deg; --pos: 50% 50%; --posx: 50%; --posy: 50%; --hyp: 0;
 					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
+				}
+			}
+			
+			@keyframes inactiveCardWrapperGlareAfter {
+				0% {
+					--mx: 50%; --my: 50%; --s: 1; --o: 0; --tx: 0px; --ty: 0px; --rx: 0deg; --ry: 0deg;
+					--pos: 50% 50%; --posx: 50%; --posy: 50%; --hyp: 0; --space: 6%; --angle: 133deg; --imgsize: 40% 40%;
+					opacity: calc(var(--hyp)*.66);
+					background-image: url("./images/patterns/abstract-pattern-hex.jpg"), 
+					repeating-linear-gradient(-33deg, rgba(169,176,184)calc(var(--space)*1), rgba(158,171,178) calc(var(--space)*2), rgba(215,219,222) calc(var(--space)*3), rgba(230,230,230) calc(var(--space)*4), rgba(206,210,213) calc(var(--space)*5), rgba(158,171,178) calc(var(--space)*6), rgba(208,213,219) calc(var(--space)*7), rgba(130,140,150) calc(var(--space)*8)),
+					repeating-linear-gradient(var(--angle), rgba(68,54,44,1) 0%, rgba(233,242,255,1) 17%, rgba(247,247,247,1) 37%, rgba(131,126,124,1) 57%, rgba(233,242,255,1) 85%, rgba(97,89,83,1) 100%),
+					radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
+					background-blend-mode: overlay, color-burn, color-burn, overlay;
+					background-size: var(--imgsize), 1100% 1100%, 600% 600%, 200% 200%;
+					background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
+					-webkit-filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+					filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+				}
+				20% {
+					/* rotate down */
+					--mx: 48%; --my: 66%; --posx: 442px; --posy: 357px; --tx: 357px; --ty: 442px; --rx: 0deg; --ry: 0deg;
+					--pos: 48% 66%; --hyp: 9.958172523108846; --angle: 133deg; --space: 6%; --imgsize: 40% 40%;
+					opacity: calc(var(--hyp)*.66);
+					background-image: url("./images/patterns/abstract-pattern-hex.jpg"), 
+					repeating-linear-gradient(-33deg, rgba(169,176,184)calc(var(--space)*1), rgba(158,171,178) calc(var(--space)*2), rgba(215,219,222) calc(var(--space)*3), rgba(230,230,230) calc(var(--space)*4), rgba(206,210,213) calc(var(--space)*5), rgba(158,171,178) calc(var(--space)*6), rgba(208,213,219) calc(var(--space)*7), rgba(130,140,150) calc(var(--space)*8)),
+					repeating-linear-gradient(var(--angle), rgba(68,54,44,1) 0%, rgba(233,242,255,1) 17%, rgba(247,247,247,1) 37%, rgba(131,126,124,1) 57%, rgba(233,242,255,1) 85%, rgba(97,89,83,1) 100%),
+					radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
+					background-blend-mode: overlay, color-burn, color-burn, overlay;
+					background-size: var(--imgsize), 1100% 1100%, 600% 600%, 200% 200%;
+					background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
+					-webkit-filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+					filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+				}
+				40% {
+					/* rotate up */
+					--mx: 49%; --my: 6%; --posx: 40px; --posy: 361px; --tx: 361px; --ty: 40px; --rx: 0deg; --ry: 0deg;
+					--pos: 49% 6%; --hyp: 6.223214603402329; --angle: 133deg; --space: 6%; --imgsize: 40% 40%;
+					opacity: calc(var(--hyp)*.66);
+					background-image: url("./images/patterns/abstract-pattern-hex.jpg"), 
+					repeating-linear-gradient(-33deg, rgba(169,176,184)calc(var(--space)*1), rgba(158,171,178) calc(var(--space)*2), rgba(215,219,222) calc(var(--space)*3), rgba(230,230,230) calc(var(--space)*4), rgba(206,210,213) calc(var(--space)*5), rgba(158,171,178) calc(var(--space)*6), rgba(208,213,219) calc(var(--space)*7), rgba(130,140,150) calc(var(--space)*8)),
+					repeating-linear-gradient(var(--angle), rgba(68,54,44,1) 0%, rgba(233,242,255,1) 17%, rgba(247,247,247,1) 37%, rgba(131,126,124,1) 57%, rgba(233,242,255,1) 85%, rgba(97,89,83,1) 100%),
+					radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
+					background-blend-mode: overlay, color-burn, color-burn, overlay;
+					background-size: var(--imgsize), 1100% 1100%, 600% 600%, 200% 200%;
+					background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
+					-webkit-filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+					filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+				}
+				60% {
+					/* rotate left */
+					--mx: 26%; --my: 27%; --posx: 184px; --posy: 192px; --tx: 192px; --ty: 184px; --rx: 0deg; --ry: 0deg;
+					--pos: 26% 27%; --hyp: 3.90486875579705; --angle: 133deg; --space: 6%; --imgsize: 40% 40%;
+					opacity: calc(var(--hyp)*.66);
+					background-image: url("./images/patterns/abstract-pattern-hex.jpg"), 
+					repeating-linear-gradient(-33deg, rgba(169,176,184)calc(var(--space)*1), rgba(158,171,178) calc(var(--space)*2), rgba(215,219,222) calc(var(--space)*3), rgba(230,230,230) calc(var(--space)*4), rgba(206,210,213) calc(var(--space)*5), rgba(158,171,178) calc(var(--space)*6), rgba(208,213,219) calc(var(--space)*7), rgba(130,140,150) calc(var(--space)*8)),
+					repeating-linear-gradient(var(--angle), rgba(68,54,44,1) 0%, rgba(233,242,255,1) 17%, rgba(247,247,247,1) 37%, rgba(131,126,124,1) 57%, rgba(233,242,255,1) 85%, rgba(97,89,83,1) 100%),
+					radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
+					background-blend-mode: overlay, color-burn, color-burn, overlay;
+					background-size: var(--imgsize), 1100% 1100%, 600% 600%, 200% 200%;
+					background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
+					-webkit-filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+					filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+				}
+				80% {
+					/* rotate right */
+					--mx: 72%; --my: 34%; --posx: 230px; --posy: 533px; --tx: 533px; --ty: 230px; --rx: 0deg; --ry: 0deg;
+					--pos: 72% 34%; --hyp: 10.30900577165422; --angle: 133deg; --space: 6%; --imgsize: 40% 40%;
+					opacity: calc(var(--hyp)*.66);
+					background-image: url("./images/patterns/abstract-pattern-hex.jpg"), 
+					repeating-linear-gradient(-33deg, rgba(169,176,184)calc(var(--space)*1), rgba(158,171,178) calc(var(--space)*2), rgba(215,219,222) calc(var(--space)*3), rgba(230,230,230) calc(var(--space)*4), rgba(206,210,213) calc(var(--space)*5), rgba(158,171,178) calc(var(--space)*6), rgba(208,213,219) calc(var(--space)*7), rgba(130,140,150) calc(var(--space)*8)),
+					repeating-linear-gradient(var(--angle), rgba(68,54,44,1) 0%, rgba(233,242,255,1) 17%, rgba(247,247,247,1) 37%, rgba(131,126,124,1) 57%, rgba(233,242,255,1) 85%, rgba(97,89,83,1) 100%),
+					radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
+					background-blend-mode: overlay, color-burn, color-burn, overlay;
+					background-size: var(--imgsize), 1100% 1100%, 600% 600%, 200% 200%;
+					background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
+					-webkit-filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+					filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+				}
+				100% {
+					--mx: 50%; --my: 50%; --s: 1; --o: 0; --tx: 0px; --ty: 0px; --rx: 0deg; --ry: 0deg; 
+					--pos: 50% 50%; --posx: 50%; --posy: 50%; --hyp: 0; --space: 6%; --angle: 133deg; --imgsize: 40% 40%;
+					opacity: calc(var(--hyp)*.66);
+					background-image: url("./images/patterns/abstract-pattern-hex.jpg"), 
+					repeating-linear-gradient(-33deg, rgba(169,176,184)calc(var(--space)*1), rgba(158,171,178) calc(var(--space)*2), rgba(215,219,222) calc(var(--space)*3), rgba(230,230,230) calc(var(--space)*4), rgba(206,210,213) calc(var(--space)*5), rgba(158,171,178) calc(var(--space)*6), rgba(208,213,219) calc(var(--space)*7), rgba(130,140,150) calc(var(--space)*8)),
+					repeating-linear-gradient(var(--angle), rgba(68,54,44,1) 0%, rgba(233,242,255,1) 17%, rgba(247,247,247,1) 37%, rgba(131,126,124,1) 57%, rgba(233,242,255,1) 85%, rgba(97,89,83,1) 100%),
+					radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
+					background-blend-mode: overlay, color-burn, color-burn, overlay;
+					background-size: var(--imgsize), 1100% 1100%, 600% 600%, 200% 200%;
+					background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
+					-webkit-filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
+					filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
 				}
 			}
 			
@@ -561,36 +475,27 @@
 			}
 			
 			@keyframes delay-animation {
-				0% {
-					opacity: 1;
-				}
-				50% {
-					opacity: 1;
-				}
-				50.01% {
-					opacity: 1;
-				}
-				100% {
-					opacity: 1;
-				}
+				0% { opacity: 1; }
+				10% { opacity: 0.99; }
+				20% { opacity: 1; }
+				30% { opacity: 0.99; }
+				40% { opacity: 1; }
+				50% { opacity: 0.99; }
+				60% { opacity: 1; }
+				70% { opacity: 0.99; }
+				80% { opacity: 1; }
+				90% { opacity: 0.99; }
+				100% { opacity: 1; }
 			}
 			
 			@keyframes inactiveGiggle {
-				10%, 90% {
-					transform: translate3d(-1px, 0, 0);
-				}
+				10%, 90% { transform: translate3d(-1px, 0, 0); }
 			  
-				20%, 80% {
-					transform: translate3d(2px, 0, 0);
-				}
+				20%, 80% { transform: translate3d(2px, 0, 0); }
 
-				30%, 50%, 70% {
-					transform: translate3d(-4px, 0, 0);
-				}
+				30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
 
-				40%, 60% {
-					transform: translate3d(4px, 0, 0);
-				}
+				40%, 60% { transform: translate3d(4px, 0, 0); }
 			}
 			
 			/* @media only screen and (max-width : 592px),
