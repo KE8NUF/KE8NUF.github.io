@@ -416,7 +416,7 @@
 				$cardsClass.addClass('active');
 				//$style.html(style);
 				$('.card-wrapper').attr('style', '--mx:' + xPercent + '%; --my:' + yPercent + '%; --posx:' + posy + 'px; --posy:' + posx + 'px; --tx:' + posx + 'px; --ty:' + posy + 'px; --rx:' + tiltX + 'deg; --ry:' + tiltY + 'deg; --pos:' + xPercent + '% ' +  yPercent + '%; --hyp:' + hyp + '; --angle:' + objAngle + 'deg;');
-				clearInterval(cardAnimationSampleRun);
+				clearInterval(cardAnimationSample);
 			}).bind('mouseleave touchend dragLeave', function() {
 				$cardsClass.removeClass('active');
 				var cardAnimationSampleRun = setInterval(cardAnimationSample, 8000);
