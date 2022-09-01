@@ -131,7 +131,6 @@
 				filter: brightness(calc((var(--hyp)*0.8) + 0.5)) contrast(0.8) saturate(1.0);
 			}
 			
-			.card-shine.active,
 			.card-shine:hover {
 				opacity: calc(var(--hyp)*.019);
 				opacity: calc(var(--hyp)*.06);
@@ -338,6 +337,7 @@
 				//clearInterval(cardAnimationSampleRun);
 				//clearInterval(cardAnimationSampleRun);
 			}).bind('mouseleave touchend dragLeave', function() {
+				$('.card-front').attr('style', 'will-change: transform; transform: perspective(800px), rotateX(0deg), rotateY(0deg);');
 				$cardsClass.removeClass('active');
 				//var cardAnimationSampleRun = setInterval(cardAnimationSample, 8000);
 			});
