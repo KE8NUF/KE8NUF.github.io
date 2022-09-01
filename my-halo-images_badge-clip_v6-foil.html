@@ -210,7 +210,6 @@
 			
 			.cardInactiveSample .card-glare {
 				animation: delay-animation 7s linear 1, inactiveCardWrapperGlare 8s linear 1;
-				opacity: calc(var(--hyp)*.66);
 				will-change: contents;
 			}
 			
@@ -224,7 +223,6 @@
 				background-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
 				-webkit-filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
 				filter: brightness(calc((var(--hyp)*0.3) + 0.5)) contrast(2.5) saturate(1.1);
-				mix-blend-mode: screen;
 			}
 			
 			@keyframes inactiveCardWrapperShine {
@@ -372,6 +370,7 @@
 					--posx: 50%;
 					--posy: 50%;
 					--hyp: 0;
+					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				10% {
@@ -387,6 +386,7 @@
 					--pos: 49% 36%;
 					--hyp: 7.3649168359187875;
 					--angle: 48.71533139429036deg;
+					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				20% {
@@ -402,6 +402,7 @@
 					--pos: 48% 66%;
 					--hyp: 9.958172523108846;
 					--angle: -179.24099924357898deg;
+					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				30% {
@@ -417,6 +418,7 @@
 					--pos: 49% 36%;
 					--hyp: 7.3649168359187875;
 					--angle: 48.71533139429036deg;
+					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				40% {
@@ -432,6 +434,7 @@
 					--pos: 49% 6%;
 					--hyp: 6.223214603402329;
 					--angle: 0.39211616022276097deg;
+					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				50% {
@@ -447,6 +450,7 @@
 					--pos: 49% 36%;
 					--hyp: 7.3649168359187875;
 					--angle: 48.71533139429036deg;
+					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				60% {
@@ -462,6 +466,7 @@
 					--pos: 26% 27%;
 					--hyp: 3.90486875579705;
 					--angle: -69.39713374013435deg;
+					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				70% {
@@ -477,6 +482,7 @@
 					--pos: 49% 36%;
 					--hyp: 7.3649168359187875;
 					--angle: 48.71533139429036deg;
+					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				80% {
@@ -492,6 +498,7 @@
 					--pos: 72% 34%;
 					--hyp: 10.30900577165422;
 					--angle: 84.40119554661753deg;
+					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				90% {
@@ -507,6 +514,7 @@
 					--pos: 49% 36%;
 					--hyp: 7.3649168359187875;
 					--angle: 48.71533139429036deg;
+					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 				100% {
@@ -522,6 +530,7 @@
 					--posx: 50%;
 					--posy: 50%;
 					--hyp: 0;
+					opacity: calc(var(--hyp)*.66);
 					background: radial-gradient(farthest-corner circle at var(--mx) var(--my),rgba(255,255,255,.8) 10%,rgba(255,255,255,.8) 8%,rgba(0,0,0,0.7) 75%);
 				}
 			}
