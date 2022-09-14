@@ -569,4 +569,8 @@ $(".nixie_container").trigger('click');
 
 humOne.play();
 
+function humPlay() {
+	humOne.play();
+}
+
 }
