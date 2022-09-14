@@ -954,20 +954,20 @@
 					<div class="col span-1-of-1">
 						<div class="content-container">
 							<!-- NIXIE Clock Insert -->
-							<script>
-								if($(window).width() >= 768) {
-									var nixieInsert = '<div id="resp-frame-container-two" class="resp-container-two">';
-									nixieInsert += '<iframe id="frame-badge" class="resp-iframe-two" src="https://damienmillard.net/nixie/my-nixie-clock.html" width="100%" height="100%" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe>';
-									nixieInsert += '</div>';
-									$('#nixieLoad').append( nixieInsert );
-								}
-							</script>
 							<div id="nixieLoad"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div> <!-- END ABOUT ME SECTION -->
+		<script>
+			if($(window).width() >= 768) {
+				var nixieInsert = '<div id="resp-frame-container-two" class="resp-container-two">';
+				nixieInsert += '<iframe id="frame-badge" class="resp-iframe-two" src="https://damienmillard.net/nixie/my-nixie-clock.html" width="100%" height="100%" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe>';
+				nixieInsert += '</div>';
+				$('#nixieLoad').append( nixieInsert );
+			}
+		</script>
 	
 		<!-- 
 		<div class="outer-page-wrapper">
