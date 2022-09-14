@@ -914,37 +914,53 @@
 			</div>
 		</div> <!-- END IMAGES SECTION ON PAGE -->
 		
-		<div class="outer-page-wrapper section-gray padding-40-tb" style="margin-top:0;margin-bottom:0;">
+		
+		<style>
+			#nixie-holder {
+				display: none;
+			}
+			@media only screen and (min-width : 768px),
+			only screen and (min-device-width : 768px){
+				#nixie-holder {
+					display:block;
+				}
+				.resp-container-two {
+					position: relative;
+					overflow: hidden;
+					padding-top: 100%;
+					padding-top: 43%;
+				}
+								
+				.resp-iframe-two {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					border: 0;
+					max-height: 450px;
+				}
+								
+				iframe {
+					border: 0;
+				}
+			}
+		</style>
+		<div id="nixie-holder" class="outer-page-wrapper section-gray padding-40-tb" style="margin-top:0;margin-bottom:0;">
 			<div class="content-center-wrapper" style="max-width:100%;">
 				<div class="section group">
 					<div class="col span-1-of-1">
 						<div class="content-container">
 							<!-- NIXIE Clock Insert -->
-							<style>
-							.resp-container-two {
-								position: relative;
-								overflow: hidden;
-								padding-top: 100%;
-								padding-top: 31%;
-							}
-							
-							.resp-iframe-two {
-								position: absolute;
-								top: 0;
-								left: 0;
-								width: 100%;
-								height: 100%;
-								border: 0;
-								max-height: 450px;
-							}
-							
-							iframe {
-								border: 0;
-							}
-							</style>
-							<div id="resp-frame-container-two" class="resp-container-two">
-								<iframe id="frame-badge" class="resp-iframe-two" src="https://damienmillard.net/nixie/my-nixie-clock.html" width="100%" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe>
-							</div>
+							<script>
+								if($(window).width() >= 768) {
+									var nixieInsert = '<div id="resp-frame-container-two" class="resp-container-two">';
+									nixieInsert += '<iframe id="frame-badge" class="resp-iframe-two" src="https://damienmillard.net/nixie/my-nixie-clock.html" width="100%" height="100%" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe>';
+									nixieInsert += '</div>';
+									$('#nixieLoad').append( nixieInsert );
+								}
+							</script>
+							<div id="nixieLoad"></div>
 						</div>
 					</div>
 				</div>
