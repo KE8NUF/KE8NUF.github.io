@@ -556,8 +556,6 @@ function tellTheTime() {
 setTimeout(startMeUp, 2000) 
 setTimeout(tellTheTime, 3000)
   
-  
-  
 var humOne = $("#hum-one")[0];
 $(".nixie_container").mouseenter(function() {
 	humOne.play();
@@ -568,5 +566,7 @@ $(".nixie_container").mouseleave(function() {
 }); 
 
 $(".nixie_container").trigger('click');
-  
+
+humOne.play();
+
 }
