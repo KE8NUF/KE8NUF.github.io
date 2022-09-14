@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+		<link rel="stylesheet" href="./my-nixie-style.css">
+	</head>
+	
+	<body>
+	
+		<div class="tube_container_background">
+		<!--   <div class="filler">Use me for background effects?</div> -->
+			<div class="nixie_container">
+				<div id="tube_1" class="nixie_tube ">
+					<div class="glass">
+						<!--  HONEYCOMB SVG ELEMENT  style="display:none" -->
+						<svg class="honeycomb">
+							<pattern id="pattern-hex" x="0" y="0" width="12.2" height="19" patternUnits="userSpaceOnUse" viewBox="56 -254 112 190" style="fill-opacity:0.75;">
+								<g id="hexagon">
+									<path d="M168-127.1c0.5,0,1,0.1,1.3,0.3l53.4,30.5c0.7,0.4,1.3,1.4,1.3,2.2v61c0,0.8-0.6,1.8-1.3,2.2L169.3-0.3
+								c-0.7,0.4-1.9,0.4-2.6,0l-53.4-30.5c-0.7-0.4-1.3-1.4-1.3-2.2v-61c0-0.8,0.6-1.8,1.3-2.2l53.4-30.5C167-127,167.5-127.1,168-127.1
+								L168-127.1z" />
+									<path d="M112-222.5c0.5,0,1,0.1,1.3,0.3l53.4,30.5c0.7,0.4,1.3,1.4,1.3,2.2v61c0,0.8-0.6,1.8-1.3,2.2l-53.4,30.5
+								c-0.7,0.4-1.9,0.4-2.6,0l-53.4-30.5c-0.7-0.4-1.3-1.4-1.3-2.2v-61c0-0.8,0.6-1.8,1.3-2.2l53.4-30.5
+								C111-222.4,111.5-222.5,112-222.5L112-222.5z" />
+									<path d="M168-317.8c0.5,0,1,0.1,1.3,0.3l53.4,30.5c0.7,0.4,1.3,1.4,1.3,2.2v61c0,0.8-0.6,1.8-1.3,2.2L169.3-191
+								c-0.7,0.4-1.9,0.4-2.6,0l-53.4-30.5c-0.7-0.4-1.3-1.4-1.3-2.2v-61c0-0.8,0.6-1.8,1.3-2.2l53.4-30.5
+								C167-317.7,167.5-317.8,168-317.8L168-317.8z" />
+								</g>
+							</pattern>
+								<rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-hex)" />
+						</svg>
+
+						<div class="nipple"></div>
+						<div class="nixie_glass"></div>
+						<div class="nixie_glass_left"></div>
+						<div class="nixie_glass_left_front"></div>
+						<div class="nixie_glass_right_front"></div>
+						<!-- <div class="nixie_gla ss_right"></div> <!-- no real effect -->
+						<div class="top_reflection "></div>
+						<!-- <div class="honeycomb_1"></div> -->
+						<div class="digits ">
+							<div class="digit no_11">!</div>
+							<div class="digit no_10">:</div>
+							<div class="digit no_9 ">9</div>
+							<div class="digit no_8 ">8</div>
+							<div class="digit no_7 ">7</div>
+							<div class="digit no_6 ">6</div>
+							<div class="digit no_5 ">5</div>
+							<div class="digit no_4 ">4</div>
+							<div class="digit no_3 ">3</div>
+							<div class="digit no_2 ">2</div>
+							<div class="digit no_1 ">1</div>
+							<div class="digit no_0 ">0</div>
+						</div>
+						<div class="prongs">
+							<div></div>
+							<div></div>
+						</div>
+					</div> <!-- end of glass  -->
+					
+					<div class="base">
+						<!-- gradiant w LOW side reflection (for left-most)-->
+						<div class="base_gradiant"></div> <!-- gradiant w high side reflection-->
+						<div class="base_top ">
+							<div class="base_top_depth"></div> <!-- rounded side shading -->
+						</div>
+						<div class="base_glow"></div> <!-- reflection of lit tube -->
+						<div class="base_glow_two"></div> <!-- reflection of lit tube -->
+					</div>
+				</div><!-- end Nixie Tube -->
+			</div><!-- end Nixie container -->
+		</div><!-- end tube_container_background -->
+
+		<div class="cabinet">
+			<div id="clock_button_wrapper" class="button_with_controls" style="display:none;">
+				<button id="clock" class="group_1" data-content="Clock">Clock</button>
+				<div id="military_slider_container"><span class="h12"> 12 </span>
+					<label class="switch">
+					<input type="checkbox" id="military_time_switch">
+					<span class="slip round"> </span>
+					</label><span class="h24 opacity_5"> 24 </span>
+				</div> --><!-- military slider -->
+			</div><!-- button_with_controls -->
+			<!-- <button id="mayhem" class="group_1" data-content="Mayhem">Mayhem</button> -->
+		</div> <!-- end Cabinet -->
+  
+		<audio id="hum-one" controls loop preload="auto" style="opacity:0; height:0;">
+			<source src="audio/Tube_TV_Humming_Sound_Effect.mp3"></source>
+			<source src="audio/Tube_TV_Humming_Sound_Effect.ogg"></source>
+			Your browser isn't invited for super fun audio time.
+		</audio>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="./nixie-script.js"></script>
+	</body>
+</html>
+	
