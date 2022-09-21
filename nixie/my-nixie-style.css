@@ -541,6 +541,12 @@ path {
 		rgba(0,0,0,0.38) 72%,
 		rgba(27,27,27,0.8) 95%,
 		rgba(33,33,33,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: linear-gradient(
+		rgba(30,87,153,0) 0%,
+		rgba(9,25,45,0) 51%,
+		rgba(0,0,0,0.38) 72%,
+		rgba(27,27,27,0.8) 95%,
+		rgba(33,33,33,0.8) 100%);
 	/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', 
 		endColorstr='#cc212121',GradientType=1 ); */ /* IE6-9 fallback on horizontal gradient */
 	mix-blend-mode: color-burn;
