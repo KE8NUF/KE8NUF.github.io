@@ -523,26 +523,26 @@ path {
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,000000+84,000000+100&0+0,0+69,0.8+95 */
   
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,000000+72,212121+100&0+0,0+51,0.8+95 */
-	background: -moz-radial-gradient(center, ellipse cover,  
+	/* background: -moz-radial-gradient(center, ellipse cover,  
 		rgba(30,87,153,0) 0%, 
 		rgba(9,25,45,0) 51%, 
 		rgba(0,0,0,0.38) 72%, 
 		rgba(27,27,27,0.8) 95%, 
-		rgba(33,33,33,0.8) 100%); /* FF3.6-15 */
-	background: -webkit-radial-gradient(center, ellipse cover,
+		rgba(33,33,33,0.8) 100%); */ /* FF3.6-15 */
+	/* background: -webkit-radial-gradient(center, ellipse cover,
 		rgba(30,87,153,0) 0%,
 		rgba(9,25,45,0) 51%,
 		rgba(0,0,0,0.38) 72%,
 		rgba(27,27,27,0.8) 95%,
-		rgba(33,33,33,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+		rgba(33,33,33,0.8) 100%); */ /* Chrome10-25,Safari5.1-6 */
 	background: radial-gradient(ellipse at center,
 		rgba(30,87,153,0) 0%,
 		rgba(9,25,45,0) 51%,
 		rgba(0,0,0,0.38) 72%,
 		rgba(27,27,27,0.8) 95%,
 		rgba(33,33,33,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', 
-		endColorstr='#cc212121',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', 
+		endColorstr='#cc212121',GradientType=1 ); */ /* IE6-9 fallback on horizontal gradient */
 	mix-blend-mode: color-burn;
 }
   
