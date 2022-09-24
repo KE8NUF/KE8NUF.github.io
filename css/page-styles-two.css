@@ -1863,6 +1863,10 @@ only screen and (max-device-width : 667px) {
 		grid-column: span 1;
 	}
 	
+	header {
+		max-height: 275px;
+	}
+	
 	#pulse-rings {
 		left: 23.5%;
 		top: 22%;
