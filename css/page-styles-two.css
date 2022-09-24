@@ -108,9 +108,11 @@ body {
 	background: rgba(236, 240, 243, 1); /* same as #ecf0f3 */
 	/* Font choices
 	font-family: 'Segoe UI';
-	font-family: 'Segoe UI Semibold';
+	font-family: 'Segoe UI Italic';
 	font-family: 'Segoe UI Bold';
 	font-family: 'Segoe UI Light';
+	font-family: 'Segoe UI BoldItalic';
+	font-family: 'Segoe UI Semibold';
 	*/
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	/* font-weight: lighter; */
