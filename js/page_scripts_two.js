@@ -156,13 +156,13 @@ function equalContentHeight() {
 		//*****
 		document.onreadystatechange = function() {
 			if (document.readyState !== "complete") {
-				document.querySelector("body").style.visibility = "hidden";
-				document.querySelector("#page-load-wrapper").style.visibility = "visible";
+				//document.querySelector("body").style.visibility = "hidden";
+				//document.querySelector("#page-load-wrapper").style.visibility = "visible";
 				$('#page-load-wrapper').fadeIn();
 				console.log('Page Not Loaded Yet.');
 			} else {
-				document.querySelector("#page-load-wrapper").style.display = "none";
-				document.querySelector("body").style.visibility = "visible";
+				//document.querySelector("#page-load-wrapper").style.display = "none";
+				//document.querySelector("body").style.visibility = "visible";
 				$('#page-load-wrapper').fadeOut();
 				console.log('Page Loaded');
 			}
