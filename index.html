@@ -49,13 +49,14 @@
 			function loadStylesAsync(href, stylesLoaded) {
 				var linkStyle = document.createElement('link');
 				var cssFiles = [
-					'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;900&display=swap',
 					'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css',
 					'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0',
+					'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css',
 					'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css',
 					'css/animate.css',
 					'css/css-loader-styles.css',
-					'css/page-styles.css'
+					'css/Segoe_UI_Font.css',
+					'css/page-styles-two.css'
 				];
 				for( var i = 0; i < cssFiles.length; i++ ){
 					var linkMultiple = linkStyle.cloneNode(true);
@@ -72,9 +73,9 @@
 			loadStylesAsync();
 		</script>
 		<noscript>
-			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;900&display=swap" media="none" onload="if(media!='all')media='all'" />
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" media="none" onload="if(media!='all')media='all'" />
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" media="none" onload="if(media!='all')media='all'" />
+			<link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css' media="none" onload="if(media!='all')media='all'" />
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="none" onload="if(media!='all')media='all'" />
 			<!-- https://fontawesome.com/icons -->
 			<!-- https://cdnjs.com/libraries/font-awesome -->
@@ -83,7 +84,8 @@
 			<!-- reference https://animate.style/ -->
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="none" onload="if(media!='all')media='all'" />
 			<link rel="stylesheet" href="css/css-loader-styles.css" media="none" onload="if(media!='all')media='all'" />
-			<link rel="stylesheet" href="css/page-styles.css" media="none" onload="if(media!='all')media='all'" />
+			<link rel="stylesheet" href="css/Segoe_UI_Font.css" media="none" onload="if(media!='all')media='all'" />
+			<link rel="stylesheet" href="css/page-styles-two.css" media="none" onload="if(media!='all')media='all'" />
 		</noscript>
 		<!-- end async style sheet load -->
 		
@@ -122,928 +124,534 @@
 			}
 		</script>
 	</head>
-
-	<body>
-		<!-- INSERT CSS LOADER -->
-		<div id="loading-wrapper">
-			<div class="loading-inner-wrapper">
-				<div class="loader-outer">
-					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100px" height="100px" id="circle-gradient">
-						<defs>
-							<linearGradient id="GradientColorFill">
-								<stop offset="0%" stop-color="#f9c856" />
-								<stop offset="100%" stop-color="#f77f28" />
-							</linearGradient>
-						</defs>
-						<filter id="inset-shadow" x="-50%" y="-50%" width="200%" height="200%">
-							<feComponentTransfer in=SourceAlpha>
-							<feFuncA type="table" tableValues="1 0" />
-							</feComponentTransfer>
-							<feGaussianBlur stdDeviation="4"/>
-							<feOffset dx="0" dy="5" result="offsetblur"/>
-							<feFlood flood-color="rgb(0, 0, 0, 0.55)" result="color"/>
-							<feComposite in2="offsetblur" operator="in"/>
-							<feComposite in2="SourceAlpha" operator="in" />
-							<feMerge>
-								<feMergeNode in="SourceGraphic" />
-								<feMergeNode />
-							</feMerge>
-						</filter>
-						<filter id="inset-shadow-2" x="-50%" y="-50%" width="200%" height="200%">
-							<feComponentTransfer in=SourceAlpha>
-							<feFuncA type="table" tableValues="1 0" />
-							</feComponentTransfer>
-							<feGaussianBlur stdDeviation="4"/>
-							<feOffset dx="0" dy="-5" result="offsetblur"/>
-							<feFlood flood-color="rgb(255, 255, 255, 0.55)" result="color"/>
-							<feComposite in2="offsetblur" operator="in"/>
-							<feComposite in2="SourceAlpha" operator="in" />
-							<feMerge>
-								<feMergeNode in="SourceGraphic" />
-								<feMergeNode />
-							</feMerge>
-						</filter>
-						
-						<g filter="url(#inset-shadow)">
-							<circle cx="50" cy="50" r="40" stroke-linecap="round" filter="url(#inset-shadow-2)" />
-						</g>
-						
-					</svg>
-				
-					<div class="loader-inner">
-						<div id="countNumberText"></div>
-					</div>
-				</div>
-				
-				<div class="loading-text">
-					Loading . . .
-				</div>
-			</div>
-		</div>
-		<!-- END INSERT CSS LOADER -->
 	
-		<div class="outer-page-wrapper" style="margin:0px;">
-			<!-- START header area content -->
-			<div id="header-content-container">
-				<nav id="nav">
-					<div id="bar-scroll-mobile-logo" class="mobile-menu-logo">
-						<a href="https://damienmillard.net/" title="Click here to return home.">
-							<img id="scroll-logo1" src="./images/damien-site-logo-four-bw.svg" alt="Damien Site Logo" />
-						</a>
-					</div>
-					<div id="nav-menu-toggle"><span class="material-symbols-outlined" style="vertical-align: middle; display:table;">menu</span></div>
-					
-					<ul id="nav-left" class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link active" href="https://damienmillard.net/" title="Click here to return home.">
-								<!-- old <span class="material-symbols-outlined" style="vertical-align: middle; display:table;">home</span> -->
-								<span><i class="fa-solid fa-house" style="font-size:22px; vertical-align: middle; display:table;"></i></span>
-							</a>
-						</li>
-						<!-- <li class="nav-item"><a class="nav-link" href="#" title="">Contact</a></li> -->
-						<!-- <li class="nav-item"><a class="nav-link" href="#" title="">Calendar</a></li> -->
-						
-						<!--
-						<li>
-						<div class="search">
-						<span class="icon-magnifier material-symbols-outlined" style="vertical-align: middle; display:inline-block;">search</span>
-						<input type="text" name="search-link" placeholder="Search Site" aria-label="Search" autocomplete="off">
-							--><!-- <span placeholder="Sample Search">Sample Search</span> -->
-						<!-- </div>
-						</li> -->
-						
-					</ul>
-					
-					<div id="bar-scroll-mobile-logo" class="desktop-menu-logo">
-						<a href="https://damienmillard.net/" title="Click here to return home.">
-							<img id="scroll-logo1" src="./images/damien-site-logo-four-bw.svg" alt="Damien Site Logo" />
-							<!-- <img id="scroll-logo2" src="./images/damien-site-logo-four.svg" alt="Damien Site Logo" /> -->
-						</a>
-					</div>
-					
-					<ul id="nav-right" class="navbar-nav">
-						<li class="nav-item"><a class="nav-link" href="https://damienmillard.net/terms-of-service.html" title="Click to see terms of service.">Terms of Service</a></li>
-						<!-- <li class="nav-item"><a class="nav-link" href="#" title="">Messages</a></li> -->
-						<!-- <li class="nav-item"><a class="nav-link" href="#" title="">Contact</a></li> -->
-					</ul>
-				</nav>
-				
-				<header id="header">
-					<div id="hero-container">
-						<!-- <div id="hero-image" class="hero-image">
-						</div> -->
-						<div id="hero-image" class="hero-image-animated">
-							<div class="aurora">
-								<div class="field-1"></div>
-								<div class="field-2"></div>
-								<div class="field-3"></div>
-								<div class="field-4"></div>
-								<div class="field-5"></div>
-							</div>
-						</div>
-						
-						<!-- <div class="waves-back"></div> -->
-						
-						<div class="hero-bar">
-							<div class="hero-bar-logo">
-								<!-- old non animated logo
-								<a href="https://damienmillard.net/" title="Click here to return home."><img src="./images/damien-site-logo-four.svg" alt="Damien Site Logo" /></a>
-								-->
-								
-								<!-- new animated logo -->
-								<style>
-									#ring-pulse-logo-wrapper {
-										width: 100%;
-										max-width: 96%;
-										height: 100%;
-										max-height: 275px;
-										margin: 0px auto;
-										padding: 0px;
-										position: relative;
-										overflow: visible;
-									}
-									
-									#ring-pulse-logo-inside {
-										/*
-										position: absolute;
-										top: 50%;
-										left: 50%;
-										transform: translate(-50%, -50%);
-										*/
-									}
-									
-									#ring-pulse-logo-inside a {
-										width: 100%;
-										height: 100%;
-										display: block;
-									}
-									
-									#pulse-rings {
-										position: absolute;
-										left: 23.7%;
-										top: 23%;
-										z-index: 5;
-									}
-									
-									#pulse-rings .rings {
-										position: absolute;
-										top: 50%;
-										left: 50%;
-										transform: translate(-50%,-50%);
-										width: 0px;
-										height: 0px;
-										border-radius: 100%;
-										opacity: 0;
-										border: 5px solid rgba(239, 73, 49, 1.0);
-										border: 5px solid rgba(158, 158, 158, 0.25);
-										animation: ringPulse 4s infinite linear;
-										margin: 6px;
-										
-										box-shadow: 20px 20px 60px var(--darkenTower), -20px -20px 60px var(--lightenTower);
-									}
-									
-									#pulse-rings .rings:after {
-										content: "";
-										width: 0px;
-										height: 0px;
-										box-shadow: inset 20px 20px 60px var(--darkenTower), inset -20px -20px 60px var(--lightenTower);
-									}
-									
-									#pulse-rings .clear-rings {
-										position:absolute;
-										top: 50%;
-										left: 50%;
-										transform: translate(-50%,-50%);
-										width: 0px;
-										height: 0px;
-										border-radius: 100%;
-										opacity: 0;
-										border: 5px solid rgba(255, 255, 255, 0.0);
-										animation: ringPulse 5s infinite linear;
-										animation-delay: 200ms;
-										margin: 6px;
-									}
-									
-									/*
-									* Prefixed by https://autoprefixer.github.io
-									* PostCSS: v8.4.14,
-									* Autoprefixer: v10.4.7
-									* Browsers: last 4 version
-									*/
-
-									@-webkit-keyframes ringPulse {
-										0% {
-											opacity: 0.0;
-											width: 0vmin;
-											height: 0vmin;
-										}
-										10% {
-											opacity: 0.2;
-										}
-										40% {
-											opacity: 0.80;
-											width: 40vmin;
-											height: 40vmin;
-										}
-										60% {
-											opacity: 0.4;
-											width: 60vmin;
-											height: 60vmin;
-										}
-										75% {
-											opacity: 0.2;
-											width: 75vmin;
-											height: 75vmin;
-										}
-										100% {
-											opacity: 0.0;
-											width: 100vmin;
-											height: 100vmin;
-										}
-									}
-
-									@keyframes ringPulse {
-										0% {
-											opacity: 0.0;
-											width: 0vmin;
-											height: 0vmin;
-										}
-										10% {
-											opacity: 0.2;
-										}
-										40% {
-											opacity: 0.80;
-											width: 40vmin;
-											height: 40vmin;
-										}
-										60% {
-											opacity: 0.4;
-											width: 60vmin;
-											height: 60vmin;
-										}
-										75% {
-											opacity: 0.2;
-											width: 75vmin;
-											height: 75vmin;
-										}
-										100% {
-											opacity: 0.0;
-											width: 100vmin;
-											height: 100vmin;
-										}
-									}
-
-									#pulse-rings .rings:nth-child(1) { animation-delay:200ms; }
-									#pulse-rings .rings:nth-child(2) { animation-delay:400ms; }
-									#pulse-rings .rings:nth-child(3) { animation-delay:600ms; }
-									#pulse-rings .rings:nth-child(4) { animation-delay:800ms; }
-									#pulse-rings .rings:nth-child(5) { animation-delay:1000ms; }
-									#pulse-rings .rings:nth-child(6) { animation-delay:1200ms; }
-									#pulse-rings .rings:nth-child(7) { animation-delay:1400ms; }
-									#pulse-rings .rings:nth-child(8) { animation-delay:1600ms; }
-									#pulse-rings .rings:nth-child(9) { animation-delay:1800ms; }
-									
-									#fixed-dot {
-										width: 15px;
-										height: 15px;
-										background: none repeat rgba(239, 73, 49, 1.0);
-										background: none repeat rgba(255, 138, 0, 1.0);
-										border-radius: 100%;
-										position: absolute;
-										left: 23.3%;
-										top: 23%;
-										z-index: 15;
-										box-shadow: inset 0px 0px 10px 2px rgba(255,150,0, 0.5), 0px 0px 10px 2px rgba(255,138,0,1.0);
-										animation: fadeInPulse 2s infinite alternate;
-									}
-									
-									@-webkit-keyframes fadeInPulse { 
-										0% {
-											background: rgba(255,255,255,0.2);
-											-webkit-box-shadow: inset 0px 0px 10px 2px rgba(255,138,0,0.5), 0px 0px 5px 2px rgba(255,150,0,0.2);
-												box-shadow: inset 0px 0px 10px 2px rgba(255,138,0,0.5), 0px 0px 5px 2px rgba(255,150,0,0.2);
-										}
-										100% {
-											background: rgba(255,255,255,1);
-											-webkit-box-shadow: inset 0px 0px 10px 2px rgba(255,150,0,0.5), 0px 0px 15px 2px rgba(255,138,0,1);
-												box-shadow: inset 0px 0px 10px 2px rgba(255,150,0,0.5), 0px 0px 15px 2px rgba(255,138,0,1);
-										} 
-									} 
-									
-									@keyframes fadeInPulse { 
-										0% {
-											background: rgba(255,255,255,0.2);
-											-webkit-box-shadow: inset 0px 0px 10px 2px rgba(255,138,0,0.5), 0px 0px 5px 2px rgba(255,150,0,0.2);
-												box-shadow: inset 0px 0px 10px 2px rgba(255,138,0,0.5), 0px 0px 5px 2px rgba(255,150,0,0.2);
-										}
-										100% {
-											background: rgba(255,255,255,1);
-											-webkit-box-shadow: inset 0px 0px 10px 2px rgba(255,150,0,0.5), 0px 0px 15px 2px rgba(255,138,0,1);
-												box-shadow: inset 0px 0px 10px 2px rgba(255,150,0,0.5), 0px 0px 15px 2px rgba(255,138,0,1);
-										} 
-									}
-									
-									@media only screen and (max-width : 896px),
-									only screen and (max-device-width : 896px) {
-									
-										#pulse-rings {
-											left: 23.6%;
-											top: 22%;
-										}
-									}
-									
-									@media only screen and (max-width : 800px),
-									only screen and (max-device-width : 800px) {
-									
-										#pulse-rings {
-											left: 23.6%;
-											top: 22%;
-										}
-									
-										#fixed-dot {
-											width: 10px;
-											height: 10px;
-											left: 22.4%;
-										}
-									}
-									
-									@media only screen and (max-width : 780px),
-									only screen and (max-device-width : 780px) {
-									
-										#fixed-dot {
-											left: 23.5%;
-										}
-									}
-									
-									@media only screen and (max-width : 768px),
-									only screen and (max-device-width : 768px) {
-									
-										#fixed-dot {
-											left: 23.5%;
-										}
-									}
-									
-									@media only screen and (max-width : 740px),
-									only screen and (max-device-width : 740px) {
-										
-										#fixed-dot {
-											left: 23.5%;
-										}
-									}
-									
-									@media only screen and (max-width : 667px),
-									only screen and (max-device-width : 667px) {
-									
-										#pulse-rings {
-											left: 23.5%;
-											top: 22%;
-										}
-									
-										#fixed-dot {
-											width: 10px;
-											height: 10px;
-											left: 23.4%;
-											left: 24.5%;
-											left: 120px;
-										}
-									}
-									
-									@media only screen and (max-width : 428px),
-									only screen and (max-device-width : 428px) {
-										
-										#pulse-rings {
-											left: 23%;
-										}
-										
-										#fixed-dot {
-											width: 10px;
-											height: 10px;
-											left: 22.5%;
-											top: 23%;
-										}
-									}
-									
-									@media only screen and (max-width : 412px),
-									only screen and (max-device-width : 412px) {
-										
-										#fixed-dot {
-											left: 22.7%;
-										}
-									}
-									
-									@media only screen and (max-width : 393px),
-									only screen and (max-device-width : 393px) {
-										
-										#fixed-dot {
-											left: 22.7%;
-										}
-									}
-									
-									@media only screen and (max-width : 390px),
-									only screen and (max-device-width : 390px) {
-									
-										#fixed-dot {
-											left: 22.7%;
-										}
-									}
-									
-									@media only screen and (max-width : 384px),
-									only screen and (max-device-width : 384px) {
-									
-										#fixed-dot {
-											width: 10px;
-											height: 10px;
-											left: 22.5%;
-											top: 23%;
-										}
-									}
-									
-									@media only screen and (max-width : 360px),
-									only screen and (max-device-width : 360px) {
-									
-										#fixed-dot {
-											left: 22.8%;
-										}
-									}
-									
-									@media only screen and (max-width : 280px),
-									only screen and (max-device-width : 280px) {
-										
-										#pulse-rings {
-											left: 22%;
-										}
-									
-										#fixed-dot {
-											left: 22.3%;
-										}
-									}
-								</style>
-
-								<div id="ring-pulse-logo-wrapper">
-									<div id="ring-pulse-logo-inside">
-										<a href="https://damienmillard.net/" title="Click here to return home.">
-											<span id="pulse-rings">
-													<span class="rings"></span>
-													<span class="clear-rings"></span>
-													<span class="clear-rings"></span>
-													<span class="rings"></span>
-													<span class="rings"></span>
-													<span class="clear-rings"></span>
-													<span class="clear-rings"></span>
-													
-													<span class="rings"></span>
-													<span class="clear-rings"></span>
-													<span class="clear-rings"></span>
-													<span class="clear-rings"></span>
-													<!-- <span class="rings"></span>
-													<span class="rings"></span>
-													<span class="rings"></span>
-													<span class="rings"></span>
-													<span class="rings"></span>
-													<span class="rings"></span> -->
-											</span>
-											<!-- <span id="fixed-dot"></span> -->
-												
-											<img src="./images/damien-site-logo-four-A.svg" style="position:relative; z-index: 10;" />
-										</a>
-									</div>
-								</div>
-								<!-- end new animated logo -->
-								
-							</div>
-						</div>
-						
-					</div>
-				</header>
+	<body>
+		<!-- START SITE HEADER AND NAVIGATION -->
+		<header>
+			<div class="hero-background">
+				<div class="overlay-content overlay1"></div>
+				<div class="overlay-content overlay2"></div>
+				<div class="overlay-content overlay3"></div>
+				<div class="overlay-content overlay4"></div>
 			</div>
-			<!-- END header area content -->
-		</div> <!-- END HEADER AND MENU BAR AREAS -->
-		
-		<!-- NOT NEEDED CHANGED COLOR SVG
-		<div class="outer-page-wrapper padding-20-tb">
-			<div class="content-center-wrapper">
-				<div class="section group">
-					<div class="col span-1-of-1">
-						<div class="content-container">
-						</div>
+			
+			<!-- new animated logo -->
+			<div class="hero-bar-logo">
+				<div id="ring-pulse-logo-wrapper">
+					<div id="ring-pulse-logo-inside">
+						<a href="https://damienmillard.net/" title="Click here to return home.">
+							<span id="pulse-rings">
+								<span class="rings"></span>
+								<span class="clear-rings"></span>
+								<span class="clear-rings"></span>
+								<span class="rings"></span>
+								<span class="rings"></span>
+								<span class="clear-rings"></span>
+								<span class="clear-rings"></span>
+														
+								<span class="rings"></span>
+								<span class="clear-rings"></span>
+								<span class="clear-rings"></span>
+								<span class="clear-rings"></span>
+								<!-- <span class="rings"></span>
+								<span class="rings"></span>
+								<span class="rings"></span>
+								<span class="rings"></span>
+								<span class="rings"></span>
+								<span class="rings"></span> -->
+							</span>
+												<!-- <span id="fixed-dot"></span> -->
+													
+							<img src="./images/damien-site-logo-four-A.svg" style="position:relative; z-index: 10;" />
+						</a>
 					</div>
 				</div>
 			</div>
-		</div> --><!-- USED FOR CLEAR SPACE DON'T REMOVE / DON'T USE -->
+			<!-- end new animated logo -->
+			
+			<nav id="site-nav">
+				<div class="menu-icon">
+					<i class="fa fa-bars fa-2x"></i>
+				</div><!-- END NAV MENU ICON FOR MOBILE -->
+
+				<div class="logo">
+					<a href="https://damienmillard.net/"><img id="scroll-logo1" src="./images/damien-site-logo-four-bw.svg" alt="Damien Site Logo"></a>
+				</div><!-- END LOGO INSERT FOR SITE -->
+
+				<div class="menu">
+					<ul>
+						<li><a href="https://damienmillard.net/" title="Click here to return home" class="nav-link active"><span class="material-symbols-outlined house">house</span></a></li>
+						<li><a href="https://damienmillard.net/terms-of-service.html" title="Read our terms of service." class="nav-link">Terms of Service</a></li>
+						<!-- <li><a href="#">Blog</a></li>
+						<li><a href="#">Contact</a></li> -->
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- END PAGE HEADER AND NAVIGATION -->
 		
-		<div class="outer-page-wrapper section-gray padding-20-tb six-fix-header" style="margin-bottom:0px; margin-top:-21px;">
-			<div class="content-center-wrapper">
-				<div class="section group match-height">
-					<div class="col span-2-of-3">
-						<div class="content-container body-images" style="text-align: center;">
-							<img src="./images/hotdogflip.gif" alt="Hot Dog Flip Image" style="border:0; padding:0; margin:0px 10px; display:inline-block; width: 100%; max-width: 30%; height: auto;" />
-							<img src="./images/dogelove.gif" alt="Doge Love Image" style="border:0; padding:0; margin:0px 10px; display:inline-block; width: 100%; max-width: 30%; height: auto;" />
-						</div>
-					</div>
-					
-					<div class="col span-1-of-3">
-						<div class="content-container">
-							<span><h1 class="teal-text" style="font-weight:bold; font-size:45px; margin: 20px auto;">Welcome to my Website!</h1></span>
+		<!-- START SITE CONTENT -->
+			<!-- START WELCOME MESSAGE -->
+			<div class="container-wrapper">
+				<div class="grid-container">
+					<div class="grid-item">
+						<div class="oval-background"></div>
+						<div class="content-container" style="padding: 20px 0px;">
+							<span><h1 class="teal-text" style="font-weight:bold;font-family: 'Segoe UI Bold';font-size:45px; margin: 20px auto;text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6), -1px -1px 1px rgba(0, 0, 0, 0.25);">
+							Welcome to my Website!</h1></span>
 							<span style="font-size:19px;">My name is Damien Millard, owner of this website and I am studying to become a Heating, 
 							Ventilation, and Air Conditioning/Refrigeration Technician. Have fun on my site, and maybe learn a little about
 							me!</span>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div> <!-- END WELCOME AREA TEXT -->
-		
-		<div class="outer-page-wrapper section-white padding-40-tb" style="margin-top:0;margin-bottom:0;">
-			<div class="content-center-wrapper">
-				<div class="section group match-height">
-					<div class="col span-1-of-2">
-						<div class="content-container center-items">
-							<span><h1 class="gray-text" style="font-weight:bold; font-size:45px; margin: 20px auto;">? What's New ?</h1></span>
-							<span style="font-size:19px;">[Aug 19, 2022] First football game of the year for our highschool, looking foward to a good season.</span>
+			</div><!-- END WELCOME MESSAGE -->
+			
+			<!-- START HOTDOG, DOGE, ANNOUNCEMENTS -->
+			<div class="container-wrapper">
+				<div class="grid-container col-3">
+					<div class="grid-item">
+						<div class="card-container">
+							<div class="card">
+								<div class="card-image" style="background: var(--rainbowRed);">
+									<img src="./images/Announcement.png" alt="What's New Image" />
+								</div>
+								<div class="card-text">
+									<div class="content-container">
+										<span><h1 class="gray-text">? What's New ?</h1></span>
+										<span>[Aug 19, 2022] First football game of the year for our highschool, looking foward 
+										to a good season.</span>
+									</div>
+								</div>
+							</div>
 						</div>
+					</div><!-- END ANNOUNCEMENTS AREA -->
+					
+					<div class="grid-item">
+						<div class="card-container">
+							<div class="card">
+								<div class="card-image" style="background: var(--rainbowGreen);">
+									<img src="./images/hotdogflip.gif" alt="Hot Dog Flip Image" />
+								</div>
+								<div class="card-text">
+									<div class="content-container">
+										<span><h1 class="gray-text">? What's New ?</h1></span>
+										<span>[Aug 19, 2022] First football game of the year for our highschool, looking foward 
+										to a good season.</span>
+									</div>
+								</div>
+							</div>
+						</div><!-- END HOTDOG FLIP AREA -->
 					</div>
 					
-					<div class="col span-1-of-2">
-						<div class="content-container center-items body-images" style="text-align: center;">
-							<img src="./images/Announcement.png" alt="What's New Image" style="border:0; padding:0; margin:0px 10px; display:inline-block; width: 100%; max-width: 60%; height: auto;" />
-						</div>
+					<div class="grid-item">
+						<div class="card-container">
+							<div class="card">
+								<div class="card-image" style="background: var(--rainbowBlue);">
+									<img src="./images/dogelove.gif" alt="Doge Love Image" />
+								</div>
+								<div class="card-text">
+									<div class="content-container">
+										<span><h1 class="gray-text">? What's New ?</h1></span>
+										<span>[Aug 19, 2022] First football game of the year for our highschool, looking foward 
+										to a good season.</span>
+									</div>
+								</div>
+							</div>
+						</div><!-- END DOGE AREA -->
 					</div>
 				</div>
-			</div>
-		</div> <!-- END NEW NEWS SECTION/ANNOUNCEMENTS -->
-		
-		<div class="outer-page-wrapper section-gray padding-40-tb" style="margin-top:0;margin-bottom:0;">
-			<div class="content-center-wrapper">
-				<div class="section group">
-					<div class="col span-1-of-1">
-						<div class="content-container body-images">
-							<span><h1 class="drkorange-text" style="font-weight:bold; font-size:45px; margin: 20px auto;">A Little About Me and From Me</h1></span>
-							<span style="font-size:19px;"><p>I like electronics, knives, radios, and watches. I am EPA-608 Universal Certified, and I am 
-							a Technician Amateur Radio Operator, my callsign is <a href="https://www.qrz.com/db/ke8nuf" title="Click here to see my QRZ information." target="_blank">KE8NUF</a></p></span>
+			</div><!-- END HOTDOG, DOGE, ANNOUNCEMENTS -->
+			
+			<!-- START ABOUT ME SECTION -->
+			<div class="container-wrapper section-gray padding-40-tb" style="max-width:100%;">
+				<div class="container-wrapper">
+					<div class="content-container body-images">
+						<span><h1 class="drkorange-text">A Little About Me and From Me</h1></span>
+						<span><p>I like electronics, knives, radios, and watches. I am EPA-608 Universal Certified, and I am 
+						a Technician Amateur Radio Operator, my callsign is <a href="https://www.qrz.com/db/ke8nuf" title="Click here to see my QRZ information." target="_blank">KE8NUF</a></p></span>
+						<br />
+						<br />
+						<span><p>I use MacOS for my computer systems, but have Linux drives, should I need them.</p></span>
+						<br />
+						<br />
+						<span>
+							<h2>My Daily Carry Knives Are:</h2>
+							<span>&bull;&nbsp;&nbsp;<a href="https://www.bladehq.com/item--Bear-Ops-Bear-Song-VIII-Butterfly--102070" title="Click here to see this." target="_blank">Bear Ops Bear Song VIII Tanto Butterfly Knife</a></span>
 							<br />
-							<br />
-							<span style="font-size:19px;"><p>I use MacOS for my computer systems, but have Linux drives, should I need them.</p></span>
-							<br />
-							<br />
-							<span style="font-size:19px;">
-								<h2 style="font-weight:bold; font-size:30px; margin: 20px auto;">My Daily Carry Knives Are:</h2>
-								<span>&bull;&nbsp;&nbsp;<a href="https://www.bladehq.com/item--Bear-Ops-Bear-Song-VIII-Butterfly--102070" title="Click here to see this." target="_blank">Bear Ops Bear Song VIII Tanto Butterfly Knife</a></span>
-								<br />
-								<span>&bull;&nbsp;&nbsp;<a href="https://www.bladehq.com/item--Spyderco-Delica-4-Knife-Flat-Ground--48918" title="Click here to see this." target="_blank">Spyderco Delica 4 Flat Ground Zome Green</a></span>
-							</span>
-							<br />
-							<br />
-							<span style="font-size:19px;"><p>In my opinion Yaesu makes the best quality compared to price radios I know!</p></span>
-							<br />
-							<br />
-							<span style="font-size:19px;">
-								<figure style="margin:0;">
-									<figcaption class="teal-text">Rocky Audio:</figcaption>
-									<audio controls src="./audio/rockytheme.mp3">
-										Your browser does not support the
-										<code>audio</code> element.
-									</audio>
-								</figure>
-							</span>
-						</div>
+							<span>&bull;&nbsp;&nbsp;<a href="https://www.bladehq.com/item--Spyderco-Delica-4-Knife-Flat-Ground--48918" title="Click here to see this." target="_blank">Spyderco Delica 4 Flat Ground Zome Green</a></span>
+						</span>
+						<br />
+						<br />
+						<span><p>In my opinion Yaesu makes the best quality compared to price radios I know!</p></span>
+						<br />
+						<br />
+						<span>
+							<figure style="margin:0;">
+								<figcaption class="teal-text">Rocky Audio:</figcaption>
+								<audio controls src="./audio/rockytheme.mp3">
+									Your browser does not support the
+									<code>audio</code> element.
+								</audio>
+							</figure>
+						</span>
 					</div>
 				</div>
-			</div>
-		</div> <!-- END ABOUT ME SECTION -->
-		
-		<div class="outer-page-warpper section-black-lighter padding-40-tb margin-50-b" style="margin-top:0px;">
-			<div class="content-center-wrapper">
-				<div class="section group">
-					<div class="col span-1-of-1">
-						<div class="content-container center-text body-images">
-							<span><h2 class="yellow-text" style="font-weight:bold; font-size:38px; margin: 20px auto;">Proud to be a Member of the Massillon Amateur Radio Club (MARC) W8NP 147.180</h2></span>
+			</div><!-- END ABOUT ME SECTION -->
+			
+			<!-- START THE MARC LOGO AND BADGE SECTION -->
+			<div class="container-wrapper section-black-lighter padding-40-tb margin-50-b" style="max-width:100%;display:table;">
+				<div class="container-wrapper">
+					<div class="grid-container">
+						<div class="grid-item no-back-border-shadow">
+							<div class="content-container center-text body-images">
+								<span><h2 class="yellow-text center-text" style="font-size:33px;">Proud to be a Member of the 
+								<br />Massillon Amateur Radio Club 
+								<br />(MARC) W8NP 147.180</h2></span>
+							</div>
 						</div>
-					</div>
-				</div>
+					</div><!-- END SINGLE ITEM COLUMN -->
 					
-				<div class="section group match-height">
-					<div class="col span-1-of-2">
-						<div class="content-container body-images">
-							<!-- INSERT FOR FOIL BADGE -->
-							<style>
-							.resp-container {
-								position: relative;
-								overflow: hidden;
-								padding-top: 100%;
-							}
-							
-							.resp-iframe {
-								position: absolute;
-								top: 0;
-								left: 0;
-								width: 100%;
-								height: 100%;
-								border: 0;
-							}
-							
-							iframe {
-								border: 0;
-							}
-							
-							@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){
-								.card-front img {
-									max-height: 283px;
-								}
-							}
-							</style>
-							
-							<script>
-							$(document).ready(function (){
-								if($(window).width() <= 592) {
-									//code to execute
-									var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
-									$('#badge-frame-insert').append(frameCode);
-								} else {
-									var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
-									$('#badge-frame-insert').append(frameCode);
+					<div class="grid-container col-2">
+						<div class="grid-item no-back-border-shadow">
+							<!-- START FOIL BADGE INSERT -->
+							<div class="content-container body-images">
+								<!-- INSERT FOR FOIL BADGE -->
+								<style>
+								.resp-container {
+									position: relative;
+									overflow: hidden;
+									padding-top: 100%;
 								}
 								
-								if($(window).width() <= 592) {
-									var iframe = document.getElementById('frame-badge');
-									var styleAdd = document.createElement('style');
-									styleAdd.textContent =
-									'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
-									'.card-front img {' +
-									'max-height: 283px;' +
-									'}' +
-									'}' 
-									;
-									iframe.contentDocument.head.appendChild(styleAdd);
-									console.log('orientation change from iPadOrentation function');
+								.resp-iframe {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									border: 0;
 								}
-								console.log(frameCode);
 								
-								$(window).on('load resize orientationchange', function () {
-									//START OLD ORENTATION
-									//window.addEventListener('orientationchange', function() {
-										//if($(window).width() <= 592) {
-											//var iframe = document.getElementById('frame-badge');
-											//var styleAdd = document.createElement('style');
-											//styleAdd.textContent =
-											  //'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
-											  //'.card-front img {' +
-											  //'max-height: 283px;' +
-											  //'}' +
-											  //'}' 
-											//;
-											//iframe.contentDocument.head.appendChild(styleAdd);
-											//console.log('orientation change from event listener');
-										//}
-									//}, false);
-									//END OLD ORIENTATION
+								iframe {
+									border: 0;
+								}
+								
+								@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){
+									.card-front img {
+										max-height: 283px;
+									}
+								}
+								</style>
+								
+								<script>
+								$(document).ready(function (){
+									if($(window).width() <= 592) {
+										//code to execute
+										var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
+										$('#badge-frame-insert').append(frameCode);
+									} else {
+										var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
+										$('#badge-frame-insert').append(frameCode);
+									}
+									
 									if($(window).width() <= 592) {
 										var iframe = document.getElementById('frame-badge');
 										var styleAdd = document.createElement('style');
 										styleAdd.textContent =
-											'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
-											'.card-front img {' +
-											'max-height: 283px;' +
-											'}' +
-											'}' 
-											;
+										'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+										'.card-front img {' +
+										'max-height: 283px;' +
+										'}' +
+										'}' 
+										;
 										iframe.contentDocument.head.appendChild(styleAdd);
-										console.log('added iFrame in general run/rules');
-									} else if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-										$(window).bind("orientationchange",function(){
-											$('.resp-container').remove();
-											console.log("The orientation has changed!");
-											if($(window).width() <= 592) {
-												//code to execute
-												var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v5-foil" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
-												$('#badge-frame-insert').append(frameCode);
-											} else {
-												var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v5-foil" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
-												$('#badge-frame-insert').append(frameCode);
-											}
-											setTimeout(
-											function() {
-												if($(window).width() <= 592) {
-													var iframe = document.getElementById('frame-badge');
-													var styleAdd = document.createElement('style');
-													styleAdd.textContent =
-														'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
-														'.card-front img {' +
-														'max-height: 283px;' +
-														'}' +
-														'}' 
-														;
-													iframe.contentDocument.head.appendChild(styleAdd);
-													console.log('orientation change from iPadOrentation function');
-												}
-											}, 500);
-										 }); 
+										console.log('orientation change from iPadOrentation function');
 									}
-									//$(window).trigger('orientationchange');
+									console.log(frameCode);
+									
+									$(window).on('load resize orientationchange', function () {
+										//START OLD ORENTATION
+										//window.addEventListener('orientationchange', function() {
+											//if($(window).width() <= 592) {
+												//var iframe = document.getElementById('frame-badge');
+												//var styleAdd = document.createElement('style');
+												//styleAdd.textContent =
+												  //'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+												  //'.card-front img {' +
+												  //'max-height: 283px;' +
+												  //'}' +
+												  //'}' 
+												//;
+												//iframe.contentDocument.head.appendChild(styleAdd);
+												//console.log('orientation change from event listener');
+											//}
+										//}, false);
+										//END OLD ORIENTATION
+										if($(window).width() <= 592) {
+											var iframe = document.getElementById('frame-badge');
+											var styleAdd = document.createElement('style');
+											styleAdd.textContent =
+												'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+												'.card-front img {' +
+												'max-height: 283px;' +
+												'}' +
+												'}' 
+												;
+											iframe.contentDocument.head.appendChild(styleAdd);
+											console.log('added iFrame in general run/rules');
+										} else if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+											$(window).bind("orientationchange",function(){
+												$('.resp-container').remove();
+												console.log("The orientation has changed!");
+												if($(window).width() <= 592) {
+													//code to execute
+													var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v5-foil" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+													$('#badge-frame-insert').append(frameCode);
+												} else {
+													var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v5-foil" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+													$('#badge-frame-insert').append(frameCode);
+												}
+												setTimeout(
+												function() {
+													if($(window).width() <= 592) {
+														var iframe = document.getElementById('frame-badge');
+														var styleAdd = document.createElement('style');
+														styleAdd.textContent =
+															'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+															'.card-front img {' +
+															'max-height: 283px;' +
+															'}' +
+															'}' 
+															;
+														iframe.contentDocument.head.appendChild(styleAdd);
+														console.log('orientation change from iPadOrentation function');
+													}
+												}, 500);
+											 }); 
+										}
+										//$(window).trigger('orientationchange');
+									});
 								});
-							});
-							</script>
-							
-							<div id="badge-frame-insert"></div>
-							<!-- END INSERT FOR FOIL BADGE -->
-							
-							<!-- BADGE ME GOOD REDONE REMOVED
-							<img src="./images/marc-logo-2022-ctm-four.png" alt="Massillon Radio Club Logo" style="border:0; padding:0; margin:0px 10px; display:inline-block; width: 100%; max-width: 70%; height: auto;" />
-							-->
-							
-							<!-- OLD PREVIOUS BADGE REMOVED
-							<img src="./images/marc-logo-2022-diamond-ctm.png" alt="Massillon Radio Club Logo" style="border:0; padding:0; margin:0px 10px; display:inline-block; width: 100%; max-width: 70%; height: auto;" /> 
-							-->
-						</div>
-					</div>
-					
-					<div class="col span-1-of-2">
-						<div class="content-container center-text">
-							<span><h1 class="yellow-text" style="font-weight:bold; font-size:45px; margin: 20px auto;">Massillon Amateur <br />Radio Club</h1></span>
-							<span><h2 class="teal-text" style="font-weight:bold; font-size:30px; margin: 20px auto;">W8NP</h2></span>
-							<span style="font-size:19px;" class="text-on-black"><p>P.O. Box 73, Massillon, OH 44648</p></span>
-							<span style="font-size:19px;" class="text-on-black"><p>Serving the Massillon community since 1927</p></span>
-							<div class="orange-button"><span class="orange-button-inside"><a href="https://w8np.net/" title="Click here to learn more about Massillon Amateur Radio Club." target="_blank">Visit MARC website</a></span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> <!-- END MASSILLON RADIO SECTION -->
-		
-		<div class="outer-page-wrapper">
-			<div class="content-center-wrapper">
-				<div class="section group match-height">
-					<div class="col span-1-of-3">
-						<div class="content-container body-images">
-							<img src="./images/epacertification.jpg" alt="My EPA-608 Universal Certificate." style="display:inline-block; margin:10px auto; padding:0; border:0; position:relative; min-width: 65%; max-width:95%; top:55%; left:50%; transform: translate(-50%, -0%);" />
-							<span>EPA-608 Universal Certificate</span>
-						</div>
-					</div>
-					
-					<div class="col span-1-of-3">
-						<div class="content-container body-images">
-							<img src="./images/radiosetup.jpg" alt="One of my radio setups." style="display:inline-block; margin:10px auto; padding:0; border:0; position:relative; min-width: 65%;  max-width:95%; top:55%; left:50%; transform: translate(-50%, -0%);" />
-						</div>
-					</div>
-					
-					<div class="col span-1-of-3">
-						<div class="content-container body-images">
-							<img src="./images/yaesuft840.jpg" alt="Another of my radio setups." style="display:inline-block; margin:10px auto; padding:0; border:0; position:relative; min-width: 65%;  max-width:95%; top:55%; left:50%; transform: translate(-50%, -0%);" />
-						</div>
-					</div>
-				</div>
-				
-				<div class="section group match-height">
-					<div class="col span-1-of-3">
-						<div class="content-container body-images">
-							<h2 style="font-weight:bold; font-size:45px; margin: 20px auto;"><a href="https://www.hamqsl.com/solar.html" title="Band Conditions Chart" target="_blank"><img src="https://www.hamqsl.com/solarbc.php" alt="Band Conditions Chart" style="display:inline-block; margin:10px auto; padding:0; border:0; position:relative; min-width: 65%; max-width:95%; top:55%; left:50%; transform: translate(-50%, -0%);"></a></h2>
-						</div>
-					</div>
-					
-					<div class="col span-1-of-3">
-						<div class="content-container body-images">
-							<img src="./images/senkolove.gif" alt="Senko Love Image." style="display:inline-block; margin:10px auto; padding:0; border:0; position:relative; min-width: 65%; max-width:95%; top:55%; left:50%; transform: translate(-50%, -0%);" />
-						</div>
-					</div>
-					
-					<div class="col span-1-of-3">
-						<div class="content-container body-images">
-							<img src="./images/61qtFF1qyqL._AC_SX569_.jpg" alt="Another of my radio setups." style="display:inline-block; margin:10px auto; padding:0; border:0; position:relative; min-width: 65%; max-width:95%; top:55%; left:50%; transform: translate(-50%, -0%);" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> <!-- END IMAGES SECTION ON PAGE -->
-		
-		
-		<style>
-			#nixie-holder {
-				display: none;
-			}
-			
-			@media only screen and (min-width : 800px),
-			only screen and (min-device-width : 800px){
-				#nixie-holder {
-					display:block;
-				}
-				
-				.resp-container-two {
-					position: relative;
-					overflow: hidden;
-					padding-top: 100%;
-					padding-top: 55%;
-				}
+								</script>
 								
-				.resp-iframe-two {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					border: 0;
-					max-height: 450px;
-				}
+								<div id="badge-frame-insert"></div>
+								<!-- END INSERT FOR FOIL BADGE -->
 								
-				iframe {
-					border: 0;
-				}
-			}
-		</style>
-		<div id="nixie-holder" class="outer-page-wrapper section-gray padding-40-tb" style="margin-top:0;margin-bottom:0;">
-			<div class="content-center-wrapper" style="max-width:100%;">
-				<div class="section group">
-					<div class="col span-1-of-1">
-						<div class="content-container">
-							<!-- NIXIE Clock Insert -->
-							<div id="nixieLoad"></div>
+								<!-- BADGE ME GOOD REDONE REMOVED
+								<img src="./images/marc-logo-2022-ctm-four.png" alt="Massillon Radio Club Logo" style="border:0; padding:0; margin:0px 10px; display:inline-block; width: 100%; max-width: 70%; height: auto;" />
+								-->
+								
+								<!-- OLD PREVIOUS BADGE REMOVED
+								<img src="./images/marc-logo-2022-diamond-ctm.png" alt="Massillon Radio Club Logo" style="border:0; padding:0; margin:0px 10px; display:inline-block; width: 100%; max-width: 70%; height: auto;" /> 
+								-->
+							</div><!-- END FOIL BADGE INSERT -->
 						</div>
-					</div>
-				</div>
-			</div>
-		</div> <!-- END ABOUT ME SECTION -->
-		<script>
-			$(window).on('resize load', function() {
-				if($(window).width() >= 800) {
-					var nixieInsert = '<div id="resp-frame-container-two" class="resp-container-two">';
-					nixieInsert += '<iframe id="frame-badge" class="resp-iframe-two" src="https://damienmillard.net/nixie/my-nixie-clock.html" width="100%" height="100%" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe>';
-					nixieInsert += '</div>';
-					$('#nixieLoad').append( nixieInsert );
-				}
-			});
-		</script>
-	
-		<!-- 
-		<div class="outer-page-wrapper">
-			<div class="content-center-wrapper">
-				
-				<div class="section group match-height">
-					<div class="col span-1-of-2 section-white">
-						<div class="content-container">
-							This is column 1 <br />This is column 1 <br />This is column 1
-							This is column 1 <br />This is column 1 <br />This is column 1
-							This is column 1 <br />This is column 1 <br />This is column 1
-							This is column 1 <br />This is column 1 <br />This is column 1
-							This is column 1 <br />This is column 1 <br />This is column 1
-						</div>
-					</div>
-					
-					<div class="col span-1-of-2">
-						<div class="content-container">This is column 2</div> -->
-						<!-- OLD NOT USED <div class="yellow-button">Yellow Button Test</div>
-						OLD NOT USED <div class="green-button"><span class="green-button-inside">Green Button Test</span></div>
-						OLD NOT USED <div class="pale-button"><span class="pale-button-inside">Pale Button Test</span></div> -->
-						<!-- <div class="orange-button"><span class="orange-button-inside">Orange Button</span></div>
 						
-						<div id="radio-tower-wrapper">
-							<div id="radio-tower">
-								<div id="radio-bulb"></div>
-								
-								<img src="./images/tower-shape-animation-base.png" style="margin:0; padding:0; border:0; position:absolute; max-height:100%; top:55%; left:50%; transform: translate(-50%, -0%);" />
-								
-								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"> -->
-									<!-- OLD NOT USED <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path> -->
-								<!-- </svg>	
+						<div class="grid-item no-back-border-shadow">
+							<!-- START MARC BUTTON AND DETAILS -->
+							<div class="content-container center-text">
+								<span><h1 class="yellow-text center-text" style="font-weight:bold; font-size:45px; margin: 20px auto;">Massillon Amateur <br />Radio Club</h1></span>
+								<span><h2 class="teal-text center-text" style="font-weight:bold; font-size:30px; margin: 20px auto;">W8NP</h2></span>
+								<span class="text-on-black"><p>P.O. Box 73, Massillon, OH 44648</p></span>
+								<span class="text-on-black"><p>Serving the Massillon community since 1927</p></span>
+								<div class="orange-button"><span class="orange-button-inside"><a href="https://w8np.net/" title="Click here to learn more about Massillon Amateur Radio Club." target="_blank">Visit MARC website</a></span></div>
+							</div><!-- END MARC BUTTON AND DETAILS -->
+						</div>
+					</div><!-- END 2 COLUMNS -->
+				</div>
+			</div><!-- END THE MARC LOGO AND BADGE SECTION -->
+			
+			<!-- START DAMIEN RANDOM IMAGES -->
+			<div class="container-wrapper">
+				<div class="grid-container col-3">
+					<div class="grid-item">
+						<div class="card-container">
+							<div class="card">
+								<div class="card-image" style="background: var(--rainbowPurple);">
+									<img src="./images/epacertification.jpg" alt="My EPA-608 Universal Certificate." style="min-width: 65%; max-width:95%;" />
+								</div>
+								<div class="card-text">
+									<div class="content-container">
+										<!-- <span><h1 class="gray-text">? What's New ?</h1></span> -->
+										<span>EPA-608 Universal Certificate.</span>
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="section group match-height">
-					<div class="col span-1-of-1">
-						<div class="content-container">
-						 Single Column
-						</div>
-					</div>
-				</div>
-				
-				<div class="section group match-height">
-					<div class="col span-2-of-3">
-						<div class="content-container">
-						 Single Column
-						</div>
+						</div><!-- END HOTDOG FLIP AREA -->
 					</div>
 					
-					<div class="col span-1-of-3">
-						<div class="content-container">
-						 Single Column
-						</div>
+					<div class="grid-item">
+						<div class="card-container">
+							<div class="card">
+								<div class="card-image" style="background: var(--rainbowTeal);">
+									<img src="./images/radiosetup.jpg" alt="One of my radio setups." style="min-width: 65%;  max-width:95%;" />
+								</div>
+								<div class="card-text">
+									<div class="content-container">
+										<!-- <span><h1 class="gray-text">? What's New ?</h1></span> -->
+										<span>My home radio setup.</span>
+									</div>
+								</div>
+							</div>
+						</div><!-- END HOTDOG FLIP AREA -->
 					</div>
-				</div>
 					
-			</div>--> <!-- END CONTENT CENTER WRAPPER FOR SECTION -->
-		<!-- </div> --><!-- END OUT CONTENT WRAPPER -->
-		
-		<!-- <div class="outer-page-wrapper section-white padding-20">
-			<div class="content-center-wrapper">
-				<div class="section group">
-					<div class="col span-1-of-1">
-						<div class="content-container">
-							
-						</div>
+					<div class="grid-item">
+						<div class="card-container">
+							<div class="card">
+								<div class="card-image" style="background: var(--rainbowYellow);">
+									<img src="./images/yaesuft840.jpg" alt="Another of my radio setups." style="min-width: 65%;  max-width:95%;" />
+								</div>
+								<div class="card-text">
+									<div class="content-container">
+										<!-- <span><h1 class="gray-text">? What's New ?</h1></span> -->
+										<span>The Yaesuft I bought.</span>
+									</div>
+								</div>
+							</div>
+						</div><!-- END HOTDOG FLIP AREA -->
 					</div>
-				</div>
-			</div>
-		</div> -->
+				</div><!-- END 3 COLUMNS -->
+				
+				<div class="grid-container col-3">
+					<div class="grid-item">
+						<div class="card-container">
+							<div class="card">
+								<div class="card-image center-text" style="background: var(--rainbowPink);">
+									<h2 class="center-text" style="margin:0; display:flex; height:100%;">
+										<a class="center-text" href="https://www.hamqsl.com/solar.html" title="Band Conditions Chart" target="_blank" style="width:100%;">
+											<img src="https://www.hamqsl.com/solarbc.php" alt="Band Conditions Chart" style="position:relative; min-width: 65%; max-width:95%;" />
+										</a>
+									</h2>
+								</div>
+								<div class="card-text">
+									<div class="content-container">
+										<!-- <span><h1 class="gray-text">? What's New ?</h1></span> -->
+										<span>Solar-Terrestrial Data.</span>
+									</div>
+								</div>
+							</div>
+						</div><!-- END HOTDOG FLIP AREA -->
+					</div>
+					
+					<div class="grid-item">
+						<div class="card-container">
+							<div class="card">
+								<div class="card-image" style="background: var(--rainbowOrange);">
+									<img src="./images/senkolove.gif" alt="Senko Love Image." style="min-width: 65%; max-width:95%;" />
+								</div>
+								<div class="card-text">
+									<div class="content-container">
+										<!-- <span><h1 class="gray-text">? What's New ?</h1></span> -->
+										<span>Senko Love, Oh Yeah!</span>
+									</div>
+								</div>
+							</div>
+						</div><!-- END HOTDOG FLIP AREA -->
+					</div>
+					
+					<div class="grid-item">
+						<div class="card-container">
+							<div class="card">
+								<div class="card-image" style="background: var(--rainbowBlue);">
+									<img src="./images/61qtFF1qyqL._AC_SX569_.jpg" alt="Another of my radio setups." style="min-width: 65%; max-width:95%;" />
+								</div>
+								<div class="card-text">
+									<div class="content-container">
+										<!-- <span><h1 class="gray-text">? What's New ?</h1></span> -->
+										<span>Such and awesome sign. And yes, always beware of us hams!</span>
+									</div>
+								</div>
+							</div>
+						</div><!-- END HOTDOG FLIP AREA -->
+					</div>
+				</div><!-- END 3 COLUMNS -->
+			</div><!-- END DAMIEN RANDOM IMAGES -->
+			
+		<!-- END SITE CONTENT -->
 		
+		<!-- SAMPLE GRID ITEMS -->
+		<!-- <div class="container-wrapper">
+		
+			<div class="grid-container">
+				<div class="grid-item">
+					Single
+				</div>
+			</div> --><!-- END SINGLE ITEM COLUMN -->
+			
+			<!-- <div class="grid-container col-single-double">
+				<div class="grid-item">
+					Single Small
+				</div> 
+				<div class="grid-item">
+					Single Double
+				</div>
+			</div> --><!-- END SINGLE/DOUBLE WIDE COLUMNS -->
+			
+			<!-- <div class="grid-container col-double-single">
+				<div class="grid-item">
+					Single Double
+				</div> 
+				<div class="grid-item">
+					Single Small
+				</div>
+			</div> --><!-- END DOUBLE/SINGLE WIDE COLUMNS -->
+			
+			<!-- <div class="grid-container col-4">
+				<div class="grid-item">
+					4/1
+					<div class="overlay"></div>
+				</div>
+				
+				<div class="grid-item">
+					4/2
+					<div class="overlay"></div>
+				</div>
+				
+				<div class="grid-item">
+					4/3
+					<div class="overlay"></div>
+				</div>
+				
+				<div class="grid-item">
+					4/4
+					<div class="overlay"></div>
+				</div>
+			</div> --><!-- END 4 COLUMNS -->
+			
+			<!-- <div class="grid-container col-3">
+				<div class="grid-item">
+					3/1
+					<div class="overlay"></div>
+				</div>
+				
+				<div class="grid-item">
+					3/2
+					<div class="overlay"></div>
+				</div>
+				
+				<div class="grid-item">
+					3/3
+					<div class="overlay"></div>
+				</div>
+			</div> --><!-- END 3 COLUMNS -->
+			
+			<!-- <div class="grid-container col-2">
+				<div class="grid-item">
+					2/1
+					<div class="overlay"></div>
+				</div>
+				
+				<div class="grid-item">
+					2/2
+					<div class="overlay"></div>
+				</div>
+			</div> --><!-- END 2 COLUMNS -->
+			
+		<!-- </div> --><!-- END CONTAINER WRAPPER -->
+		
+		<!-- START FOOTER ON PAGE -->
 		<div class="outer-page-wrapper section-black-lighter padding-40-tb" style="margin:0px; padding-bottom:0px; background: radial-gradient(circle at top right,#24292c, #2d3336, #24292c, #24292c); box-shadow: inset 0px 20px 10px -20px rgba(0, 0, 0, 0.40);">
 			<div class="content-center-wrapper">
 				<div class="section group">
@@ -1123,16 +731,24 @@
 					</div>
 				</div>
 			</div>
-		</div><!-- END FOOTER ON PAGE -->
+		</div>
+		<!-- END FOOTER ON PAGE -->
+		<!-- START PROGRESS BAR WITH BACK TO TOP -->
+		<div class="progress-wrap">
+			<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+				<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+				<defs>
+					<linearGradient id="progressGradient">
+					  <stop offset="5%" stop-color="#ff8a00" />
+					  <stop offset="95%" stop-color="#e45c0d" />
+					</linearGradient>
+				</defs>
+			</svg>
+		</div>
+		<!-- END PROGESS BAR WITH BACK TO TOP -->
 		
-		
-		<style>
-			#toTop {
-				padding: 0px;
-			}
-		</style>
-		<div id="toTop" data-webicon="stroke7:angle-up"><span class="material-symbols-outlined" style="cursor:pointer; vertical-align:middle; font-weight:800; font-size:40px;">expand_less</span><span class="icon-arrow-up" style="cursor:pointer; vertical-align:middle; font-weight:800; font-size:15px;"></span></div>
-		<script src="js/page-scripts.js"></script>
+	
+		<script src="js/page_scripts_two.js"></script>
 		
 		<script>
 		document.addEventListener('dragover', function(e){
@@ -1159,23 +775,6 @@
 		});
 		-->
 		
-		<script>
-			/* css file load async */
-			// include in "head" for devices that do not support Javascript will still load
-			//<noscript>
-			//<link rel="stylesheet" href="" media="screen" />
-			//</noscript>
-			
-			// removed put in head
-			//var cssDeferOne = document.createElement('link');
-			//cssDeferOne.rel = 'stylesheet';
-			//cssDeferOne.href = 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
-			//cssDeferOne.type = 'text/css';
-				//var deferThisStyle = document.getElementsByTagName('link')[0];
-			//var deferThisStyle = document.getElementsByTagName('body')[0];
-				//deferThisStyle.parentNode.insertBefore(cssDeferOne, deferThisStyle);
-			//deferThisStyle.prepend(cssDeferOne);
-		</script>
 		
 		<!-- html 5 reference
 			<header> - Defines a header for a document or a section
