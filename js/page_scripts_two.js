@@ -158,9 +158,9 @@ function equalContentHeight() {
 		var interval = setInterval(function() {
 			if(document.readyState === 'complete') {
 				$('#page-load-wrapper').fadeOut();
-				console.log('Page Loaded');
 				clearInterval(interval);
-				done();
+				console.log('Page Loaded');
+				//done();
 			} else {
 				$('#page-load-wrapper').fadeIn();
 				console.log('Page Not Loaded Yet.');
