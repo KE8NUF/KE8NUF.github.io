@@ -1153,12 +1153,12 @@ nav ul li a .house {
 	/* https://bloggerpilot.com/en/tools/svg-to-css/ */
 	background-color: transparent;
 	
-	background: url("../images/oval-back.jpg") no-repeat 100% 100% fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-attachment: fixed;
+	background: url("../images/oval-back.jpg") no-repeat 100% 100% fixed!important;
+	-webkit-background-size: cover!important;
+	-moz-background-size: cover!important;
+	-o-background-size: cover!important;
+	background-size: cover!important;
+	background-attachment: fixed!important;
 }
 
 .black-text {
