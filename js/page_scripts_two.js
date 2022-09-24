@@ -154,19 +154,18 @@ function equalContentHeight() {
 		//*****
 		//page loading scripts for loading animation
 		//*****
-		document.onreadystatechange = function() {
-			if (document.readyState !== "complete") {
-				//document.querySelector("body").style.visibility = "hidden";
-				//document.querySelector("#page-load-wrapper").style.visibility = "visible";
-				$('#page-load-wrapper').fadeIn();
-				console.log('Page Not Loaded Yet.');
-			} else {
-				//document.querySelector("#page-load-wrapper").style.display = "none";
-				//document.querySelector("body").style.visibility = "visible";
+		// Polling for the sake of my intern tests
+		var interval = setInterval(function() {
+			if(document.readyState === 'complete') {
 				$('#page-load-wrapper').fadeOut();
 				console.log('Page Loaded');
+				clearInterval(interval);
+				done();
+			} else {
+				$('#page-load-wrapper').fadeIn();
+				console.log('Page Not Loaded Yet.');
 			}
-		};
+		}, 100);
 		
 		equalContentHeight();
 	});
