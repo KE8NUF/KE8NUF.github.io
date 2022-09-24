@@ -1959,6 +1959,10 @@ only screen and (max-device-width : 390px) {
 
 @media only screen and (max-width : 384px),
 only screen and (max-device-width : 384px) {
+	header {
+		max-height:225px;
+	}
+	
 	#fixed-dot {
 		width: 10px;
 		height: 10px;
