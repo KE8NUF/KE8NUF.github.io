@@ -350,7 +350,7 @@
 									border: 0;
 								}
 								
-								@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){
+								@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){
 									.card-front img {
 										max-height: 283px;
 									}
@@ -358,28 +358,16 @@
 								</style>
 								
 								<script>
+								var frameCode;
 								$(document).ready(function (){
-									if($(window).width() <= 592) {
+									var frameCode;
+									if($(window).width() <= 768) {
 										//code to execute
 										var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
 										$('#badge-frame-insert').append(frameCode);
 									} else {
 										var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
 										$('#badge-frame-insert').append(frameCode);
-									}
-									
-									if($(window).width() <= 592) {
-										var iframe = document.getElementById('frame-badge');
-										var styleAdd = document.createElement('style');
-										styleAdd.textContent =
-										'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
-										'.card-front img {' +
-										'max-height: 283px;' +
-										'}' +
-										'}' 
-										;
-										iframe.contentDocument.head.appendChild(styleAdd);
-										console.log('orientation change from iPadOrentation function');
 									}
 									console.log(frameCode);
 									
@@ -401,23 +389,11 @@
 											//}
 										//}, false);
 										//END OLD ORIENTATION
-										if($(window).width() <= 592) {
-											var iframe = document.getElementById('frame-badge');
-											var styleAdd = document.createElement('style');
-											styleAdd.textContent =
-												'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
-												'.card-front img {' +
-												'max-height: 283px;' +
-												'}' +
-												'}' 
-												;
-											iframe.contentDocument.head.appendChild(styleAdd);
-											console.log('added iFrame in general run/rules');
-										} else if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+										if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 											$(window).bind("orientationchange",function(){
 												$('.resp-container').remove();
 												console.log("The orientation has changed!");
-												if($(window).width() <= 592) {
+												if($(window).width() <= 768) {
 													//code to execute
 													var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v5-foil" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 													$('#badge-frame-insert').append(frameCode);
@@ -425,22 +401,6 @@
 													var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v5-foil" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 													$('#badge-frame-insert').append(frameCode);
 												}
-												setTimeout(
-												function() {
-													if($(window).width() <= 592) {
-														var iframe = document.getElementById('frame-badge');
-														var styleAdd = document.createElement('style');
-														styleAdd.textContent =
-															'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
-															'.card-front img {' +
-															'max-height: 283px;' +
-															'}' +
-															'}' 
-															;
-														iframe.contentDocument.head.appendChild(styleAdd);
-														console.log('orientation change from iPadOrentation function');
-													}
-												}, 500);
 											 }); 
 										}
 										//$(window).trigger('orientationchange');
@@ -770,6 +730,57 @@
 
 			console.log("X: "+dragX+" Y: "+dragY);
 		}, false);
+		
+		$(document).ready(function (){
+			if($(window).width() <= 768) {
+				var iframe = document.getElementById('frame-badge');
+				var styleAdd = document.createElement('style');
+				styleAdd.textContent =
+				'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+				'.card-front img {' +
+				'max-height: 283px;' +
+				'}' +
+				'}' 
+				;
+				iframe.contentDocument.head.appendChild(styleAdd);
+				console.log('orientation change from iPadOrentation function');
+			}
+									
+			$(window).on('load resize orientationchange', function () {
+				if($(window).width() <= 768) {
+					var iframe = document.getElementById('frame-badge');
+					var styleAdd = document.createElement('style');
+					styleAdd.textContent =
+						'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
+						'.card-front img {' +
+						'max-height: 283px;' +
+						'}' +
+						'}' 
+						;
+					iframe.contentDocument.head.appendChild(styleAdd);
+					console.log('added iFrame in general run/rules');
+				} else if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+					$(window).bind("orientationchange",function(){
+						setTimeout(
+						function() {
+							if($(window).width() <= 768) {
+								var iframe = document.getElementById('frame-badge');
+								var styleAdd = document.createElement('style');
+								styleAdd.textContent =
+								'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
+								'.card-front img {' +
+								'max-height: 283px;' +
+								'}' +
+								'}' 
+								;
+								iframe.contentDocument.head.appendChild(styleAdd);
+								console.log('orientation change from iPadOrentation function');
+							}
+						}, 500);
+					});
+				}
+			});
+		});
 		</script>
 		<!-- <script>
 		(function($){
