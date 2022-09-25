@@ -1074,10 +1074,13 @@ nav ul li a .house {
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
 }
 
-.progress-wrap:after {
+.progress-wrap:after,
+.progress-wrap i {
 	position: absolute;
+	/*
 	font-family: 'unicons';
 	content: '\e84b';
+	*/
 	text-align: center;
 	line-height: 46px;
 	font-size: 35px;
@@ -1100,10 +1103,13 @@ nav ul li a .house {
 	opacity: 1;
 }
 
-.progress-wrap:before {
+.progress-wrap:before,
+.progress-wrap i:after {
 	position: absolute;
+	/* 
 	font-family: 'unicons';
 	content: '\e84b';
+	*/
 	text-align: center;
 	line-height: 46px;
 	font-size: 24px;
