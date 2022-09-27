@@ -163,7 +163,8 @@ function equalContentHeight() {
 				//done();
 				var iframe = $('#frame-badge');
 				// Run code here.
-				$(window).on('load', function () {
+				$(iframe).on('load', function() {
+				//$(window).on('load', function () {
 						 if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 							$(window).bind("orientationchange",function(){
 								setTimeout(
