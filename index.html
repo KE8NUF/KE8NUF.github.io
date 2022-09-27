@@ -393,7 +393,7 @@
 											//}
 										//}, false);
 										//END OLD ORIENTATION
-										if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+										if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 											$(window).bind("orientationchange",function(){
 												$('.resp-container').remove();
 												console.log("The orientation has changed!");
@@ -774,7 +774,7 @@
 						;
 					iframe.contentDocument.head.appendChild(styleAdd);
 					console.log('added iFrame in general run/rules');
-				} else if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				} else if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 					$(window).bind("orientationchange",function(){
 						setTimeout(
 						function() {
