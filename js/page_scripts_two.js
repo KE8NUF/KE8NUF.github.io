@@ -189,9 +189,8 @@ function equalContentHeight() {
 				//$(window).on('load', function () {
 					if( isMobile.any() ) {
 						//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-							$(window).bind('load',function(){
-								setTimeout(
-								function() {
+							//$(window).bind('load',function(){
+								setTimeout( function() {
 									if($(window).width() <= 768) {
 										var iframe = document.getElementById('frame-badge');
 										var styleAdd = document.createElement('style');
@@ -206,7 +205,7 @@ function equalContentHeight() {
 										console.log('resied iframe orientation change from iPadOrentation function');
 									}
 								}, 500);
-							});
+							//});
 						} else {
 							if($(window).width() <= 768) {
 								var iframe = document.getElementById('frame-badge');
