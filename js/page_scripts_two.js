@@ -33,6 +33,69 @@ function equalContentHeight() {
 	}
 }
 
+var ua = navigator.userAgent;
+var isMobile = {
+	Android: function() {
+		return ua.match(/Android/i);
+	},
+	BlackBerry: function() {
+		return ua.match(/BlackBerry/i);
+	},
+	iOS: function() {
+		return ua.match(/iPhone|iPad|iPod/i);
+	},
+	Opera: function() {
+		return ua.match(/Opera Mini/i);
+	},
+	Windows: function() {
+		return ua.match(/IEMobile/i);
+	},
+	any: function() {
+		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	}
+};
+		
+var iframe = $('#frame-badge');
+function iframeReady {
+//$(window).on('load', function () {
+	if( isMobile.any() ) {
+	//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		//$(window).bind('load',function(){
+		setTimeout( function() {
+			if($(window).width() <= 768) {
+				var iframe = document.getElementById('frame-badge');
+				var styleAdd = document.createElement('style');
+				styleAdd.textContent =
+					'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
+					'.card-front img {' +
+					'max-height: 283px;' +
+					'}' +
+					'}' 
+				;
+				iframe.contentDocument.head.appendChild(styleAdd);
+				console.log('resied iframe orientation change from iPadOrentation function');
+			}
+		}, 500);
+		//});
+	} else {
+		if($(window).width() <= 768) {
+			var iframe = document.getElementById('frame-badge');
+			var styleAdd = document.createElement('style');
+			styleAdd.textContent =
+				'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
+				'.card-front img {' +
+				'max-height: 283px;' +
+				'}' +
+				'}' 
+			;
+			iframe.contentDocument.head.appendChild(styleAdd);
+			console.log('resized iFrame in general run/rules');
+		}
+	}
+	//$(window).trigger('resize');
+	console.log('Ran Frame loaded scripts');
+}
+
 (function($){
 	$(function(){
 		
@@ -155,76 +218,12 @@ function equalContentHeight() {
 		//page loading scripts for loading animation
 		//*****
 		// Polling for the sake of my intern tests
-		var ua = navigator.userAgent;
-		var isMobile = {
-			Android: function() {
-				return ua.match(/Android/i);
-			},
-			BlackBerry: function() {
-				return ua.match(/BlackBerry/i);
-			},
-			iOS: function() {
-				return ua.match(/iPhone|iPad|iPod/i);
-			},
-			Opera: function() {
-				return ua.match(/Opera Mini/i);
-			},
-			Windows: function() {
-				return ua.match(/IEMobile/i);
-			},
-			any: function() {
-				return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-			}
-		};
-						
 		var interval = setInterval(function() {
 			if(document.readyState === 'complete') {
 				$('#page-load-wrapper').fadeOut();
 				clearInterval(interval);
 				console.log('Page Loaded');
 				//done();
-				var iframe = $('#frame-badge');
-				// Run code here.
-				var function iframeReady {
-				//$(window).on('load', function () {
-					if( isMobile.any() ) {
-						//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-							//$(window).bind('load',function(){
-								setTimeout( function() {
-									if($(window).width() <= 768) {
-										var iframe = document.getElementById('frame-badge');
-										var styleAdd = document.createElement('style');
-										styleAdd.textContent =
-										'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
-										'.card-front img {' +
-										'max-height: 283px;' +
-										'}' +
-										'}' 
-										;
-										iframe.contentDocument.head.appendChild(styleAdd);
-										console.log('resied iframe orientation change from iPadOrentation function');
-									}
-								}, 500);
-							//});
-						} else {
-							if($(window).width() <= 768) {
-								var iframe = document.getElementById('frame-badge');
-								var styleAdd = document.createElement('style');
-								styleAdd.textContent =
-									'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
-									'.card-front img {' +
-									'max-height: 283px;' +
-									'}' +
-									'}' 
-									;
-								iframe.contentDocument.head.appendChild(styleAdd);
-								console.log('resized iFrame in general run/rules');
-							}
-						}
-						//$(window).trigger('resize');
-					}
-					console.log('Ran Frame loaded scripts');
-				}
 				iframeReady();
 			} else {
 				$('#page-load-wrapper').fadeIn();
