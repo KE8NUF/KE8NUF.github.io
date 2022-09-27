@@ -761,7 +761,16 @@
 				iframe.contentDocument.head.appendChild(styleAdd);
 				console.log('orientation change from iPadOrentation function');
 			} */
-			$('#frame-badge').ready(function(){
+			var fidl = setInterval(timer, 100);
+			function timer() {
+				 var elementExist = $('#frame-badge');
+
+				 if (elementExist.length == 1) {
+					   functionToLoad();
+				 }
+			}
+			function functionToLoad(){
+				clearInterval(fidl);
 				// Run code here.
 				//$(window).on('load', function () {
 					if($(window).width() <= 768) {
@@ -798,7 +807,7 @@
 					}
 					//$(window).trigger('resize');
 				//});
-			});
+			}
 			$(window).on('resize orientationchange', function () {
 				if($(window).width() <= 768) {
 					var iframe = document.getElementById('frame-badge');
