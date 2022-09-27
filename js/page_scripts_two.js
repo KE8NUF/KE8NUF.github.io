@@ -163,7 +163,7 @@ function equalContentHeight() {
 				//done();
 				var iframe = $('#frame-badge');
 				// Run code here.
-				//$(window).on('load', function () {
+				$(window).on('load', function () {
 						if($(window).width() <= 768) {
 							var iframe = document.getElementById('frame-badge');
 							var styleAdd = document.createElement('style');
@@ -197,7 +197,7 @@ function equalContentHeight() {
 							});
 						}
 						//$(window).trigger('resize');
-					//});
+					});
 					console.log('Ran Frame loaded scripts');
 				
 			} else {
