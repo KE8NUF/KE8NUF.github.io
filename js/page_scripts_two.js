@@ -165,7 +165,29 @@ function equalContentHeight() {
 				// Run code here.
 				$(iframe).on('load', function() {
 				//$(window).on('load', function () {
-						 if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+						var ua = navigator.userAgent;
+						var isMobile = {
+							Android: function() {
+								return ua.match(/Android/i);
+							},
+							BlackBerry: function() {
+								return ua.match(/BlackBerry/i);
+							},
+							iOS: function() {
+								return ua.match(/iPhone|iPad|iPod/i);
+							},
+							Opera: function() {
+								return ua.match(/Opera Mini/i);
+							},
+							Windows: function() {
+								return ua.match(/IEMobile/i);
+							},
+							any: function() {
+								return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+							}
+						};
+						if(isMobile.any()) {
+						//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 							$(window).bind("orientationchange",function(){
 								setTimeout(
 								function() {
