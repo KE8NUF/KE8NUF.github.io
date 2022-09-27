@@ -747,11 +747,11 @@
 		}, false);
 		
 		$(document).ready(function (){
-			if($(window).width() <= 768) {
+			if($(window).width() >= 768) {
 				var iframe = document.getElementById('frame-badge');
 				var styleAdd = document.createElement('style');
 				styleAdd.textContent =
-				'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+				'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
 				'.card-front img {' +
 				'max-height: 283px;' +
 				'}' +
@@ -762,7 +762,7 @@
 			}
 									
 			$(window).on('load resize orientationchange', function () {
-				if($(window).width() <= 768) {
+				if($(window).width() >= 768) {
 					var iframe = document.getElementById('frame-badge');
 					var styleAdd = document.createElement('style');
 					styleAdd.textContent =
@@ -778,7 +778,7 @@
 					$(window).bind("orientationchange",function(){
 						setTimeout(
 						function() {
-							if($(window).width() <= 768) {
+							if($(window).width() >= 768) {
 								var iframe = document.getElementById('frame-badge');
 								var styleAdd = document.createElement('style');
 								styleAdd.textContent =
