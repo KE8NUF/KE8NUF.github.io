@@ -784,7 +784,7 @@
 							'}' 
 							;
 						iframe.contentDocument.head.appendChild(styleAdd);
-						console.log('added iFrame in general run/rules');
+						console.log('resized iFrame in general run/rules');
 					} else if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 						$(window).bind("orientationchange",function(){
 							setTimeout(
@@ -800,7 +800,7 @@
 									'}' 
 									;
 									iframe.contentDocument.head.appendChild(styleAdd);
-									console.log('orientation change from iPadOrentation function');
+									console.log('resied iframe orientation change from iPadOrentation function');
 								}
 							}, 500);
 						});
@@ -808,7 +808,7 @@
 					//$(window).trigger('resize');
 				//});
 			}
-			$(window).on('resize orientationchange', function () {
+			$(window).on('load resize orientationchange', function () {
 				if($(window).width() <= 768) {
 					var iframe = document.getElementById('frame-badge');
 					var styleAdd = document.createElement('style');
