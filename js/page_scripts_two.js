@@ -56,7 +56,7 @@ var isMobile = {
 };
 		
 var iframe = $('#frame-badge');
-function iframeReady {
+function iframeReady() {
 //$(window).on('load', function () {
 	if( isMobile.any() ) {
 	//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
