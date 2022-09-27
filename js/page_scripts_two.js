@@ -164,19 +164,7 @@ function equalContentHeight() {
 				var iframe = $('#frame-badge');
 				// Run code here.
 				$(window).on('load', function () {
-						if($(window).width() <= 768) {
-							var iframe = document.getElementById('frame-badge');
-							var styleAdd = document.createElement('style');
-							styleAdd.textContent =
-								'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
-								'.card-front img {' +
-								'max-height: 283px;' +
-								'}' +
-								'}' 
-								;
-							iframe.contentDocument.head.appendChild(styleAdd);
-							console.log('resized iFrame in general run/rules');
-						} else if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+						 if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 							$(window).bind("orientationchange",function(){
 								setTimeout(
 								function() {
@@ -195,6 +183,20 @@ function equalContentHeight() {
 									}
 								}, 500);
 							});
+						} else {
+							if($(window).width() <= 768) {
+								var iframe = document.getElementById('frame-badge');
+								var styleAdd = document.createElement('style');
+								styleAdd.textContent =
+									'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
+									'.card-front img {' +
+									'max-height: 283px;' +
+									'}' +
+									'}' 
+									;
+								iframe.contentDocument.head.appendChild(styleAdd);
+								console.log('resized iFrame in general run/rules');
+							}
 						}
 						//$(window).trigger('resize');
 					});
