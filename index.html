@@ -375,7 +375,7 @@
 									}
 									console.log(frameCode); */
 									
-									$(window).on('load resize orientationchange', function () {
+									//$(window).on('load resize orientationchange', function () {
 										//START OLD ORENTATION
 										//window.addEventListener('orientationchange', function() {
 											//if($(window).width() <= 592) {
@@ -393,6 +393,17 @@
 											//}
 										//}, false);
 										//END OLD ORIENTATION
+										if($(window).width() <= 768) {
+											//code to execute
+											var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
+											$('#badge-frame-insert').append(frameCode);
+										}
+										
+										if ($(window).width() >= 768) {
+											var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
+											$('#badge-frame-insert').append(frameCode);
+										}
+										
 										if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 											$(window).bind("orientationchange",function(){
 												$('.resp-container').remove();
@@ -409,20 +420,9 @@
 												
 											 });
 										}
-										
-										if($(window).width() <= 768) {
-											//code to execute
-											var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
-											$('#badge-frame-insert').append(frameCode);
-										}
-										
-										if ($(window).width() >= 768) {
-											var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
-											$('#badge-frame-insert').append(frameCode);
-										}
 										console.log(frameCode);
 										//$(window).trigger('orientationchange');
-									});
+									//});
 								});
 								</script>
 								<!-- END INSERT FOR FOIL BADGE -->
