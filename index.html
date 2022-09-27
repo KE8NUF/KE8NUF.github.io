@@ -747,6 +747,26 @@
 		}, false);
 		
 		var iframe = $('#frame-badge');
+		function checkIframeLoaded() {
+			// Get a handle to the iframe element
+			var iframe = document.getElementById('frame-badge');
+			var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+			// Check if loading is complete
+			if (  iframeDoc.readyState  == 'complete' ) {
+				//iframe.contentWindow.alert("Hello");
+				iframe.contentWindow.onload = function(){
+					alert("I am loaded");
+				};
+				// The loading is complete, call the function we want executed once the iframe is loaded
+				afterLoadingFrame();
+				return;
+			} 
+
+			// If we are here, it is not loaded. Set things up so we check   the status again in 100 milliseconds
+			window.setTimeout(checkIframeLoaded, 100);
+		}
+		
 		$(document).ready(function (){
 			/* if($(window).width() >= 768) {
 				var iframe = document.getElementById('frame-badge');
@@ -761,16 +781,7 @@
 				iframe.contentDocument.head.appendChild(styleAdd);
 				console.log('orientation change from iPadOrentation function');
 			} */
-			var fidl = setInterval(timerLoad, 100);
-			function timerLoad() {
-				 var elementExist = $('#frame-badge');
-
-				 if (elementExist.length == 1) {
-					   iframeHasLoaded();
-				 }
-			}
-			function iframeHasLoaded(){
-				clearInterval(fidl);
+			function afterLoadingFrame(){
 				// Run code here.
 				//$(window).on('load', function () {
 					if($(window).width() <= 768) {
@@ -808,7 +819,7 @@
 					//$(window).trigger('resize');
 				//});
 			}
-			$(window).on('load resize orientationchange', function () {
+			$(window).on('resize orientationchange', function () {
 				if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
 					if($(window).width() <= 768) {
 						var iframe = document.getElementById('frame-badge');
