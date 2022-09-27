@@ -739,36 +739,35 @@
 		<script src="js/page_scripts_two.js"></script>
 		
 		<script>
-		document.addEventListener('dragover', function(e){
-			e = e || window.event;
-			var dragX = e.pageX, dragY = e.pageY;
-
-			console.log("X: "+dragX+" Y: "+dragY);
-		}, false);
-		
-		var iframe = $('#frame-badge');
-		function checkIframeLoaded() {
-			// Get a handle to the iframe element
-			var iframe = document.getElementById('frame-badge');
-			var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-			// Check if loading is complete
-			if (  iframeDoc.readyState  == 'complete' ) {
-				//iframe.contentWindow.alert("Hello");
-				iframe.contentWindow.onload = function(){
-					alert("I am loaded");
-				};
-				// The loading is complete, call the function we want executed once the iframe is loaded
-				afterLoadingFrame();
-				return;
-			} 
-
-			// If we are here, it is not loaded. Set things up so we check   the status again in 100 milliseconds
-			window.setTimeout(checkIframeLoaded, 100);
-			console.log('Checking if frame loaded');
-		}
-		
 		$(document).ready(function (){
+			document.addEventListener('dragover', function(e){
+				e = e || window.event;
+				var dragX = e.pageX, dragY = e.pageY;
+
+				console.log("X: "+dragX+" Y: "+dragY);
+			}, false);
+			
+			var iframe = $('#frame-badge');
+			function checkIframeLoaded() {
+				// Get a handle to the iframe element
+				var iframe = document.getElementById('frame-badge');
+				var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+				// Check if loading is complete
+				if (  iframeDoc.readyState  == 'complete' ) {
+					//iframe.contentWindow.alert("Hello");
+					iframe.contentWindow.onload = function(){
+						alert("I am loaded");
+					};
+					// The loading is complete, call the function we want executed once the iframe is loaded
+					afterLoadingFrame();
+					return;
+				} 
+
+				// If we are here, it is not loaded. Set things up so we check   the status again in 100 milliseconds
+				window.setTimeout(checkIframeLoaded, 100);
+				console.log('Checking if frame loaded');
+			}
 			/* if($(window).width() >= 768) {
 				var iframe = document.getElementById('frame-badge');
 				var styleAdd = document.createElement('style');
