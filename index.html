@@ -747,7 +747,7 @@
 				console.log("X: "+dragX+" Y: "+dragY);
 			}, false);
 			
-			$(window).on('resize load orientationchange', function () {
+			$(window).on('resize orientationchange', function () {
 				if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
 					if($(window).width() <= 768) {
 						var iframe = document.getElementById('frame-badge');

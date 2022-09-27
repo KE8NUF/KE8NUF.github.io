@@ -155,6 +155,28 @@ function equalContentHeight() {
 		//page loading scripts for loading animation
 		//*****
 		// Polling for the sake of my intern tests
+		var ua = navigator.userAgent;
+		var isMobile = {
+			Android: function() {
+				return ua.match(/Android/i);
+			},
+			BlackBerry: function() {
+				return ua.match(/BlackBerry/i);
+			},
+			iOS: function() {
+				return ua.match(/iPhone|iPad|iPod/i);
+			},
+			Opera: function() {
+				return ua.match(/Opera Mini/i);
+			},
+			Windows: function() {
+				return ua.match(/IEMobile/i);
+			},
+			any: function() {
+				return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+			}
+		};
+						
 		var interval = setInterval(function() {
 			if(document.readyState === 'complete') {
 				$('#page-load-wrapper').fadeOut();
@@ -165,30 +187,9 @@ function equalContentHeight() {
 				// Run code here.
 				$(iframe).ready(function() {
 				//$(window).on('load', function () {
-						var ua = navigator.userAgent;
-						var isMobile = {
-							Android: function() {
-								return ua.match(/Android/i);
-							},
-							BlackBerry: function() {
-								return ua.match(/BlackBerry/i);
-							},
-							iOS: function() {
-								return ua.match(/iPhone|iPad|iPod/i);
-							},
-							Opera: function() {
-								return ua.match(/Opera Mini/i);
-							},
-							Windows: function() {
-								return ua.match(/IEMobile/i);
-							},
-							any: function() {
-								return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-							}
-						};
 						if( isMobile.any() ) {
 						//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-							$(window).bind("orientationchange",function(){
+							$(window).bind('load',function(){
 								setTimeout(
 								function() {
 									if($(window).width() <= 768) {
