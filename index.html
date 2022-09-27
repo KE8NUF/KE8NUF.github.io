@@ -766,10 +766,10 @@
 				 var elementExist = $('#frame-badge');
 
 				 if (elementExist.length == 1) {
-					   functionToLoad();
+					   iframeHasLoaded();
 				 }
 			}
-			function functionToLoad(){
+			function iframeHasLoaded(){
 				clearInterval(fidl);
 				// Run code here.
 				//$(window).on('load', function () {
@@ -820,7 +820,7 @@
 						'}' 
 						;
 					iframe.contentDocument.head.appendChild(styleAdd);
-					console.log('added iFrame in general run/rules');
+					console.log('resized iFrame in general run/rules');
 				} else if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 					$(window).bind("orientationchange",function(){
 						setTimeout(
@@ -836,7 +836,7 @@
 								'}' 
 								;
 								iframe.contentDocument.head.appendChild(styleAdd);
-								console.log('orientation change from iPadOrentation function');
+								console.log('resized iframe orientation change from iPadOrentation function');
 							}
 						}, 500);
 					});
