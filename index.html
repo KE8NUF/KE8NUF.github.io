@@ -770,7 +770,7 @@
 			// I'm checking for a specific class .file-item and then running code. You can also check for an id or an element.
 			isElementLoaded('#frame-badge').then((selector) => {
 				// Run code here.
-				$(window).on('load', function () {
+				//$(window).on('load', function () {
 					if($(window).width() <= 768) {
 						var iframe = document.getElementById('frame-badge');
 						var styleAdd = document.createElement('style');
@@ -804,7 +804,7 @@
 						});
 					}
 					//$(window).trigger('resize');
-				});
+				//});
 			});
 			$(window).on('resize orientationchange', function () {
 				if($(window).width() <= 768) {
