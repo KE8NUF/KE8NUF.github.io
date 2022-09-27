@@ -185,9 +185,9 @@ function equalContentHeight() {
 				//done();
 				var iframe = $('#frame-badge');
 				// Run code here.
-				$(iframe).ready(function() {
+				var function iframeReady {
 				//$(window).on('load', function () {
-						if( isMobile.any() ) {
+					if( isMobile.any() ) {
 						//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 							$(window).bind('load',function(){
 								setTimeout(
@@ -223,9 +223,10 @@ function equalContentHeight() {
 							}
 						}
 						//$(window).trigger('resize');
-					});
+					}
 					console.log('Ran Frame loaded scripts');
-				
+				}
+				iframeReady();
 			} else {
 				$('#page-load-wrapper').fadeIn();
 				console.log('Page Not Loaded Yet.');
