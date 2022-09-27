@@ -360,11 +360,11 @@
 									}
 								}
 								</style>
-								
+								<div id="badge-frame-insert"></div>
 								<script>
 								var frameCode;
 								$(document).ready(function (){
-									var frameCode;
+									//var frameCode;
 									/* if($(window).width() <= 768) {
 										//code to execute
 										var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
@@ -375,7 +375,7 @@
 									}
 									console.log(frameCode); */
 									
-									$(window).on('load resize orientationchange', function () {
+									//$(window).on('load resize orientationchange', function () {
 										//START OLD ORENTATION
 										//window.addEventListener('orientationchange', function() {
 											//if($(window).width() <= 592) {
@@ -407,22 +407,24 @@
 													$('#badge-frame-insert').append(frameCode);
 												}
 												
-											 }); 
-										} else if($(window).width() <= 768) {
+											 });
+										}
+										
+										if($(window).width() <= 768) {
 											//code to execute
 											var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
 											$('#badge-frame-insert').append(frameCode);
-										} else if($(window).width() >= 768) {
+										}
+										
+										if ($(window).width() >= 768) {
 											var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
 											$('#badge-frame-insert').append(frameCode);
 										}
 										console.log(frameCode);
 										//$(window).trigger('orientationchange');
-									});
+									//});
 								});
 								</script>
-								
-								<div id="badge-frame-insert"></div>
 								<!-- END INSERT FOR FOIL BADGE -->
 								
 								<!-- BADGE ME GOOD REDONE REMOVED
@@ -746,8 +748,9 @@
 			console.log("X: "+dragX+" Y: "+dragY);
 		}, false);
 		
+		var iframe = $('#frame-badge');
 		$(document).ready(function (){
-			if($(window).width() >= 768) {
+			/* if($(window).width() >= 768) {
 				var iframe = document.getElementById('frame-badge');
 				var styleAdd = document.createElement('style');
 				styleAdd.textContent =
@@ -759,10 +762,10 @@
 				;
 				iframe.contentDocument.head.appendChild(styleAdd);
 				console.log('orientation change from iPadOrentation function');
-			}
+			} */
 									
 			$(window).on('load resize orientationchange', function () {
-				if($(window).width() >= 768) {
+				if($(window).width() <= 768) {
 					var iframe = document.getElementById('frame-badge');
 					var styleAdd = document.createElement('style');
 					styleAdd.textContent =
@@ -778,7 +781,7 @@
 					$(window).bind("orientationchange",function(){
 						setTimeout(
 						function() {
-							if($(window).width() >= 768) {
+							if($(window).width() <= 768) {
 								var iframe = document.getElementById('frame-badge');
 								var styleAdd = document.createElement('style');
 								styleAdd.textContent =
