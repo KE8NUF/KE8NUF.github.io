@@ -163,8 +163,8 @@ function equalContentHeight() {
 				//done();
 				var iframe = $('#frame-badge');
 				// Run code here.
-				//$(iframe).on('load', function() {
-				$(window).on('load', function () {
+				$(iframe).ready(function() {
+				//$(window).on('load', function () {
 						var ua = navigator.userAgent;
 						var isMobile = {
 							Android: function() {
