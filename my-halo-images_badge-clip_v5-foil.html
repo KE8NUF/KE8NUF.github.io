@@ -187,8 +187,15 @@
 				opacity: calc(var(--hyp)*.66);
 			}
 			
-			/* @media only screen and (max-width : 592px),
-			only screen and (max-device-width : 592px) { */
+			'@media only screen and (max-width : 768px), 
+			only screen and (max-device-width : 768px){
+				.card-front img {
+					max-height: 283px;
+				}
+			}
+			
+			/* @media only screen and (max-width : 768px),
+			only screen and (max-device-width : 768px) { */
 			@supports (-webkit-touch-callout: none) {
 			
 				.card-shine,
