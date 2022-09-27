@@ -765,6 +765,7 @@
 
 			// If we are here, it is not loaded. Set things up so we check   the status again in 100 milliseconds
 			window.setTimeout(checkIframeLoaded, 100);
+			console.log('Checking if frame loaded');
 		}
 		
 		$(document).ready(function (){
@@ -818,6 +819,7 @@
 					}
 					//$(window).trigger('resize');
 				//});
+				console.log('Ran Frame loaded scripts');
 			}
 			$(window).on('resize orientationchange', function () {
 				if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
