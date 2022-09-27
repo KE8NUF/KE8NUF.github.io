@@ -186,7 +186,7 @@ function equalContentHeight() {
 								return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 							}
 						};
-						if(isMobile.any()) {
+						if( isMobile.any() ) {
 						//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 							$(window).bind("orientationchange",function(){
 								setTimeout(
