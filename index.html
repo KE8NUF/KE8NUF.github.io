@@ -392,66 +392,66 @@
 								</style>
 								<div id="badge-frame-insert"></div>
 								<script>
-								var frameCode;
-								$(document).ready(function (){
-									//var frameCode;
-									/* if($(window).width() <= 768) {
-										//code to execute
-										var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
-										$('#badge-frame-insert').append(frameCode);
-									} else {
-										var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
-										$('#badge-frame-insert').append(frameCode);
-									}
-									console.log(frameCode); */
-									
-									//$(window).on('load resize orientationchange', function () {
-										//START OLD ORENTATION
-										//window.addEventListener('orientationchange', function() {
-											//if($(window).width() <= 592) {
-												//var iframe = document.getElementById('frame-badge');
-												//var styleAdd = document.createElement('style');
-												//styleAdd.textContent =
-												  //'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
-												  //'.card-front img {' +
-												  //'max-height: 283px;' +
-												  //'}' +
-												  //'}' 
-												//;
-												//iframe.contentDocument.head.appendChild(styleAdd);
-												//console.log('orientation change from event listener');
-											//}
-										//}, false);
-										//END OLD ORIENTATION
-										if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-											$(window).bind("load resize orientationchange",function(){
-												$('.resp-container').remove();
-												console.log("The orientation has changed!");
-													
+									var frameCode;
+									$(document).ready(function (){
+										//var frameCode;
+										//if($(window).width() <= 768) {
+											//code to execute
+											//var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
+											//$('#badge-frame-insert').append(frameCode);
+										//} else {
+											//var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
+											//$('#badge-frame-insert').append(frameCode);
+										//}
+										//console.log(frameCode);
+										
+										//$(window).on('load resize orientationchange', function () {
+											//START OLD ORENTATION
+											//window.addEventListener('orientationchange', function() {
+												//if($(window).width() <= 592) {
+													//var iframe = document.getElementById('frame-badge');
+													//var styleAdd = document.createElement('style');
+													//styleAdd.textContent =
+													  //'@media only screen and (max-width : 592px), only screen and (max-device-width : 592px){' +
+													  //'.card-front img {' +
+													  //'max-height: 283px;' +
+													  //'}' +
+													  //'}' 
+													//;
+													//iframe.contentDocument.head.appendChild(styleAdd);
+													//console.log('orientation change from event listener');
+												//}
+											//}, false);
+											//END OLD ORIENTATION
+											if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+												$(window).bind("load resize orientationchange",function(){
+													$('.resp-container').remove();
+													console.log("The orientation has changed!");
+														
+													if($(window).width() <= 960) {
+														//code to execute
+														var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v5-foil" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+														$('#badge-frame-insert').append(frameCode);
+													} else if($(window).width() >= 960) {
+														var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v5-foil" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+														$('#badge-frame-insert').append(frameCode);
+													}
+												});
+											}
+											if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
 												if($(window).width() <= 960) {
 													//code to execute
-													var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v5-foil" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+													var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
 													$('#badge-frame-insert').append(frameCode);
-												} else if($(window).width() >= 960) {
-													var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v5-foil" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+												} else if ($(window).width() >= 960) {
+													var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
 													$('#badge-frame-insert').append(frameCode);
 												}
-											});
-										}
-										if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
-											if($(window).width() <= 960) {
-												//code to execute
-												var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
-												$('#badge-frame-insert').append(frameCode);
-											} else if ($(window).width() >= 960) {
-												var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v7-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
-												$('#badge-frame-insert').append(frameCode);
 											}
-										}
-										console.log(frameCode);
-										//$(window).trigger('orientationchange');
-									//});
-								});
+											console.log(frameCode);
+											//$(window).trigger('orientationchange');
+										//});
+									});
 								</script>
 								<!-- END INSERT FOR FOIL BADGE -->
 								
