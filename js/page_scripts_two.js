@@ -62,11 +62,11 @@ function iframeReady() {
 	//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		//$(window).bind('load',function(){
 		setTimeout( function() {
-			if($(window).width() <= 640) {
+			if($(window).width() <= 960) {
 				var iframe = document.getElementById('frame-badge');
 				var styleAdd = document.createElement('style');
 				styleAdd.textContent =
-					'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
+					'@media only screen and (max-width : 960px), only screen and (max-device-width : 960px){' +
 					'.card-front img {' +
 					'max-height: 283px;' +
 					'}' +
@@ -78,11 +78,11 @@ function iframeReady() {
 		}, 500);
 		//});
 	} else {
-		if($(window).width() <= 640) {
+		if($(window).width() <= 960) {
 			var iframe = document.getElementById('frame-badge');
 			var styleAdd = document.createElement('style');
 			styleAdd.textContent =
-				'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
+				'@media only screen and (max-width : 960px), only screen and (max-device-width : 960px){' +
 				'.card-front img {' +
 				'max-height: 283px;' +
 				'}' +
