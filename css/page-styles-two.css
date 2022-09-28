@@ -377,7 +377,7 @@ picture {
 	margin: 6px;
 }
 
-#pulse-rings-color .fixed-dot-blink {
+.page-load-wrapper-inside .fixed-dot-blink {
 	width: 10px;
 	height: 10px;
 	display: block;
