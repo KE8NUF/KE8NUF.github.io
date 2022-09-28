@@ -270,6 +270,261 @@ picture {
 	box-shadow: 0 0 50px #673ab7;
 }
 
+.page-load-wrapper-inside-absolute {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.page-load-wrapper-inside {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.page-load-wrapper-inside-absolute img {
+	width: 250px;
+	heigh: 108px;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+.circle-spinner {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	margin: 0 auto;
+	box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.2), -20px -20px 60px rgba(255, 255, 255, 0.3);
+}
+
+.circle-spinner:before, .circle-spinner:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	
+	/* border: 3px dotted #fff; */
+	border: 3px dotted transparent;
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	-webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-3 -3 106 106"><circle cx="50" cy="50" r="50" fill="transparent" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" style="stroke-dasharray:.4, 10" /></svg>') center/contain;
+          mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-3 -3 106 106"><circle cx="50" cy="50" r="50" fill="transparent" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" style="stroke-dasharray:.4, 10" /></svg>') center/contain
+	
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: sk-bounce 2s linear infinite;
+}
+
+.circle-spinner:after {
+	box-shadow: inset 10px 10px 30px rgba(0, 0, 0, 0.35), inset -10px -10px 30px rgba(255, 255, 255, 0.10);
+	animation-delay: -1s;
+}
+
+#pulse-rings-color {
+	width: 45px;
+	height: 45px;
+	display: block;
+	position: absolute;
+	left: 35px;
+	top: -10px;
+}
+
+#pulse-rings-color .rings {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 0px;
+	height: 0px;
+	border-radius: 100%;
+	opacity: 0;
+	animation: ringPulseColor 4s infinite linear;
+	margin: 6px;
+	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.35), -10px -10px 30px rgba(255, 255, 255, 0.10);
+}
+									
+#pulse-rings-color .rings:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border: 1px dotted transparent;
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	-webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-3 -3 106 106"><circle cx="50" cy="50" r="50" fill="transparent" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" style="stroke-dasharray:.3, 8" /></svg>') center/contain;
+          mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-3 -3 106 106"><circle cx="50" cy="50" r="50" fill="transparent" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" style="stroke-dasharray:3, 8" /></svg>') center/contain
+	
+	box-shadow: inset 10px 10px 30px rgba(0, 0, 0, 0.35), inset -10px -10px 30px rgba(255, 255, 255, 0.10);
+}
+									
+#pulse-rings-color .clear-rings {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 0px;
+	height: 0px;
+	border-radius: 100%;
+	opacity: 0;
+	border: 5px solid rgba(255, 255, 255, 0.0);
+	animation: ringPulseColor 5s infinite linear;
+	animation-delay: 200ms;
+	margin: 6px;
+}
+
+#pulse-rings-color .fixed-dot-blink {
+	width: 10px;
+	height: 10px;
+	display: block;
+	border-radius: 100%;
+	background: #F79533;
+	content: "";
+	position: absolute;
+	top: 16px;
+	left: 56.4px;
+	box-shadow: inset 0px 0px 10px 2px rgba(251, 139, 28, 0.65),
+                      0px 0px 15px 2px rgba(247, 149, 51, 1);
+	-webkit-animation: blinky 2s alternate infinite;
+	animation: blinky 2s alternate infinite;
+}
+
+@-webkit-keyframes ringPulseColor {
+	0% {
+		opacity: 0.0;
+		width: 0vmin;
+		height: 0vmin;
+	}
+	10% {
+		opacity: 0.2;
+	}
+	40% {
+		opacity: 0.80;
+		width: 20vmin;
+		height: 20vmin;
+	}
+	60% {
+		opacity: 0.4;
+		width: 30vmin;
+		height: 30vmin;
+	}
+	75% {
+		opacity: 0.2;
+		width: 55vmin;
+		height: 55vmin;
+	}
+	100% {
+		opacity: 0.0;
+		width: 75vmin;
+		height: 75vmin;
+	}
+}
+
+@keyframes ringPulseColor {
+	0% {
+		opacity: 0.0;
+		width: 0vmin;
+		height: 0vmin;
+	}
+	10% {
+		opacity: 0.2;
+	}
+	40% {
+		opacity: 0.80;
+		width: 20vmin;
+		height: 20vmin;
+	}
+	60% {
+		opacity: 0.4;
+		width: 30vmin;
+		height: 30vmin;
+	}
+	75% {
+		opacity: 0.2;
+		width: 55vmin;
+		height: 55vmin;
+	}
+	100% {
+		opacity: 0.0;
+		width: 75vmin;
+		height: 75vmin;
+	}
+}
+
+#pulse-rings-color .rings:nth-child(1) { animation-delay:200ms; }
+#pulse-rings-color .rings:nth-child(2) { animation-delay:400ms; }
+#pulse-rings-color .rings:nth-child(3) { animation-delay:600ms; }
+#pulse-rings-color .rings:nth-child(4) { animation-delay:800ms; }
+#pulse-rings-color .rings:nth-child(5) { animation-delay:1000ms; }
+#pulse-rings-color .rings:nth-child(6) { animation-delay:1200ms; }
+#pulse-rings-color .rings:nth-child(7) { animation-delay:1400ms; }
+#pulse-rings-color .rings:nth-child(8) { animation-delay:1600ms; }
+#pulse-rings-color .rings:nth-child(9) { animation-delay:1800ms; }
+
+@-webkit-keyframes sk-bounce {
+	0% {
+		transform: scale(0);
+	}
+	20% {
+		transform: scale(1);
+	}
+	40% {
+		transform: scale(1.5);
+	}
+	60% {
+		transform: scale(2);
+    opacity: 0.5;
+	}
+	80% {
+		transform: scale(2.5);
+    opacity: 0.25;
+	}
+	100% {
+		transform: scale(3);
+    opacity: 0;
+	}
+}
+
+@keyframes sk-bounce {
+	0% {
+		transform: scale(0);
+	}
+	20% {
+		transform: scale(1);
+	}
+	40% {
+		transform: scale(1.5);
+	}
+	60% {
+		transform: scale(2);
+    opacity: 0.5;
+	}
+	80% {
+		transform: scale(2.5);
+    opacity: 0.25;
+	}
+	100% {
+		transform: scale(3);
+    opacity: 0;
+	}
+}
+
+@-webkit-keyframes blinky {
+  0% { opacity: 0.25; }
+  50% { opacity: 1; }
+  100% { opacity: 0.25; }
+}
+
+@keyframes blinky {
+  0% { opacity: 0.25; }
+  50% { opacity: 1; }
+  100% { opacity: 0.25; }
+}
+
 .container-wrapper-full {
 	position: relative;
 	height: 100%;
