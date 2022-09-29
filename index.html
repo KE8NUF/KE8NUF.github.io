@@ -771,7 +771,31 @@
 		<script src="js/page_scripts_two.js"></script>
 		
 		<script>
+		//*****
+		//set variable for device with for on resize event below
+		//*****
 		var deviceWidth = $(window).width();
+		//*****
+		//prevent scrolling on element not needed to scroll
+		//*****
+		function stopWheel(e){
+			if(!e){ /* IE7, IE8, Chrome, Safari */ 
+				e = window.event; 
+			}
+			if(e.preventDefault) { /* Chrome, Safari, Firefox */ 
+				e.preventDefault(); 
+			} 
+			e.returnValue = false; /* IE7, IE8 */
+		}
+		$('#frame-badge').on('hover touchstart mouseenter', function() {
+			$(document).bind('mousewheel DOMMouseScroll',function(){
+				console.log('Stopped scroll on iframe div');
+				stopWheel();
+			});
+		}, function() {
+			$(document).unbind('mousewheel DOMMouseScroll');
+		});
+		
 		$(document).ready(function (){
 			//*****
 			//add listener for drag
