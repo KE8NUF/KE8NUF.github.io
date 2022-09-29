@@ -822,7 +822,7 @@
 			//change css for frame on resize
 			//*****
 			var document_width, document_height;
-			$(window).on('resize orientationchange', function () {
+			$(window).on('resize', function () {
 				if( document_width!=$(window).width() || document_height!=$(window).height() ) {
 					document_width=$(window).width(); document_height=$(window).height();
 					// Do something
