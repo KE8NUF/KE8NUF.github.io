@@ -291,6 +291,7 @@ picture {
 	padding: 0;
 	margin: 0;
 	display: block;
+	display: inline-block;
 }
 
 .circle-spinner {
@@ -523,6 +524,81 @@ picture {
   0% { opacity: 0.25; }
   50% { opacity: 1; }
   100% { opacity: 0.25; }
+}
+
+.stage {
+	/* 
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem 0;
+    margin: 0 -5%;
+    overflow: hidden;
+	*/
+	display: inline-block;
+	overflow: hidden;
+}
+
+.dot-typing {
+	position: absolute;
+	right: 9999px;
+	bottom: 35px;
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	background-color: #F79533;
+	color: #F79533;
+	box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+	animation: dotTyping 1.5s infinite linear;
+}
+
+@-webkit-keyframes dotTyping {
+	0% {
+		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+	}
+	16.667% {
+		box-shadow: 9984px -10px 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+	}
+	33.333% {
+		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+	}
+	50% {
+		box-shadow: 9984px 0 0 0 #F79533, 9999px -10px 0 0 #F79533, 10014px 0 0 0 #F79533;
+	}
+	66.667% {
+		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+	}
+	83.333% {
+		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px -10px 0 0 #F79533;
+	}
+	100% {
+		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+	}
+}
+
+@keyframes dotTyping {
+	0% {
+		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+	}
+	16.667% {
+		box-shadow: 9984px -10px 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+	}
+	33.333% {
+		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+	}
+	50% {
+		box-shadow: 9984px 0 0 0 #F79533, 9999px -10px 0 0 #F79533, 10014px 0 0 0 #F79533;
+	}
+	66.667% {
+		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+	}
+	83.333% {
+		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px -10px 0 0 #F79533;
+	}
+	100% {
+		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+	}
 }
 
 .container-wrapper-full {
