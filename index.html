@@ -771,6 +771,7 @@
 		<script src="js/page_scripts_two.js"></script>
 		
 		<script>
+		var deviceWidth = $(window).width();
 		$(document).ready(function (){
 			//*****
 			//add listener for drag
@@ -821,10 +822,10 @@
 			//*****
 			//change css for frame on resize
 			//*****
-			var document_width, document_height;
 			$(window).on('resize', function () {
-				if( document_width!=$(window).width() || document_height!=$(window).height() ) {
-					document_width=$(window).width(); document_height=$(window).height();
+				var windowWidth = $(window).width();
+				if( deviceWidth !== windowWidth) {
+					deviceWidth = $(window).width();
 					// Do something
 					iframeReady();
 				}
