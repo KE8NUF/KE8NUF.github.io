@@ -824,7 +824,8 @@
 			//*****
 			$(window).on('resize', function () {
 				var windowWidth = $(window).width();
-				if( deviceWidth !== windowWidth) {
+				var notFrame = $('iframe:not(.resp-iframe), div:not(.resp-container)');
+				if( deviceWidth !== windowWidth && notFrame ) {
 					deviceWidth = $(window).width();
 					// Do something
 					iframeReady();
