@@ -821,8 +821,13 @@
 			//*****
 			//change css for frame on resize
 			//*****
+			var document_width, document_height;
 			$(window).on('resize orientationchange', function () {
-				iframeReady();
+				if( document_width!=$(window).width() || document_height!=$(window).height() ) {
+					document_width=$(window).width(); document_height=$(window).height();
+					// Do something
+					iframeReady();
+				}
 				/* if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
 					if($(window).width() <= 768) {
 						var iframe = document.getElementById('frame-badge');
