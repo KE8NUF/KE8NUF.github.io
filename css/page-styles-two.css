@@ -542,62 +542,62 @@ picture {
 
 .dot-typing {
 	position: absolute;
-	right: 9999px;
+	right: 9994px;
 	bottom: 35px;
 	width: 5px;
 	height: 5px;
 	border-radius: 5px;
 	background-color: #F79533;
 	color: #F79533;
-	box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+	box-shadow: 9984px 0 0 0 #F79533, 9994px 0 0 0 #F79533, 10004px 0 0 0 #F79533;
 	animation: dotTyping 1.5s infinite linear;
 }
 
 @-webkit-keyframes dotTyping {
 	0% {
-		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+		box-shadow: 9984px 0 0 0 #F79533, 9994px 0 0 0 #F79533, 10004px 0 0 0 #F79533;
 	}
 	16.667% {
-		box-shadow: 9984px -10px 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+		box-shadow: 9984px -10px 0 0 #F79533, 9994px 0 0 0 #F79533, 10004px 0 0 0 #F79533;
 	}
 	33.333% {
-		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+		box-shadow: 9984px 0 0 0 #F79533, 9994px 0 0 0 #F79533, 10004px 0 0 0 #F79533;
 	}
 	50% {
-		box-shadow: 9984px 0 0 0 #F79533, 9999px -10px 0 0 #F79533, 10014px 0 0 0 #F79533;
+		box-shadow: 9984px 0 0 0 #F79533, 9994px -10px 0 0 #F79533, 10004px 0 0 0 #F79533;
 	}
 	66.667% {
-		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+		box-shadow: 9984px 0 0 0 #F79533, 9994px 0 0 0 #F79533, 10004px 0 0 0 #F79533;
 	}
 	83.333% {
-		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px -10px 0 0 #F79533;
+		box-shadow: 9984px 0 0 0 #F79533, 9994px 0 0 0 #F79533, 10004px -10px 0 0 #F79533;
 	}
 	100% {
-		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+		box-shadow: 9984px 0 0 0 #F79533, 9994px 0 0 0 #F79533, 10004px 0 0 0 #F79533;
 	}
 }
 
 @keyframes dotTyping {
 	0% {
-		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+		box-shadow: 9984px 0 0 0 #F79533, 9994px 0 0 0 #F79533, 10004px 0 0 0 #F79533;
 	}
 	16.667% {
-		box-shadow: 9984px -10px 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+		box-shadow: 9984px -10px 0 0 #F79533, 9994px 0 0 0 #F79533, 10004px 0 0 0 #F79533;
 	}
 	33.333% {
-		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+		box-shadow: 9984px 0 0 0 #F79533, 9994px 0 0 0 #F79533, 10004px 0 0 0 #F79533;
 	}
 	50% {
-		box-shadow: 9984px 0 0 0 #F79533, 9999px -10px 0 0 #F79533, 10014px 0 0 0 #F79533;
+		box-shadow: 9984px 0 0 0 #F79533, 9994px -10px 0 0 #F79533, 10004px 0 0 0 #F79533;
 	}
 	66.667% {
-		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+		box-shadow: 9984px 0 0 0 #F79533, 9994px 0 0 0 #F79533, 10004px 0 0 0 #F79533;
 	}
 	83.333% {
-		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px -10px 0 0 #F79533;
+		box-shadow: 9984px 0 0 0 #F79533, 9994px 0 0 0 #F79533, 10004px -10px 0 0 #F79533;
 	}
 	100% {
-		box-shadow: 9984px 0 0 0 #F79533, 9999px 0 0 0 #F79533, 10014px 0 0 0 #F79533;
+		box-shadow: 9984px 0 0 0 #F79533, 9994px 0 0 0 #F79533, 10004px 0 0 0 #F79533;
 	}
 }
 
@@ -2204,6 +2204,7 @@ only screen and (max-device-width : 667px) {
 	.col-3 {
 		grid-template-columns: repeat(2, 1fr);
 	}
+	
 	/* MAKES LAST COLUMN 100% WIDTH FOR NON EVEN NUMBERS */
 	.col-3 > .grid-item:last-of-type {
 	  grid-column: 1 / -1;
@@ -2292,16 +2293,30 @@ only screen and (max-device-width : 428px) {
 		left: 22.5%;
 		top: 23%;
 	}
+	
+	.page-load-wrapper-inside .fixed-dot-blink {
+	  left: 48px;
+	  top: 11px;
+	}
 }
 
 @media only screen and (max-width : 414px), /* 414px */
 only screen and (max-device-width : 414px) {
+	.page-load-wrapper-inside .fixed-dot-blink {
+	  left: 46px;
+	  top: 13px;
+	}
 }
 
 @media only screen and (max-width : 412px),
 only screen and (max-device-width : 412px) {
 	#fixed-dot {
 		left: 22.7%;
+	}
+	
+	.page-load-wrapper-inside .fixed-dot-blink {
+	  left: 46px;
+	  top: 13px;
 	}
 }
 
@@ -2317,6 +2332,11 @@ only screen and (max-device-width : 390px) {
 	#fixed-dot {
 		left: 22.7%;
 	}
+	
+	.page-load-wrapper-inside .fixed-dot-blink {
+	  left: 43px;
+	  top: 11px;
+	}
 }
 
 @media only screen and (max-width : 384px),
@@ -2330,6 +2350,11 @@ only screen and (max-device-width : 384px) {
 		height: 10px;
 		left: 22.5%;
 		top: 23%;
+	}
+	
+	.page-load-wrapper-inside .fixed-dot-blink {
+	  left: 43px;
+	  top: 11px;
 	}
 }
 
@@ -2349,13 +2374,25 @@ only screen and (max-device-width : 360px) {
 	}
 	
 	.page-load-wrapper-inside .fixed-dot-blink {
-		left: 50px;
-		top: 13px;
+	  left: 40px;
+	  top: 10px;
 	}
 }
 
 @media only screen and (max-width : 320px), /* 320px */
 only screen and (max-device-width : 320px) {
+	.page-load-wrapper-inside .fixed-dot-blink {
+	  left: 35px;
+	  top: 7px;
+	}
+	
+	.dot-typing {
+		bottom: 28px;
+	}
+	
+	.dot-typing {
+		right: 9984px;
+	}
 }
 
 @media only screen and (max-width : 280px),
@@ -2368,8 +2405,16 @@ only screen and (max-device-width : 280px) {
 		left: 22.3%;
 	}
 	
+	#pulse-rings-color {
+		left: 11px;
+	}
+	
 	.page-load-wrapper-inside .fixed-dot-blink {
-		left: 50px;
-		top: 13px;
+	  left: 30px;
+	  top: 6px;
+	
+	
+	.dot-typing {
+		right: 9984px;
 	}
 }
