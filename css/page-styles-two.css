@@ -1743,6 +1743,7 @@ nav ul li a .house {
 	text-align: center;
 	padding-top: 45%;
 	position: relative;
+	overlow: hidden;
 	/* max-height: 45%;
 	min-height: 45%; */
 	flex: 1 100%;
@@ -1758,6 +1759,15 @@ nav ul li a .house {
 	height: 100%;
 	left: 0;
 	right: 0;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.card-image img:hover {
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 .card-text {
