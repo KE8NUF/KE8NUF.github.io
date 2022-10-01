@@ -1823,6 +1823,7 @@ h2 {
 	top: 50%;
 	left: 50%;
 	width: 100%;
+	min-height: 115px;
 	transform: translate(-50%, -50%);
 	font-family: 'Fredoka One', cursive;
 	font-variant: small-caps;
@@ -1873,7 +1874,7 @@ h2 {
     height: 8px;
     background: transparent;
     border-radius: 100px/50px;
-    box-shadow: 0 40px 30px rgba(0, 0, 0, 0.65);
+    box-shadow: 0 40px 30px rgba(0, 0, 0, 1), 0 40px 15px rgba(0, 0, 0, 0.55), 0 40px 6px rgba(0, 0, 0, 0.15);
 }
 
 .bounceItem:nth-child(1) {
