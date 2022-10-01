@@ -230,6 +230,15 @@ function iframeReady() {
 				console.log('Page Not Loaded Yet.');
 			}
 		}, 100);
+		//*****
+		//welcome rainbow text for whiney
+		//*****
+		$('.anim-text-flow').html(function(i, html) {
+			//var chars = $.trim(html).split(" ")
+			var chars = $.trim(html).split("");
+
+			return '<span class="bounceItem"><span class="flowText">' + chars.join('</span></span><span class="bounceItem"><span class="flowText">') + '</span></span>';
+		});
 		
 		equalContentHeight();
 	});
