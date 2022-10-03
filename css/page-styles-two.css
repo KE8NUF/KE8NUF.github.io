@@ -1743,7 +1743,7 @@ nav ul li a .house {
 	text-align: center;
 	padding-top: 45%;
 	position: relative;
-	overlow: hidden;
+	overflow: hidden;
 	/* max-height: 45%;
 	min-height: 45%; */
 	flex: 1 100%;
