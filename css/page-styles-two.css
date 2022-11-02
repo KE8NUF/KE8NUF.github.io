@@ -157,6 +157,7 @@ table {
 
 input[type=button], button {
 	-webkit-appearance: none;
+	appearance: none;
 	border: 0px solid transparent;
 }
 
@@ -286,7 +287,7 @@ picture {
 
 .page-load-wrapper-inside-absolute img {
 	width: 250px;
-	heigh: 108px;
+	height: 108px;
 	border: 0;
 	padding: 0;
 	margin: 0;
@@ -313,7 +314,7 @@ picture {
 	border: 3px dotted transparent;
 	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
 	-webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-3 -3 106 106"><circle cx="50" cy="50" r="50" fill="transparent" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" style="stroke-dasharray:.4, 10" /></svg>') center/contain;
-          mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-3 -3 106 106"><circle cx="50" cy="50" r="50" fill="transparent" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" style="stroke-dasharray:.4, 10" /></svg>') center/contain
+          mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-3 -3 106 106"><circle cx="50" cy="50" r="50" fill="transparent" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" style="stroke-dasharray:.4, 10" /></svg>') center/contain;
 	
 	opacity: 1;
 	position: absolute;
@@ -358,9 +359,9 @@ picture {
 	border: 1px dotted transparent;
 	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
 	-webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-3 -3 106 106"><circle cx="50" cy="50" r="50" fill="transparent" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" style="stroke-dasharray:.3, 8" /></svg>') center/contain;
-          mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-3 -3 106 106"><circle cx="50" cy="50" r="50" fill="transparent" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" style="stroke-dasharray:3, 8" /></svg>') center/contain
+          mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-3 -3 106 106"><circle cx="50" cy="50" r="50" fill="transparent" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" style="stroke-dasharray:3, 8" /></svg>') center/contain;
 	
-	box-shadow: inset 10px 10px 30px rgba(0, 0, 0, 0.35), inset -10px -10px 30px rgba(255, 255, 255, 0.10);
+	box-shadow: inset 10px 10px 30px rgba(0,  0,  0,  0.35), inset -10px -10px 30px rgba(255,  255,  255,  0.10);
 }
 									
 #pulse-rings-color .clear-rings {
@@ -670,7 +671,7 @@ picture {
 	justify-content: center;
 	-ms-flex-align: center;
 	align-items: center;
-	overlow: hidden;
+	overflow: hidden;
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -1447,6 +1448,7 @@ nav ul li a .house {
 	opacity: 0;
 	background-image: linear-gradient(298deg, #da2c4d, #f8ab37);
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	left: 0;
 	top: 0;
@@ -3646,7 +3648,7 @@ only screen and (max-device-width : 280px) {
 	.page-load-wrapper-inside .fixed-dot-blink {
 	  left: 30px;
 	  top: 6px;
-	
+	}
 	
 	.dot-typing {
 		right: 9984px;
