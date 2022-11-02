@@ -1751,6 +1751,15 @@ nav ul li a .house {
 	flex: 1 100%;
 }
 
+.card-image:hover {
+	transition: 
+		filter 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+		-webkit-filter 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	will-change: filter;
+	-webkit-filter: brightness(120%) hue-rotate(45deg);
+	filter: brightness(120%) hue-rotate(45deg);
+}
+
 .card-image h2,
 .card-image img {
 	border: 0;
