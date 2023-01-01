@@ -554,7 +554,6 @@
 				/* opacity: calc(var(--hyp)*.66); */
 			}
 			
-			
 			.banner-front-glare {
 				position: absolute;
 				top: 0;
@@ -622,6 +621,19 @@
 				
 				-webkit-mask-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
 				mask-position: center, 0% var(--posy), var(--posx) var(--posy), var(--posx) var(--posy);
+			}
+			
+			@media only screen and (max-width : 960px), 
+			only screen and (max-device-width : 960px){
+				.badge-back-gline-wrapper img,
+				.badge-banners-top img,
+				.badge-banners-bottom img,
+				.badge-front img {
+					max-height: 283px;
+				}
+			}
+			
+			@supports (-webkit-touch-callout: none) {
 			}
 		</style>
 		
