@@ -628,7 +628,7 @@
 			}
 			
 			.badge:hover img {
-				transition: all 250ms ease;
+				transition: all 350ms ease;
 				display: none;
 				opacity: 0;
 			}
@@ -649,6 +649,7 @@
 				transform: translateZ(50px);
 				display: none;
 				opacity: 0;
+				transition: all 350ms ease;
 			}
 			
 			.badge:hover .badge-front .image-shadowed {
@@ -656,7 +657,9 @@
 			}
 			
 			.badge:hover .image-shadowed,
-			.badge:hover .badge-front .image-shadowed {
+			.badge:hover .badge-front .image-shadowed,
+			.badge:hover .badge-back-gline-wrapper img,
+			.badge:hover .badge-back {
 				display: inline-block;
 				opacity: 1;
 			}
@@ -682,12 +685,10 @@
 		<div class="three-d-badge-wrapper">
 			<div class="badge">
 				
-				<img class="badge-back" src="./images/MARC-Badge-Design_v4-background-noshad.png" style="opacity:0;" />
-				<img class="badge-back image-shadowed" src="./images/MARC-Badge-Design_v4-background.png" style="opacity:0;" />
+				<img class="badge-back" src="./images/MARC-Badge-Design_v4-background.png" style="opacity:0;" />
 				
 				<div class="badge-back-gline-wrapper">
-					<img src="./images/MARC-Badge-Design_v4-background-noshad.png" />
-					<img class="image-shadowed" src="./images/MARC-Badge-Design_v4-background.png" />
+					<img src="./images/MARC-Badge-Design_v4-background.png" />
 					<div class="badge-back-glare"></div>
 					<div class="badge-back-shine"></div>
 				</div>
