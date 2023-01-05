@@ -494,6 +494,16 @@
 				transform: translateZ(50px);
 			}
 			
+			.badge.active .badge-banners-top,
+			.badge.hover .badge-banners-top,
+			.badge.active .badge-banners-bottom,
+			.badge:hover .badge-banners-bottom,
+			.badge.active .badge-front,
+			.badge:hover .badge-front {
+				-webkit-filter: drop-shadow(var(--xMovement) var(--yMovement) 8px rgb(0 0 0 / 0.6));
+				filter: drop-shadow(var(--xMovement) var(--yMovement) 6px rgb(0 0 0 / 0.6));
+			}
+			
 			.badge-front img {
 				height: 100%;
 				max-height: 425px;
@@ -695,21 +705,21 @@
 				
 				<div id="badge-banners-top" class="badge-banners-top">
 					<img src="./images/MARC-Badge-Design_v4-banners-top-noshad.png" />
-					<img class="image-shadowed" src="./images/MARC-Badge-Design_v4-banners-top.png" />
+					<img class="image-shadowed" src="./images/MARC-Badge-Design_v4-banners-top-noshad.png"" />
 					<div class="banner-top-glare"></div>
 					<div class="banner-top-shine badge-mask"></div>
 				</div>
 				
 				<div id="badge-banners-bottom" class="badge-banners-bottom">
 					<img src="./images/MARC-Badge-Design_v4-banners-bottom-noshad.png" />
-					<img class="image-shadowed" src="./images/MARC-Badge-Design_v4-banners-bottom.png" />
+					<img class="image-shadowed" src="./images/MARC-Badge-Design_v4-banners-bottom-noshad.png" />
 					<div class="banner-bottom-glare"></div>
 					<div class="banner-bottom-shine badge-mask"></div>
 				</div>
 					
 				<div id="badge-front" class="badge-front">
 					<img src="./images/MARC-Badge-Design_v4-front-noshad.png" />
-					<img class="image-shadowed" src="./images/MARC-Badge-Design_v4-front.png" />
+					<img class="image-shadowed" src="./images/MARC-Badge-Design_v4-front-noshad.png" />
 					<div class="banner-front-glare"></div>
 					<div class="banner-front-shine badge-mask"></div>
 				</div>
@@ -1291,6 +1301,12 @@
 				// console.log(objAngle);
 				// get hype for high point variable
 				var hyp = Math.sqrt( (posy-50)*(posy-50) + (posx-50) * (posx-50) ) /50;
+				//filter shadow movement
+				var movementShadow = 5;
+				var shadowX = l + e.target.offsetLeft;
+				var shadowY = t + e.target.offsetTop;
+				var xMovement = Math.round((shadowX / width * movementShadow) - (movementShadow / 2)); 
+				var yMovement = Math.round((shadowY / height * movementShadow) - (movementShadow / 2));
 				
 				$badgeClass.removeClass('active');
 				$('.badge-back-shine, .banner-top-shine, .banner-bottom-shine, .banner-front-shine, .badge-back-glare, .banner-top-glare, .banner-bottom-glare, .banner-front-glare').removeClass('active');
@@ -1298,7 +1314,7 @@
 				$('.badge-back-shine, .banner-top-shine, .banner-bottom-shine, .banner-front-shine, .badge-back-glare, .banner-top-glare, .banner-bottom-glare, .banner-front-glare').addClass('active');
 				//$style.html(style);
 				//$('.badge').attr('style', '--mx:' + xPercent + '%; --my:' + yPercent + '%; --posx:' + posy + 'px; --posy:' + posx + 'px; --tx:' + posx + 'px; --ty:' + posy + 'px; --rx:' + tiltX + 'deg; --ry:' + tiltY + 'deg; --pos:' + xPercent + '% ' +  yPercent + '%; --hyp:' + hyp + '; --angle:' + objAngle + 'deg;');
-				$(':root').attr('style', '--mx:' + xPercent + '%; --my:' + yPercent + '%; --posx:' + posy + 'px; --posy:' + posx + 'px; --tx:' + posx + 'px; --ty:' + posy + 'px; --rx:' + tiltX + 'deg; --ry:' + tiltY + 'deg; --pos:' + xPercent + '% ' +  yPercent + '%; --hyp:' + hyp + '; --angle:' + objAngle + 'deg;');
+				$(':root').attr('style', '--mx:' + xPercent + '%; --my:' + yPercent + '%; --posx:' + posy + 'px; --posy:' + posx + 'px; --tx:' + posx + 'px; --ty:' + posy + 'px; --rx:' + tiltX + 'deg; --ry:' + tiltY + 'deg; --pos:' + xPercent + '% ' +  yPercent + '%; --hyp:' + hyp + '; --angle:' + objAngle + 'deg; --xMovement:' + xMovement + 'px; --yMovement:' + yMovement + 'px;');
 			}).on('mouseleave touchend dragLeave', function() {
 				$('.badge').attr('style', 'will-change: transform; transform: perspective(1000px), rotateX(0deg), rotateY(0deg);');
 				$badgeClass.removeClass('active');
