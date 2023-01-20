@@ -3245,7 +3245,7 @@ h2 {
 }
 
 .dark-mode .logo img {
-	filter: invert(1);
+	filter: invert(1) brightness(2);
 }
 
 .dark-mode nav.reveal .logo img {
