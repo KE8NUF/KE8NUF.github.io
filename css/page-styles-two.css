@@ -3226,6 +3226,89 @@ h2 {
 	}
 }
 
+.dark-mode {
+	background: #111111;
+	color: #f1f4f7;
+}
+
+.dark-mode nav ul li a {
+	color: #f1f4f7;
+}
+
+.dark-mode nav ul li a:hover,
+.dark-mode nav.reveal ul li a:hover {
+	color: var(--orange);
+}
+
+.dark-mode nav.reveal ul li a {
+	color: var(--txtgray);
+}
+
+.dark-mode .logo img {
+	filter: invert(1);
+}
+
+.dark-mode nav.reveal .logo img {
+	filter: none;
+}
+
+.dark-mode .hero-background {
+	mix-blend-mode: hard-light; 
+}
+
+.dark-mode .grid-item {
+	border: 1px solid #4f5865;
+	background: #2f3c4f;
+}
+
+.dark-mode .grid-item .card,
+.dark-mode .grid-item #terms-data a, 
+.dark-mode #terms-data span a, 
+.dark-mode #terms-data span a span,
+.dark-mode #terms-data,
+.dark-mode #terms-data span span,
+.dark-mode #terms-data, 
+.dark-mode #terms-data span, 
+.dark-mode #terms-data a, 
+.dark-mode #terms-data div {
+	color: #f1f4f7!important;
+	background-color: transparent!important;
+}
+
+.dark-mode #terms-data strong,
+.dark-mode #terms-data div strong,
+.dark-mode #terms-data strong span,
+.dark-mode #terms-data strong span strong {
+	color: var(--teal)!important;
+}
+
+.dark-mode .section-gray {
+	color: var(--txtgray);
+}
+
+.dark-mode .section-black-lighter .grid-item,
+.dark-mode .section-black-lighter.no-back-border-shadow {
+	background: none repeat scroll 0 0 transparent;
+	border: 0px solid transparent;
+	box-shadow: 0px 0px 0px;
+}
+
+.dark-mode .grid-item .gray-text {
+	color: var(--txtgrayonblack);
+}
+
+.orange-button:hover {
+	filter: brightness(1.2);
+}
+
+.orange-button-inside a {
+	color: #f1f4f7;
+}
+
+.orange-button-inside a:hover {
+	color: #ffffff;
+}
+
 /* ====== media quieries call for each display device screen resolutions ====== */
 @media (pointer: coarse) {
 	.oval-background {
