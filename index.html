@@ -130,7 +130,7 @@
 		</script>
 	</head>
 	
-	<body class="dark-mode">
+	<body>
 		<!-- INSERT PAGE LOADING DOTS -->
 		<div id="page-load-wrapper">
 			<!-- START OLD LAODING DOTS -->
@@ -243,6 +243,20 @@
 		<!-- END PAGE HEADER AND NAVIGATION -->
 		
 		<!-- START SITE CONTENT -->
+			<!-- dark mode toggle -->
+			<div class="container-wrapper">
+				<div class="toggle-container">
+					<input type="checkbox" id="theme-switch" name="theme-switch" />
+					<label for="theme-switch">Toggle Button</label>
+					<div class="theme-mode-text">
+						<span class="theme-mode-status">Light</span>
+						<span class="theme-mode-status">Dark</span>
+						Theme
+					</div>
+				</div>
+			</div>
+			<!-- end dark mode toggle -->
+			
 			<!-- START WELCOME RAINBOW TEXT -->
 			<div class="container-wrapper">
 				<div class="grid-container">
@@ -912,6 +926,31 @@
 				}
 				//$(window).trigger('resize');
 				*/
+			});
+			//theme mode toggle
+			var checkbox = document.querySelector('input[name=theme-switch]');
+			checkbox.addEventListener('change', function() {
+				if(this.checked) {
+					trans();
+					document.body.setAttribute('data-theme', 'dark');
+					document.body.classList.add('dark-mode');
+				} else {
+					trans();
+					document.body.setAttribute('data-theme', 'light');
+					document.body.classList.remove('dark-mode');
+				}
+			});
+			
+			let trans = () => {
+				document.body.classList.add('transition');
+				console.log('theme switched');
+				window.setTimeout(() => {
+					document.body.classList.remove('transition');
+				}, 1000);
+			}
+			
+			$(window).on('load', function() {
+				checkbox.checked = false;
 			});
 		});
 		</script>

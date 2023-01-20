@@ -127,7 +127,7 @@
 		</script>
 	</head>
 	
-	<body class="dark-mode">
+	<body>
 		<!-- START SITE HEADER AND NAVIGATION -->
 		<header>
 			<div class="hero-background">
@@ -191,6 +191,20 @@
 			</nav>
 		</header>
 		<!-- END PAGE HEADER AND NAVIGATION -->
+			<!-- dark mode toggle -->
+			<div class="container-wrapper">
+				<div class="toggle-container">
+					<input type="checkbox" id="theme-switch" name="theme-switch" />
+					<label for="theme-switch">Toggle Button</label>
+					<div class="theme-mode-text">
+						<span class="theme-mode-status">Light</span>
+						<span class="theme-mode-status">Dark</span>
+						Theme
+					</div>
+				</div>
+			</div>
+			<!-- end dark mode toggle -->
+			
 			<div class="container-wrapper" style="max-height:inherit;">
 				<div class="grid-container">
 					<div class="grid-item">
@@ -1744,6 +1758,32 @@
 
 			console.log("X: "+dragX+" Y: "+dragY);
 		}, false);
+		
+		//theme mode toggle
+		var checkbox = document.querySelector('input[name=theme-switch]');
+		checkbox.addEventListener('change', function() {
+			if(this.checked) {
+				trans();
+				document.body.setAttribute('data-theme', 'dark');
+				document.body.classList.add('dark-mode');
+			} else {
+				trans();
+				document.body.setAttribute('data-theme', 'light');
+				document.body.classList.remove('dark-mode');
+			}
+		});
+			
+		let trans = () => {
+			document.body.classList.add('transition');
+			console.log('theme switched');
+			window.setTimeout(() => {
+				document.body.classList.remove('transition');
+			}, 1000);
+		}
+			
+		$(window).on('load', function() {
+			checkbox.checked = false;
+		});
 		</script>
 		<!-- <script>
 		(function($){
