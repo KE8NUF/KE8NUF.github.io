@@ -3248,7 +3248,12 @@ h2 {
 	filter: invert(1) brightness(2);
 }
 
-.dark-mode nav.reveal .logo img {
+.dark-mode .logo img:hover {
+	filter: invert(1) brightness(1);
+}
+
+.dark-mode nav.reveal .logo img,
+.dark-mode nav.reveal .logo img:hover {
 	filter: none;
 }
 
