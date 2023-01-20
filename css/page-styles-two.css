@@ -3240,7 +3240,9 @@ h2 {
 	color: var(--orange);
 }
 
-.dark-mode nav.reveal ul li a {
+.dark-mode nav.reveal ul li a,
+.dark-mode .menu-icon.active,
+.dark-mode .menu .showing li a {
 	color: var(--txtgray);
 }
 
