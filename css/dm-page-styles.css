@@ -2687,6 +2687,10 @@ only screen and (max-device-width : 667px) {
 	header {
 		max-height: 275px;
 	}
+	
+	header .site-logo-large img {
+		max-height: 200px;
+	}
 }
 
 @media only screen and (max-width : 640px),
@@ -2753,6 +2757,10 @@ only screen and (max-device-width : 390px) {
 only screen and (max-device-width : 384px) {
 	header {
 		max-height:225px;
+	}
+	
+	header .site-logo-large img {
+		max-height: 150px;
 	}
 }
 
