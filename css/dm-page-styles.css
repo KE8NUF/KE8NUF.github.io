@@ -2591,6 +2591,18 @@ only screen and (max-device-width : 960px) {
 		background: rgba(255, 255, 255, 0.09);
 		background: rgba(1, 84, 146, 0.14);
 	}
+	
+	nav .shown-menu {
+		-webkit-backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
+		backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
+	}
+
+	nav.fixed-nav .menu,
+	nav.fixed-nav .menu-logo,
+	nav.fixed-nav .menu-icon {
+		-webkit-backdrop-filter: blur(0px) saturate(100%) brightness(1);
+		backdrop-filter: blur(0px) saturate(100%) brightness(1);
+	}
 
 	nav ul li {
 		box-sizing: border-box;
