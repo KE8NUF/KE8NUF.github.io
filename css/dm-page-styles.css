@@ -236,6 +236,7 @@ body {
 	padding-top: 2%;
 	-webkit-mask-image: linear-gradient(to top, black 98%, transparent 100%);
 	mask-image: linear-gradient(to top, black 98%, transparent 100%);
+	overflow: hidden;
 }
 
 /* apply to glass style box
