@@ -282,10 +282,22 @@
 												<figure style="margin:0;">
 													<figcaption style="margin-bottom:5px;">Daft Punk - Robot Rock (Midi):</figcaption>
 													<style>
-														audio::-webkit-media-controls-play-button,
 														audio::-webkit-media-controls-panel {
 															color: var(--white);
-															background: var(--siteDarkBlueText);
+															background-color: var(--siteDarkBlueText);
+														}
+														audio::-webkit-media-controls-play-button,
+														audio::-webkit-media-controls-mute-button {
+															background-color: rgba(255, 255, 255, 0.85);
+															border-radius: 50%;
+														}
+														audio::-webkit-media-controls-play-button:hover,
+														audio::-webkit-media-controls-mute-button:hover {
+															background-color: rgba(255, 255, 255, 0.5);
+														}
+														audio::-webkit-media-controls-current-time-display,
+														audio::-webkit-media-controls-time-remaining-display {
+															color: rgba(255, 255, 255, 1);
 														}
 													</style>
 													<audio controls src="./audio/robot_rock_midi.mp3" style="background:var(--siteDarkBlueText);">
