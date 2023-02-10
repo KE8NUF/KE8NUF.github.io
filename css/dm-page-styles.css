@@ -222,7 +222,7 @@ body {
 
 .background-wave {
 	width: 100%;
-	height: 100%;
+	/* height: 100%; */
 	display: block;
 	background-image: url('../images/svg_backshape_full.png');
 	background-repeat: repeat-y;
