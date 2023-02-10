@@ -2620,6 +2620,10 @@ only screen and (max-device-width : 960px) {
 	nav.fixed-nav .menu-icon {
 		border-bottom:1px solid rgba(255, 255, 255, 0.18);
 	}
+	
+	.background-wave {
+		background-attachment: unset;
+	}
 }
 
 @media only screen and (max-width : 900px), /* 900px */
@@ -2708,7 +2712,7 @@ only screen and (max-device-width : 550px){
 @media only screen and (max-width : 540px),
 only screen and (max-device-width : 540px){
 	#footer-bottom-content {
-		background: rgba(36, 41, 44, 0) linear-gradient(50deg, var(--orangeyellow) 80%, #121415 10%) repeat scroll 0 0;
+		background: rgba(36, 41, 44, 0) linear-gradient(50deg, var(--limeGreen) 80%, #121415 10%) repeat scroll 0 0;
 	}
 }
 
@@ -2721,7 +2725,7 @@ only screen and (max-device-width : 480px) {
 	}
 	
 	#footer-bottom-content {
-		background: rgba(36, 41, 44, 0) linear-gradient(0deg, var(--orangeyellow) 90%, var(--orangeyellow) 1%) repeat scroll 0 0;
+		background: rgba(36, 41, 44, 0) linear-gradient(50deg, var(--limeGreen) 90%, #121415 1%) repeat scroll 0 0;
 	}
 }
 
