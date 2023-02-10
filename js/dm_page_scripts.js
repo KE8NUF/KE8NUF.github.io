@@ -130,8 +130,10 @@ function iframeReady() {
 		// Scrolling Effect
 
 		$(window).on('scroll', function() {
-			var yScroll = $(window).scrollTop();
-			if($(window).scrollTop(yScroll + 10)) {
+			var yScrollTarget = 5;
+			var scollPosition = $(this).scrollTop();
+			//if($(window).scrollTop()) {
+			if(scrollPosition >= yScrollTarget) {
 				$('nav').addClass('fixed-nav');
 			} else {
 				$('nav').removeClass('fixed-nav');
