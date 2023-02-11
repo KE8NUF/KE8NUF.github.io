@@ -602,7 +602,7 @@ nav .menu-logo {
 	letter-spacing: 2px;
 	height: 65%;
 	display: none;
-	animation: fadeIn 600ms;
+	animation: fadeIn 300ms;
 	z-index: 10000;
 }
 
@@ -619,7 +619,7 @@ nav .menu-logo a img {
 	padding: 0px;
 	height: 100%;
 	width: auto;
-	transition: all 600ms ease-out;
+	transition: all 300ms ease-out;
 }
 
 nav ul {
@@ -632,7 +632,7 @@ nav ul {
 	text-align: right;
 	margin: 0;
 	padding-right: 40px;
-	transition: 600ms;
+	transition: 500ms;
 	position: relative;
 }
 
@@ -732,7 +732,7 @@ nav ul li a.active {
 	cursor: pointer;
 	color: rgba(255, 255, 255, 1);
 	display: none;
-	animation: fadeIn 600ms;
+	animation: fadeIn 300ms;
 }
 
 .card-container {
