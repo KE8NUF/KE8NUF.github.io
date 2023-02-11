@@ -662,7 +662,7 @@ nav .shown-menu {
 	overflow: hidden;
 }
 
-nav .shown-menu:before {
+nav .menu.shown-menu:before {
 	content: "";
 	position: absolute;
 	width: 130%;
