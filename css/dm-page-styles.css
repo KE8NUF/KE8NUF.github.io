@@ -2556,6 +2556,10 @@ only screen and (max-device-width : 1024px) {
 
 @media only screen and (max-width : 980px), /* 980px */
 only screen and (max-device-width : 980px) {
+	.grid-container {
+		width: 98%;
+	}
+	
 	.center-item {
 		top: auto;
 		left: auto;
@@ -2570,6 +2574,11 @@ only screen and (max-device-width : 980px) {
 
 @media only screen and (max-width : 960px), /* 960px */
 only screen and (max-device-width : 960px) {
+	.background-wave {
+		-webkit-mask-image: linear-gradient(to top, black 99%, transparent 100%);
+		mask-image: linear-gradient(to top, black 99%, transparent 100%);
+	}
+	
 	nav .menu-logo {
 		position: fixed;
 		top: 0;
