@@ -123,8 +123,8 @@ function iframeReady() {
 		//*****
 		// Menu-toggle button
 		$('.menu-icon').on('click', function() {
+			$('.menu').toggleClass('shown-menu');
 			$('nav ul').toggleClass('menu-showing');
-			$('#nav .menu').toggleClass('shown-menu');
 			$('#nav').toggleClass('open-menu');
 		});
 		// Scrolling Effect
