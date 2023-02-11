@@ -842,7 +842,6 @@ nav ul li a.active {
 	font-weight: bold; 
 	font-size: 1.6em; 
 	margin: 20px auto;
-	font-family: 'Segoe UI Bold';
 	text-align: left;
 	color: var(--limeGreen);
 }
