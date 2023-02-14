@@ -2214,7 +2214,7 @@ footer {
 	background: linear-gradient(-25deg, #000000, #40494f); /* dark scheme */
 	background: linear-gradient(-30deg, rgba(0, 0, 0, 1) 0%, rgba(64, 73, 79, 1) 100%);
 	transition: 150ms;
-	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4), -4px -4px 8px rgba(255, 255, 255, 0.1);
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4), -4px -4px 8px rgba(139, 139, 139, 0.2);
 }
 
 #contact-social li a:hover {
