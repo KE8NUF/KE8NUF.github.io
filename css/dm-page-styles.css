@@ -2212,14 +2212,18 @@ footer {
 	box-shadow: 0 0px 5px rgba(0,0,0,0.40); /* dark scheme */
 	background: linear-gradient(0deg, #dddddd, #ffffff); /* light scheme */
 	background: linear-gradient(-25deg, #000000, #40494f); /* dark scheme */
-	transition: .3s;
+	background: linear-gradient(-30deg, rgba(0, 0, 0, 1) 0%, rgba(64, 73, 79, 1) 100%);
+	transition: 150ms;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4), -4px -4px 8px rgba(255, 255, 255, 0.1);
 }
 
 #contact-social li a:hover {
 	box-shadow: 0 3px 4px rgba(0,0,0,0.25); /* light scheme */
 	box-shadow: 0 3px 4px rgba(0,0,0,0.40); /* dark scheme */
 	text-decoration: none;
+	/* 
 	animation: wiggle 500ms ease-in-out;
+	*/
 }
 
 #contact-social li a:before {
@@ -2240,51 +2244,101 @@ footer {
 	font-size:25px;
 	color: #262626;
 	color: #ffffff;
-	transition: .5s;
+	transition: 250ms;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
+#contact-social li a.facebook:hover {
+	box-shadow: 0px 0px 8px rgba(64, 122, 237, 1), 0px 0px 15px rgba(64, 122, 237, .8), 0px 0px 30px rgba(64, 122, 237, .5);
+}
+
 #contact-social li a.facebook:hover i {
-	color: #4267B2;
+	colro: rgba(66, 103, 178, 1);
+	text-shadow: 0px 0px 6px rgba(64, 122, 237, .3), 0px 0px 10px rgba(64, 122, 237, .1);
+}
+
+#contact-social li a.twitter:hover {
+	box-shadow: 0px 0px 8px rgba(35, 194, 255, 1), 0px 0px 15px rgba(35, 194, 255, .8), 0px 0px 30px rgba(35, 194, 255, .5);
 }
 
 #contact-social li a.twitter:hover i {
-	color: #00acee;
+	color: rgba(0, 172, 238, 1);
+	text-shadow: 0px 0px 6px rgba(35, 194, 255, .3), 0px 0px 10px rgba(35, 194, 255, .1);
+}
+
+#contact-social li a.googleplus:hover {
+	box-shadow: 0px 0px 8px rgba(243, 66, 46, 1), 0px 0px 15px rgba(243, 66, 46, .8), 0px 0px 30px rgba(243, 66, 46, .5);
 }
 
 #contact-social li a.googleplus:hover i {
-	color: #db4a39;
+	color: rgba(219, 74, 57, 1);
+	text-shadow: 0px 0px 6px rgba(243, 66, 46, .3), 0px 0px 10px rgba(243, 66, 46, .1);
+}
+
+#contact-social li a.linkedin:hover {
+	box-shadow: 0px 0px 8px rgba(9, 144, 219, 1), 0px 0px 15px rgba(9, 144, 219, .8), 0px 0px 30px rgba(9, 144, 219, .5);
 }
 
 #contact-social li a.linkedin:hover i {
-	color: #0072b1;
+	color: rgba(0, 114, 177, 1);
+	text-shadow: 0px 0px 6px rgba(9, 144, 219, .3), 0px 0px 10px rgba(9, 144, 219, .1);
+}
+
+#contact-social li a.instagram:hover {
+	box-shadow: 0px 0px 8px rgba(222, 37, 163, 1), 0px 0px 15px rgba(222, 37, 163, .8), 0px 0px 30px rgba(222, 37, 163, .5);
 }
 
 #contact-social li a.instagram:hover i {
-	color: #bc2a8d;
+	color: rgba(188, 42, 141, 1);
+	text-shadow: 0px 0px 6px rgba(222, 37, 163, .3), 0px 0px 10px rgba(222, 37, 163, .1);
+}
+
+#contact-social li a.sendmail:hover {
+	box-shadow: 0px 0px 8px rgba(255, 104, 15, 1), 0px 0px 15px rgba(255, 104, 15, .8), 0px 0px 30px rgba(255, 104, 15, .5);
 }
 
 #contact-social li a.sendmail:hover i {
-	color: #f4620c;
+	color: rgba(244, 98, 12, 1);
+	text-shadow: 0px 0px 6px rgba(255, 104, 15, .3), 0px 0px 10px rgba(255, 104, 15, .1);
+}
+
+#contact-social li a.github:hover {
+	box-shadow: 0px 0px 8px rgba(139, 59, 231, 1), 0px 0px 15px rgba(139, 59, 231, .8), 0px 0px 30px rgba(139, 59, 231, .5);
 }
 
 #contact-social li a.github:hover i {
-	color: #6e5494;
+	color: rgba(110, 84, 148, 1);
+	text-shadow: 0px 0px 6px rgba(139, 59, 231, .3), 0px 0px 10px rgba(139, 59, 231, .1);
+}
+
+#contact-social li a.discord:hover {
+	box-shadow: 0px 0px 8px rgba(48, 66, 255, 1), 0px 0px 15px rgba(48, 66, 255, .8), 0px 0px 30px rgba(48, 66, 255, .5);
 }
 
 #contact-social li a.discord:hover i {
-	color: #5865F2;
+	color: rgba(88, 101, 242, 1);
+	text-shadow: 0px 0px 6px rgba(48, 66, 255, .3), 0px 0px 10px rgba(48, 66, 255, .1);
+}
+
+#contact-social li a.steam:hover {
+	box-shadow: 0px 0px 8px rgba(14, 168, 232, 1), 0px 0px 15px rgba(14, 168, 232, .8), 0px 0px 30px rgba(14, 168, 232, .5);
 }
 
 #contact-social li a.steam:hover i {
-	color: #1387b8;
+	color: rgba(30, 145, 193, 1);
+	text-shadow: 0px 0px 6px rgba(14, 168, 232, .3), 0px 0px 10px rgba(14, 168, 232, .1);
+}
+
+#contact-social li a.youtube:hover {
+	box-shadow: 0px 0px 8px rgba(255, 0, 0, 1), 0px 0px 15px rgba(255, 0, 0, .8), 0px 0px 30px rgba(255, 0, 0, .5);
 }
 
 #contact-social li a.youtube:hover i {
-	color: #FF0000;
+	color: rgba(255, 0, 0, 1);
+	text-shadow: 0px 0px 6px rgba(255, 0, 0, .3), 0px 0px 10px rgba(255, 0, 0, .1);
 }
 
 .progress-wrap {
