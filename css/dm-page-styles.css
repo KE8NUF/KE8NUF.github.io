@@ -67,7 +67,7 @@
 	
 	/* set universal variables for glass */
 	--borderRadius: .5em;
-	--filterBlur: 30px;
+	--filterBlur: 26px;
 	--filterSaturation: 150%;
 	--filterBrightness: 105%;
 	--filterGrayscale: 20%;
@@ -386,6 +386,7 @@ body {
 	background-color: rgba(19, 21, 23, 0.6);
 	background-color: rgba(0, 0, 0, 0.2);
 	background-color: rgba(22, 29, 36, .3);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .glass-style:before {
