@@ -148,7 +148,7 @@ function iframeReady() {
 		var lnk = lnkContainer.getElementsByClassName('nav-link');
 		// Loop through the links and add the active class to the current/clicked button
 		for (var i = 0; i < lnk.length; i++) {
-			lnk[i].addEventListener("click", function() {
+			lnk[i].addEventListener('click', function() {
 				var current = document.getElementsByClassName('active');
 				current[0].className = current[0].className.replace(' active', "");
 				this.className += ' active';
@@ -244,6 +244,14 @@ function iframeReady() {
 
 			return '<span class="bounceItem"><span class="flowText">' + chars.join('</span></span><span class="bounceItem"><span class="flowText">') + '</span></span>';
 		});
+		//*****
+		//jello animation for menu
+		//*****
+		$("#contact-social li .jello-link").hover(function(){
+			$(this).find('i').addClass('animate-jello');  //Add the active class to the area is hovered
+		 }, function () {
+			  $(this).find('i').removeClass('animate-jello i');
+		 });
 		//*****
 		//equal height content script
 		//*****
