@@ -35,9 +35,9 @@
 	--orangeyellow: rgba(255, 138, 0);
 	--white: rgba(255, 255, 255); /* #fff */
 	/* --lighten: #62d5ff; */
-	--lightenTower: rgba(187, 205, 255, 0.40);
+	--lightenTower: rgba(187, 205, 255, 0.70);
 	/* --darkenTower: #489dcf; */
-	--darkenTower: rgba(17, 17, 17, 0.65);
+	--darkenTower: rgba(17, 17, 17, 0.80);
 	/* silver colors
 	drk gray 
 	rgba(200, 203, 202) - #c8cbca
