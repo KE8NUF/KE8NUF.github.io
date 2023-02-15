@@ -2238,13 +2238,15 @@ footer {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	transition: all 250ms;
 }
 
 #contact-social li a i {
 	font-size:25px;
 	color: #262626;
 	color: #ffffff;
-	transition: 250ms;
+	color: rgba(101, 104, 112, 1);
+	transition: all 250ms;
 	position: absolute;
 	/*
 	top: 50%;
@@ -2260,8 +2262,9 @@ footer {
 }
 
 #contact-social li a.facebook:hover i {
-	colro: rgba(66, 103, 178, 1);
-	text-shadow: 0px 0px 6px rgba(64, 122, 237, .3), 0px 0px 10px rgba(64, 122, 237, .1);
+	color: rgba(66, 103, 178, 1);
+	color: rgba(249, 249, 249, 1);
+	text-shadow: 0px 0px 8px rgba(64, 122, 237, 1), 0px 0px 10px rgba(64, 122, 237, .6);
 }
 
 #contact-social li a.twitter:hover {
@@ -2270,7 +2273,8 @@ footer {
 
 #contact-social li a.twitter:hover i {
 	color: rgba(0, 172, 238, 1);
-	text-shadow: 0px 0px 6px rgba(35, 194, 255, .3), 0px 0px 10px rgba(35, 194, 255, .1);
+	color: rgba(249, 249, 249, 1);
+	text-shadow: 0px 0px 8px rgba(35, 194, 255, 1), 0px 0px 12px rgba(35, 194, 255, .6);
 }
 
 #contact-social li a.googleplus:hover {
@@ -2279,7 +2283,8 @@ footer {
 
 #contact-social li a.googleplus:hover i {
 	color: rgba(219, 74, 57, 1);
-	text-shadow: 0px 0px 6px rgba(243, 66, 46, .3), 0px 0px 10px rgba(243, 66, 46, .1);
+	color: rgba(249, 249, 249, 1);
+	text-shadow: 0px 0px 8px rgba(243, 66, 46, 1), 0px 0px 12px rgba(243, 66, 46, .6);
 }
 
 #contact-social li a.linkedin:hover {
@@ -2288,7 +2293,8 @@ footer {
 
 #contact-social li a.linkedin:hover i {
 	color: rgba(0, 114, 177, 1);
-	text-shadow: 0px 0px 6px rgba(9, 144, 219, .3), 0px 0px 10px rgba(9, 144, 219, .1);
+	color: rgba(249, 249, 249, 1);
+	text-shadow: 0px 0px 8px rgba(9, 144, 219, 1), 0px 0px 12px rgba(9, 144, 219, .6);
 }
 
 #contact-social li a.instagram:hover {
@@ -2297,7 +2303,8 @@ footer {
 
 #contact-social li a.instagram:hover i {
 	color: rgba(188, 42, 141, 1);
-	text-shadow: 0px 0px 6px rgba(222, 37, 163, .3), 0px 0px 10px rgba(222, 37, 163, .1);
+	color: rgba(249, 249, 249, 1);
+	text-shadow: 0px 0px 8px rgba(222, 37, 163, 1), 0px 0px 12px rgba(222, 37, 163, .6);
 }
 
 #contact-social li a.sendmail:hover {
@@ -2306,7 +2313,8 @@ footer {
 
 #contact-social li a.sendmail:hover i {
 	color: rgba(244, 98, 12, 1);
-	text-shadow: 0px 0px 6px rgba(255, 104, 15, .3), 0px 0px 10px rgba(255, 104, 15, .1);
+	color: rgba(249, 249, 249, 1);
+	text-shadow: 0px 0px 8px rgba(255, 104, 15, 1), 0px 0px 12px rgba(255, 104, 15, .6);
 }
 
 #contact-social li a.github:hover {
@@ -2315,7 +2323,8 @@ footer {
 
 #contact-social li a.github:hover i {
 	color: rgba(110, 84, 148, 1);
-	text-shadow: 0px 0px 6px rgba(139, 59, 231, .3), 0px 0px 10px rgba(139, 59, 231, .1);
+	color: rgba(249, 249, 249, 1);
+	text-shadow: 0px 0px 8px rgba(139, 59, 231, 1), 0px 0px 12px rgba(139, 59, 231, .6);
 }
 
 #contact-social li a.discord:hover {
@@ -2324,7 +2333,8 @@ footer {
 
 #contact-social li a.discord:hover i {
 	color: rgba(88, 101, 242, 1);
-	text-shadow: 0px 0px 6px rgba(48, 66, 255, .3), 0px 0px 10px rgba(48, 66, 255, .1);
+	color: rgba(249, 249, 249, 1);
+	text-shadow: 0px 0px 8px rgba(48, 66, 255, 1), 0px 0px 12px rgba(48, 66, 255, .6);
 }
 
 #contact-social li a.steam:hover {
@@ -2333,7 +2343,8 @@ footer {
 
 #contact-social li a.steam:hover i {
 	color: rgba(30, 145, 193, 1);
-	text-shadow: 0px 0px 6px rgba(14, 168, 232, .3), 0px 0px 10px rgba(14, 168, 232, .1);
+	color: rgba(249, 249, 249, 1);
+	text-shadow: 0px 0px 8px rgba(14, 168, 232, 1), 0px 0px 12px rgba(14, 168, 232, .6);
 }
 
 #contact-social li a.youtube:hover {
@@ -2342,7 +2353,8 @@ footer {
 
 #contact-social li a.youtube:hover i {
 	color: rgba(255, 0, 0, 1);
-	text-shadow: 0px 0px 6px rgba(255, 0, 0, .3), 0px 0px 10px rgba(255, 0, 0, .1);
+	color: rgba(249, 249, 249, 1);
+	text-shadow: 0px 0px 8px rgba(255, 0, 0, 1), 0px 0px 12px rgba(255, 0, 0, .6);
 }
 
 .progress-wrap {
