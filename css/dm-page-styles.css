@@ -712,6 +712,7 @@ nav ul li a {
 	font-size: 16px;
 	line-height: 60px;
 	vertical-align: middle;
+	display: block;
 }
 
 nav ul li a i,
@@ -2720,11 +2721,9 @@ only screen and (max-device-width : 960px) {
 		-webkit-mask-image: linear-gradient(to top, black 99%, transparent 100%);
 		mask-image: linear-gradient(to top, black 99%, transparent 100%);
 	}
-	
-	
-	
+		
 	nav .menu-logo {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		margin-top: 16px;
 		/* height: 10%; */
