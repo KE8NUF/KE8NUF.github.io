@@ -1,7 +1,7 @@
 /* === root defined variables for site === */
 :root {
 	/* === site universal color / variables === */
-	--system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--system-ui: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	/* #111111*/
 	--richBlack: rgba(17, 17, 17);
 	/* #282828 */
@@ -153,6 +153,9 @@ a:hover, a span:hover, a span:active,
 span a:hover, span a:active, a:active {
 	color: inherit;
 	color: var(--limeGreen);
+	
+	color: rgba(237, 243, 217, 1);
+	text-shadow: 0px 0px 2px rgba(166, 211, 31, 1), 0px 0px 8px rgba(166, 211, 31, 1), 0px 0px 10px rgba(166, 211, 31, .6);
 }
 
 img, picture {
@@ -718,6 +721,9 @@ nav ul li a span {
 nav ul li a:hover {
 	cursor: pointer;
 	color: var(--limeGreen);
+	
+	color: rgba(237, 243, 217, 1);
+	text-shadow: 0px 0px 2px rgba(166, 211, 31, 1), 0px 0px 8px rgba(166, 211, 31, 1), 0px 0px 10px rgba(166, 211, 31, .6);
 }
 
 nav ul li a.active {
@@ -2713,10 +2719,18 @@ only screen and (max-device-width : 960px) {
 	}
 	
 	nav .menu-logo {
-		position: fixed;
+		position: absolute;
 		top: 0;
 		margin-top: 16px;
-		height: 10%;
+		/* height: 10%; */
+	}
+	
+	nav.fixed-nav .menu-logo {
+		position: absolute;
+		top: 0;
+		margin-top: 16px;
+		/* height: 10%; */
+		max-height: 23%;
 	}
 
 	nav ul {
