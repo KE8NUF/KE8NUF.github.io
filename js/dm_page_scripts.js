@@ -126,6 +126,7 @@ function iframeReady() {
 			$('.menu').toggleClass('shown-menu');
 			$('nav ul').toggleClass('menu-showing');
 			$('#nav').toggleClass('open-menu');
+			$('#nav.fixed-nav .menu-logo').toggleClass('active-menu');
 		});
 		// Scrolling Effect
 
@@ -170,6 +171,7 @@ function iframeReady() {
 						$('nav .menu ul').removeClass('menu-showing');
 						$("#nav .menu").removeClass('shown-menu');
 						$('#nav').removeClass('open-menu');
+						$('#nav.fixed-nav .menu-logo').removeClass('active-menu');
 						//console.log('closing menu');
 					}
 				});
@@ -184,6 +186,7 @@ function iframeReady() {
 									$('nav .menu ul').removeClass('menu-showing');
 									$("#nav .menu").removeClass('shown-menu');
 									$('#nav').removeClass('open-menu');
+									$('#nav.fixed-nav .menu-logo').removeClass('active-menu');
 									//console.log('closing menu');
 								}
 							});
@@ -197,6 +200,7 @@ function iframeReady() {
 						$('#nav.fixed-nav .menu ul').removeClass('menu-showing');
 						$("#nav .menu").removeClass('shown-menu');
 						$('#nav').removeClass('open-menu');
+						$('#nav.fixed-nav .menu-logo').removeClass('active-menu');
 						//console.log('scrolling closing menu');
 					}
 				});
@@ -247,7 +251,7 @@ function iframeReady() {
 		//*****
 		//jello animation for menu
 		//*****
-		$("#contact-social li .jello-link").hover(function(){
+		$("#contact-social li .jello-link, #nav .menu ul li a").hover(function(){
 			$(this).find('i').addClass('animate-jello');  //Add the active class to the area is hovered
 		 }, function () {
 			  $(this).find('i').removeClass('animate-jello i');

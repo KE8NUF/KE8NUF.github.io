@@ -586,13 +586,14 @@ nav {
 	position: relative;
 	width: 100%;
 	line-height: 60px;
-	transition: all 400ms ease-out;
 	z-index: 11000;
 	overflow-x: hidden;
+	transition: all 250ms ease;
 }
 
 nav.fixed-nav .menu-logo {
 	display: block;
+	height: 80px;
 }
 
 nav .menu-logo {
@@ -608,6 +609,7 @@ nav .menu-logo {
 	display: none;
 	animation: fadeIn 400ms;
 	z-index: 10000;
+	transition: none;
 }
 
 nav .menu-logo a {
@@ -623,7 +625,7 @@ nav .menu-logo a img {
 	padding: 0px;
 	height: 100%;
 	width: auto;
-	transition: all 400ms ease-out;
+	transition: none;
 }
 
 nav ul {
@@ -733,9 +735,10 @@ nav ul li a.active {
 .menu-icon {
 	line-height: 60px;
 	width: 100%;
+	max-height: 85px;
 	text-align: right;
 	box-sizing: border-box;
-	padding: 15px 24px;
+	padding: 15px 30px 15px 24px;
 	cursor: pointer;
 	color: rgba(255, 255, 255, 1);
 	display: none;
@@ -2718,6 +2721,8 @@ only screen and (max-device-width : 960px) {
 		mask-image: linear-gradient(to top, black 99%, transparent 100%);
 	}
 	
+	
+	
 	nav .menu-logo {
 		position: absolute;
 		top: 0;
@@ -2730,7 +2735,24 @@ only screen and (max-device-width : 960px) {
 		top: 0;
 		margin-top: 16px;
 		/* height: 10%; */
-		max-height: 23%;
+		height: 63%;
+		max-height: 63%;
+	}
+	
+	nav .menu-logo a {
+		display: table;
+		width: 95px;
+		height: 80px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+	
+	nav.fixed-nav .menu-logo.active-menu {
+		height: 20%;
+		max-height: 20%;
 	}
 
 	nav ul {
