@@ -657,8 +657,8 @@ nav.fixed-nav:before {
 	display: block;
 	box-shadow: 0px 1px 3px 3px rgba(0, 0, 0, 0.3);
 	
-	-webkit-backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
-	backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
+	-webkit-backdrop-filter: blur(20px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
+	backdrop-filter: blur(20px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
 }
 
 nav .menu {
