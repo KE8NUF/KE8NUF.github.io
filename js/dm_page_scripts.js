@@ -252,7 +252,7 @@ function iframeReady() {
 		//jello animation for menu
 		//*****
 		if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
-			if($(window).width() <= 960) {
+			if($(window).width() >= 960) {
 				$("#contact-social li .jello-link, #nav .menu ul li a").hover(function(){
 					$(this).find('i').addClass('animate-jello');  //Add the active class to the area is hovered
 				 }, function () {
