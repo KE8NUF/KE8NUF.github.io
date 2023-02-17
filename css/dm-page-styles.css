@@ -2743,14 +2743,14 @@ only screen and (max-device-width : 960px) {
 	}
 		
 	nav .menu-logo {
-		position: fixed;
+		position: absolute;
 		top: 0;
 		margin-top: 16px;
 		/* height: 10%; */
 	}
 	
 	nav.fixed-nav .menu-logo {
-		position: fixed;
+		position: absolute;
 		top: 0;
 		margin-top: 16px;
 		/* height: 10%; */
@@ -2785,7 +2785,14 @@ only screen and (max-device-width : 960px) {
 	
 	nav .shown-menu .menu-showing li,
 	nav.fixed-nav ul li {
+		display: flex;
+		width: 100%;
+		max-width: 100%;
+	}
+	
+	nav ul li a {
 		display: block;
+		max-width: 100%;
 	}
 	
 	nav.open-menu {
