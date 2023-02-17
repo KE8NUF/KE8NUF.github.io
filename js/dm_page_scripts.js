@@ -243,10 +243,13 @@ function iframeReady() {
 		//welcome rainbow text for whiney
 		//*****
 		$('.anim-text-flow').html(function(i, html) {
-			//var chars = $.trim(html).split(" ")
-			var chars = $.trim(html).split("");
-
-			return '<span class="bounceItem"><span class="flowText">' + chars.join('</span></span><span class="bounceItem"><span class="flowText">') + '</span></span>';
+			//var chars = $.trim(html).split(" ") //split by word spaces
+			var chars = $.trim(html).split(""); //splt by all.
+			//var chars = $.trim(html).match(/[A-Z][a-z]+|[0-9]+/g); //match and split by caps
+			//var chars = $(this).html();
+			//var chars = stringCamelCase.split(/(?=[A-Z])/).join(" ");
+			
+		return '<span class="bounce-item" style="display:inlie-block;"><span class="flow-text" style="display:inline-block;">' + chars.join(" " + '</span></span><span class="bounce-item"><span class="flow-text">').replace(/([A-Z])/g, ' $1').trim() + '</span></span>';
 		});
 		//*****
 		//jello animation for menu

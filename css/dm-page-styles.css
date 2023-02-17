@@ -896,18 +896,18 @@ nav ul li a.active {
 	min-height: 115px;
 	transform: translate(-50%, -50%);
 	font-family: 'Fredoka One', cursive;
-	font-variant: small-caps;
+	/* font-variant: small-caps; */
 	margin: 10px auto 20px auto;
 	padding: 10px 0px 20px 0px;
 }
 
 /* 3d styles for text */
-.dee3-text .bounceItem .flowText {
+.dee3-text .bounce-item .flow-text {
 	font-size: 30px;
 	text-align: center;
 	color: #fff;
 	font-family: 'Fredoka One', cursive;
-	font-variant: small-caps;
+	/* font-variant: small-caps; */
 	letter-spacing: 4px;
 	font-size: 1.35em;
 	/* 3d text shadow style */
@@ -926,14 +926,16 @@ nav ul li a.active {
 	;
 	*/
 	text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5), 1px 1px 1px rgba(0, 0, 0, 0.5), 0px 10px 5px rgba(0, 0, 0, 0.25);
+	display: inline-block;
+	min-width: 10px;
 }
 
-.bounceItem {
+.bounce-item {
 	display: inline-block;
 	animation: none!important;
 }
 
-.bounceItem:after {
+.bounce-item:after {
 	content:'';
     display: block;
     position: absolute;
@@ -946,405 +948,406 @@ nav ul li a.active {
     background: transparent;
     border-radius: 100px/50px;
     box-shadow: 0 40px 30px rgba(0, 0, 0, 1), 0 40px 15px rgba(0, 0, 0, 0.55), 0 40px 6px rgba(0, 0, 0, 0.15);
+	display: none;
 }
 
-.bounceItem:nth-child(1) {
+.bounce-item:nth-child(1) {
 	animation: bouncingElement 0.8s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
 }
 
-.bounceItem:nth-child(2) {
+.bounce-item:nth-child(2) {
 	animation: bouncingElement 0.8s 0.2s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(3) {
+.bounce-item:nth-child(3) {
 	animation: bouncingElement 0.8s 0.3s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(4) {
+.bounce-item:nth-child(4) {
 	animation: bouncingElement 0.8s 0.4s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(5) {
+.bounce-item:nth-child(5) {
 	animation: bouncingElement 0.8s 0.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(6) {
+.bounce-item:nth-child(6) {
 	animation: bouncingElement 0.8s 0.6s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(7) {
+.bounce-item:nth-child(7) {
 	animation: bouncingElement 0.8s 0.7s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(8) {
+.bounce-item:nth-child(8) {
 	animation: bouncingElement 0.8s 0.8s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(9) {
+.bounce-item:nth-child(9) {
 	animation: bouncingElement 0.8s 0.9s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(10) {
+.bounce-item:nth-child(10) {
 	animation: bouncingElement 0.8s 1s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(11) {
+.bounce-item:nth-child(11) {
 	animation: bouncingElement 0.8s 1.1s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(12) {
+.bounce-item:nth-child(12) {
 	animation: bouncingElement 0.8s 1.2s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(13) {
+.bounce-item:nth-child(13) {
 	animation: bouncingElement 0.8s 1.3s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(14) {
+.bounce-item:nth-child(14) {
 	animation: bouncingElement 0.8s 1.4s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(15) {
+.bounce-item:nth-child(15) {
 	animation: bouncingElement 0.8s 1.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(16) {
+.bounce-item:nth-child(16) {
 	animation: bouncingElement 0.8s 1.6s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(17) {
+.bounce-item:nth-child(17) {
 	animation: bouncingElement 0.8s 1.7s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(18) {
+.bounce-item:nth-child(18) {
 	animation: bouncingElement 0.8s 1.8s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(19) {
+.bounce-item:nth-child(19) {
 	animation: bouncingElement 0.8s 1.9s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(20) {
+.bounce-item:nth-child(20) {
 	animation: bouncingElement 0.8s 2.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(21) {
+.bounce-item:nth-child(21) {
 	animation: bouncingElement 0.8s 2.1s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(22) {
+.bounce-item:nth-child(22) {
 	animation: bouncingElement 0.8s 2.2s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(23) {
+.bounce-item:nth-child(23) {
 	animation: bouncingElement 0.8s 2.3s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(24) {
+.bounce-item:nth-child(24) {
 	animation: bouncingElement 0.8s 2.4s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(25) {
+.bounce-item:nth-child(25) {
 	animation: bouncingElement 0.8s 2.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(26) {
+.bounce-item:nth-child(26) {
 	animation: bouncingElement 0.8s 2.6s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(27) {
+.bounce-item:nth-child(27) {
 	animation: bouncingElement 0.8s 2.7s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(28) {
+.bounce-item:nth-child(28) {
 	animation: bouncingElement 0.8s 2.8s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(29) {
+.bounce-item:nth-child(29) {
 	animation: bouncingElement 0.8s 2.9s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(30) {
+.bounce-item:nth-child(30) {
 	animation: bouncingElement 0.8s 3.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(31) {
+.bounce-item:nth-child(31) {
 	animation: bouncingElement 0.8s 3.1s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(32) {
+.bounce-item:nth-child(32) {
 	animation: bouncingElement 0.8s 3.2s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(33) {
+.bounce-item:nth-child(33) {
 	animation: bouncingElement 0.8s 3.3s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(34) {
+.bounce-item:nth-child(34) {
 	animation: bouncingElement 0.8s 3.4s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(35) {
+.bounce-item:nth-child(35) {
 	animation: bouncingElement 0.8s 3.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(36) {
+.bounce-item:nth-child(36) {
 	animation: bouncingElement 0.8s 3.6s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(37) {
+.bounce-item:nth-child(37) {
 	animation: bouncingElement 0.8s 3.7s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(38) {
+.bounce-item:nth-child(38) {
 	animation: bouncingElement 0.8s 3.8s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(39) {
+.bounce-item:nth-child(39) {
 	animation: bouncingElement 0.8s 3.9s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(40) {
+.bounce-item:nth-child(40) {
 	animation: bouncingElement 0.8s 4.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(41) {
+.bounce-item:nth-child(41) {
 	animation: bouncingElement 0.8s 4.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(42) {
+.bounce-item:nth-child(42) {
 	animation: bouncingElement 0.8s 4.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(43) {
+.bounce-item:nth-child(43) {
 	animation: bouncingElement 0.8s 4.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(44) {
+.bounce-item:nth-child(44) {
 	animation: bouncingElement 0.8s 4.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(45) {
+.bounce-item:nth-child(45) {
 	animation: bouncingElement 0.8s 4.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(46) {
+.bounce-item:nth-child(46) {
 	animation: bouncingElement 0.8s 4.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(47) {
+.bounce-item:nth-child(47) {
 	animation: bouncingElement 0.8s 4.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(48) {
+.bounce-item:nth-child(48) {
 	animation: bouncingElement 0.8s 4.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(49) {
+.bounce-item:nth-child(49) {
 	animation: bouncingElement 0.8s 4.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(50) {
+.bounce-item:nth-child(50) {
 	animation: bouncingElement 0.8s 5.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(51) {
+.bounce-item:nth-child(51) {
 	animation: bouncingElement 0.8s 5.1s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(52) {
+.bounce-item:nth-child(52) {
 	animation: bouncingElement 0.8s 5.2s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(53) {
+.bounce-item:nth-child(53) {
 	animation: bouncingElement 0.8s 5.3s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(54) {
+.bounce-item:nth-child(54) {
 	animation: bouncingElement 0.8s 5.4s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(55) {
+.bounce-item:nth-child(55) {
 	animation: bouncingElement 0.8s 5.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(56) {
+.bounce-item:nth-child(56) {
 	animation: bouncingElement 0.8s 5.6s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(57) {
+.bounce-item:nth-child(57) {
 	animation: bouncingElement 0.8s 5.7s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(58) {
+.bounce-item:nth-child(58) {
 	animation: bouncingElement 0.8s 5.8s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(59) {
+.bounce-item:nth-child(59) {
 	animation: bouncingElement 0.8s 5.9s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(60) {
+.bounce-item:nth-child(60) {
 	animation: bouncingElement 0.8s 6.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(61) {
+.bounce-item:nth-child(61) {
 	animation: bouncingElement 0.8s 6.1s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(62) {
+.bounce-item:nth-child(62) {
 	animation: bouncingElement 0.8s 6.2s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(63) {
+.bounce-item:nth-child(63) {
 	animation: bouncingElement 0.8s 6.3s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(64) {
+.bounce-item:nth-child(64) {
 	animation: bouncingElement 0.8s 6.4s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(65) {
+.bounce-item:nth-child(65) {
 	animation: bouncingElement 0.8s 6.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(66) {
+.bounce-item:nth-child(66) {
 	animation: bouncingElement 0.8s 6.6s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(67) {
+.bounce-item:nth-child(67) {
 	animation: bouncingElement 0.8s 6.7s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(68) {
+.bounce-item:nth-child(68) {
 	animation: bouncingElement 0.8s 6.8s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(69) {
+.bounce-item:nth-child(69) {
 	animation: bouncingElement 0.8s 6.9s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(70) {
+.bounce-item:nth-child(70) {
 	animation: bouncingElement 0.8s 7.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(71) {
+.bounce-item:nth-child(71) {
 	animation: bouncingElement 0.8s 7.1s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(72) {
+.bounce-item:nth-child(72) {
 	animation: bouncingElement 0.8s 7.2s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(73) {
+.bounce-item:nth-child(73) {
 	animation: bouncingElement 0.8s 7.3s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(74) {
+.bounce-item:nth-child(74) {
 	animation: bouncingElement 0.8s 7.4s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(75) {
+.bounce-item:nth-child(75) {
 	animation: bouncingElement 0.8s 7.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(76) {
+.bounce-item:nth-child(76) {
 	animation: bouncingElement 0.8s 7.6s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(77) {
+.bounce-item:nth-child(77) {
 	animation: bouncingElement 0.8s 7.7s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(78) {
+.bounce-item:nth-child(78) {
 	animation: bouncingElement 0.8s 7.8s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(79) {
+.bounce-item:nth-child(79) {
 	animation: bouncingElement 0.8s 7.9s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(80) {
+.bounce-item:nth-child(80) {
 	animation: bouncingElement 0.8s 8.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(81) {
+.bounce-item:nth-child(81) {
 	animation: bouncingElement 0.8s 8.1s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(82) {
+.bounce-item:nth-child(82) {
 	animation: bouncingElement 0.8s 8.2s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(83) {
+.bounce-item:nth-child(83) {
 	animation: bouncingElement 0.8s 8.3s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(84) {
+.bounce-item:nth-child(84) {
 	animation: bouncingElement 0.8s 8.4s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(85) {
+.bounce-item:nth-child(85) {
 	animation: bouncingElement 0.8s 8.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(86) {
+.bounce-item:nth-child(86) {
 	animation: bouncingElement 0.8s 8.6s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(87) {
+.bounce-item:nth-child(87) {
 	animation: bouncingElement 0.8s 8.7s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(88) {
+.bounce-item:nth-child(88) {
 	animation: bouncingElement 0.8s 8.8s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(89) {
+.bounce-item:nth-child(89) {
 	animation: bouncingElement 0.8s 8.9s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(90) {
+.bounce-item:nth-child(90) {
 	animation: bouncingElement 0.8s 9.0s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(91) {
+.bounce-item:nth-child(91) {
 	animation: bouncingElement 0.8s 9.1s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(92) {
+.bounce-item:nth-child(92) {
 	animation: bouncingElement 0.8s 9.2s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(93) {
+.bounce-item:nth-child(93) {
 	animation: bouncingElement 0.8s 9.3s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(94) {
+.bounce-item:nth-child(94) {
 	animation: bouncingElement 0.8s 9.4s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(95) {
+.bounce-item:nth-child(95) {
 	animation: bouncingElement 0.8s 9.5s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(96) {
+.bounce-item:nth-child(96) {
 	animation: bouncingElement 0.8s 9.6s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(97) {
+.bounce-item:nth-child(97) {
 	animation: bouncingElement 0.8s 9.7s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(98) {
+.bounce-item:nth-child(98) {
 	animation: bouncingElement 0.8s 9.8s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(99) {
+.bounce-item:nth-child(99) {
 	animation: bouncingElement 0.8s 9.9s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
-.bounceItem:nth-child(100) {
+.bounce-item:nth-child(100) {
 	animation: bouncingElement 0.8s 10s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
@@ -1366,8 +1369,8 @@ nav ul li a.active {
 	}
 }
 
-.anim-text-flow .bounceItem .flowText,
-.anim-text-flow-hover:hover .bounceItem .flowText {
+.anim-text-flow .bounce-item .flow-text,
+.anim-text-flow-hover:hover .bounce-item .flow-text {
 	-webkit-animation-name: anim-text-flow-keys;
 		animation-name: anim-text-flow-keys;
 	-webkit-animation-duration: 50s;
@@ -1512,602 +1515,602 @@ nav ul li a.active {
 	}
 }
 
-.anim-text-flow .bounceItem:nth-of-type(1) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(1) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(1) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(1) .flow-text {
 	-webkit-animation-delay: -19.8s;
 		animation-delay: -19.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(2) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(2) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(2) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(2) .flow-text {
 	-webkit-animation-delay: -19.6s;
 		animation-delay: -19.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(3) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(3) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(3) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(3) .flow-text {
 	-webkit-animation-delay: -19.4s;
 		animation-delay: -19.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(4) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(4) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(4) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(4) .flow-text {
 	-webkit-animation-delay: -19.2s;
 		animation-delay: -19.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(5) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(5) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(5) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(5) .flow-text {
 	-webkit-animation-delay: -19s;
 		animation-delay: -19s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(6) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(6) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(6) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(6) .flow-text {
 	-webkit-animation-delay: -18.8s;
 		animation-delay: -18.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(7) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(7) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(7) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(7) .flow-text {
 	-webkit-animation-delay: -18.6s;
 		animation-delay: -18.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(8) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(8) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(8) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(8) .flow-text {
 	-webkit-animation-delay: -18.4s;
 		animation-delay: -18.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(9) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(9) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(9) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(9) .flow-text {
 	-webkit-animation-delay: -18.2s;
 		animation-delay: -18.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(10) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(10) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(10) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(10) .flow-text {
 	-webkit-animation-delay: -18s;
 		animation-delay: -18s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(11) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(11) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(11) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(11) .flow-text {
 	-webkit-animation-delay: -17.8s;
 		animation-delay: -17.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(12) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(12) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(12) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(12) .flow-text {
 	-webkit-animation-delay: -17.6s;
 		animation-delay: -17.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(13) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(13) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(13) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(13) .flow-text {
 	-webkit-animation-delay: -17.4s;
 		animation-delay: -17.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(14) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(14) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(14) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(14) .flow-text {
 	-webkit-animation-delay: -17.2s;
 		animation-delay: -17.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(15) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(15) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(15) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(15) .flow-text {
 	-webkit-animation-delay: -17s;
 		animation-delay: -17s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(16) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(16) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(16) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(16) .flow-text {
 	-webkit-animation-delay: -16.8s;
 		animation-delay: -16.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(17) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(17) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(17) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(17) .flow-text {
 	-webkit-animation-delay: -16.6s;
 		animation-delay: -16.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(18) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(18) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(18) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(18) .flow-text {
 	-webkit-animation-delay: -16.4s;
 		animation-delay: -16.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(19) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(19) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(19) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(19) .flow-text {
 	-webkit-animation-delay: -16.2s;
 		animation-delay: -16.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(20) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(20) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(20) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(20) .flow-text {
 	-webkit-animation-delay: -16s;
 		animation-delay: -16s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(21) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(21) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(21) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(21) .flow-text {
 	-webkit-animation-delay: -15.8s;
 		animation-delay: -15.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(22) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(22) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(22) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(22) .flow-text {
 	-webkit-animation-delay: -15.6s;
 		animation-delay: -15.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(23) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(23) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(23) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(23) .flow-text {
 	-webkit-animation-delay: -15.4s;
 		animation-delay: -15.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(24) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(24) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(24) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(24) .flow-text {
 	-webkit-animation-delay: -15.2s;
 		animation-delay: -15.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(25) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(25) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(25) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(25) .flow-text {
 	-webkit-animation-delay: -15s;
 		animation-delay: -15s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(26) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(26) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(26) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(26) .flow-text {
 	-webkit-animation-delay: -14.8s;
 		animation-delay: -14.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(27) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(27) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(27) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(27) .flow-text {
 	-webkit-animation-delay: -14.6s;
 		animation-delay: -14.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(28) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(28) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(28) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(28) .flow-text {
 	-webkit-animation-delay: -14.4s;
 		animation-delay: -14.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(29) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(29) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(29) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(29) .flow-text {
 	-webkit-animation-delay: -14.2s;
 		animation-delay: -14.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(30) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(30) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(30) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(30) .flow-text {
 	-webkit-animation-delay: -14s;
 		animation-delay: -14s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(31) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(31) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(31) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(31) .flow-text {
 	-webkit-animation-delay: -13.8s;
 		animation-delay: -13.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(32) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(32) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(32) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(32) .flow-text {
 	-webkit-animation-delay: -13.6s;
 		animation-delay: -13.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(33) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(33) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(33) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(33) .flow-text {
 	-webkit-animation-delay: -13.4s;
 		animation-delay: -13.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(34) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(34) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(34) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(34) .flow-text {
 	-webkit-animation-delay: -13.2s;
 		animation-delay: -13.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(35) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(35) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(35) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(35) .flow-text {
 	-webkit-animation-delay: -13s;
 		animation-delay: -13s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(36) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(36) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(36) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(36) .flow-text {
 	-webkit-animation-delay: -12.8s;
 		animation-delay: -12.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(37) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(37) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(37) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(37) .flow-text {
 	-webkit-animation-delay: -12.6s;
 		animation-delay: -12.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(38) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(38) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(38) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(38) .flow-text {
 	-webkit-animation-delay: -12.4s;
 		animation-delay: -12.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(39) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(39) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(39) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(39) .flow-text {
 	-webkit-animation-delay: -12.2s;
 		animation-delay: -12.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(40) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(40) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(40) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(40) .flow-text {
 	-webkit-animation-delay: -12s;
 		animation-delay: -12s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(41) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(41) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(41) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(41) .flow-text {
 	-webkit-animation-delay: -11.8s;
 		animation-delay: -11.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(42) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(42) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(42) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(42) .flow-text {
 	-webkit-animation-delay: -11.6s;
 		animation-delay: -11.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(43) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(43) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(43) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(43) .flow-text {
 	-webkit-animation-delay: -11.4s;
 		animation-delay: -11.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(44) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(44) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(44) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(44) .flow-text {
 	-webkit-animation-delay: -11.2s;
 		animation-delay: -11.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(45) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(45) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(45) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(45) .flow-text {
 	-webkit-animation-delay: -11s;
 		animation-delay: -11s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(46) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(46) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(46) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(46) .flow-text {
 	-webkit-animation-delay: -10.8s;
 		animation-delay: -10.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(47) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(47) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(47) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(47) .flow-text {
 	-webkit-animation-delay: -10.6s;
 		animation-delay: -10.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(48) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(48) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(48) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(48) .flow-text {
 	-webkit-animation-delay: -10.4s;
 		animation-delay: -10.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(49) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(49) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(49) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(49) .flow-text {
 	-webkit-animation-delay: -10.2s;
 		animation-delay: -10.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(50) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(50) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(50) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(50) .flow-text {
 	-webkit-animation-delay: -10s;
 		animation-delay: -10s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(51) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(51) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(51) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(51) .flow-text {
 	-webkit-animation-delay: -9.8s;
 		animation-delay: -9.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(52) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(52) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(52) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(52) .flow-text {
 	-webkit-animation-delay: -9.6s;
 		animation-delay: -9.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(53) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(53) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(53) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(53) .flow-text {
 	-webkit-animation-delay: -9.4s;
 		animation-delay: -9.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(54) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(54) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(54) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(54) .flow-text {
 	-webkit-animation-delay: -9.2s;
 		animation-delay: -9.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(55) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(55) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(55) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(55) .flow-text {
 	-webkit-animation-delay: -9s;
 		animation-delay: -9s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(56) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(56) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(56) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(56) .flow-text {
 	-webkit-animation-delay: -8.8s;
 		animation-delay: -8.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(57) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(57) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(57) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(57) .flow-text {
 	-webkit-animation-delay: -8.6s;
 		animation-delay: -8.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(58) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(58) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(58) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(58) .flow-text {
 	-webkit-animation-delay: -8.4s;
 		animation-delay: -8.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(59) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(59) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(59) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(59) .flow-text {
 	-webkit-animation-delay: -8.2s;
 		animation-delay: -8.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(60) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(60) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(60) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(60) .flow-text {
 	-webkit-animation-delay: -8s;
 		animation-delay: -8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(61) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(61) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(61) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(61) .flow-text {
 	-webkit-animation-delay: -7.8s;
 		animation-delay: -7.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(62) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(62) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(62) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(62) .flow-text {
 	-webkit-animation-delay: -7.6s;
 		animation-delay: -7.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(63) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(63) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(63) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(63) .flow-text {
 	-webkit-animation-delay: -7.4s;
 		animation-delay: -7.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(64) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(64) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(64) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(64) .flow-text {
 	-webkit-animation-delay: -7.2s;
 		animation-delay: -7.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(65) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(65) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(65) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(65) .flow-text {
 	-webkit-animation-delay: -7s;
 		animation-delay: -7s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(66) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(66) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(66) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(66) .flow-text {
 	-webkit-animation-delay: -6.8s;
 		animation-delay: -6.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(67) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(67) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(67) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(67) .flow-text {
 	-webkit-animation-delay: -6.6s;
 		animation-delay: -6.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(68) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(68) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(68) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(68) .flow-text {
 	-webkit-animation-delay: -6.4s;
 		animation-delay: -6.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(69) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(69) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(69) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(69) .flow-text {
 	-webkit-animation-delay: -6.2s;
 		animation-delay: -6.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(70) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(70) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(70) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(70) .flow-text {
 	-webkit-animation-delay: -6s;
 		animation-delay: -6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(71) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(71) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(71) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(71) .flow-text {
 	-webkit-animation-delay: -5.8s;
 		animation-delay: -5.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(72) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(72) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(72) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(72) .flow-text {
 	-webkit-animation-delay: -5.6s;
 		animation-delay: -5.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(73) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(73) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(73) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(73) .flow-text {
 	-webkit-animation-delay: -5.4s;
 		animation-delay: -5.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(74) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(74) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(74) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(74) .flow-text {
 	-webkit-animation-delay: -5.2s;
 		animation-delay: -5.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(75) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(75) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(75) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(75) .flow-text {
 	-webkit-animation-delay: -5s;
 		animation-delay: -5s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(76) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(76) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(76) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(76) .flow-text {
 	-webkit-animation-delay: -4.8s;
 		animation-delay: -4.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(77) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(77) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(77) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(77) .flow-text {
 	-webkit-animation-delay: -4.6s;
 		animation-delay: -4.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(78) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(78) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(78) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(78) .flow-text {
 	-webkit-animation-delay: -4.4s;
 		animation-delay: -4.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(79) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(79) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(79) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(79) .flow-text {
 	-webkit-animation-delay: -4.2s;
 		animation-delay: -4.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(80) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(80) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(80) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(80) .flow-text {
 	-webkit-animation-delay: -4s;
 		animation-delay: -4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(81) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(81) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(81) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(81) .flow-text {
 	-webkit-animation-delay: -3.8s;
 		animation-delay: -3.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(82) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(82) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(82) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(82) .flow-text {
 	-webkit-animation-delay: -3.6s;
 		animation-delay: -3.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(83) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(83) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(83) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(83) .flow-text {
 	-webkit-animation-delay: -3.4s;
 		animation-delay: -3.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(84) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(84) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(84) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(84) .flow-text {
 	-webkit-animation-delay: -3.2s;
 		animation-delay: -3.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(85) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(85) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(85) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(85) .flow-text {
 	-webkit-animation-delay: -3s;
 		animation-delay: -3s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(86) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(86) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(86) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(86) .flow-text {
 	-webkit-animation-delay: -2.8s;
 		animation-delay: -2.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(87) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(87) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(87) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(87) .flow-text {
 	-webkit-animation-delay: -2.6s;
 		animation-delay: -2.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(88) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(88) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(88) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(88) .flow-text {
 	-webkit-animation-delay: -2.4s;
 		animation-delay: -2.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(89) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(89) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(89) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(89) .flow-text {
 	-webkit-animation-delay: -2.2s;
 		animation-delay: -2.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(90) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(90) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(90) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(90) .flow-text {
 	-webkit-animation-delay: -2s;
 		animation-delay: -2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(91) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(91) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(91) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(91) .flow-text {
 	-webkit-animation-delay: -1.8s;
 		animation-delay: -1.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(92) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(92) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(92) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(92) .flow-text {
 	-webkit-animation-delay: -1.6s;
 		animation-delay: -1.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(93) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(93) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(93) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(93) .flow-text {
 	-webkit-animation-delay: -1.4s;
 		animation-delay: -1.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(94) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(94) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(94) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(94) .flow-text {
 	-webkit-animation-delay: -1.2s;
 		animation-delay: -1.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(95) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(95) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(95) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(95) .flow-text {
 	-webkit-animation-delay: -1s;
 		animation-delay: -1s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(96) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(96) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(96) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(96) .flow-text {
 	-webkit-animation-delay: -0.8s;
 		animation-delay: -0.8s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(97) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(97) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(97) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(97) .flow-text {
 	-webkit-animation-delay: -0.6s;
 		animation-delay: -0.6s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(98) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(98) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(98) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(98) .flow-text {
 	-webkit-animation-delay: -0.4s;
 		animation-delay: -0.4s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(99) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(99) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(99) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(99) .flow-text {
 	-webkit-animation-delay: -0.2s;
 		animation-delay: -0.2s;
 }
 
-.anim-text-flow .bounceItem:nth-of-type(100) .flowText,
-.anim-text-flow-hover:hover .bounceItem:nth-of-type(100) .flowText {
+.anim-text-flow .bounce-item:nth-of-type(100) .flow-text,
+.anim-text-flow-hover:hover .bounce-item:nth-of-type(100) .flow-text {
 	-webkit-animation-delay: 0s;
 		animation-delay: 0s;
 }
