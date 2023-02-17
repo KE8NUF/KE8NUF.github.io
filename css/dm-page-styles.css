@@ -488,6 +488,7 @@ header .waves-container {
 	left: 0;
 	bottom: 0;
 	right: 0;
+	opacity: 0.7;
 }
 
 header .waves-container canvas {
@@ -2734,8 +2735,8 @@ only screen and (max-device-width : 960px) {
 		top: 0;
 		margin-top: 16px;
 		/* height: 10%; */
-		height: 53%;
-		max-height: 53%;
+		height: 43%;
+		max-height: 43%;
 	}
 	
 	nav .menu-logo a {
