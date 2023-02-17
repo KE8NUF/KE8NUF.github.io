@@ -2750,8 +2750,8 @@ only screen and (max-device-width : 960px) {
 	}
 	
 	nav.fixed-nav .menu-logo.active-menu {
-		height: 20%;
-		max-height: 20%;
+		height: 10%;
+		max-height: 10%;
 	}
 
 	nav ul {
