@@ -716,9 +716,14 @@ nav ul li a {
 	display: block;
 	transition: all 250ms;
 	-webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0) scale(1.0, 1.0);
-    transform: translateZ(0);
+	backface-visibility: hidden;
+    -webkit-transform: translateZ(0) perspective(1px) scale(1.0, 1.0);
+    transform: translateZ(0) perspective(1px) scale(1.0, 1.0);
 	font-smoothing: antialiased !important;
+	-webkit-font-smoothing: subpixel-antialiased!important;
+	-webkit-filter: blur(0);
+	filter: blur(0px);
+	 transform-style: preserve-3d;
 }
 
 nav ul li a i,
@@ -736,9 +741,14 @@ nav ul li a:hover {
 	
 	transition: all 250ms;
 	-webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0) scale(1.0, 1.0);
-    transform: translateZ(0);
+	backface-visibility: hidden;
+    -webkit-transform: translateZ(0) perspective(1px) scale(1.0, 1.0);
+    transform: translateZ(0) perspective(1px) scale(1.0, 1.0);
 	font-smoothing: antialiased !important;
+	-webkit-font-smoothing: subpixel-antialiased!important;
+	-webkit-filter: blur(0);
+	filter: blur(0px);
+	 transform-style: preserve-3d;
 }
 
 nav ul li a.active {
@@ -2746,8 +2756,8 @@ only screen and (max-device-width : 960px) {
 		top: 0;
 		margin-top: 16px;
 		/* height: 10%; */
-		height: 13%;
-		max-height: 13%;
+		height: 6%;
+		max-height: 6%;
 	}
 	
 	nav .menu-logo a {
@@ -2762,8 +2772,8 @@ only screen and (max-device-width : 960px) {
 	}
 	
 	nav.fixed-nav .menu-logo.active-menu {
-		height: 10%;
-		max-height: 10%;
+		height: 6%;
+		max-height: 6%;
 	}
 
 	nav ul {
