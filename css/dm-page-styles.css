@@ -714,6 +714,7 @@ nav ul li a {
 	line-height: 60px;
 	vertical-align: middle;
 	display: block;
+	transition: all 250ms;
 }
 
 nav ul li a i,
