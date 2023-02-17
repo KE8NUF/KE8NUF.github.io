@@ -1,7 +1,8 @@
 //waves for mobile single frame.
-//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-	if($(window).width() <= 960) {
+if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || ($(window).width() <= 960) ) {
+	//if($(window).width() <= 960) {
 		function waveRender() {
+		var lastFrameTime = 8;
 		var waves = new SineWaves({
 			el: document.getElementById('waves'),
 			//speed: 5,
@@ -55,8 +56,8 @@
 					lineWidth: 2,
 					amplitude: -80,
 					wavelength: 110,
-					segmentLength: 1,
-					type: 'Sawtooth'
+					//segmentLength: 1,
+					//type: 'Sawtooth'
 				}
 			],
 		 
@@ -91,8 +92,8 @@
 		});
 		waves.update();
 		}
-	}
-//}
+	//}
+}
 
 // waves for desktop
 //if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
@@ -150,8 +151,8 @@
 					lineWidth: 2,
 					amplitude: -160,
 					wavelength: 180,
-					segmentLength: 1,
-					type: 'Sawtooth'
+					//segmentLength: 1,
+					//type: 'Sawtooth'
 				}
 			],
 		 
