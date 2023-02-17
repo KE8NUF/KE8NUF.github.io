@@ -3,7 +3,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Opera Mobile|K
 
 //waves for mobile single frame.
 //if(isMobile && ($(window).width() <= 960) ) {
-if(isMobile === 'true') {
+if(isMobile == 'true') {
 	//if($(window).width() <= 960) {
 		function waveRender() {
 		var lastFrameTime = 8;
