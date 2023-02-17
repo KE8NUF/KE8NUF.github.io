@@ -5,7 +5,8 @@ console.log(isMobile);
 
 //waves for mobile single frame.
 //if(isMobile && ($(window).width() <= 960) ) {
-if(isMobile == true || 'ontouchstart' in document.documentElement) {
+if(isMobile == true || 'ontouchstart' in document.documentElement || window.navigator.msPointerEnabled) {
+//if(isMobile == true || 'ontouchstart' in window || window.navigator.msPointerEnabled) {
 	//if($(window).width() <= 960) {
 		function waveRender() {
 		var lastFrameTime = 8;
