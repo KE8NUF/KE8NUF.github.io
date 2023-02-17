@@ -1,9 +1,9 @@
 var isMobile = false;
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Opera Mobile|Kindle|Windows Phone|PSP|AvantGo|Atomic Web Browser|Blazer|Chrome Mobile|Dolphin|Dolfin|Doris|GO Browser|Jasmine|MicroB|Mobile Firefox|Mobile Safari|Mobile Silk|Motorola Internet Browser|NetFront|NineSky|Nokia Web Browser|Obigo|Openwave Mobile Browser|Palm Pre web browser|Polaris|PS Vita browser|Puffin|QQbrowser|SEMC Browser|Skyfire|Tear|TeaShark|UC Browser|uZard Web|wOSBrowser|Yandex.Browser mobile/i.test(navigator.userAgent) && confirm('Are you viewing on a mobile device? We are confirming to give you the best experience on the site as possible.')) { isMobile = true; }
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Opera Mobile|Kindle|Windows Phone|PSP|AvantGo|Atomic Web Browser|Blazer|Chrome Mobile|Dolphin|Dolfin|Doris|GO Browser|Jasmine|MicroB|Mobile Firefox|Mobile Safari|Mobile Silk|Motorola Internet Browser|NetFront|NineSky|Nokia Web Browser|Obigo|Openwave Mobile Browser|Palm Pre web browser|Polaris|PS Vita browser|Puffin|QQbrowser|SEMC Browser|Skyfire|Tear|TeaShark|UC Browser|uZard Web|wOSBrowser|Yandex.Browser mobile/i.test(navigator.userAgent) && confirm('We see you are viewing our site on a mobile device? We ask confirmation to give you the best possible experience.')) { var isMobile = true; }
 
 //waves for mobile single frame.
 //if(isMobile && ($(window).width() <= 960) ) {
-if(isMobile) {
+if(isMobile === 'true') {
 	//if($(window).width() <= 960) {
 		function waveRender() {
 		var lastFrameTime = 8;
@@ -97,11 +97,10 @@ if(isMobile) {
 		waves.update();
 		}
 	//}
-}
-
+} else {
 // waves for desktop
 //if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
-	if($(window).width() >= 960) {
+	//if($(window).width() >= 960) {
 		function waveRender() {
 		var waves = new SineWaves({
 			el: document.getElementById('waves'),
