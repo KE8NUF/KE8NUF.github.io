@@ -99,6 +99,7 @@ if( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/WebOS/i)
 		});
 		waves.update();
 		}
+		console.log('Waves Stop Mobile');
 	//}
 } else {
 // waves for desktop
