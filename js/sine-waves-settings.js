@@ -194,5 +194,6 @@ if( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/WebOS/i)
 			}
 		});
 		}
+		console.log('Waves Desktop Version');
 	}
 //}
