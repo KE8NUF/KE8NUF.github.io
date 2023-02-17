@@ -2736,8 +2736,8 @@ only screen and (max-device-width : 960px) {
 		top: 0;
 		margin-top: 16px;
 		/* height: 10%; */
-		height: 33%;
-		max-height: 33%;
+		height: 23%;
+		max-height: 23%;
 	}
 	
 	nav .menu-logo a {
