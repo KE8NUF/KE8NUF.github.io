@@ -249,7 +249,7 @@ function iframeReady() {
 			//var chars = $(this).html();
 			//var chars = stringCamelCase.split(/(?=[A-Z])/).join(" ");
 			
-		return '<span class="bounce-item" style="display:inlie-block;"><span class="flow-text" style="display:inline-block;">' + chars.join(" " + '</span></span><span class="bounce-item"><span class="flow-text">').replace(/([A-Z])/g, ' $1').trim() + '</span></span>';
+		return '<span class="bounce-item"><span class="flow-text">' + chars.join(" " + '</span></span><span class="bounce-item"><span class="flow-text">').replace(/([A-Z])/g, ' $1').trim() + '</span></span>';
 		});
 		//*****
 		//jello animation for menu
