@@ -697,6 +697,18 @@ nav .menu.shown-menu:before {
 	backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
 }
 
+.menu.shown-menu:before {
+	content: "";
+	position: absolute;
+	width: 130%;
+	height: 130%;
+	/* add 30% for filter blured edges to fill space */
+	top: -30%;
+	left: -30%;
+	-webkit-backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
+	backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
+}
+
 nav.fixed-nav ul {
 	position: relative;
 }
