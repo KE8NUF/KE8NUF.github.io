@@ -5,8 +5,11 @@ console.log(isMobile);
 
 //waves for mobile single frame.
 //if(isMobile && ($(window).width() <= 960) ) {
-if( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/WebOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) ||  navigator.userAgent.match(/CriOS/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/OPiOS/i) || navigator.userAgent.match(/Opera Mini/i) || 'ontouchstart' in document.documentElement || window.navigator.msPointerEnabled && navigator.maxTouchPoints > 1 ) {
+// good if( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/WebOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) ||  navigator.userAgent.match(/CriOS/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/OPiOS/i) || navigator.userAgent.match(/Opera Mini/i) || 'ontouchstart' in document.documentElement || window.navigator.msPointerEnabled && navigator.maxTouchPoints > 1 ) {
 //if(isMobile == true || 'ontouchstart' in window || window.navigator.msPointerEnabled) {
+	
+	//sample code https://www.sitepoint.com/detect-mobile-devices-jquery/
+	if(jQuery.browser.mobile) {
 	//if($(window).width() <= 960) {
 		function waveRender() {
 		var lastFrameTime = 8;
