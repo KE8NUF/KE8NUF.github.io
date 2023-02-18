@@ -646,6 +646,10 @@
 		
 		<script src="./js/dm_page_scripts.js"></script>
 		<script>
+			window.navigator.userAgent;
+			var isMobile = false;
+			if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { var isMobile = true; }
+			console.log(isMobile);
 			//*****
 			//set variable for device with for on resize event below
 			//*****
