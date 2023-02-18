@@ -9,7 +9,7 @@ console.log(isMobile);
 //if(isMobile == true || 'ontouchstart' in window || window.navigator.msPointerEnabled) {
 	
 	//sample code https://www.sitepoint.com/detect-mobile-devices-jquery/
-	if(jQuery.browser.mobile) {
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
 	//if($(window).width() <= 960) {
 		function waveRender() {
 		var lastFrameTime = 8;
