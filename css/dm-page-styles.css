@@ -697,7 +697,7 @@ nav .menu.shown-menu:before {
 	backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
 }
 
-.menu.shown-menu:before {
+.shown-menu:before {
 	content: "";
 	position: absolute;
 	width: 130%;
