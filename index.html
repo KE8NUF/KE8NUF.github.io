@@ -769,8 +769,11 @@
 				//*****
 				//resize waves on page as needed
 				//*****
-				waveRender();
-				window.addEventListener('resize', wavesResize);
+				if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				} else {
+					waveRender();
+					window.addEventListener('resize', wavesResize);
+				}
 				//*****
 				//touch simulation events if needed.
 				//*****
