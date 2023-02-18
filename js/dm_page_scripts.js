@@ -53,7 +53,7 @@ var isMobile = {
 	any: function() {
 		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 	}
-};
+}
 		
 var iframe = $('#frame-badge');
 function iframeReady() {
