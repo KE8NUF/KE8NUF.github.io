@@ -2371,7 +2371,7 @@ footer {
 #contact-social li a.discord:hover i {
 	color: rgba(88, 101, 242, 1);
 	color: rgba(249, 249, 249, 1);
-	text-shadow: 0px 0px 8px rgba(48, 66, 255, 1), 0px 0px 12px rgba(48, 66, 255, .6);
+	text-shadow: 0px 0px 8px rgba(48, 66, 255, 1), 0px 0px 10px rgba(48, 66, 255, .8), 0px 0px 12px rgba(48, 66, 255, .6);
 }
 
 #contact-social li a.steam:hover {
