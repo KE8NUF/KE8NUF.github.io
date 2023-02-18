@@ -684,6 +684,14 @@
 			
 			$(document).ready(function() {
 				//*****
+				//resize waves on page as needed
+				//*****
+				if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				} else {
+					waveRender();
+					window.addEventListener('resize', wavesResize);
+				}
+				//*****
 				//if needed fixed footer to bottom script
 				//*****
 				function footerAlign() {
@@ -766,14 +774,6 @@
 						iframeReady();
 					}
 				});
-				//*****
-				//resize waves on page as needed
-				//*****
-				if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-				} else {
-					waveRender();
-					window.addEventListener('resize', wavesResize);
-				}
 				//*****
 				//touch simulation events if needed.
 				//*****
