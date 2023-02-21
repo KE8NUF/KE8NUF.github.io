@@ -270,6 +270,15 @@ function iframeReady() {
 			}
 		}
 		//*****
+		//light mode/dark mode toggle
+		//*****
+		var checkboxModeToggle = document.getElementById('checkbox-mode-toggle');
+		checkboxModeToggle.addEventListener('change', () => {
+			document.body.classList.toggle('light');
+			$('.toggle-mode .la-moon').toggleClass('non-active');
+			$('.toggle-mode .la-sun').toggleClass('non-active');
+		});
+		//*****
 		//equal height content script
 		//*****
 		equalContentHeight();

@@ -150,6 +150,15 @@
 							<div class="glass-style">
 								<div class="glass-content-wrapper">
 									<div class="glass-content" style="padding:5px;">
+										<div class="toggle-mode" style="position:relative; margin-bottom: 20px;">
+											<input id="checkbox-mode-toggle" type="checkbox" class="checkbox" />
+											<label for="checkbox" class="checkbox-label">
+												<i class="las la-moon"></i>
+												<i class="las la-sun non-active"></i>
+												<span class="ball"></span>
+											</label>
+										</div>
+										
 										<div id="data-terms-wrapper">
 											<!-- START TERMS OF SERVICE AREA -->
 											
@@ -160,11 +169,19 @@
 														[data-custom-class='link'], [data-custom-class='link'] * {
 														word-break: break-word !important;
 														}
+														
 														#terms-data,
 														#terms-data span,
 														#terms-data a,
 														#terms-data div {
 															font-size: 0.98em!important;
+														}
+														
+														.light #terms-data,
+														.light #terms-data span,
+														.light #terms-data a,
+														.light #terms-data div {
+															color: rgba(17, 17, 17, 1)!important;
 														}
 														
 														#data-terms-wrapper {
