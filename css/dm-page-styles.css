@@ -389,6 +389,7 @@ body.light {
 .grid-item.noGlass:before {
 	-webkit-backdrop-filter: blur(0) saturate(1) brightness(1) grayscale(0); 
 	backdrop-filter: blur(0) saturate(1) brightness(1) grayscale(0);
+	display: none;
 }
 
 .light .grid-item.noGlass h2,
