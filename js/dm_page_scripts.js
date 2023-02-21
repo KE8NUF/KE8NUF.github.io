@@ -277,6 +277,14 @@ function iframeReady() {
 			document.body.classList.toggle('light');
 			$('.toggle-mode .la-moon').toggleClass('non-active');
 			$('.toggle-mode .la-sun').toggleClass('non-active');
+			$('.checkbox-label .ball').toggleClass('non-active');
+		});
+		
+		$(window).on('load', function() {
+			$('.toggle-mode .la-moon').removeClass('non-active');
+			$('.toggle-mode .la-sun').removeClass('non-active');
+			$('.toggle-mode .la-sun').addClass('non-active');
+			$('.checkbox-label .ball').removeClass('non-active');
 		});
 		//*****
 		//equal height content script

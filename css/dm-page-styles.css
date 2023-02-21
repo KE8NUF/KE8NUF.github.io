@@ -572,9 +572,18 @@ body.light {
 }
 
 .toggle-mode .checkbox-label .ball {
-	background-color: rgba(255, 255, 255, .15);
+	/* greens
+	background-color: rgba(255, 255, 255, .3);
+	background: radial-gradient(circle at 42px 42px, rgba(86, 182, 14, .4), rgba(16, 124, 16, .4));
+	*/
+	background: radial-gradient(circle at 42px 42px, rgba(108, 177, 255, .4), rgba(64, 121, 186, .4));
+	border: 1px solid rgba(198, 228, 239, .8);
+	box-shadow: 0px 0px 8px rgba(108, 177, 255, .2), 0px 0px 15px rgba(108, 177, 255, .2), 0px 0px 30px rgba(108, 177, 255, .6);
+	
+	/* whites
 	border: 1px solid rgba(0, 255, 36, .8);
 	box-shadow: 0px 0px 8px rgba(38, 255, 145, .2), 0px 0px 15px rgba(38, 255, 145, .2), 0px 0px 30px rgba(38, 255, 145, .6);
+	*/
 	width: 42px;
 	height: 42px;
 	position: absolute;
@@ -582,6 +591,13 @@ body.light {
 	top: -3px;
 	border-radius: 50%;
 	transition: transform 0.2s linear;
+}
+
+.toggle-mode .checkbox-label .ball.non-active {
+	/* sun colors */
+	background: radial-gradient(circle at 42px 42px, rgba(243, 156, 18, .4), rgba(208, 141, 36, .4));
+	border: 1px solid rgba(243, 156, 18, .8);
+	box-shadow: 0px 0px 8px rgba(255, 214, 148, .2), 0px 0px 15px rgba(255, 214, 148, .2), 0px 0px 30px rgba(255, 214, 148, .6);
 }
 
 .toggle-mode .checkbox-label .ball:before {
