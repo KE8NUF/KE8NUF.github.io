@@ -462,6 +462,13 @@ body.light {
 	backdrop-filter: blur(var(--filterBlur)) saturate(var(--filterSaturation)) brightness(var(--filterBrightness)) grayscale(var(--filterGrayscale));
 }
 
+.light .glass-style:before {
+	border-top: 1px solid rgba(239, 242, 245, .28);
+	border-left: 1px solid rgba(239, 242, 245, .22);
+	border-bottom: .75px solid rgba(239, 242, 245, .16);
+	border-right: .75px solid rgba(239, 242, 245, .18);
+}
+
 .glass-content-wrapper {
 	position: relative;
 	overflow: hidden;
@@ -973,6 +980,11 @@ nav ul li a.active:hover,
 	background: linear-gradient(to bottom, rgba(255, 255, 255, .075), rgba(255, 255, 255, .015) );
 	border: 1px solid rgba(255, 255, 255, 0.09);
 	border-radius: var(--borderRadius);
+}
+
+.light .card-container {
+	background: linear-gradient(to bottom, rgba(255, 255, 255, .085), rgba(255, 255, 255, .025) );
+	border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .card-container:before {
