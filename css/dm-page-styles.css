@@ -3124,6 +3124,7 @@ only screen and (max-device-width : 960px) {
 		width: 100%;
 		padding: 0;
 		margin: 0;
+		position: relative;
 	}
 	
 	nav.fixed-nav .menu-showing {
