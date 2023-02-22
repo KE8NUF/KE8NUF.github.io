@@ -3113,6 +3113,11 @@ only screen and (max-device-width : 960px) {
 		border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 	}
 	
+	.light nav ul li {
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	}
+	
 	nav ul li:first-child {
 		border-top: 0px solid transparent;
 	}
