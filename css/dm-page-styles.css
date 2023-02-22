@@ -3133,8 +3133,8 @@ only screen and (max-device-width : 960px) {
 		width: 100%;
 		padding: 12px 0px;
 		text-align: left;
-		border-top: 1px solid rgba(255, 255, 255, 0.09);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+		border-top: 1px solid rgba(255, 255, 255, 0.15);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.9);
 	}
 	
 	.light nav ul li {
