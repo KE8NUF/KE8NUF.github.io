@@ -864,6 +864,8 @@ nav .shown-menu {
 	height: 100%;
 	position: relative;
 	overflow: hidden;
+	-webkit-backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
+	backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
 }
 
 nav .menu.shown-menu:before {
@@ -3064,6 +3066,7 @@ only screen and (max-device-width : 960px) {
 	
 	nav.fixed-nav .menu-logo {
 		position: absolute;
+		position: fixed;
 		top: 0;
 		margin-top: 16px;
 		/* height: 10%; */
