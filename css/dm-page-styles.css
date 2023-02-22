@@ -3125,6 +3125,8 @@ only screen and (max-device-width : 960px) {
 		padding: 0;
 		margin: 0;
 		position: relative;
+		-webkit-backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
+		backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
 	}
 	
 	nav.fixed-nav .menu-showing {
@@ -3135,6 +3137,8 @@ only screen and (max-device-width : 960px) {
 	
 	.light nav .menu-showing {
 		background: rgba( 255, 255, 255, 0.15);
+		-webkit-backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
+		backdrop-filter: blur(16px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness));
 	}
 	
 	nav ul li {
