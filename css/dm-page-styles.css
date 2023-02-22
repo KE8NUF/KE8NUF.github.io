@@ -3120,7 +3120,7 @@ only screen and (max-device-width : 960px) {
 	nav .menu-showing {
 		max-height: 34em;
 		background: rgba(255, 255, 255, 0.5);
-		background: rgba(1, 84, 146, 0.18);
+		background: rgba(80, 124, 156, 0.25);
 		width: 100%;
 		padding: 0;
 		margin: 0;
@@ -3129,6 +3129,11 @@ only screen and (max-device-width : 960px) {
 	nav.fixed-nav .menu-showing {
 		background: rgba(255, 255, 255, 0.09);
 		background: rgba(1, 84, 146, 0.14);
+		background: rgba(80, 124, 156, 0.25);
+	}
+	
+	.light nav .menu-showing {
+		background: rgba( 255, 255, 255, 0.15);
 	}
 	
 	nav ul li {
