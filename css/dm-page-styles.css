@@ -3052,7 +3052,7 @@ only screen and (max-device-width : 960px) {
 	
 	header {
 		max-width: 100%;
-		overflow-x: hidden;
+		/* overflow-x: hidden; */
 	}
 		
 	nav .menu-logo {
