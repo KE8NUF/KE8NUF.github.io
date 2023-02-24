@@ -287,6 +287,22 @@ function iframeReady() {
 			$('.checkbox-label .ball').removeClass('non-active');
 		});
 		//*****
+		//parallax function
+		//*****
+		/* function parallax(){
+			var scrolled = $(window).scrollTop();
+			//$('.bg').css('top',-(scrolled*0.1)+'px');
+			//$('header .parallax').css( 'top', 50+(scrolled*0.1)+'%' );
+			$('header .parallax').css( 'top', (scrolled*0.1)+'%' );
+			$('header .parallax').css( 'opacity', 1-(scrolled*0.01)/10 );
+			$('header .parallax').css( 'opacity', 1-(scrolled*0.01)/10 );
+		}
+		
+		$(window).on('scroll', function(){
+			parallax();
+		}); */
+		
+		//*****
 		//equal height content script
 		//*****
 		equalContentHeight();
