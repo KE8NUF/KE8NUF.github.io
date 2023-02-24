@@ -1,4 +1,6 @@
 // The plugin code
+//reference and credit
+//http://www.franckmaurin.com/blog/the-parallax-effect-with-jquery/
 (function($){
 	$.fn.parallax = function(options){
 		var $$ = $(this);
