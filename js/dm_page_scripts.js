@@ -96,7 +96,7 @@ function iframeReady() {
 	console.log('Ran Frame loaded scripts');
 }
 
-document.addEventListener("DOMContentLoaded", (event) => {
+/* document.addEventListener("DOMContentLoaded", (event) => {
 	if (document.readyState === "loading") {
 		document.querySelector('body').style.visibility = 'hidden';
 		document.querySelector('#kit-loader').style.visibility = 'visible';
@@ -107,9 +107,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		document.querySelector('body').style.visibility = 'visible';
 	}
 });
+*/
 
 (function($){
 	$(function(){
+		//*****
+		//page loading scripts for loading animation
+		//*****
+		// Polling for the sake of my internet tests
+		var interval = setInterval(function() {
+			if(document.readyState === 'complete') {
+				$('#kit-loader').fadeOut();
+				clearInterval(interval);
+				console.log('Page Loaded');
+				//done();
+				iframeReady();
+			} else {
+				$('#kit-loader').fadeIn();
+				console.log('Page Not Loaded Yet.');
+			}
+		}, 100);
 		//*****
 		//show width height function for responsive design
 		//*****
