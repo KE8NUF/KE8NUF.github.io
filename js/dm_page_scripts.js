@@ -96,9 +96,20 @@ function iframeReady() {
 	console.log('Ran Frame loaded scripts');
 }
 
+document.addEventListener("DOMContentLoaded", (event) => {
+	if (document.readyState === "loading") {
+		document.querySelector('body').style.visibility = 'hidden';
+		document.querySelector('#kit-loader').style.visibility = 'visible';
+		document.querySelector('#kit-loader').style.display = 'block';
+	} else {
+		document.querySelector('#kit-loader').style.visibility = 'hidden';
+		document.querySelector('#kit-loader').style.display = 'none';
+		document.querySelector('body').style.visibility = 'visible';
+	}
+});
+
 (function($){
 	$(function(){
-		
 		//*****
 		//show width height function for responsive design
 		//*****
