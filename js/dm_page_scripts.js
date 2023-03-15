@@ -167,6 +167,21 @@ function iframeReady() {
 			} else {
 				$('nav').removeClass('fixed-nav');
 			}
+			
+			//*****
+			//page scroll to end of div
+			//*****
+			if($(window).scrollTop() >= $('#main-content').offset().top + $('#main-content').outerHeight() - window.innerHeight) {
+				$('.banner-message').css({
+					'position': 'relative',
+					'bottom': '-15px'
+				});
+			} else {
+				$('.banner-message').css({
+					'position': 'fixed',
+					'bottom': '25px'
+				});
+			}
 		});
 		//*****
 		//add active class to menu clicks
