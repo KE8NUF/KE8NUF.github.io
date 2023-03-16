@@ -2686,6 +2686,8 @@ nav ul li a.active:hover,
 	position: fixed;
 	bottom: 25px;
 	z-index: 11000;
+	background-image: url("../images/white-paper-trans.png");
+	background-repeat: repeat;
 	background-color: #ffffff33;
 	
 	border-top: 1px solid rgba(239, 242, 245, .5);
@@ -2693,7 +2695,12 @@ nav ul li a.active:hover,
 	box-shadow: 0 0 3px rgba(0, 0, 0, .15), 0 0 6px rgba(0, 0, 0, .13), 0 0 8px rgba(0, 0, 0, .15);
 }
 
+/*
+https://www.transparenttextures.com/
+*/
+
 .light .banner-message {
+	background-image: url("../images/black-paper-trans.png");
 	background-color: rgba(0, 0, 0, 0.3);
 	border-top: 1px solid rgba(17, 17, 17, .28);
 	border-bottom: 1px solid rgba(17, 17, 17, .28);
@@ -2707,6 +2714,11 @@ nav ul li a.active:hover,
 	height: 100%;
 	max-height: 100%;
 	margin: 0 auto;
+	
+	/* 
+	-webkit-filter: url("#roughpaper");
+	filter: url("#roughpaper");
+	*/
 	
 	-webkit-backdrop-filter: blur(20px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness)) grayscale(var(--filterGrayscale));
 	backdrop-filter: blur(20px) saturate(var(--filterSaturation)) brightness(var(--filterBrightness)) grayscale(var(--filterGrayscale));
