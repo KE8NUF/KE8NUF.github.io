@@ -3431,12 +3431,17 @@ https://codepen.io/simeydotme/pen/GRgLWE
 	background: rgba(72, 72, 72, .2);
 	opacity: .3;
 	
+	-webkit-backdrop-filter: blur(3px);
+	backdrop-filter: blur(3px);
 	-webkit-filter: blur(3px);
 	filter: blur(3px);
 }
 
 .magic-button-wrapper:hover .magic-shadow {
 	opacity: .6;
+	
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
 	-webkit-filter: blur(10px);
 	filter: blur(10px);
 }
@@ -3447,6 +3452,9 @@ https://codepen.io/simeydotme/pen/GRgLWE
 
 .magic-button-wrapper:hover .magic-shadow canvas {
 	opacity: 1!important;
+	
+	-webkit-backdrop-filter: blur(16px);
+	backdrop-filter: blur(16px);
 	-webkit-filter: blur(16px)!important;
 	filter: blur(16px)!important;
 }
@@ -3511,6 +3519,8 @@ https://codepen.io/simeydotme/pen/GRgLWE
 }
 
 .magic-button-wrapper .magic-coloring canvas {
+	-webkit-backdrop-filter: saturate(3);
+	backdrop-filter: saturate(3);
 	-webkit-filter: saturate(3);
 	filter: saturate(3);
 	/* center mask 50%/w 75%/h transparent center to solid outer */
@@ -3587,6 +3597,9 @@ https://codepen.io/simeydotme/pen/GRgLWE
 		0 4px 4px 1px rgba(0, 0, 0, 0.05);
 		
 	cursor: pointer;
+	
+	-webkit-backdrop-filter: brightness(145%) contrast(1.15) saturate(1.3);
+	backdrop-filter: brightness(145%) contrast(1.15) saturate(1.3);
 	-webkit-filter: brightness(145%) contrast(1.15) saturate(1.3);
 	filter: brightness(145%) contrast(1.15) saturate(1.3);
 }
@@ -3620,6 +3633,9 @@ https://codepen.io/simeydotme/pen/GRgLWE
 		rgba(244, 254, 255, .42) 15%, 
 		rgba(244, 254, 255, .03) 100%
 	);
+	
+	-webkit-backdrop-filter: blur(.8px);
+	backdrop-filter: blur(.8px);
 	-webkit-filter: blur(.8px);
 	filter: blur(.8px);
 }
