@@ -3642,7 +3642,7 @@ https://codepen.io/simeydotme/pen/GRgLWE
 
 .magic-button-wrapper .magic-button a {
 	text-decoration: none;
-	font-size: .85em;
+	font-size: .80em;
 	color: rgba(244, 254, 255, 1);
 	text-shadow: var(--textShadow);
 	line-height: 30px;
