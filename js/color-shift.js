@@ -144,9 +144,6 @@ function createCanvas() {
 		transform: translate(-50%, -50%);
 		z-index: -5;
 		opacity: .9;
-		-webkit-backdrop-filter: blur(65px);
-		backdrop-filter: blur(65px);
-		
 	`;
 	
 	canvas.a.style = `
@@ -159,8 +156,8 @@ function createCanvas() {
 		z-index: -8;
 		opacity: 1;
 		border-radius: 3em;
-		-webkit-backdrop-filter: blur(8px);
-		backdrop-filter: blur(8px);
+		-webkit-filter: blur(8px);
+		filter: blur(8px);
 	`;
 	
 	//containerNames.forEach( (containerName) => container.append(canvas.b) );
