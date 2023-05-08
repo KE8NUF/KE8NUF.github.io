@@ -3424,7 +3424,7 @@ https://codepen.io/simeydotme/pen/GRgLWE
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) translate3d(0, 0, 0);
 	border-radius: 3em;
 	z-index: -8;
 	
@@ -3481,7 +3481,7 @@ https://codepen.io/simeydotme/pen/GRgLWE
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) translate3d(0, 0, 0);
 	z-index: -1;
 	
 	/* my blues #00e1ff to #0051ff  */
@@ -3552,7 +3552,7 @@ https://codepen.io/simeydotme/pen/GRgLWE
 	
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) translate3d(0, 0, 0);
 	
 	border-radius: 5em;
 	transition: all 250ms ease;
@@ -3633,7 +3633,7 @@ https://codepen.io/simeydotme/pen/GRgLWE
 	position: absolute;
 	top: 6%;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translateX(-50%) translate3d(0, 0, 0);
 	border-radius: 10em;
 	width: 80%;
 	height: 35%;
