@@ -2815,7 +2815,7 @@ https://www.transparenttextures.com/
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	position: absolute;
-	display: table;
+	/* display: table; */
 }
 
 .banner-message .marquee h3 {
@@ -4556,6 +4556,10 @@ only screen and (max-device-width : 480px) {
 	
 	.light #footer-bottom-content {
 		background: rgba(36, 41, 44, 0) linear-gradient(50deg, var(--limeGreen) 90%, #65696b 1%) repeat scroll 0 0;
+	}
+	
+	.banner-message .marquee {
+		width: auto;
 	}
 }
 
