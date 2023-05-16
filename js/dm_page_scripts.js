@@ -250,6 +250,18 @@ function iframeReady() {
 			});
 		}
 		//*****
+		//magic particles hover script
+		//*****
+		var magicButtonSelector = document.querySelector('.magic-button');
+		var magicButtonParticles = document.querySelector('.magical-particles');
+
+		$(magicButtonSelector).on('mouseenter', function(){
+			$(magicButtonParticles).addClass('over');
+		});
+		$(magicButtonSelector).on('mouseleave', function(){
+			$(magicButtonParticles).removeClass('over');
+		});
+		//*****
 		//progress bar with back to top
 		//*****
 		//Scroll back to top
