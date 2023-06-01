@@ -358,6 +358,19 @@ function iframeReady() {
 		}); */
 		
 		//*****
+		//page marquee animation needed
+		//*****
+		var root = document.documentElement;
+		var marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elements-displayed');
+		var marqueeContent = document.querySelector('ul.marquee-content');
+		
+		root.style.setProperty('--marquee-elements', marqueeContent.children.length);
+		
+		for(let i=0; i < marqueeElementsDisplayed; i++) {
+			marqueeContent.appendChild( marqueeContent.children[i].cloneNode(true) );
+		}
+		
+		//*****
 		//equal height content script
 		//*****
 		equalContentHeight();
