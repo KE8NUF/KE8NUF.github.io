@@ -1107,6 +1107,7 @@ nav {
 nav.fixed-nav .menu-logo {
 	display: block;
 	height: 80px;
+	overflow: hidden;
 }
 
 nav .menu-logo {
