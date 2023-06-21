@@ -3434,7 +3434,7 @@ only screen and (max-device-width : 800px) {
 	
 	.banner-wrapper {
 		display: table;
-		margin: 1.25em 1.25em;
+		margin: 1.25em auto;
 	}
 	
 	.gallery-card {
