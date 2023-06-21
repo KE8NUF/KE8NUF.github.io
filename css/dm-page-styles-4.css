@@ -3410,7 +3410,7 @@ only screen and (max-device-width : 800px) {
 
 	.span-2-of-2, .span-1-of-2 {
 		width: 100%;
-		width: 92.3%;
+		width: 81.3%;
 	}
 
 	.span-3-of-3, .span-2-of-3, .span-1-of-3 {
@@ -3425,6 +3425,10 @@ only screen and (max-device-width : 800px) {
 	
 	.container-wrapper-center {
 		width: 95vw;
+	}
+	
+	.neon-text-container {
+		height: 75px;
 	}
 	
 	.neon-text-holder {
