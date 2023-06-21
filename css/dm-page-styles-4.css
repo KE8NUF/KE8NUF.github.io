@@ -3400,6 +3400,10 @@ only screen and (max-device-width : 800px) {
 		height: 18.75em;
 	}
 	
+	.section {
+		width: 99.5%;
+	}
+	
 	.col {
 		margin: 1% 0% 1% 0%;
 	}
@@ -3424,8 +3428,8 @@ only screen and (max-device-width : 800px) {
 	}
 	
 	.neon-text-holder {
-		font-size: 2em;
-		line-height: 3em;
+		font-size: 1.5em;
+		line-height: 2em;
 	}
 	
 	.banner-wrapper {
