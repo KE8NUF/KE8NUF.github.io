@@ -3019,7 +3019,7 @@ body.darkTheme {
 		height: 100%;
 		max-height: 2.625em;
 		padding: 0;
-		margin: 1.25em auto;
+		margin: 1.25em 0;
 	}
 
 	.banner-background {
@@ -3435,6 +3435,10 @@ only screen and (max-device-width : 800px) {
 	.neon-text-holder {
 		font-size: 1.5em;
 		line-height: 2em;
+	}
+	
+	.banner-fix {
+		display: table;
 	}
 	
 	.banner-wrapper {
