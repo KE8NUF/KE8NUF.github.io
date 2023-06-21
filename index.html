@@ -636,27 +636,25 @@
 				$(document).unbind('mousewheel DOMMouseScroll');
 			});
 			
-			$(document).ready(function() {
 				//*****
 				//resize functions
 				//*****
-				$(window).on('resize', function() {
-					//*****
-					//responsive iframe for badge
-					//*****
-					var windowWidth = $(window).width();
-					var notFrame = $('iframe:not(.resp-iframe), div:not(.resp-container)');
-					if( deviceWidth !== windowWidth && notFrame ) {
-						deviceWidth = $(window).width();
-						// Do something
-						iframeReady();
-					}
-				});
+			$(window).on('resize load', function() {
+				//*****
+				//responsive iframe for badge
+				//*****
+				var windowWidth = $(window).width();
+				var notFrame = $('iframe:not(.resp-iframe), div:not(.resp-container)');
+				if( deviceWidth !== windowWidth && notFrame ) {
+					deviceWidth = $(window).width();
+					// Do something
+					iframeReady();
+				}
+			});
 				//*****
 				//touch simulation events if needed.
 				//*****
 				//simulateTouchEvents('#footer-top-content');
-			});
 		</script>
 	</body>
 </html>
