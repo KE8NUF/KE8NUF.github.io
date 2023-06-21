@@ -607,13 +607,6 @@
 		<!-- SITE PAGE SCRIPTS IF NEEDED HERE -->
 		<script src="./js/site_page_scripts.js"></script>
 		<script>
-			//window.navigator.userAgent;
-			//var isMobile = false;
-			//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { var isMobile = true; }
-			//console.log(isMobile);
-			//*****
-			//set variable for device with for on resize event below
-			//*****
 			var deviceWidth = $(window).width();
 			//*****
 			//prevent scrolling on element not needed to scroll
@@ -636,25 +629,71 @@
 				$(document).unbind('mousewheel DOMMouseScroll');
 			});
 			
+			$(document).ready(function() {
+				//window.navigator.userAgent;
+				//var isMobile = false;
+				//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { var isMobile = true; }
+				//console.log(isMobile);
+				//*****
+				//set variable for device with for on resize event below
+				//*****
+				var deviceWidth = $(window).width();
+				//*****
+				//prevent scrolling on element not needed to scroll
+				//*****
+				function stopWheel(e){
+					if(!e){ /* IE7, IE8, Chrome, Safari */ 
+						e = window.event; 
+					}
+					if(e.preventDefault) { /* Chrome, Safari, Firefox */ 
+						e.preventDefault(); 
+					} 
+					e.returnValue = false; /* IE7, IE8 */
+				}
+				$('#frame-badge').on('hover touchstart mouseenter', function() {
+					$(document).bind('mousewheel DOMMouseScroll',function(){
+						console.log('Stopped scroll on iframe div');
+						stopWheel();
+					});
+				}, function() {
+					$(document).unbind('mousewheel DOMMouseScroll');
+				});
+				//*****
+				//add listener for orientation change
+				//*****
+				window.addEventListener("orientationchange", function() {
+					// Announce the new orientation number
+					//alert(screen.orientation);
+					iframeReady();
+				}, false);
+				//*****
+				//add listener for resize changes
+				//*****
+				// Listen for resize changes
+				window.addEventListener("resize", function() {
+					// Get screen size (inner/outerWidth, inner/outerHeight)
+					iframeReady();
+				}, false);
 				//*****
 				//resize functions
 				//*****
-			$(window).on('resize load', function() {
-				//*****
-				//responsive iframe for badge
-				//*****
-				var windowWidth = $(window).width();
-				var notFrame = $('iframe:not(.resp-iframe), div:not(.resp-container)');
-				if( deviceWidth !== windowWidth && notFrame ) {
-					deviceWidth = $(window).width();
-					// Do something
-					iframeReady();
-				}
-			});
+				$(window).on('resize load', function() {
+					//*****
+					//responsive iframe for badge
+					//*****
+					var windowWidth = $(window).width();
+					var notFrame = $('iframe:not(.resp-iframe), div:not(.resp-container)');
+					if( deviceWidth !== windowWidth && notFrame ) {
+						deviceWidth = $(window).width();
+						// Do something
+						iframeReady();
+					}
+				});
 				//*****
 				//touch simulation events if needed.
 				//*****
 				//simulateTouchEvents('#footer-top-content');
+			});
 		</script>
 	</body>
 </html>
