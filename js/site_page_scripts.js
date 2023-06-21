@@ -30,7 +30,8 @@ function equalContentHeight() {
 						var highestBox = 0;
 						$($columns).each(function() { 
 							if($(this).height() > highestBox){ 
-								highestBox = $(this).height();  
+								//highestBox = $(this).height();
+								highestBox = $(this).outerHeight(true);
 							}
 						});    
 						$($columns).height(highestBox);
