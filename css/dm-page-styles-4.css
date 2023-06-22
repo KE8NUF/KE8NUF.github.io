@@ -184,7 +184,7 @@
 	
 		/* new dark/black colors - USE */
 	--darkHighlight: rgba(0, 0, 1, 1); /* #000001 */
-	--bodyDark: rgba(25, 27, 34, 1);
+	--bodyDark: rgba(25, 27, 34, 1); /* #191b22 */
 	--bodyDark: rgba(33, 36, 45, 1); /* #21242d */
 	
 	--darkContentBackground: rgba(32, 37, 43, 1); /* #20252b */
@@ -193,6 +193,7 @@
 	--borderDarkTheme: rgba(50, 50, 50, 1); /* #323232 */
 	--borderDarkTheme: rgba(65, 66, 75, 1); /* #41424b */
 	--buttonDarkTheme: rgba(64, 74, 86, 1); /* #343844 */
+	--buttonDarkTheme: rgba(79, 91, 106, 1); /* #4a5563 */
 	
 	/* === SITE WIDE VARIABLES === */
 	
