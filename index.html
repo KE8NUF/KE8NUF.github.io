@@ -366,12 +366,13 @@
 									<div id="badge-frame-insert"></div>
 									<script>
 										var frameCode;
+										var cacheWidth = $(window).width();
 										
 										const cachedWindowWidth = $(window).width();
 										//$(document).ready(function (){
 											
 												if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-													$(window).bind('load resize',function(){
+													$(window).bind('load', function(){
 														//var newWindowWidth = $(window).width();
 														//fixes resize event triggered on mobile by browser bars hiding bug
 														//if(screenwidth !== $(window).width() ) {
@@ -390,6 +391,26 @@
 														//}
 															//cachedWindowWidth = newWindowWidth;
 														//}
+													});
+													var cacheWidth = $(window).width();
+													
+													$(window).bind('resize', function() {
+														var currentWidth = $(window).width();
+														if(cacheWidth !== currentWidth) {
+															$('.resp-container').remove();
+															console.log("The orientation has changed!");
+																
+															if($(window).width() <= 650) {
+																//code to execute
+																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+																$('#badge-frame-insert').append(frameCode);
+															} else if($(window).width() >= 650) {
+																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+																$('#badge-frame-insert').append(frameCode);
+															}
+															
+															cacheWidth = $(window).width();
+														}
 													});
 												}
 												if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
