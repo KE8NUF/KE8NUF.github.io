@@ -101,7 +101,21 @@ function iframeReady() {
 					'.card-front img {' +
 					'max-height: 283px;' +
 					'}' +
-					'}' 
+					'}' +
+					'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
+					'.resp-container {' +
+					'padding-top: 117%;' +
+					'}' +
+					'.card-front img {' +
+					'max-height: 283px;' +
+					'}' +
+					'.badge-back-gline-wrapper img,' +
+					'.badge-banners-top img,' +
+					'.badge-banners-bottom img,' +
+					'.badge-front img {' +
+					'max-height: 283px;' +
+					'}' +
+					'}'
 				;
 				iframe.contentDocument.head.appendChild(styleAdd);
 				console.log('resied iframe orientation change from iPadOrentation function');
@@ -113,11 +127,25 @@ function iframeReady() {
 			var iframe = document.getElementById('frame-badge');
 			var styleAdd = document.createElement('style');
 			styleAdd.textContent =
-				'@media only screen and (max-width : 960px), only screen and (max-device-width : 960px){' +
-				'.card-front img {' +
-				'max-height: 283px;' +
-				'}' +
-				'}' 
+					'@media only screen and (max-width : 960px), only screen and (max-device-width : 960px){' +
+					'.card-front img {' +
+					'max-height: 283px;' +
+					'}' +
+					'}' +
+					'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
+					'.resp-container {' +
+					'padding-top: 117%;' +
+					'}' +
+					'.card-front img {' +
+					'max-height: 283px;' +
+					'}' +
+					'.badge-back-gline-wrapper img,' +
+					'.badge-banners-top img,' +
+					'.badge-banners-bottom img,' +
+					'.badge-front img {' +
+					'max-height: 283px;' +
+					'}' +
+					'}'
 			;
 			iframe.contentDocument.head.appendChild(styleAdd);
 			console.log('resized iFrame in general run/rules');
