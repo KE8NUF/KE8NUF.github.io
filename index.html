@@ -368,7 +368,7 @@
 										$(document).ready(function (){
 											
 												if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-													$(window).on('load resize',function(){
+													$(window).bind('load resize',function(){
 														$('.resp-container').remove();
 														console.log("The orientation has changed!");
 															
