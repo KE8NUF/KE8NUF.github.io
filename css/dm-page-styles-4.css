@@ -2061,8 +2061,6 @@ body.darkTheme {
 		height: 100%;
 		max-height: 4.688em;
 		border-radius: 10em;
-		-webkit-filter: blur(0em);
-		filter:	blur(0em);
 	}
 
 	.header-content-wrapper {
