@@ -427,9 +427,9 @@ body.darkTheme {
 
 .bodyBlur.fadeIn {
 	/* Any browser which supports CSS3 */
-    filter: blur(.375em);
+    filter: blur(.5em);
     /* Webkit in Chrome 52, Safari 9, Opera 39, and earlier */
-    -webkit-filter: blur(.375em);
+    -webkit-filter: blur(.5em);
 	pointer-events: none;
 	
 	animation: bodyFadeIn 300ms ease-in;
