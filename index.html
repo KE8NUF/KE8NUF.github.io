@@ -368,9 +368,9 @@
 										//$(document).ready(function (){
 											
 												if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-													$(window).bind('load resize',function(){
+													$(window).bind('load orientationchange',function(){
 														//fixes resize event triggered on mobile by browser bars hiding bug
-														if(screenwidth !== $(window).width() ) { 
+														//if(screenwidth !== $(window).width() ) { 
 															$('.resp-container').remove();
 															console.log("The orientation has changed!");
 																
@@ -382,7 +382,7 @@
 																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 																$('#badge-frame-insert').append(frameCode);
 															}
-														}
+														//}
 													}).resize();
 												}
 												if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
@@ -700,7 +700,7 @@
 				//*****
 				$(window).on('resize load', function() {
 					//fixes resize event triggered on mobile by browser bars hiding bug
-					if(screenwidth !== $(window).width() ) {
+					//if(screenwidth !== $(window).width() ) {
 						//*****
 						//responsive iframe for badge
 						//*****
@@ -711,7 +711,7 @@
 							// Do something
 							iframeReady();
 						}
-					}
+					//}
 				});
 				//*****
 				//touch simulation events if needed.
