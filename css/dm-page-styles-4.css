@@ -2857,6 +2857,10 @@ body.darkTheme {
 		transition: 350ms ease;
 		border-radius: var(--borderRadius);
 		overflow: hidden;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	
 	.card-image img {

@@ -14,7 +14,7 @@ function equalContentHeight() {
 		$(document).each(function(event) {
 			//$(document).on('load', function() {
 				if( $('.match-height').length > 0 ) {
-					$('.section.match-height').each(function() {
+					$('.group.match-height').each(function() {
 						//var $contentHeight = 0;
 						var $columns = $('.col', this);
 						//var $maxHeight = Math.max.apply(Math, $columns.map(function() {
