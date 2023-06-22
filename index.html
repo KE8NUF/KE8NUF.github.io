@@ -372,14 +372,6 @@
 											
 												if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 													$(window).bind('load resize',function(){
-														$('#resp-fram-container').resizable({
-															start: function(event, ui) {
-																$('iframe').css('pointer-events', 'none');
-															},
-															stop: function(event, ui) {
-																$('iframe').css('pointer-events', 'auto');
-															}
-														});
 														//var newWindowWidth = $(window).width();
 														//fixes resize event triggered on mobile by browser bars hiding bug
 														//if(screenwidth !== $(window).width() ) {
@@ -642,6 +634,7 @@
 		
 		<!-- SITE PAGE SCRIPTS IF NEEDED HERE -->
 		<script src="./js/site_page_scripts.js"></script>
+		<script src="./js/jquery-scrollstartstop.js"></script>
 		<script>
 			var deviceWidth = $(window).width();
 			//*****
@@ -727,6 +720,20 @@
 							iframeReady();
 						}
 					//}
+				});
+				//*****
+				//stop pointer events on iframe
+				//*****
+				$(document).on('scrollstart', function() {
+					$('#resp-frame-container, iframe').css({
+						'pointer-events' : 'none'
+					});
+				});
+				
+				$(document).on('scrollend', function() {
+					$('#resp-frame-container, iframe').css({
+						'pointer-events' : 'auto'
+					});
 				});
 				//*****
 				//touch simulation events if needed.
