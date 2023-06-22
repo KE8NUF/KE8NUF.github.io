@@ -102,7 +102,7 @@ function iframeReady() {
 					'max-height: 283px;' +
 					'}' +
 					'}' +
-					'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
+					'@media only screen and (max-width : 660px), only screen and (max-device-width : 660px){' +
 					'.resp-container {' +
 					'padding-top: 117%;' +
 					'}' +
@@ -132,7 +132,7 @@ function iframeReady() {
 					'max-height: 283px;' +
 					'}' +
 					'}' +
-					'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
+					'@media only screen and (max-width : 660px), only screen and (max-device-width : 660px){' +
 					'.resp-container {' +
 					'padding-top: 117%;' +
 					'}' +
