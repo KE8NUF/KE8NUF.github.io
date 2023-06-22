@@ -8,6 +8,29 @@ document.onreadystatechange = function () {
 	}
 }
 
+// user agent check for mobile.
+var ua = navigator.userAgent;
+var isMobile = {
+	Android: function() {
+		return ua.match(/Android/i);
+	},
+	BlackBerry: function() {
+		return ua.match(/BlackBerry/i);
+	},
+	iOS: function() {
+		return ua.match(/iPhone|iPad|iPod/i);
+	},
+	Opera: function() {
+		return ua.match(/Opera Mini/i);
+	},
+	Windows: function() {
+		return ua.match(/IEMobile/i);
+	},
+	any: function() {
+		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	}
+}
+
 //function to equalize heights of content when needed
 function equalContentHeight() {
 	if( $(window).width() >= 800 ) {
