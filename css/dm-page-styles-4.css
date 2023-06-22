@@ -3464,6 +3464,12 @@ only screen and (max-device-width : 800px) {
 		max-width: 100%;
 	}
 	
+	.card-image #solar-data {
+		width: 100%!important;
+		max-width: 100%!important;
+		height: auto!important;
+	}
+	
 	.footer-content-wrapper {
 		padding: 0 1.2em 0;
 	}
