@@ -3470,6 +3470,10 @@ only screen and (max-device-width : 800px) {
 		max-height: 40px;
 	}
 	
+	.grad-icon-colors a {
+		font-size: 1.5em;
+	}
+	
 	.footer-copy {
 		font-size: .7em;
 	}
