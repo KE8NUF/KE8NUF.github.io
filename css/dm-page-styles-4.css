@@ -395,6 +395,7 @@ body {
 	height: 100vh;
 	min-height: 100vh;
 	min-width: 100%;
+	max-width: 100%;
 	overflow-x: hidden;
 	display: table-cell;
 	/* 
@@ -673,6 +674,7 @@ body.darkTheme {
 .content-container {
 	width: 95%;
 	width: 100%;
+	max-width: 100%;
 	height: 100%;
 	margin: 0px auto;
 	padding: 0;
@@ -701,6 +703,7 @@ body.darkTheme {
 /* === START SITE RADIAL GRADIENT STYLES === */
 .radials-background {
 	width: 100%;
+	max-width: 100%;
 	height: 37.5em;
 	position: absolute;
 	top: 0;
@@ -856,6 +859,7 @@ body.darkTheme {
 
 #lightToggle .switch .bulb .reflection {
 	width: 100%;
+	max-width: 100%;
 	height: 100%;
 	position: absolute;
 	z-index: 90;
@@ -1307,6 +1311,7 @@ body.darkTheme {
 	margin: 0px auto 20px;
 	padding: 0px;
 	width: 100%;
+	max-width: 100%;
 }
 
 #toggleThemeWrapper input {
@@ -1688,6 +1693,7 @@ body.darkTheme {
 	right: 0;
 	bottom: 0;
 	width: 100%;
+	max-width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -1696,6 +1702,7 @@ body.darkTheme {
 
 .toggle-icon-container .theme-toggle-icon {
 	width: 100%;
+	max-width: 100%;
 	height: 100%;
 	-moz-border-radius: var(--borderRadiusToggleIcon);
 	-webkit-border-radius: var(--borderRadiusToggleIcon);
@@ -1740,6 +1747,7 @@ body.darkTheme {
 
 .toggle-icon-container .theme-toggle-icon .light-toggle {
 	width: 100%;
+	max-width: 100%;
 	height: 100%;
 	font-size: 2em;
 	text-align: center;
@@ -1784,6 +1792,7 @@ body.darkTheme {
 
 .toggle-icon-container .theme-toggle-icon .dark-toggle {
 	width: 100%;
+	max-width: 100%;
 	height: 100%;
 	font-size: 1.5em;
 	text-align: center;
@@ -2097,6 +2106,7 @@ body.darkTheme {
 		max-height: 100%;
 		width: calc(100% / 2);
 		width: 100%;
+		max-width: 100%;
 		align-content: center;
 		align-items: center;
 		position: relative;
@@ -2121,6 +2131,7 @@ body.darkTheme {
 
 	.site-logo a {
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		display: inline-block;
 	}
@@ -2146,6 +2157,7 @@ body.darkTheme {
 		content: "";
 		position: absolute;
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		top: 0;
 		right: 0;
@@ -2220,6 +2232,7 @@ body.darkTheme {
 		
 		display: inline-block;
 		width: 100%;
+		max-width: 100%;
 		margin: 0 auto;
 		padding: 0;
 	}
@@ -2331,6 +2344,7 @@ body.darkTheme {
 		
 		padding: 1em;
 		width: 100%;
+		max-width: 100%;
 	}
 	
 	nav ul li {
@@ -2415,6 +2429,7 @@ body.darkTheme {
 	
 	.top-footer-content-wrapper {
 		width: 100%;
+		max-width: 100%;
 		margin-bottom: -1px;
 		padding: 2.813em 0px;
 		background: radial-gradient(ellipse at top center, rgba(12, 13, 19, 1) 5%, rgba(11, 13, 20, 1) 20%, 
@@ -2478,6 +2493,7 @@ body.darkTheme {
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		transition: all 250ms ease;
 		
@@ -2500,6 +2516,7 @@ body.darkTheme {
 	.grad-icon-colors {
 		position: relative;
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		transition: all 250ms ease;
 		border-radius: var(--gradIconBorderRadius);
@@ -2645,6 +2662,7 @@ body.darkTheme {
 	.neon-text-container {
 		position: relative;
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		height: 100px;
 		overflow: hidden;
@@ -2668,6 +2686,7 @@ body.darkTheme {
 		top: 50%;
 		left: 50%;
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		transform: translate(-50%, -50%);
 		color: rgba(255, 255, 255, 1);
@@ -2690,6 +2709,7 @@ body.darkTheme {
 		top: 50%;
 		left: 50%;
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		transform: translate(-50%, -51%);
 		color: rgba(50, 57, 66, 1);
@@ -2710,6 +2730,7 @@ body.darkTheme {
 		left: 50%;
 		transform: translate(-50%, -50.8%);
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		
 		background-image: url("https://damienmillard.net/images/holo-foil-background.jpg");
@@ -2856,6 +2877,7 @@ body.darkTheme {
 	/* === START GALLERY CARD STYLES FOR GALLERY CONTENT === */
 	.gallery-card {
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		min-height: 200px;
 		max-width: 100%;
@@ -2869,6 +2891,7 @@ body.darkTheme {
 		content: "";
 		display: block;
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		top: 0;
 		left: 0;
@@ -2925,6 +2948,7 @@ body.darkTheme {
 		content: "";
 		position: absolute;
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		top: 0;
 		left: 0;
@@ -2971,6 +2995,7 @@ body.darkTheme {
 	.card-caption {
 		position: absolute;
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		bottom: -110%;
 		padding: 1.25em 0.625em;
@@ -3062,6 +3087,7 @@ body.darkTheme {
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 100%;
+		max-width: 100%;
 		height: calc(100% + 0.125em);
 		text-align: center;
 		border-radius: .2em .2em 0 0;
@@ -3093,6 +3119,7 @@ body.darkTheme {
 		font-size: 1.2em;
 		line-height: 2.625em;
 		width: 100%;
+		max-width: 100%;
 		padding: 0 0.625;
 		margin: -0.125em 0 0 0;
 		color: rgba(255, 255, 255, 1);
@@ -3103,6 +3130,7 @@ body.darkTheme {
 		position: absolute;
 		bottom: -1.15px;
 		width: 100%;
+		max-width: 100%;
 		height: 0.125em;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -3146,6 +3174,7 @@ body.darkTheme {
 		position: absolute;
 		bottom: -50%;
 		width: 100%;
+		max-width: 100%;
 		height: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -3187,6 +3216,7 @@ body.darkTheme {
 	/* === START BANNER CONTENT FOR SCROLLING NEWS BANNER === */
 	.banner-message {
 		width: 100%;
+		max-width: 100%;
 		height: 35px;
 		padding-left: 0;
 		padding-right: 0;
@@ -3251,6 +3281,7 @@ body.darkTheme {
 		content: "";
 		position: absolute;
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		padding: 0;
 		margin: 0 auto;
@@ -3263,6 +3294,7 @@ body.darkTheme {
 		content: "";
 		position: absolute;
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		padding: 0;
 		margin: 0 auto;
@@ -3361,6 +3393,7 @@ body.darkTheme {
 
 	.banner-message .marquee-content li img {
 		width: 100%;
+		max-width: 100%;
 		border: 2px solid transparent;
 	}
 	/* === END BANNER CONTENT FOR SCROLLING NEWS BANNER === */
