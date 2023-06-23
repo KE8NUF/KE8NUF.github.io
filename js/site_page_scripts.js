@@ -33,7 +33,7 @@ var isMobile = {
 
 //function to equalize heights of content when needed
 function equalContentHeight() {
-	if( $(window).width() >= 800 ) {
+	if( $(window).width() >= 768 ) {
 		$(document).each(function(event) {
 			//$(document).on('load', function() {
 				if( $('.match-height').length > 0 ) {
@@ -93,7 +93,7 @@ function iframeReady() {
 	//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		//$(window).bind('load',function(){
 		setTimeout( function() {
-			if($(window).width() <= 960) {
+			if($(window).width() <= 768) {
 				var iframe = document.getElementById('frame-badge');
 				var styleAdd = document.createElement('style');
 				styleAdd.textContent =
@@ -123,7 +123,7 @@ function iframeReady() {
 		}, 500);
 		//});
 	} else {
-		if($(window).width() <= 960) {
+		if($(window).width() <= 768) {
 			var iframe = document.getElementById('frame-badge');
 			var styleAdd = document.createElement('style');
 			styleAdd.textContent =
