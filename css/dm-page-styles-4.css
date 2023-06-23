@@ -381,7 +381,9 @@ html {
 	display: table;
 	height: 100%;
 	width: 100%;
+	max-width: 100%;
 	transition: all 250ms;
+	table-layout: fixed;
 }
 
 html, body {
@@ -530,6 +532,8 @@ body.darkTheme {
 	
 	display: table;
 	width: 100%;
+	max-width: 100%;
+	table-layout: fixed;
 }
 
 /* ====== column setup ====== */
@@ -561,6 +565,8 @@ body.darkTheme {
 	content: "";
 	clear: both;
 	display: table;
+	max-width: 100%;
+	table-layout: fixed;
 }
 
 .lightTheme .col {
@@ -598,6 +604,8 @@ body.darkTheme {
 	display: table;
 	width: 100%;
 	height: 0.125em;
+	max-width: 100%;
+	table-layout: fixed;
 }
 
 .group:after {
@@ -3473,11 +3481,13 @@ only screen and (max-device-width : 768px) {
 	
 	.banner-fix {
 		display: table;
+		table-layout: fixed;
 	}
 	
 	.banner-wrapper {
 		display: table;
 		margin: 1.25em auto;
+		table-layout: fixed;
 	}
 	
 	.gallery-card {
