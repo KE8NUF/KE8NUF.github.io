@@ -3404,6 +3404,14 @@ only screen and (max-device-width : 896px) {
 
 @media only screen and (max-width : 800px),
 only screen and (max-device-width : 800px) {
+}
+
+@media only screen and (max-width : 780px),
+only screen and (max-device-width : 780px) {
+}
+
+@media only screen and (max-width : 768px),
+only screen and (max-device-width : 768px) {
 	
 	.radials-background {
 		height: 18.75em;
@@ -3492,14 +3500,6 @@ only screen and (max-device-width : 800px) {
 	.footer-copy span:nth-child(2) {
 		font-size: .9em!important;
 	}
-}
-
-@media only screen and (max-width : 780px),
-only screen and (max-device-width : 780px) {
-}
-
-@media only screen and (max-width : 768px),
-only screen and (max-device-width : 768px) {
 }
 
 @media only screen and (max-width : 750px),
