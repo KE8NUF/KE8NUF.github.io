@@ -3080,6 +3080,7 @@ body.darkTheme {
 		max-height: 2.625em;
 		padding: 0;
 		margin: 1.25em 0;
+		overflow: hidden;
 	}
 
 	.banner-background {
@@ -3089,7 +3090,7 @@ body.darkTheme {
 		transform: translate(-50%, -50%);
 		width: 100%;
 		max-width: 100%;
-		height: calc(100% + 0.125em);
+		height: calc(95% + 0.125em);
 		text-align: center;
 		border-radius: .2em .2em 0 0;
 		
