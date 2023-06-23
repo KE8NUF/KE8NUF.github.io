@@ -532,6 +532,7 @@ body.darkTheme {
 	margin: 0px;
 	
 	display: table;
+	display: block;
 	width: 100%;
 	max-width: 100%;
 	table-layout: fixed;
@@ -555,6 +556,7 @@ body.darkTheme {
 	font-size: var(--font18);
 	
 	display: table-cell;
+	display: block;
 	border-collapse: separate;
 	border-spacing: 1.25em;
 }
