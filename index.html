@@ -11,7 +11,7 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 		
-		<meta name="Site Name" content="Site Name" />
+		<meta name="Damien Millard" content="Damien Millard" />
 		<meta name="keywords" content="Damien Millard, Damien, personal, portfolio, GunFighterMan101" />
 		<meta name="description" content="Welcome to Damien Millard's personal portfolio website." />
 		<meta name="author" content="Charles Millard Jr." />
@@ -56,6 +56,12 @@
 			<link rel="stylesheet" href="./css/dm-page-styles-4.css" media="none" onload="if(media!='all')media='all'" />
 		</noscript>
 		
+		<!-- <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script> -->
+		<script>
+			document.write('<scr'+'ipt src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></scr'+'ipt>');
+			document.write('<scr'+'ipt src="https://code.jquery.com/jquery-3.6.4.min.js"></scr'+'ipt>');
+		</script>
+		
 		<script>
 			//appends css to end of body for loading
 			//document.addEventListener('DOMContentLoaded', function() {
@@ -74,12 +80,6 @@
 					}
 				}
 			}
-		</script>
-		
-		<!-- <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script> -->
-		<script>
-			document.write('<scr'+'ipt src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></scr'+'ipt>');
-			document.write('<scr'+'ipt src="https://code.jquery.com/jquery-3.6.4.min.js"></scr'+'ipt>');
 		</script>
 	</head>
 	
@@ -654,8 +654,10 @@
 		<!-- END PAGE PROGRESS AREA -->
 		
 		<!-- SITE PAGE SCRIPTS IF NEEDED HERE -->
-		<script src="./js/site_page_scripts.js"></script>
+		<script src="./js/simulate-touch-events.js"></script>
 		<script src="./js/jquery-scrollstartstop.js"></script>
+		
+		<script src="./js/site_page_scripts.js"></script>
 		<script>
 			var deviceWidth = $(window).width();
 			//*****
