@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="cache-control" content"public" />
+		<meta http-equiv="pragma" content="public" />
+		
+		<link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+		
+		<title>Damien Millard.net</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		
+		<meta name="Damien Millard" content="Damien Millard" />
+		<meta name="keywords" content="Damien Millard, Damien, personal, portfolio, GunFighterMan101" />
+		<meta name="description" content="Welcome to Damien Millard's personal portfolio website." />
+		<meta name="author" content="Charles Millard Jr." />
+		
+		<script>
+			//async js load for css styles
+			function loadStylesAsync(href, stylesLoaded) {
+				var linkStyle = document.createElement('link');
+				var cssFiles = [
+					'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;600;900&display=swap',
+					'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css',
+					'https://unicons.iconscout.com/release/v3.0.1/css/line.css',
+					'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css',
+					'https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css',
+					'https://fonts.googleapis.com/icon?family=Material+Icons',
+					'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css',
+					'./css/dm-page-styles-4.css'
+				];
+				for( var i = 0; i < cssFiles.length; i++ ) {
+					var linkMultiple = linkStyle.cloneNode(true);
+					linkMultiple.rel = 'stylesheet';
+					linkMultiple.type = 'text/css';
+					linkMultiple.href = cssFiles[i];
+						if( stylesLoaded ) { linkMultiple.onload = function() { stylesLoaded(); } }
+					var documentHead = document.getElementsByTagName('head')[0];
+					documentHead.appendChild(linkMultiple);
+				}
+			}
+			loadStylesAsync();
+		</script>
+		
+		<noscript>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;600;900&display=swap" media="none" onload="if(media!='all')media='all'" />
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" media="none" onload="if(media!='all')media='all'" />
+			<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.1/css/line.css" media="none" onload="if(media!='all')media='all'" />
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" media="none" onload="if(media!='all')media='all'" />
+			<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"  media="none" onload="if(media!='all')media='all'" />
+			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"  media="none" onload="if(media!='all')media='all'" />
+			<!-- reference https://animate.style/ -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="none" onload="if(media!='all')media='all'" />
+			
+			<link rel="stylesheet" href="./css/dm-page-styles-4.css" media="none" onload="if(media!='all')media='all'" />
+		</noscript>
+		
+		<!-- <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script> -->
+		<script>
+			document.write('<scr'+'ipt src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></scr'+'ipt>');
+			document.write('<scr'+'ipt src="https://code.jquery.com/jquery-3.6.4.min.js"></scr'+'ipt>');
+		</script>
+		
+		<script>
+			//appends css to end of body for loading
+			//document.addEventListener('DOMContentLoaded', function() {
+			document.onreadystatechange = function() {
+				//"loading" document is still loading
+				//"interactive" document has finished loading. We can now access DOM elements
+				//"complete" document/page has finished completely and fully loaded
+				if(document.readyState === 'interactive') {
+					var noscriptContainerCSS = document.getElementById('async-stylesheets');
+					if(noscriptContainerCSS != null) {
+						//insert style into body
+						var containerCSS = document.createElement('div');
+						containerCSS.className = 'style-sheet-load';
+						containerCSS.innerHTML = noscriptContainerCSS.textContent;
+						document.body.prepend(containerCSS);
+					}
+				}
+			}
+		</script>
+	</head>
+	
+	<body class="darkTheme">
+		<div class="radials-background"></div>
+		<!-- HEADER AREA TO SITE -->
+		<div class="container-wrapper-full">
+			<div class="container-wrapper-center">
+				<div class="grid-container-row" style="justify-items:left; margin:0.5em auto .25em auto;">
+					<header class="glass headerArea">
+						<div class="header-content-wrapper">
+							<div class="site-logo">
+								<a href="https://damienmillard.net/" title="Click here to return home.">
+									<img src="./images/new-ham-logo.svg" alt="Site Logo" />
+								</a>
+							</div>
+							
+							<nav id="nav">
+								<div class="menu-icon">
+									<i class="fa fa-bars" aria-hidden="true"></i>
+								</div>
+
+								<div class="menu">
+									<ul class="glass">
+										<li><a href="https://damienmillard.net/" title="Damien Millard.net" class="nav-link active"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+										<li><a href="https://damienmillard.net/terms-of-service.html" title="Read our terms of service." class="nav-link">Terms of Service</a></li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+					</header>
+				</div>
+			</div>
+		</div>
+		<!-- HEADER AREA TO SITE -->
+		<!-- START BODY BLUR CONTENT AREA -->
+		<div class="bodyBlur">
+		<!-- CONTENT AREA TO SITE -->
+		<div class="container-wrapper-full" style="display:block; float:none; padding-bottom:3.125em; max-height: inherit;">
+			<div class="container-wrapper-center">
+				<!-- START NEWS AREA MARQUEE -->
+				<div class="section group">
+					<div class="col span-1-of-1 clearCol">
+						<div class="content-container">
+							<div class="banner-message">
+								<div class="marquee">
+									<ul class="marquee-content">
+										<li>
+											<span>? NEWS ?</span><span>&nbsp;&bull;&nbsp;</span>Congrats to the class of 2023!
+										</li>
+										
+										<li>
+											<span>? NEWS ?</span><span>&nbsp;&bull;&nbsp;</span>Congrats to the class of 2023!
+										</li>
+										
+										<li>
+											<span>? NEWS ?</span><span>&nbsp;&bull;&nbsp;</span>Congrats to the class of 2023!
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END NEWS AREA MARQUEE -->
+				<!-- START TOGGLE ICON AND RAINBOW TEXT AREA -->
+				<div class="section group">
+					<div class="col span-1-of-1">
+						<!-- LIGHT.DARK TOGGLE AREA -->
+						<!-- ICON TOGGLE SWITCH -->
+						<div style="width:100%; display:inline-block;">
+						<div class="toggle-icon-container">
+							<div class="toggle-icon">
+								<input type="checkbox" class="toggle-icon-input" id="toggleTheme" onclick="checkBoxCheck()" />
+								<label for="toggleTheme">
+									<div class="theme-toggle-icon">
+										<span class="toggle-icon-span light-toggle" id="light-toggle">
+											<i class="material-icons">light_mode</i>
+										</span>
+										
+										<span class="toggle-icon-span dark-toggle" id="dark-toggle">
+											<i class="fa-solid fa-moon"></i>
+										</span>
+									</div>
+								</label>
+							</div>
+						</div>
+						</div>
+						<!-- ICON TOGGLE SWITCH -->
+						<!-- LIGHT.DARK TOGGLE AREA -->
+						
+						<!-- START NEON GRADIENT TEXT AREA -->
+						<div class="neon-text-container">
+							<div class="neon-text-holder">
+								<div class="text-details">Tacticool Banana</div>
+								<div class="text-foil">Tacticool Banana</div>
+							</div>
+						</div>
+						<!-- END NEON GRADUEBT TEXT AREA -->
+					</div>
+				</div>
+				<!-- END TOGGLE ICON AND RAINBOW TEXT AREA -->
+				<!-- START WELCOME MESSAGE HOT DOG AND DOGE -->
+				<div class="section group match-height">
+					<div class="col span-1-of-3">
+						<div class="content-container">
+							<div class="banner-wrapper">
+								<div class="banner-background blue">
+									<div class="banner-text">Welcome</div>
+									<div class="banner-border">
+										<div class="banner-glow"></div>
+									</div>
+								</div>
+							</div>
+							
+							<h1>Thanks for visiting, hope you enjoy!</h1>
+							<p>My name is Damien Millard, owner of this website and I am a Heating, 
+							Ventilation, and Air Conditioning/Refrigeration Technician. Have fun on my site!</p>
+						</div>
+					</div>
+					
+					<div class="col span-1-of-3">
+						<div class="content-container gallery">
+							<div class="gallery-card">
+								<div class="card-image">
+									<img src="./images/hotdogflip.gif" alt="Hot Dog Flip Image" />
+								</div>
+								<div class="card-caption">
+									Who doesn't love a good weiner. A tasty frank. Spin that dog!
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col span-1-of-3">
+						<div class="content-container gallery">
+							<div class="gallery-card">
+								<div class="card-image">
+									<img src="./images/dogelove.gif" alt="Doge Love Image" />
+								</div>
+								<div class="card-caption" style="font-family: 'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif; font-size: .9em;">
+									Doge. Love the internet meme that 
+									became popular in 2013, one of the few memes that have been popular 
+									and still talked about today. Love Shiba Inu dogs too.
+									Must be accompanied by Comic Sans.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END WELCOME MESSAGE HOT DOG AND DOGE -->
+				<!-- START THE ABOUT ME AND DAILY CARRY AREA -->
+				<div class="section group match-height">
+					<div class="col span-1-of-2">
+						<div class="content-container">
+							<div class="banner-wrapper">
+								<div class="banner-background pink">
+									<div class="banner-text">About</div>
+									<div class="banner-border">
+										<div class="banner-glow"></div>
+									</div>
+								</div>
+							</div>
+							
+							<div>
+								<h1>A Little About Me</h1>
+								<p>I like knives, radios, and watches. I am an Amateur Radio Operator for the Technician class, my callsign is KE8NUF.</p>
+								<br />
+								<p>I use Windows mainly for my computer systems, but have Linux drives, should I need them.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col span-1-of-2">
+						<div class="content-container banner-fix">
+							<div class="banner-wrapper">
+								<div class="banner-background blue">
+									<div class="banner-text">Me Daily</div>
+									<div class="banner-border">
+										<div class="banner-glow"></div>
+									</div>
+								</div>
+							</div>
+							
+							<div>
+								<h1>My Daily Carry Knives Are:</h1>
+								
+								<p><span style="-webkit-appearance: none;"><span style="font-size:0.5em; vertical-align:middle;">&#x25a0;</span>&nbsp;&nbsp;<a href="https://www.bladehq.com/item--Buck-Special-119BKS-Hunting-Knife--17047" title="Click here to see this." target="_blank">Buck 119</a></span></p>
+								<br />
+								<p><span style="-webkit-appearance: none;"><span style="font-size:0.5em; vertical-align:middle;">&#x25a0;</span>&nbsp;&nbsp;<a href="https://www.bladehq.com/item--Spyderco-Delica-4-Knife-Flat-Ground--48918" title="Click here to see this." target="_blank">Spyderco Delica 4 Flat Ground Zome Green</a></span></p>
+								<br />
+								<p style="color:rgba(0, 81, 255, 1);">Friends make the good times better, and the hard times easier.</p>
+								<br />
+								<p>
+									<figure style="margin:0;">
+										<figcaption style="margin-bottom:5px;">Daft Punk - Robot Rock (Midi):</figcaption>
+										<style>
+											audio::-webkit-media-controls-panel {
+												color: var(--white);
+												background-color: var(--siteDarkBlueText);
+											}
+											audio::-webkit-media-controls-play-button,
+											audio::-webkit-media-controls-mute-button {
+												background-color: rgba(255, 255, 255, 0.85);
+												border-radius: 50%;
+											}
+											audio::-webkit-media-controls-play-button:hover,
+											audio::-webkit-media-controls-mute-button:hover {
+												background-color: rgba(255, 255, 255, 0.5);
+											}
+											audio::-webkit-media-controls-current-time-display,
+											audio::-webkit-media-controls-time-remaining-display {
+												color: rgba(255, 255, 255, 1);
+											}
+										</style>
+										<audio controls src="./audio/robot_rock_midi.mp3" style="background:var(--siteDarkBlueText);">
+											Your browser does not support the
+											<code>audio</code> element.
+										</audio>
+									</figure>
+								</p>
+								<br />
+								<br />
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END THE ABOUT ME AND DAILY CARRY AREA -->
+				<!-- START THE MARC WEBSITE LINKS BADGE -->
+				<div class="section group">
+					<div class="col span-1-of-1 clearCol" style="border-spacing:.5em; padding-bottom: 0em;">
+						<div class="content-container">
+							<h1 style="text-align:center;">Proud to be a Member of the
+							<br />Massillon Amateur Radio Club
+							<br />(MARC) W8NP 147.180 </h1>
+						</div>
+					</div>
+				</div>
+				
+				<div class="section group match-height">
+					<div class="col span-1-of-2 clearCol" style="padding:0em 1.25em; border-spacing:.5em;">
+						<div class="content-container">
+							<!-- START FOIL BADGE INSERT -->
+								<div style="padding:0; display:table; width: 100%; height: 100%;">
+									<!-- INSERT FOR FOIL BADGE -->
+									<style>
+									.resp-container {
+										position: relative;
+										overflow: hidden;
+										padding-top: 103%;
+									}
+									
+									.resp-iframe {
+										position: absolute;
+										top: 0;
+										left: 0;
+										width: 100%;
+										height: 100%;
+										border: 0;
+									}
+									
+									iframe {
+										border: 0;
+										border: none;
+									}
+									
+									@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){
+										.resp-container {
+											padding-top: 117%;
+										}
+										
+										.card-front img {
+											max-height: 283px;
+										}
+										
+										.badge-back-gline-wrapper img,
+										.badge-banners-top img,
+										.badge-banners-bottom img,
+										.badge-front img {
+											max-height: 283px;
+										}
+									}
+									</style>
+									<div id="badge-frame-insert"></div>
+									<script>
+										var frameCode;
+										var cacheWidth = $(window).width();
+										
+										const cachedWindowWidth = $(window).width();
+										//$(document).ready(function (){
+											
+												if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+													$(window).bind('load', function(){
+														//var newWindowWidth = $(window).width();
+														//fixes resize event triggered on mobile by browser bars hiding bug
+														//if(screenwidth !== $(window).width() ) {
+														//if(newWindowWidth !== cachedWindowWidth) {
+															$('.resp-container').remove();
+															console.log("The orientation has changed!");
+																
+															if($(window).width() <= 650) {
+																//code to execute
+																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+																$('#badge-frame-insert').append(frameCode);
+															} else if($(window).width() >= 650) {
+																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+																$('#badge-frame-insert').append(frameCode);
+															}
+														//}
+															//cachedWindowWidth = newWindowWidth;
+														//}
+													});
+													var cacheWidth = $(window).width();
+													
+													$(window).bind('resize', function() {
+														var currentWidth = $(window).width();
+														if(cacheWidth !== currentWidth) {
+															$('.resp-container').remove();
+															console.log("The orientation has changed!");
+																
+															if($(window).width() <= 650) {
+																//code to execute
+																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+																$('#badge-frame-insert').append(frameCode);
+															} else if($(window).width() >= 650) {
+																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+																$('#badge-frame-insert').append(frameCode);
+															}
+															
+															cacheWidth = $(window).width();
+														}
+													});
+												}
+												if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
+													if($(window).width() <= 650) {
+														//code to execute
+														var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v8-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
+														$('#badge-frame-insert').append(frameCode);
+													} else if ($(window).width() >= 650) {
+														var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v8-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
+														$('#badge-frame-insert').append(frameCode);
+													}
+												}
+												console.log(frameCode);
+											
+										//});
+									</script>
+								</div>
+								<!-- END FOIL BADGE INSERT -->
+						</div>
+					</div>
+					
+					<div class="col span-1-of-2 clearCol" style="padding:0em 1.25em; border-spacing:.5em;">
+						<div class="content-container">
+							<style>
+								@media only screen and (max-width : 768px),
+								only screen and (max-device-width : 768px) {
+									.fix-frame-mobile-clear {
+										top: inherit!important;
+										left: 50%!important;
+										transform: translateX(-50%)!important;
+									}
+								}
+							</style>
+							<div class="fix-frame-mobile-clear" style="padding:20px; text-align:center; position:relative; top:50%; left:50%; transform:translate(-50%, -50%);">
+								<div style="width:100%; height:100%;">
+									<!-- START RADIO CLUB BUTTON AREA -->
+									<span style="text-align:center; text-shadow: 0 -1px 0 rgba(0, 0, 0, .45), 0 0 10px rgba(0, 0, 0, 0.6), 0 1.5px 2px rgba(0, 0, 0, 0.7); text-shadow:none;"><h1 style="color:var(--pink); font-weight:bold; font-size:1.6em; margin: 20px auto;">Massillon Amateur <br />Radio Club</h1></span>
+									<span style="text-align:center; text-shadow: 0 -1px 0 rgba(0, 0, 0, .45), 0 0 10px rgba(0, 0, 0, 0.6), 0 1.5px 2px rgba(0, 0, 0, 0.7); text-shadow:none;"><h2 style="color:var(--limeGreen); font-weight:bold; font-size:1.8em; margin: 20px auto;">W8NP</h2></span>
+									<span style="text-align:center; text-shadow: 0 -1px 0 rgba(0, 0, 0, .45), 0 0 10px rgba(0, 0, 0, 0.6), 0 1.5px 2px rgba(0, 0, 0, 0.7); text-shadow:none;"><p style="line-height:1.2em;">P.O. Box 73, Massillon, OH 44648</p></span>
+									<span style="text-align:center; text-shadow: 0 -1px 0 rgba(0, 0, 0, .45), 0 0 10px rgba(0, 0, 0, 0.6), 0 1.5px 2px rgba(0, 0, 0, 0.7); text-shadow:none;"><p style="line-height:1.2em;">Serving the Massillon community since 1927</p></span>
+									
+									<br />
+									<div class="grid-item-container">
+										<a href="https://w8np.net/" title="Click here to learn more about Massillon Amateur Radio Club." target="_blank" class="grad-rainbow-outer"><button class="button-grad-rainbow light-rainbow" type="button">Visit MARC Website</button></a>
+										<a href="https://w8np.net/" title="Click here to learn more about Massillon Amateur Radio Club." target="_blank" class="grad-rainbow-outer"><button class="button-grad-rainbow dark-rainbow" type="button">Visit MARC Website</button></a>
+									</div>
+									<!-- END RAIDO CLUB BUTTON AREA -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END THE MARC WEBSITE LINKS BADGE -->
+				<!-- START SITE GALLERY AREA LINKS/CARDS -->
+				<div class="section group match-height">
+					<div class="col span-1-of-3">
+						<div class="content-container gallery">
+							<div class="gallery-card">
+								<div class="card-image">
+									<img src="./images/epacertification.jpg" alt="My EPA-608 Universal Certificate." />
+								</div>
+								<div class="card-caption">
+									EPA-608 Universal Certificate.
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col span-1-of-3">
+						<div class="content-container gallery">
+							<div class="gallery-card">
+								<div class="card-image">
+									<img src="./images/radiosetup.jpg" alt="One of my radio setups." />
+								</div>
+								<div class="card-caption">
+									My home radio setup.
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col span-1-of-3">
+						<div class="content-container gallery">
+							<div class="gallery-card">
+								<div class="card-image">
+									<img src="./images/yaesuft840.jpg" alt="Another of my radio setups." />
+								</div>
+								<div class="card-caption">
+									Yaesu FT-840
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="section group match-height">
+					<div class="col span-1-of-3">
+						<div class="content-container">
+							<div class="gallery-card noEffect">
+								<div class="card-image">
+									<h2 id="solar-data" class="center-text" style="margin:0; height:100%;">
+										<a class="center-text" href="https://www.hamqsl.com/solar.html" title="Band Conditions Chart" target="_blank" style="width:100%;">
+											<img src="https://www.hamqsl.com/solarbc.php" alt="Band Conditions Chart" style="text-align:center; margin: 0 auto;" />
+										</a>
+									</h2>
+								</div>
+								<div class="card-caption" style="display:none;">
+									&nbsp;
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col span-1-of-3">
+						<div class="content-container">
+							<div class="gallery-card noEffect">
+								<div class="card-image">
+									<img src="./images/senkolove.gif" alt="Senko Love Image." />
+								</div>
+								<div class="card-caption" style="display:none;">
+									&nbsp;
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col span-1-of-3">
+						<div class="content-container gallery">
+							<div class="gallery-card">
+								<div class="card-image">
+									<img src="./images/61qtFF1qyqL._AC_SX569_.jpg" alt="Another of my radio setups." />
+								</div>
+								<div class="card-caption">
+									Always beware of us hams!
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END SITE GALLERY AREA LINKS/CARDS -->
+			</div>
+		</div>
+		<!-- CONTENT AREA TO SITE -->
+		</div> <!-- END BODY BLUR AREA -->
+		<!-- FOOTER AREA TO SITE -->
+		<div class="container-wrapper-full footer-content-wrapper">
+			<footer>
+				<!-- START TOP FOOTER CONTENT AREA -->
+				<div class="container-wrapper-center">
+					<div class="" style="margin:0px auto 1.25em auto;">
+						<!-- START TOP FOOTER CONTENT AREA ICONS -->
+						<div class="top-footer-content-wrapper">
+							<div class="footer-social-icons">
+								<div class="icon-wrapper-outer">
+									<div class="icon-wrapper steam">
+										<div class="grad-icon-outer">
+											<div class="grad-icon-colors">
+												<a href="https://steamcommunity.com/id/gunfighterman101/" target="_blank" title="Click here to visit me on Steam.">
+													<i class="lab la-steam" aria-hidden="true"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+									
+									<div class="icon-wrapper discord">
+										<div class="grad-icon-outer">
+											<div class="grad-icon-colors">
+												<a href="https://discord.com/users/852695205073125376" target="_blank" title="Click here to visit me on Discord." style="margin-top:-2px;">
+													<i class="fontAw fa-brands fa-discord" style="font-size:.8em;"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+									
+									<div class="icon-wrapper github">
+										<div class="grad-icon-outer">
+											<div class="grad-icon-colors">
+												<a href="https://github.com/GunFighterMan101" target="_blank" title="Click here to visit me on Git.">
+													<i class="lab la-github" aria-hidden="true"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+									
+									<div class="icon-wrapper youtube">
+										<div class="grad-icon-outer">
+											<div class="grad-icon-colors">
+												<a href="https://www.youtube.com/channel/UCf79sdnAeHB_A1s1_lABkrw/featured" target="_blank" title="Click here to see my YouTube channel." style="margin-top:-2px;">
+													<i class="fontAw fa-brands fa-youtube" style="font-size:.8em;"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+									
+									<div class="icon-wrapper email">
+										<div class="grad-icon-outer">
+											<div class="grad-icon-colors">
+												<a href="mailto:damienmillard05@icloud.com" target="_blank" title="Click here to email">
+													<i class="las la-mail-bulk"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- END TOP FOOTER CONTENT AREA ICONS -->
+					</div>
+				</div>
+				<!-- END TOP FOOTER CONTENT AREA -->
+				
+				<!-- START BOTTOM FOOTER CONTENT AREA -->
+				<div class="container-wrapper-center">
+					<div class="grid-container-row" style="justify-items:left; grid-column-gap:0; grid-row-gap:0; margin:0px auto 1.25em auto;">
+						<div class="bottom-footer-content-wrapper">
+							<div class="footer-copy">
+								<span>&copy; Copyright <script>document.write(new Date().getFullYear())</script> Damien Millard All rights reserved.</span>
+								<br />
+								<span style="font-size:.8em;">&bull;&nbsp;&nbsp; Site built by Charles Millard &nbsp;&nbsp;&bull;&nbsp;&nbsp; 2023</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END BOTTOM FOOTER CONTENT AREA -->
+			</footer>
+		</div>
+		<!-- FOOTER AREA TO SITE -->
+		<!-- START PAGE PROGRESS AREA -->
+		<div class="progress-wrap">
+			<i class="uil uil-arrow-up"></i>
+			<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+				<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+				<defs>
+					<linearGradient id="progressGradient">
+						<stop offset="5%" stop-color="rgba(126, 16, 186)" />
+						<stop offset="95%" stop-color="rgba(25, 25, 33)" />
+					</linearGradient>
+				</defs>
+			</svg>
+		</div>
+		<!-- END PAGE PROGRESS AREA -->
+		
+		<!-- SITE PAGE SCRIPTS IF NEEDED HERE -->
+		<script src="./js/simulate-touch-events.js"></script>
+		<script src="./js/jquery-scrollstartstop.js"></script>
+		
+		<script src="./js/site_page_scripts.js"></script>
+		<script>
+			var deviceWidth = $(window).width();
+			//*****
+			//prevent scrolling on element not needed to scroll
+			//*****
+			function stopWheel(e){
+				if(!e){ /* IE7, IE8, Chrome, Safari */ 
+					e = window.event; 
+				}
+				if(e.preventDefault) { /* Chrome, Safari, Firefox */ 
+					e.preventDefault(); 
+				} 
+				e.returnValue = false; /* IE7, IE8 */
+			}
+			$('#frame-badge').on('hover touchstart mouseenter', function() {
+				$(document).bind('mousewheel DOMMouseScroll',function(){
+					console.log('Stopped scroll on iframe div');
+					stopWheel();
+				});
+			}, function() {
+				$(document).unbind('mousewheel DOMMouseScroll');
+			});
+			
+			$(document).ready(function() {
+				//window.navigator.userAgent;
+				//var isMobile = false;
+				//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { var isMobile = true; }
+				//console.log(isMobile);
+				//*****
+				//set variable for device with for on resize event below
+				//*****
+				var deviceWidth = $(window).width();
+				//*****
+				//prevent scrolling on element not needed to scroll
+				//*****
+				function stopWheel(e){
+					if(!e){ /* IE7, IE8, Chrome, Safari */ 
+						e = window.event; 
+					}
+					if(e.preventDefault) { /* Chrome, Safari, Firefox */ 
+						e.preventDefault(); 
+					} 
+					e.returnValue = false; /* IE7, IE8 */
+				}
+				$('#frame-badge').on('hover touchstart mouseenter', function() {
+					$(document).bind('mousewheel DOMMouseScroll',function(){
+						console.log('Stopped scroll on iframe div');
+						stopWheel();
+					});
+				}, function() {
+					$(document).unbind('mousewheel DOMMouseScroll');
+				});
+				//*****
+				//add listener for orientation change
+				//*****
+				window.addEventListener("orientationchange", function() {
+					// Announce the new orientation number
+					//alert(screen.orientation);
+					iframeReady();
+				}, false);
+				//*****
+				//add listener for resize changes
+				//*****
+				// Listen for resize changes
+				window.addEventListener("resize", function() {
+					// Get screen size (inner/outerWidth, inner/outerHeight)
+					iframeReady();
+				}, false);
+				//*****
+				//stop pointer events on iframe
+				//*****
+				$(document).on('scrollstart', function() {
+					$('#resp-frame-container, iframe').css({
+						'pointer-events' : 'none'
+					});
+				});
+				
+				$(document).on('scrollend', function() {
+					$('#resp-frame-container, iframe').css({
+						'pointer-events' : 'auto'
+					});
+				});
+				//*****
+				//resize functions
+				//*****
+				$(window).on('resize load', function() {
+					//fixes resize event triggered on mobile by browser bars hiding bug
+					//if(screenwidth !== $(window).width() ) {
+						//*****
+						//responsive iframe for badge
+						//*****
+						var windowWidth = $(window).width();
+						var notFrame = $('iframe:not(.resp-iframe), div:not(.resp-container)');
+						if( deviceWidth !== windowWidth && notFrame ) {
+							deviceWidth = $(window).width();
+							// Do something
+							iframeReady();
+						}
+					//}
+				});
+				//*****
+				//touch simulation events if needed.
+				//*****
+				//simulateTouchEvents('#footer-top-content');
+			});
+		</script>
+	</body>
+</html>
