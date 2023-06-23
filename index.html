@@ -727,6 +727,20 @@
 					iframeReady();
 				}, false);
 				//*****
+				//stop pointer events on iframe
+				//*****
+				$(document).on('scrollstart', function() {
+					$('#resp-frame-container, iframe').css({
+						'pointer-events' : 'none'
+					});
+				});
+				
+				$(document).on('scrollend', function() {
+					$('#resp-frame-container, iframe').css({
+						'pointer-events' : 'auto'
+					});
+				});
+				//*****
 				//resize functions
 				//*****
 				$(window).on('resize load', function() {
@@ -743,20 +757,6 @@
 							iframeReady();
 						}
 					//}
-				});
-				//*****
-				//stop pointer events on iframe
-				//*****
-				$(document).on('scrollstart', function() {
-					$('#resp-frame-container, iframe').css({
-						'pointer-events' : 'none'
-					});
-				});
-				
-				$(document).on('scrollend', function() {
-					$('#resp-frame-container, iframe').css({
-						'pointer-events' : 'auto'
-					});
 				});
 				//*****
 				//touch simulation events if needed.
