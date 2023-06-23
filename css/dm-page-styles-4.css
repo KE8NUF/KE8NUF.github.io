@@ -143,7 +143,7 @@
 		/* update 06-23-2023 */
 	--bodyLight: rgba(241, 242, 243, 1); /* #f1f2f3 */
 	--textLightTheme: rgba(113, 119, 144, 1); /* #717790 */
-	--borderLightTheme: rgba(186, 191, 196, .7); /* #babfc4 */
+	--borderLightTheme: rgba(186, 191, 196, .86); /* #babfc4 */
 	--lightContentBackground: rgba(235, 236, 237, 1); /* #dfe0e1 */
 	--buttonLightTheme: rgba(195, 198, 201, 1); /* #c3c6c9 */
 	
