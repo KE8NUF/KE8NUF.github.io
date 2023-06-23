@@ -545,6 +545,7 @@ body.darkTheme {
 
 	position: relative;
 	min-height: 16px;
+	overflow: hidden;
 }
 
 .col {
