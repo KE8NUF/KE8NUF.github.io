@@ -140,6 +140,13 @@
 	--borderLightTheme: rgba(196, 196, 196, 1); /* #a3aab9 */
 	--lightContentBackground: rgba(229, 230, 234, 1); /* #e5e6ea */
 	
+		/* update 06-23-2023 */
+	--bodyLight: rgba(241, 242, 243, 1); /* #f1f2f3 */
+	--textLightTheme: rgba(113, 119, 144, 1); /* #717790 */
+	--borderLightTheme: rgba(186, 191, 196, .7); /* #babfc4 */
+	--lightContentBackground: rgba(235, 236, 237, 1); /* #dfe0e1 */
+	--buttonLightTheme: rgba(195, 198, 201, 1); /* #c3c6c9 */
+	
 	/* === DARK THEME VARIABLES === */
 	
 	--darkContentBoxShadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.009), 
@@ -194,6 +201,12 @@
 	--borderDarkTheme: rgba(65, 66, 75, 1); /* #41424b */
 	--buttonDarkTheme: rgba(64, 74, 86, 1); /* #343844 */
 	--buttonDarkTheme: rgba(79, 91, 106, 1); /* #4a5563 */
+	
+		/* update 06-23-2023 */
+	--bodyDark: rgba(30, 31, 38, 1); /* #1e1f26 */
+	--darkContentBackground: rgba(44, 48, 58, 1); /* #2C303A */
+	--borderDarkTheme: rgba(68, 72, 87, 1); /* #444857 */
+	--buttonDarkTheme: rgba(68, 72, 87, 1); /* #444857 */
 	
 	/* === SITE WIDE VARIABLES === */
 	
@@ -427,9 +440,9 @@ body.darkTheme {
 
 .bodyBlur.fadeIn {
 	/* Any browser which supports CSS3 */
-    filter: blur(.5em);
+    filter: blur(0.406em);
     /* Webkit in Chrome 52, Safari 9, Opera 39, and earlier */
-    -webkit-filter: blur(.5em);
+    -webkit-filter: blur(0.406em);
 	pointer-events: none;
 	
 	animation: bodyFadeIn 300ms ease-in;
@@ -1883,11 +1896,13 @@ body.darkTheme {
 	all: unset;
 	position: relative;
 	border: 1px solid rgba(0, 0, 0, .19);
+	border: 1px solid var(--buttonLightTheme);
 	border-radius: .6em;
 	padding: .5em 1.2em;
 	font-size: 1em;
 	font-weight: 600;
 	background-color: rgba(216, 216, 216, 1);
+	background-color: var(--buttonLightTheme);
 	/* overflow: hidden; will cause famous overflow bug */
 	/* clip-path: inset(0 0 0 0 round 8px); bug workaround */
 	-webkit-mask-image: -webkit-radial-gradient(rgba(255, 255, 255, 1), rgba(0, 0, 0, 1)); /* another workaround */
@@ -2496,7 +2511,9 @@ body.darkTheme {
 	.lightTheme .grad-icon-colors {
 		color: rgba(90, 102, 123, 1);
 		background: rgba(216, 216, 216, 1);
+		background: var(--buttonLightTheme);
 		border: 1px solid rgba(0, 0, 0, .19);
+		border: 1px solid var(--borderLightTheme);
 		box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, .5) inset;
 	}
 
