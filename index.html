@@ -326,7 +326,7 @@
 					.resp-container {
 						position: relative;
 						overflow: hidden;
-						padding-top: 103%;
+						padding-top: 117%;
 					}
 									
 					.resp-iframe {
@@ -343,8 +343,8 @@
 						border: none;
 					}
 									
-					@media only screen and (max-width : 768px),
-					only screen and (max-device-width : 768px) {
+					@media only screen and (max-width : 667px),
+					only screen and (max-device-width : 667px) {
 						.resp-container {
 							padding-top: 117%;
 						}
@@ -384,11 +384,11 @@
 															$('.resp-container').remove();
 															console.log("The orientation has changed!");
 																
-															if($(window).width() <= 768) {
+															if($(window).width() <= 667) {
 																//code to execute
 																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 																$('#badge-frame-insert').append(frameCode);
-															} else if($(window).width() >= 768) {
+															} else if($(window).width() >= 667) {
 																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 																$('#badge-frame-insert').append(frameCode);
 															}
@@ -404,11 +404,11 @@
 															$('.resp-container').remove();
 															console.log("The orientation has changed!");
 																
-															if($(window).width() <= 768) {
+															if($(window).width() <= 667) {
 																//code to execute
 																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="293" height="303" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 																$('#badge-frame-insert').append(frameCode);
-															} else if($(window).width() >= 768) {
+															} else if($(window).width() >= 667) {
 																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="460" height="473" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 																$('#badge-frame-insert').append(frameCode);
 															}
@@ -418,11 +418,11 @@
 													});
 												}
 												if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
-													if($(window).width() <= 768) {
+													if($(window).width() <= 667) {
 														//code to execute
 														var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v8-foil.html" width="293" height="303" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
 														$('#badge-frame-insert').append(frameCode);
-													} else if ($(window).width() >= 768) {
+													} else if ($(window).width() >= 667) {
 														var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v8-foil.html" width="460" height="473" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
 														$('#badge-frame-insert').append(frameCode);
 													}
@@ -437,8 +437,8 @@
 					</div>
 					
 					<style>
-						@media only screen and (max-width : 768px),
-						only screen and (max-device-width : 768px) {
+						@media only screen and (max-width : 667px),
+						only screen and (max-device-width : 667px) {
 							.fix-frame-mobile-clear {
 								top: inherit!important;
 								left: 50%!important;

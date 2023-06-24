@@ -96,7 +96,7 @@ function iframeReady() {
 	//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		//$(window).bind('load',function(){
 		setTimeout( function() {
-			if($(window).width() <= 768) {
+			if($(window).width() <= 960) {
 				var iframe = document.getElementById('frame-badge');
 				var styleAdd = document.createElement('style');
 				styleAdd.textContent =
@@ -105,7 +105,7 @@ function iframeReady() {
 					'max-height: 283px;' +
 					'}' +
 					'}' +
-					'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
+					'@media only screen and (max-width : 667px), only screen and (max-device-width : 667px){' +
 					'.resp-container {' +
 					'padding-top: 117%;' +
 					'}' +
@@ -126,7 +126,7 @@ function iframeReady() {
 		}, 500);
 		//});
 	} else {
-		if($(window).width() <= 768) {
+		if($(window).width() <= 667) {
 			var iframe = document.getElementById('frame-badge');
 			var styleAdd = document.createElement('style');
 			styleAdd.textContent =
@@ -135,7 +135,7 @@ function iframeReady() {
 					'max-height: 283px;' +
 					'}' +
 					'}' +
-					'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
+					'@media only screen and (max-width : 667px), only screen and (max-device-width : 667px){' +
 					'.resp-container {' +
 					'padding-top: 117%;' +
 					'}' +

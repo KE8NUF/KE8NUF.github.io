@@ -3474,6 +3474,22 @@ only screen and (max-device-width : 780px) {
 
 @media only screen and (max-width : 768px),
 only screen and (max-device-width : 768px) {
+}
+
+@media only screen and (max-width : 750px),
+only screen and (max-device-width : 750px) {
+}
+
+@media only screen and (max-width : 740px),
+only screen and (max-device-width : 740px) {
+}
+
+@media only screen and (max-width : 720px),
+only screen and (max-device-width : 720px) {
+}
+
+@media only screen and (max-width : 667px),
+only screen and (max-device-width : 667px) {
 	
 	.radials-background {
 		height: 18.75em;
@@ -3564,22 +3580,6 @@ only screen and (max-device-width : 768px) {
 	.footer-copy span:nth-child(2) {
 		font-size: .9em!important;
 	}
-}
-
-@media only screen and (max-width : 750px),
-only screen and (max-device-width : 750px) {
-}
-
-@media only screen and (max-width : 740px),
-only screen and (max-device-width : 740px) {
-}
-
-@media only screen and (max-width : 720px),
-only screen and (max-device-width : 720px) {
-}
-
-@media only screen and (max-width : 667px),
-only screen and (max-device-width : 667px) {
 }
 
 @media only screen and (max-width : 640px),
