@@ -33,7 +33,7 @@ var isMobile = {
 
 //function to equalize heights of content when needed
 function equalContentHeight() {
-	if( $(window).width() >= 768 ) {
+	if( $(window).width() >= 750 ) {
 		$(document).each(function(event) {
 			//$(document).on('load', function() {
 				if( $('.match-height').length > 0 ) {
