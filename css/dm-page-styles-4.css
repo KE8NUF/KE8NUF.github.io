@@ -1739,7 +1739,8 @@ body.darkTheme {
 	transform-style: preserve-3d;
 	transition: all .35s;
 	transform-origin: 50% 50% -18px;
-	transform: rotateX(0deg) translateZ(2px)
+	transform: rotateX(0deg) translateZ(2px);
+	display: inline-block;
 }
 
 .toggle-icon-container .toggle-icon:hover .theme-toggle-icon span {
