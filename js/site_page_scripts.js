@@ -409,7 +409,7 @@ function iframeReady() {
 		//equal height content script
 		//*****
 		//$(window).on('load', function() {
-		if( $(window).width() >= 750 ) {
+		if( $(window).width() >= 720px ) {
 			equalContentHeight();
 		}
 		//});
