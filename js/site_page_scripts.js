@@ -394,7 +394,8 @@ function iframeReady() {
 		//*****
 		//page marquee animation needed
 		//*****
-		var root = document.documentElement;
+		//var root = document.documentElement;
+		var root = document.body;
 		var marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elements-displayed');
 		var marqueeContent = document.querySelector('ul.marquee-content');
 		
