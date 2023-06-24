@@ -121,8 +121,8 @@
 		/* 3. multiple soft shadows */ 0 0.3px 0.4px hsla(230, 13%, 9%, 0.03),
 			0 0.9px 1.5px hsla(230, 13%, 9%, 0.045), 
 			0 2.5px 4px hsla(230, 13%, 9%, 0.1);
-	--lightContentBoxShadow: 0px 1px 2px 0px rgba(116, 116, 116, .35), 
-		inset 0px 1px 1px 0px rgba(255, 255, 255, 1),
+	--lightContentBoxShadow: 0 1px 2px 0 rgba(116, 116, 116, .35), 
+		inset 0 1px 1px 0 rgba(255, 255, 255, 1),
 		0 0.3px 0.4px hsla(230, 13%, 9%, 0.025),
 		0 0.9px 1.5px hsla(230, 13%, 9%, 0.035), 
 		0 2.5px 4px hsla(230, 13%, 9%, 0.07);
@@ -133,7 +133,7 @@
 	--bodyLight: rgba(245, 246, 247, 1); /* #f5f6f7 */
 	--textLightTheme: rgba(32, 35, 39, 1); /* #202327 */
 	--borderLightTheme: .75px solid rgba(223, 226, 228, 1); /* #dfe2e4 */
-	--textShadowLight: 0px -1px 1px rgba(0, 0, 0, .1), 0px 1px 1px rgba(255, 255, 255, .6);
+	--textShadowLight: 0 -1px 1px rgba(0, 0, 0, .1), 0 1px 1px rgba(255, 255, 255, .6);
 		/* Light Set 3 */
 	--bodyLight: rgba(235, 236, 240, 1); /* #EBECF0 */
 	--textLightTheme: rgba(106, 119, 142, 1); /* #6a778e */
@@ -156,8 +156,8 @@
 		0 0.9px 1.5px hsla(0, 0%, 0%, 0.35), 
 		0 2.5px 4px hsla(0, 0%, 0%, 0.6);
 		
-	--darkContentBoxShadow: 0px 1px 3px 0px rgba(0, 0, 0, .35), 
-		inset 0px 1px 1px 0px rgba(255, 255, 255, .15),
+	--darkContentBoxShadow: 0 1px 3px 0 rgba(0, 0, 0, .35), 
+		inset 0 1px 1px 0 rgba(255, 255, 255, .15),
 		0 0.3px 0.4px hsla(0, 0%, 0%, 0.5),
 		0 0.9px 1.5px hsla(0, 0%, 0%, 0.25),
 		0 2.5px 4px hsla(0, 0%, 0%, 0.5);
@@ -179,8 +179,8 @@
 	--darkContentBackground: rgba(32, 37, 43, 1);
 	--borderDarkTheme: 1px solid rgba(99, 104, 110, 1);
 	--buttonDarkTheme: rgba(51, 59, 70, 1);
-	--textShadowDarkTheme: 0px -1px 1px rgba(0, 0, 0, .6), 0px 1px 1px rgba(255, 255, 255, .1);
-	--textShadowLightTheme: 0px -1px 1px rgba(0, 0, 0, .2), 0px 1px 1px rgba(255, 255, 255, .6);
+	--textShadowDarkTheme: 0 -1px 1px rgba(0, 0, 0, .6), 0 1px 1px rgba(255, 255, 255, .1);
+	--textShadowLightTheme: 0 -1px 1px rgba(0, 0, 0, .2), 0 1px 1px rgba(255, 255, 255, .6);
 	
 		/* dark colors FF sample */
 	--bodyDark: linear-gradient(to bottom, rgba(43, 42, 51, 1) 0, rgba(26, 25, 31, 1) 100%); /* #2B2A33 to #1a191f */
@@ -291,6 +291,7 @@ footer, header, hgroup, menu, nav, section {
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 	-webkit-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 	outline: 1px solid hsla(0, 0%, 0%, .0); /* fixes aliasing on Firefox */
 }
 
@@ -357,7 +358,7 @@ input[type=button], button {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
-	border: 0px solid transparent;
+	border: 0 solid transparent;
 }
 
 a {
@@ -373,7 +374,7 @@ span a:hover, span a:active, a:active {
 img, picture {
 	max-width: 100%;
 	display: block;
-	border: 0px solid transparent;
+	border: 0 solid transparent;
 }
 
 /* === END STYLE RESETS === */
@@ -389,7 +390,7 @@ html {
 
 html, body {
 	border-collapse: collapse;
-	border-spacing: 0px;
+	border-spacing: 0;
 }
 
 body {
@@ -434,7 +435,7 @@ body.darkTheme {
 	width: 100vw;
 	min-width: 100vw;
 	min-height: 100vh;
-	margin: 0px;
+	margin: 0;
 	padding: 5.675em 0 0 0;
 	background: none repeat transparent;
 	opacity: 1;
@@ -501,7 +502,7 @@ body.darkTheme {
 	width: 100vw;
 	max-width: 1020px;
 	max-width: 1140px;
-	padding: 0px 0.625em;
+	padding: 0 0.625em;
 	margin: 0 auto;
 	/*
 	display: table-cell;
@@ -529,8 +530,8 @@ body.darkTheme {
 /* ====== section setup ====== */
 .section {
 	clear: both;
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 	
 	display: table;
 	width: 100%;
@@ -678,7 +679,7 @@ body.darkTheme {
 	width: 100%;
 	max-width: 100%;
 	height: 100%;
-	margin: 0px auto;
+	margin: 0 auto;
 	padding: 0;
 	overflow: hidden;
 
@@ -985,7 +986,7 @@ body.darkTheme {
 	20% {
 		height: 3px;
 		width: 3px;
-		right: 0px;
+		right: 0;
 		opacity: 1;
 	}
 	30% {
@@ -1015,7 +1016,7 @@ body.darkTheme {
 	20% {
 		height: 3px;
 		width: 3px;
-		right: 0px;
+		right: 0;
 		opacity: 1;
 	}
 	30% {
@@ -1045,7 +1046,7 @@ body.darkTheme {
 	20% {
 		height: 3px;
 		width: 3px;
-		right: 0px;
+		right: 0;
 		opacity: 1;
 	}
 	30% {
@@ -1075,7 +1076,7 @@ body.darkTheme {
 	20% {
 		height: 3px;
 		width: 3px;
-		right: 0px;
+		right: 0;
 		opacity: 1;
 	}
 	30% {
@@ -1169,7 +1170,7 @@ body.darkTheme {
 		width: 2px;
 	}
 	100% {
-		left: 0px;
+		left: 0;
 		bottom: 100px;
 		opacity: 0;
 		height: 3px;
@@ -1187,7 +1188,7 @@ body.darkTheme {
 		width: 2px;
 	}
 	100% {
-		left: 0px;
+		left: 0;
 		bottom: 100px;
 		opacity: 0;
 		height: 3px;
@@ -1205,7 +1206,7 @@ body.darkTheme {
 		width: 2px;
 	}
 	100% {
-		left: 0px;
+		left: 0;
 		bottom: 100px;
 		opacity: 0;
 		height: 3px;
@@ -1223,7 +1224,7 @@ body.darkTheme {
 		width: 2px;
 	}
 	100% {
-		left: 0px;
+		left: 0;
 		bottom: 100px;
 		opacity: 0;
 		height: 3px;
@@ -1310,8 +1311,8 @@ body.darkTheme {
 
 #toggleThemeWrapper {
 	position: relative;
-	margin: 0px auto 20px;
-	padding: 0px;
+	margin: 0 auto 20px;
+	padding: 0;
 	width: 100%;
 	max-width: 100%;
 }
@@ -1404,13 +1405,13 @@ body.darkTheme {
 	height: 32px;
 	width: 32px;
 	margin: 1px 3px 1px 3px;
-	left: 0px;
+	left: 0;
 	background: linear-gradient( rgba(222, 222, 222, 1) 20%, rgba(191, 191, 191, 1) 80%);
 	border: .3px solid rgba(0, 0, 0, .65);
 	box-shadow: 0 5px 2.5px 1px rgba(0, 0, 0, .35), 
 		inset 0 0 2px rgba(0, 0, 0, .5), 
-		inset 0px 1px 2px rgba(255, 255, 255, 1), 
-		inset 0px -1px 1px 0.5px rgba(255, 255, 255, .7);
+		inset 0 1px 2px rgba(255, 255, 255, 1), 
+		inset 0 -1px 1px 0.5px rgba(255, 255, 255, .7);
 	border-radius: 100px;
 	opacity: 0.95;
 	transition: all 200ms linear;
@@ -1420,8 +1421,8 @@ body.darkTheme {
 .lightTheme #toggleThemeWrapper .handle {
 	box-shadow: 0 5px 2.5px 1px rgba(0, 0, 0, .25), 
 		inset 0 0 2px rgba(0, 0, 0, .5), 
-		inset 0px 1px 2px rgba(255, 255, 255, 1), 
-		inset 0px -1px 1px 0.5px rgba(255, 255, 255, .7);
+		inset 0 1px 2px rgba(255, 255, 255, 1), 
+		inset 0 -1px 1px 0.5px rgba(255, 255, 255, .7);
 	border: .3px solid rgba(0, 0, 0, .25);
 	background: linear-gradient( rgba(240, 240, 240, 1) 20%, rgba(208, 208, 208, 1) 80%);
 }
@@ -1434,15 +1435,15 @@ body.darkTheme {
 	font-size: .8em;
 	font-size: 1.8em;
 	position: absolute;
-	right: 0px;
+	right: 0;
 	top: 50%;
 	transform: translate(0%, -50%);
-	margin: 0px 10px 0px 3px;
+	margin: 0 10px 0 3px;
 	font-weight: bold;
 	pointer-events: none;
 	color: rgba(0, 0, 0, .45);
 	color: rgba(198, 228, 239, 1);
-	text-shadow: rgba(255, 255, 255, .2) 0px 1.1px 1.1px, rgba(0, 0, 0, .6) 0px -1.1px 1.1px;
+	text-shadow: rgba(255, 255, 255, .2) 0 1.1px 1.1px, rgba(0, 0, 0, .6) 0px -1.1px 1.1px;
 	animation: fadeInThemeText 400ms ease;
 }
 
@@ -1462,7 +1463,7 @@ body.darkTheme {
 	pointer-events: none;
 	color: rgba(255, 222, 151, 1);
 	color: rgba(245, 246, 247, 1);
-	text-shadow: rgba(255, 255, 255, .2) 0px 1.1px 1.1px, rgba(0, 0, 0, .3) 0px -1.1px 1.1px;
+	text-shadow: rgba(255, 255, 255, .2) 0 1.1px 1.1px, rgba(0, 0, 0, .3) 0 -1.1px 1.1px;
 	opacity: 0;
 }
 
@@ -1483,7 +1484,7 @@ body.darkTheme {
 }
 
 #toggleThemeWrapper input[type="checkbox"]:checked ~ label[for="toggleTheme"] .themeSlider .stateTextOn:before {
-	text-shadow: rgba(210, 223, 0, .65) 0px 1.2px 1.2px, rgba(0, 0, 0, .5) 0px -1.2px 1.2px;
+	text-shadow: rgba(210, 223, 0, .65) 0 1.2px 1.2px, rgba(0, 0, 0, .5) 0 -1.2px 1.2px;
 	opacity: 1;
 	animation: fadeInThemeText 400ms ease;
 }
@@ -1589,13 +1590,13 @@ body.darkTheme {
 	transition-property: transform;
 	transition-duration: .2s;
 	border-right: 1px solid rgba(255, 255, 255, .9);
-	border-left: 0px solid rgba(255, 255, 255, 0);
+	border-left: 0 solid rgba(255, 255, 255, 0);
 }
 
 .darkTheme .switch-theme-container .switch-button-inside {
 	background-image: linear-gradient(90deg, rgba(50, 52, 59, 1) 48%, rgba(30, 33, 44, 1) 54%, rgba(50, 52, 59, 1) 98%);
 	border-right: 1px solid rgba(255, 255, 255, .5);
-	border-left: 0px solid rgba(255, 255, 255, 0);
+	border-left: 0 solid rgba(255, 255, 255, 0);
 	box-shadow: inset .0625em 0 .0625em rgba(255, 255, 255, .15), inset -.0625em 0 .0625em rgba(255, 255, 255, .1);
 }
 
@@ -1611,14 +1612,14 @@ body.darkTheme {
 	opacity: 0;
 	transition-property: opacity;
 	transition-duration: .2s;
-	border-right: 0px solid rgba(255, 255, 255, 0);
+	border-right: 0 solid rgba(255, 255, 255, 0);
 	border-left: 1px solid rgba(255, 255, 255, .6);
 }
 
 .lightTheme .switch-theme-container .switch-button-inside:after {
 	background-image: linear-gradient(90deg, rgba(213, 215, 221, 1) 10%, rgba(183, 187, 196, 1) 48%, rgba(213, 215, 221, 1) 54%); /* #b7bbc4 to #d5d7dd */
 	box-shadow: inset 0.0625em 0 0.0625em rgba(255, 255, 255, .4), inset -0.0625em 0 0.0625em rgba(255, 255, 255, .4);
-	border-right: 0px solid rgba(255, 255, 255, 0);
+	border-right: 0 solid rgba(255, 255, 255, 0);
 	border-left: 1px solid rgba(255, 255, 255, .6);
 }
 
@@ -1645,7 +1646,7 @@ body.darkTheme {
 	fill: rgba(194, 205, 255, 1);
 	color: rgba(194, 205, 255, 1);
 	filter: drop-shadow(0 .0625em .0625em rgba(128, 152, 255, .6)) drop-shadow(0 0 .25em rgba(255, 255, 255, .4)) drop-shadow(0 0 .25em rgba(255, 255, 255, .4));
-	text-shadow: rgba(255, 255, 255, .2) 0px 1px 1px, rgba(0, 0, 0, .6) 0px -1px 1px;
+	text-shadow: rgba(255, 255, 255, .2) 0 1px 1px, rgba(0, 0, 0, .6) 0 -1px 1px;
 }
 
 .switch-theme-container .switch-input:checked + .switch-button .switch-icon.off {
@@ -1660,7 +1661,7 @@ body.darkTheme {
 	fill: rgba(255, 135, 51, 1); /* #FF8733 */
 	color: rgba(255, 135, 51, 1); /* #FF8733 */
 	filter: drop-shadow(0 .0625em .0625em rgba(255, 135, 51, .3)) drop-shadow(0 .25em .25em rgba(0, 0, 0, .2)) drop-shadow(0 0 .25em rgba(255, 255, 255, .2));
-	text-shadow: rgba(210, 223, 0, .65) 0px 1px 1px, rgba(0, 0, 0, .2) 0px -1px 1px;
+	text-shadow: rgba(210, 223, 0, .65) 0 1px 1px, rgba(0, 0, 0, .2) 0 -1px 1px;
 }
 
 .switch-theme-container .switch-input:not(:checked) + .switch-button .switch-icon.on {
@@ -1927,11 +1928,11 @@ body.darkTheme {
 	-webkit-mask-image: -webkit-radial-gradient(rgba(255, 255, 255, 1), rgba(0, 0, 0, 1)); /* another workaround */
 	mask-image: radial-gradient(rgba(255, 255, 255, 1), rgba(0, 0, 0, 1));
 	cursor: pointer;
-	box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, .6) inset;
+	box-shadow: 0 2px 2px 0 rgba(255, 255, 255, .6) inset;
 }
 
 .lightTheme .button-grad-rainbow:active {
-	box-shadow: 0px 0px 3px rgba(0, 0, 0, .15) inset;
+	box-shadow: 0 0 3px rgba(0, 0, 0, .15) inset;
 }
 
 .lightTheme .button-grad-rainbow.dark-rainbow {
@@ -1945,7 +1946,7 @@ body.darkTheme {
 	background-color: var(--buttonDarkTheme);
 	background-color: rgba(50, 57, 66, 1);
 	color: rgba(220, 218, 219, 1);
-	box-shadow: 0px 2px 1px 0px rgba(141, 141, 141, .4) inset;
+	box-shadow: 0 2px 1px 0 rgba(141, 141, 141, .4) inset;
 }
 
 .button-grad-rainbow.dark-rainbow:hover {
@@ -1953,7 +1954,7 @@ body.darkTheme {
 }
 
 .button-grad-rainbow.dark-rainbow:active {
-	box-shadow: 0px 0px 3px rgba(0, 0, 0, .45) inset;
+	box-shadow: 0 0 3px rgba(0, 0, 0, .45) inset;
 }
 
 .button-grad-rainbow:after {
@@ -2169,13 +2170,13 @@ body.darkTheme {
 		border: 1px solid rgba(255, 255, 255, .08);
 		
 		box-shadow: .6px .6px 0.12px rgba(255, 255, 255, 0.25) inset, 
-			0px 1px 3px 0px rgba(0, 0, 0, .35),
+			0 1px 3px 0 rgba(0, 0, 0, .35),
 			0 0.3px 0.4px hsla(0, 0%, 0%, 0.5),
 			0 0.9px 1.5px hsla(0, 0%, 0%, 0.25),
 			0 2.5px 4px hsla(0, 0%, 0%, 0.5);
 			
 		box-shadow: .4px .4px 0.03px rgba(255, 255, 255, 0.2) inset, 
-			0px 1px 2px 0px rgba(0, 0, 0, .2),
+			0 1px 2px 0 rgba(0, 0, 0, .2),
 			0 0.3px 3px hsla(0, 0%, 0%, 0.15),
 			0 0.9px 1.5px hsla(0, 0%, 0%, 0.02),
 			0 2.5px 15px hsla(0, 0%, 0%, 0.15);
@@ -2186,7 +2187,7 @@ body.darkTheme {
 	
 	.header.glass {
 		box-shadow: .1px .1px 0.02px rgba(255, 255, 255, 0.2) inset, 
-			0px 1px 2px 0px rgba(0, 0, 0, .2),
+			0 1px 2px 0 rgba(0, 0, 0, .2),
 			0 0.3px 3px hsla(0, 0%, 0%, 0.15),
 			0 0.9px 1.5px hsla(0, 0%, 0%, 0.02),
 			0 2.5px 15px hsla(0, 0%, 0%, 0.15);
@@ -2196,13 +2197,13 @@ body.darkTheme {
 		border: 1px solid rgba(255, 255, 255, .2);
 		
 		box-shadow: .6px .6px 0.12px rgba(255, 255, 255, 0.55) inset, 
-			0px 1px 2px 0px rgba(116, 116, 116, .35),
+			0 1px 2px 0 rgba(116, 116, 116, .35),
 			0 0.3px 0.4px hsla(230, 13%, 9%, 0.025),
 			0 0.9px 1.5px hsla(230, 13%, 9%, 0.035), 
 			0 2.5px 4px hsla(230, 13%, 9%, 0.07);
 			
 		box-shadow: .4px .4px 0.05px rgba(255, 255, 255, 0.5) inset, 
-			0px 1px 2px 0px rgba(116, 116, 116, .2), 
+			0 1px 2px 0 rgba(116, 116, 116, .2), 
 			0 0.3px 3px hsla(230, 13%, 9%, 0.1), 
 			0 0.9px 4px hsla(230, 13%, 9%, 0.05), 
 			0 2.5px 15px hsla(230, 13%, 9%, 0.05);
@@ -2210,7 +2211,7 @@ body.darkTheme {
 	
 	.lightTheme .header.glass {
 		box-shadow: .1px .1px 0.02px rgba(255, 255, 255, 0.5) inset, 
-			0px 1px 2px 0px rgba(116, 116, 116, .2), 
+			0 1px 2px 0 rgba(116, 116, 116, .2), 
 			0 0.3px 3px hsla(230, 13%, 9%, 0.1), 
 			0 0.9px 4px hsla(230, 13%, 9%, 0.05), 
 			0 2.5px 15px hsla(230, 13%, 9%, 0.05);
@@ -2267,9 +2268,9 @@ body.darkTheme {
 		cursor: pointer;
 		-webkit-filter: brightness(1.5);
 		filter: brightness(1.5);
-		text-shadow: 0px 0px 3px rgba(0, 81, 255, 1), 
-			0px 0px 6px rgba(0, 255, 255, 1), 
-			0px 0px 9px rgba(126, 16, 186, 1);
+		text-shadow: 0 0 3px rgba(0, 81, 255, 1), 
+			0 0 6px rgba(0, 255, 255, 1), 
+			0 0 9px rgba(126, 16, 186, 1);
 	}
 	
 	.lightTheme nav .menu-icon:hover i,
@@ -2291,7 +2292,7 @@ body.darkTheme {
 		margin: 1.25em auto 0 auto;
 		
 		box-shadow: .4px .4px 0.03px rgba(255, 255, 255, 0.2) inset, 
-			0px 1px 2px 0px rgba(0, 0, 0, .2),
+			0 1px 2px 0 rgba(0, 0, 0, .2),
 			0 0.3px 3px hsla(0, 0%, 0%, 0.15),
 			0 0.9px 1.5px hsla(0, 0%, 0%, 0.02),
 			0 2.5px 15px hsla(0, 0%, 0%, 0.15);
@@ -2304,7 +2305,7 @@ body.darkTheme {
 	
 	.lightTheme nav .menu {
 		box-shadow: .4px .4px 0.05px rgba(255, 255, 255, 0.5) inset, 
-			0px 1px 2px 0px rgba(116, 116, 116, .2), 
+			0 1px 2px 0 rgba(116, 116, 116, .2), 
 			0 0.3px 3px hsla(230, 13%, 9%, 0.1), 
 			0 0.9px 4px hsla(230, 13%, 9%, 0.05), 
 			0 2.5px 15px hsla(230, 13%, 9%, 0.05);
@@ -2398,9 +2399,9 @@ body.darkTheme {
 		
 		-webkit-filter: brightness(1.5);
 		filter: brightness(1.5);
-		text-shadow: 0px 0px 3px rgba(0, 81, 255, 1), 
-			0px 0px 6px rgba(0, 255, 255, 1), 
-			0px 0px 9px rgba(126, 16, 186, 1);
+		text-shadow: 0 0 3px rgba(0, 81, 255, 1), 
+			0 0 6px rgba(0, 255, 255, 1), 
+			0 0 9px rgba(126, 16, 186, 1);
 	}
 	
 	.lightTheme nav ul li:hover a {
@@ -2417,23 +2418,23 @@ body.darkTheme {
 		padding: 0 2.5em 0;
 		
 		background: rgba(18, 20, 26, 1);
-		box-shadow: inset 0px 2px 1px -10px rgba(0, 0, 0, .3), 
-			inset 0px 5px 10px -10px rgba(0, 0, 0, .15), 
-			inset 0px 15px 20px -10px rgba(0, 0, 0, .15);
+		box-shadow: inset 0 2px 1px -10px rgba(0, 0, 0, .3), 
+			inset 0 5px 10px -10px rgba(0, 0, 0, .15), 
+			inset 0 15px 20px -10px rgba(0, 0, 0, .15);
 	}
 	
 	.lightTheme .footer-content-wrapper {
 		background: rgba(222, 223, 226, 1);
-		box-shadow: inset 0px 2px 1px -10px rgba(0, 0, 0, .05), 
-			inset 0px 5px 10px -10px rgba(0, 0, 0, .05), 
-			inset 0px 15px 20px -10px rgba(0, 0, 0, .08);
+		box-shadow: inset 0 2px 1px -10px rgba(0, 0, 0, .05), 
+			inset 0 5px 10px -10px rgba(0, 0, 0, .05), 
+			inset 0 15px 20px -10px rgba(0, 0, 0, .08);
 	}
 	
 	.top-footer-content-wrapper {
 		width: 100%;
 		max-width: 100%;
 		margin-bottom: -1px;
-		padding: 2.813em 0px;
+		padding: 2.813em 0;
 		background: radial-gradient(ellipse at top center, rgba(12, 13, 19, 1) 5%, rgba(11, 13, 20, 1) 20%, 
 			rgba(25, 27, 34, 1) 50%, 
 			rgba(18, 20, 26, 1)
@@ -2447,9 +2448,9 @@ body.darkTheme {
 			transparent
 		);
 		
-		box-shadow: inset 0px 2px 1px -30px rgba(0, 0, 0, .3), 
-			inset 0px 5px 10px -30px rgba(0, 0, 0, .15), 
-			inset 0px 15px 20px -30px rgba(0, 0, 0, .15);
+		box-shadow: inset 0 2px 1px -30px rgba(0, 0, 0, .3), 
+			inset 0 5px 10px -30px rgba(0, 0, 0, .15), 
+			inset 0 15px 20px -30px rgba(0, 0, 0, .15);
 	}
 	
 	.lightTheme .top-footer-content-wrapper {
@@ -2465,9 +2466,9 @@ body.darkTheme {
 			transparent
 		);
 		
-		box-shadow: inset 0px 2px 1px -30px rgba(0, 0, 0, .05), 
-			inset 0px 5px 10px -30px rgba(0, 0, 0, .05), 
-			inset 0px 15px 20px -30px rgba(0, 0, 0, .08);
+		box-shadow: inset 0 2px 1px -30px rgba(0, 0, 0, .05), 
+			inset 0 5px 10px -30px rgba(0, 0, 0, .05), 
+			inset 0 15px 20px -30px rgba(0, 0, 0, .08);
 	}
 	
 	.icon-wrapper {
@@ -2532,7 +2533,7 @@ body.darkTheme {
 		background: rgba(64, 74, 86, 1);
 		background: rgba(40, 46, 53, 1);
 		border: 1px solid rgba(0, 0, 0, .7);
-		box-shadow: 0px 2px 1px 0px rgba(141, 141, 141, .3) inset;
+		box-shadow: 0 2px 1px 0 rgba(141, 141, 141, .3) inset;
 	}
 
 	.lightTheme .grad-icon-colors {
@@ -2541,16 +2542,16 @@ body.darkTheme {
 		background: var(--buttonLightTheme);
 		border: 1px solid rgba(0, 0, 0, .19);
 		border: 1px solid var(--borderLightTheme);
-		box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, .5) inset;
+		box-shadow: 0 2px 2px 0 rgba(255, 255, 255, .5) inset;
 	}
 
 	.grad-icon-colors:active,
 	.lightTheme .grad-icon-colors:active {
-		box-shadow: 0px 0px 3px rgba(0, 0, 0, .18) inset;
+		box-shadow: 0 0 3px rgba(0, 0, 0, .18) inset;
 	}
 
 	.lightTheme .grad-icon-colors {
-		box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, .6) inset;
+		box-shadow: 0 2px 2px 0 rgba(255, 255, 255, .6) inset;
 	}
 
 	.grad-icon-colors:after {
@@ -2634,7 +2635,7 @@ body.darkTheme {
 		/* 
 		background: rgba(18, 20, 26, 1);
 		*/
-		padding: 1.25em 0px;
+		padding: 1.25em 0;
 		font-size: 1.2em;
 		line-height: 1.5em;
 		color: var(--textDarkTheme);
@@ -2801,7 +2802,7 @@ body.darkTheme {
 		opacity: 1;
 		visibility: visible;
 		transform: translateY(0);
-		box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+		box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
 	}
 
 	.progress-wrap:after,
@@ -3383,8 +3384,8 @@ body.darkTheme {
 		color: rgba(196, 196, 196, 1);
 		color: rgba(230, 230, 230, 1);
 		color: rgba(255, 255, 255, 1);
-		text-shadow: 1px 0px 1px rgba(0, 0, 0, .25),
-			0px 1px 1px rgba(0, 0, 0, .25),
+		text-shadow: 1px 0 1px rgba(0, 0, 0, .25),
+			0 1px 1px rgba(0, 0, 0, .25),
 			-1px -0px 1px rgba(0, 0, 0, .25),
 			-0px -1px 1px rgba(0, 0, 0, .25);
 	}
