@@ -105,7 +105,7 @@ function iframeReady() {
 					'max-height: 283px;' +
 					'}' +
 					'}' +
-					'@media only screen and (max-width : 667px), only screen and (max-device-width : 667px){' +
+					'@media only screen and (max-width : 720px), only screen and (max-device-width : 720px){' +
 					'.resp-container {' +
 					'padding-top: 117%;' +
 					'}' +
@@ -126,7 +126,7 @@ function iframeReady() {
 		}, 500);
 		//});
 	} else {
-		if($(window).width() <= 667) {
+		if($(window).width() <= 720) {
 			var iframe = document.getElementById('frame-badge');
 			var styleAdd = document.createElement('style');
 			styleAdd.textContent =
@@ -135,7 +135,7 @@ function iframeReady() {
 					'max-height: 283px;' +
 					'}' +
 					'}' +
-					'@media only screen and (max-width : 667px), only screen and (max-device-width : 667px){' +
+					'@media only screen and (max-width : 720px), only screen and (max-device-width : 720px){' +
 					'.resp-container {' +
 					'padding-top: 117%;' +
 					'}' +
