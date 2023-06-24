@@ -105,7 +105,7 @@ function iframeReady() {
 					'max-height: 283px;' +
 					'}' +
 					'}' +
-					'@media only screen and (max-width : 650px), only screen and (max-device-width : 650px){' +
+					'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
 					'.resp-container {' +
 					'padding-top: 117%;' +
 					'}' +
@@ -135,7 +135,7 @@ function iframeReady() {
 					'max-height: 283px;' +
 					'}' +
 					'}' +
-					'@media only screen and (max-width : 650px), only screen and (max-device-width : 650px){' +
+					'@media only screen and (max-width : 768px), only screen and (max-device-width : 768px){' +
 					'.resp-container {' +
 					'padding-top: 117%;' +
 					'}' +
