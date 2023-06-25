@@ -408,7 +408,7 @@ function iframeReady() {
 		//*****
 		//equal height content script
 		//*****
-		$(window).on('load', function() {
+		$(window).on('load resize', function() {
 			if( $(window).width() >= 720 ) {
 				equalContentHeight();
 			}
