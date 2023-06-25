@@ -248,7 +248,7 @@
 								</div>
 							</div>
 							
-							<div>
+							<div style="width:100%;">
 								<h1>A Little About Me</h1>
 								<p>I like knives, radios, and watches. I am an Amateur Radio Operator for the Technician class, my callsign is KE8NUF.</p>
 								<br />
@@ -286,7 +286,7 @@
 									</div>
 								</div>
 							</div>
-							<div style="width:100%; height:100%;">
+							<div style="width:100%;">
 								<h1>My Daily Carry Knives Are:</h1>
 								
 								<p><span><span style="font-size:0.5em; vertical-align:middle;">&#x25a0;</span>&nbsp;&nbsp;<a href="https://www.bladehq.com/item--Buck-Special-119BKS-Hunting-Knife--17047" title="Click here to see this." target="_blank">Buck 119</a></span></p>
@@ -295,7 +295,7 @@
 								<br />
 								<p style="color: rgba(0, 81, 255, 1);">Friends make the good times better, and the hard times easier.</p>
 								<br />
-								<div>
+								<div style="width:100%;">
 									<figure style="margin:0;">
 										<figcaption style="margin-bottom:5px;">Daft Punk - Robot Rock (Midi):</figcaption>
 										<audio controls src="./audio/robot_rock_midi.mp3" style="background:var(--siteDarkBlueText);">
@@ -512,10 +512,10 @@
 				
 				<div class="section group match-height">
 					<div class="col span-1-of-3">
-						<div class="content-container">
+						<div class="content-container noEffect gallery">
 							<div class="gallery-card noEffect">
 								<div class="card-image">
-									<h2 id="solar-data" class="center-text" style="margin:0; height:100%;">
+									<h2 id="solar-data" class="center-text" style="margin:0; width:100%;">
 										<a class="center-text" href="https://www.hamqsl.com/solar.html" title="Band Conditions Chart" target="_blank" style="width:100%;">
 											<img src="https://www.hamqsl.com/solarbc.php" alt="Band Conditions Chart" style="text-align:center; margin: 0 auto;" />
 										</a>
@@ -529,7 +529,7 @@
 					</div>
 					
 					<div class="col span-1-of-3">
-						<div class="content-container">
+						<div class="content-container noEffect gallery">
 							<div class="gallery-card noEffect">
 								<div class="card-image">
 									<img src="./images/senkolove.gif" alt="Senko Love Image." />
@@ -660,6 +660,7 @@
 		<!-- SITE PAGE SCRIPTS IF NEEDED HERE -->
 		<script src="./js/simulate-touch-events.js"></script>
 		<script src="./js/jquery-scrollstartstop.js"></script>
+		<script src="./js/jquery.equalheights.js"></script>
 		
 		<script src="./js/site_page_scripts.js"></script>
 		<script>
@@ -762,7 +763,9 @@
 						}
 					//}
 					if( $(window).width() >= 720 ) {
-						equalContentHeight();
+						$('.match-height').each(function() {
+							$(this).find('.col').equalHeights()
+						});
 					}
 				});
 				//*****

@@ -32,41 +32,22 @@ var isMobile = {
 }
 
 //function to equalize heights of content when needed
-function equalContentHeight() {
-	if( $(window).width() >= 750 ) {
-		$(document).each(function(event) {
-			//$(document).on('load', function() {
-				if( $('.match-height').length > 0 ) {
-					$('.group.match-height').each(function() {
-						//var $contentHeight = 0;
-						var $columns = $('.col', this);
-						//var $maxHeight = Math.max.apply(Math, $columns.map(function() {
-							//return $(this).outerHeight(true);
-							// current // return $(this).height();
-						//}).get());
-						//$columns.height($maxHeight);
-						//$columns.css({
-							//height: $maxHeight + 'px'
-						//});
-						//window.console&&console.log('Equalize content height was called and ran');
-						
-						var highestBox = 0;
-						$($columns).each(function() { 
-							if($(this).height() > highestBox){ 
-								//highestBox = $(this).height();
-								
-								//highestBox = $(this).outerHeight(true);
-								
-								highestBox = $(this).outerHeight();
-							}
-						});    
-						$($columns).height(highestBox);
-					});
-				}
-			//});
-		});
-	}
-}
+$.fn.equalHeights = function(){
+
+	let maxHeight = 0;
+
+	$(this).each(function(){
+		maxHeight = Math.max($(this).height(), maxHeight);
+	});
+
+	$(this).each(function(){
+		$(this).height(maxHeight);
+	});
+};
+
+$('.match-height').each(function() {
+	$(this).find('.col').equalHeights();
+})
 
 function checkBoxCheck() {
 	//get checkbox
@@ -410,7 +391,9 @@ function iframeReady() {
 		//*****
 		$(window).on('load resize', function() {
 			if( $(window).width() >= 720 ) {
-				equalContentHeight();
+				$('.match-height').each(function() {
+					$(this).find('.col').equalHeights()
+				});
 			}
 		});
 	});
