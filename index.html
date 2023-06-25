@@ -258,9 +258,15 @@
 					</div>
 					
 					<style>
-						audio::-webkit-media-controls-panel {
-							color: var(--white);
-							/* background-color: var(--siteDarkBlueText); */
+						.darkTheme audio::-webkit-media-controls-panel,
+						.darkTheme audio {
+							color: black;
+							background-color: rgba(255, 255, 255, 1);
+						}
+						.lightTheme audio::-webkit-media-controls-panel,
+						.lightTheme audio {
+							color: white;
+							background-color: rgba(0, 0, 0, 1);
 						}
 						audio::-webkit-media-controls-play-button,
 						audio::-webkit-media-controls-mute-button {
@@ -298,12 +304,13 @@
 								<div style="width:100%;">
 									<figure style="margin:0;">
 										<figcaption style="margin-bottom:5px;">Daft Punk - Robot Rock (Midi):</figcaption>
-										<audio controls src="./audio/robot_rock_midi.mp3" style="background:var(--siteDarkBlueText);">
+										<audio controls src="./audio/robot_rock_midi.mp3" style="">
 											Your browser does not support the
 											<code>audio</code> element.
 										</audio>
 									</figure>
 								</div>
+								<br />
 								<br />
 								<br />
 							</div>
