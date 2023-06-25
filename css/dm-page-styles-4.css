@@ -3078,8 +3078,8 @@ body.darkTheme {
 		border: none;
 		opacity: 1;
 		box-shadow: none;
-		-webkit-filter: brightness(1);
-		filter: brightness(1);
+		-webkit-filter: brightness(1) blur(0px);
+		filter: brightness(1) blur(0px);
 	}
 	/* === END GALLERY CARD STYLES FOR GALLERY CONTENT === */
 	/* === START BANNER STYLES FOR SITE CONTENT === */
