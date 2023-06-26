@@ -267,7 +267,7 @@ console.log('actual iframe height is ' + frameHolderHeight);
 		});
 		
 		//$(window).on('load', function() {
-		$(window).on('pageshow', function() {
+		$(window).bind('pageshow', function() {
 			//$('body').removeClass('lightTheme');
 			//$('body').addClass('darkTheme');
 			
@@ -411,7 +411,7 @@ console.log('actual iframe height is ' + frameHolderHeight);
 		});
 		
 		//$(window).on('load', function() {
-		$(window).on('pageshow', function () {
+		$(window).bind('pageshow', function () {
 			//window.addEventListener('DOMContentLoaded', function() {
 				if( $(window).width() >= 720 ) {
 					$('.match-height').each(function() {
