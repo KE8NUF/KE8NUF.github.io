@@ -409,7 +409,7 @@
 													}).trigger('resize');
 													var cacheWidth = $(window).width();
 													
-													$(window).bind('resize', function() {
+													$(window).bind('resize load', function() {
 														window.addEventListener('DOMContentLoaded', function() {
 															var currentWidth = $(window).width();
 															if(cacheWidth !== currentWidth) {
