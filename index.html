@@ -782,7 +782,8 @@
 					});
 				});
 				
-				window.addEventListener('DOMContentLoaded', function() {
+				$(window).on('pageshow', function() {
+				//window.addEventListener('DOMContentLoaded', function() {
 					//fixes resize event triggered on mobile by browser bars hiding bug
 					//if(screenwidth !== $(window).width() ) {
 						//*****
@@ -801,6 +802,7 @@
 							$(this).find('.col').equalHeights()
 						});
 					}
+				//});
 				});
 				//*****
 				//touch simulation events if needed.

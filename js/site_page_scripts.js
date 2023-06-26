@@ -266,7 +266,8 @@ console.log('actual iframe height is ' + frameHolderHeight);
 			$('.dark-toggle').toggleClass('selected non-selected');
 		});
 		
-		$(window).on('load', function() {
+		//$(window).on('load', function() {
+		$(window).on('pageshow', function() {
 			//$('body').removeClass('lightTheme');
 			//$('body').addClass('darkTheme');
 			
@@ -409,7 +410,8 @@ console.log('actual iframe height is ' + frameHolderHeight);
 		});
 		
 		//$(window).on('load', function() {
-			window.addEventListener('DOMContentLoaded', function() {
+		$(window).on('pageshow', function () {
+			//window.addEventListener('DOMContentLoaded', function() {
 				if( $(window).width() >= 720 ) {
 					$('.match-height').each(function() {
 						$(this).find('.col').equalHeights();
@@ -419,7 +421,8 @@ console.log('actual iframe height is ' + frameHolderHeight);
 				$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
 				$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
 				$(document).find('#frame-badge').attr('height', frameHolderHeight);
-			});
+			//});
+		});
 		//});
 	});
 })(jQuery);
