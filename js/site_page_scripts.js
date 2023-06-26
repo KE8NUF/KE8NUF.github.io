@@ -403,8 +403,8 @@ console.log('actual iframe height is ' + frameHolderHeight);
 						$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
 					});
 				}
-				$('iframe').load(function () {
-					$('iframe').height($('iframe').contents().height());
+				$('#frame-badge').load(function () {
+					$('#frame-badge').height($('#frame-badge').contents().height());
 				});
 				$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
 				$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
@@ -422,8 +422,8 @@ console.log('actual iframe height is ' + frameHolderHeight);
 						$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
 					});
 				}
-				$('iframe').load(function () {
-					$('iframe').height($('iframe').contents().height());
+				$('#frame-badge').load(function () {
+					$('#frame-badge').height($('#frame-badge').contents().height());
 				});
 				$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
 				$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
