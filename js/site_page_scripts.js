@@ -400,8 +400,8 @@ console.log('actual iframe height is ' + frameHolderHeight);
 				if( $(window).width() >= 720 ) {
 					$('.match-height').each(function() {
 						$(this).find('.col').equalHeights();
-						$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
 					});
+					$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
 				}
 				$('#frame-badge').load(function () {
 					$('#frame-badge').height($('#frame-badge').contents().height());
@@ -419,8 +419,8 @@ console.log('actual iframe height is ' + frameHolderHeight);
 				if( $(window).width() >= 720 ) {
 					$('.match-height').each(function() {
 						$(this).find('.col').equalHeights();
-						$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
 					});
+					$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
 				}
 				$('#frame-badge').load(function () {
 					$('#frame-badge').height($('#frame-badge').contents().height());
