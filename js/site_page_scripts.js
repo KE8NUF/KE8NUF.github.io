@@ -81,7 +81,7 @@ function iframeReady() {
 				var iframe = document.getElementById('frame-badge');
 				var styleAdd = document.createElement('style');
 				styleAdd.textContent =
-					'@media only screen and (max-width : 720px), only screen and (max-device-width : 720px){' +
+					'@media only screen and (max-width : 480px), only screen and (max-device-width : 480px){' +
 					'.resp-container {' +
 					'padding-top: 117%;' +
 					'}' +
@@ -93,6 +93,10 @@ function iframeReady() {
 					'.badge-banners-bottom img,' +
 					'.badge-front img {' +
 					'max-height: 283px;' +
+					'}' +
+					'#col-left,' +
+					'#col-right {' +
+					'min-height: 376px;' +
 					'}' +
 					'}'
 				;
@@ -106,7 +110,7 @@ function iframeReady() {
 			var iframe = document.getElementById('frame-badge');
 			var styleAdd = document.createElement('style');
 			styleAdd.textContent =
-					'@media only screen and (max-width : 720px), only screen and (max-device-width : 720px){' +
+					'@media only screen and (max-width : 480px), only screen and (max-device-width : 480px){' +
 					'.resp-container {' +
 					'padding-top: 117%;' +
 					'}' +
@@ -118,6 +122,10 @@ function iframeReady() {
 					'.badge-banners-bottom img,' +
 					'.badge-front img {' +
 					'max-height: 283px;' +
+					'}' +
+					'#col-left,' +
+					'#col-right {' +
+					'min-height: 376px;' +
 					'}' +
 					'}'
 			;

@@ -349,9 +349,14 @@
 						border: 0;
 						border: none;
 					}
+					
+					#col-left,
+					#col-right {
+						min-height: 592px;
+					}
 									
-					@media only screen and (max-width : 720px),
-					only screen and (max-device-width : 720px) {
+					@media only screen and (max-width : 480px),
+					only screen and (max-device-width : 480px) {
 						.resp-container {
 							padding-top: 117%;
 						}
@@ -365,6 +370,14 @@
 						.badge-banners-bottom img,
 						.badge-front img {
 							max-height: 283px;
+						}
+					}
+					
+					@media only screen and (max-width : 480px),
+					only screen and (max-device-width : 480px) {
+						#col-left,
+						#col-right {
+							min-height: 376px;
 						}
 					}
 				</style>
@@ -391,11 +404,11 @@
 															$('.resp-container').remove();
 															console.log("The page is loaded loaded frame content!");
 																
-															if($(window).width() <= 720) {
+															if($(window).width() <= 480) {
 																//code to execute
 																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="293" height="376" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 																$('#badge-frame-insert').append(frameCode);
-															} else if($(window).width() >= 720) {
+															} else if($(window).width() >= 480) {
 																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="460" height="592" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 																$('#badge-frame-insert').append(frameCode);
 															}
@@ -413,11 +426,11 @@
 																$('.resp-container').remove();
 																console.log("The orientation has changed frame content!");
 																	
-																if($(window).width() <= 720) {
+																if($(window).width() <= 480) {
 																	//code to execute
 																	var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="293" height="376" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 																	$('#badge-frame-insert').append(frameCode);
-																} else if($(window).width() >= 720) {
+																} else if($(window).width() >= 480) {
 																	var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="460" height="592" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
 																	$('#badge-frame-insert').append(frameCode);
 																}
@@ -428,11 +441,11 @@
 													});
 												}
 												if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
-													if($(window).width() <= 720) {
+													if($(window).width() <= 480) {
 														//code to execute
 														var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v8-foil.html" width="293" height="376" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
 														$('#badge-frame-insert').append(frameCode);
-													} else if ($(window).width() >= 720) {
+													} else if ($(window).width() >= 480) {
 														var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v8-foil.html" width="460" height="592" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
 														$('#badge-frame-insert').append(frameCode);
 													}
