@@ -403,10 +403,13 @@ console.log('actual iframe height is ' + frameHolderHeight);
 						$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
 					});
 				}
+				$('iframe').load(function () {
+					$('iframe').height($('iframe').contents().height());
+				});
 				$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
 				$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
 				$(document).find('#col-left').css({ 'height': frameHolderHeight + 'px' });
-				$(document).find('#frame-badge').attr('height', frameHolderHeight);
+				//$(document).find('#frame-badge').attr('height', frameHolderHeight);
 			});
 		});
 		
@@ -419,10 +422,13 @@ console.log('actual iframe height is ' + frameHolderHeight);
 						$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
 					});
 				}
+				$('iframe').load(function () {
+					$('iframe').height($('iframe').contents().height());
+				});
 				$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
 				$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
 				$(document).find('#col-left').css({ 'height': frameHolderHeight + 'px' });
-				$(document).find('#frame-badge').attr('height', frameHolderHeight);
+				//$(document).find('#frame-badge').attr('height', frameHolderHeight);
 			//});
 		});
 		//});
