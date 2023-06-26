@@ -400,11 +400,12 @@ console.log('actual iframe height is ' + frameHolderHeight);
 				if( $(window).width() >= 720 ) {
 					$('.match-height').each(function() {
 						$(this).find('.col').equalHeights();
+						$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
 					});
 				}
 				$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
 				$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
-				$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
+				$(document).find('#col-left').css({ 'height': frameHolderHeight + 'px' });
 				$(document).find('#frame-badge').attr('height', frameHolderHeight);
 			});
 		});
@@ -415,11 +416,12 @@ console.log('actual iframe height is ' + frameHolderHeight);
 				if( $(window).width() >= 720 ) {
 					$('.match-height').each(function() {
 						$(this).find('.col').equalHeights();
+						$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
 					});
 				}
 				$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
 				$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
-				$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
+				$(document).find('#col-left').css({ 'height': frameHolderHeight + 'px' });
 				$(document).find('#frame-badge').attr('height', frameHolderHeight);
 			//});
 		});
