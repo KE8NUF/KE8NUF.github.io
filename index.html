@@ -383,7 +383,8 @@
 										//$(document).ready(function (){
 											
 												if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-													$(window).bind('load', function(){
+													//$(window).bind('load', function(){
+													$(window).on('pageshow', function () {
 														//var newWindowWidth = $(window).width();
 														//fixes resize event triggered on mobile by browser bars hiding bug
 														//if(screenwidth !== $(window).width() ) {
@@ -402,6 +403,7 @@
 														//}
 															//cachedWindowWidth = newWindowWidth;
 														//}
+													//});
 													});
 													var cacheWidth = $(window).width();
 													
