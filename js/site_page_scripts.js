@@ -266,7 +266,7 @@ console.log('actual iframe height is ' + frameHolderHeight);
 			$('.dark-toggle').toggleClass('selected non-selected');
 		});
 		
-		$(window).bind('load', function() {
+		$(window).on('load', function() {
 		//$(window).bind('pageshow', function() {
 			//$('body').removeClass('lightTheme');
 			//$('body').addClass('darkTheme');
@@ -413,7 +413,7 @@ console.log('actual iframe height is ' + frameHolderHeight);
 			});
 		});
 		
-		$(window).bind('load', function() {
+		$(window).on('load', function() {
 		//$(window).bind('pageshow', function () {
 			//window.addEventListener('DOMContentLoaded', function() {
 				if( $(window).width() >= 720 ) {
