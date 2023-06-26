@@ -388,72 +388,6 @@
 								<div style="padding:0; width: 100%; height: 100%; position:relative;">
 									<!-- INSERT FOR FOIL BADGE -->
 									<div id="badge-frame-insert"></div>
-									<script>
-										var frameCode;
-										var cacheWidth = $(window).width();
-										
-										const cachedWindowWidth = $(window).width();
-										//$(document).ready(function (){
-											
-												if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-													$(window).bind('load', function(){
-														//var newWindowWidth = $(window).width();
-														//fixes resize event triggered on mobile by browser bars hiding bug
-														//if(screenwidth !== $(window).width() ) {
-														//if(newWindowWidth !== cachedWindowWidth) {
-															$('.resp-container').remove();
-															console.log("The page is loaded loaded frame content!");
-																
-															if($(window).width() <= 480) {
-																//code to execute
-																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="293" height="376" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
-																$('#badge-frame-insert').append(frameCode);
-															} else if($(window).width() >= 480) {
-																var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="460" height="592" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
-																$('#badge-frame-insert').append(frameCode);
-															}
-														//}
-															//cachedWindowWidth = newWindowWidth;
-														//}
-													});
-													
-													//var cacheWidth = $(window).width();
-													
-													$(window).bind('resize', function() {
-														window.addEventListener('DOMContentLoaded', function() {
-															var currentWidth = $(window).width();
-															//if(cacheWidth !== currentWidth) {
-																$('.resp-container').remove();
-																console.log("The orientation has changed frame content!");
-																	
-																if($(window).width() <= 480) {
-																	//code to execute
-																	var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="293" height="376" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
-																	$('#badge-frame-insert').append(frameCode);
-																} else if($(window).width() >= 480) {
-																	var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="460" height="592" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
-																	$('#badge-frame-insert').append(frameCode);
-																}
-																
-																//cacheWidth = $(window).width();
-															//}
-														});
-													});
-												}
-												if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
-													if($(window).width() <= 480) {
-														//code to execute
-														var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v8-foil.html" width="293" height="376" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
-														$('#badge-frame-insert').append(frameCode);
-													} else if ($(window).width() >= 480) {
-														var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v8-foil.html" width="460" height="592" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
-														$('#badge-frame-insert').append(frameCode);
-													}
-												}
-												console.log(frameCode);
-											
-										//});
-									</script>
 								</div>
 								<!-- END FOIL BADGE INSERT -->
 						</div>
@@ -688,8 +622,15 @@
 		<script src="./js/site_page_scripts.js"></script>
 		<script>
 			var deviceWidth = $(window).width();
+			var iframe = document.getElementById('frame-badge');
 			//*****
-			//prevent scrolling on element not needed to scroll
+			//ifram insert for badge code needed.
+			//*****
+			var frameCode;
+			var cacheWidth = $(window).width();
+			const cachedWindowWidth = $(window).width();
+			//*****
+			//prevent scrolling on element not needed to scroll.
 			//*****
 			function stopWheel(e){
 				if(!e){ /* IE7, IE8, Chrome, Safari */ 
@@ -710,16 +651,107 @@
 			});
 			
 			$(document).ready(function() {
-				//window.navigator.userAgent;
-				//var isMobile = false;
-				//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { var isMobile = true; }
-				//console.log(isMobile);
 				//*****
-				//set variable for device with for on resize event below
+				//window resize functions.
+				//*****
+				$(window).bind('resize', function() {
+					//window.addEventListener('DOMContentLoaded', function() {
+						//*****
+						//responsive iframe for badge
+						//*****
+						var windowWidth = $(window).width();
+						var notFrame = $('iframe:not(.resp-iframe), div:not(.resp-container)');
+						if( deviceWidth !== windowWidth && notFrame ) {
+							deviceWidth = $(window).width();
+							// Do something
+							iframeReady();
+						}
+						if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+							var currentWidth = $(window).width();
+							
+							//$('.resp-container').remove();
+							console.log("The orientation has changed frame content!");
+																	
+							if($(window).width() <= 480) {
+								//code to execute
+								var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="293" height="376" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+								$('#badge-frame-insert').append(frameCode);
+							} else if($(window).width() >= 480) {
+								var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="460" height="592" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+								$('#badge-frame-insert').append(frameCode);
+							}
+						}
+						if( $(window).width() >= 720 ) {
+							$('.match-height').each(function() {
+								$(this).find('.col').equalHeights()
+								//$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
+							});
+						}
+						//$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
+						//$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
+						//$(document).find('#col-left').css({ 'height': frameHolderHeight + 'px' });
+						//$(document).find('#frame-badge').attr('height', frameHolderHeight);
+					//});
+				});
+				//*****
+				//window load functions.
+				//*****
+				$(window).bind('load', function() {
+					//window.addEventListener('DOMContentLoaded', function() {
+						//*****
+						//responsive iframe for badge
+						//*****
+						var windowWidth = $(window).width();
+						var notFrame = $('iframe:not(.resp-iframe), div:not(.resp-container)');
+						if( deviceWidth !== windowWidth && notFrame ) {
+							deviceWidth = $(window).width();
+							// Do something
+							iframeReady();
+						}
+						if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+							//$('.resp-container').remove();
+							console.log("The page is loaded loaded frame content!");
+																	
+							if($(window).width() <= 480) {
+								//code to execute
+								var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="293" height="376" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+								$('#badge-frame-insert').append(frameCode);
+							} else if($(window).width() >= 480) {
+								var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil" width="460" height="592" scrolling="no" frameborder="0" allowfullscreen></iframe></div>';
+								$('#badge-frame-insert').append(frameCode);
+							}
+						}
+						if( $(window).width() >= 720 ) {
+							$('.match-height').each(function() {
+								$(this).find('.col').equalHeights()
+								//$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
+							});
+							//$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
+							//$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
+							//$(document).find('#col-left').css({ 'height': frameHolderHeight + 'px' });
+							//$(document).find('#frame-badge').attr('height', frameHolderHeight);
+						}
+					//});
+				});
+				
+				if(!( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
+					//$('.resp-container').remove();
+					if($(window).width() <= 480) {
+						//code to execute
+						var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v4-foil.html" width="293" height="376" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
+						$('#badge-frame-insert').append(frameCode);
+					} else if ($(window).width() >= 480) {
+						var frameCode = '<div id="resp-frame-container" class="resp-container"><iframe id="frame-badge" class="resp-iframe" src="https://damienmillard.net/my-halo-images_badge-clip_v8-foil.html" width="460" height="592" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen></iframe></div>';
+						$('#badge-frame-insert').append(frameCode);
+					}
+				}
+				console.log(frameCode);
+				//*****
+				//set variable for device with for on resize event below.
 				//*****
 				var deviceWidth = $(window).width();
 				//*****
-				//prevent scrolling on element not needed to scroll
+				//prevent scrolling on element not needed to scroll.
 				//*****
 				function stopWheel(e){
 					if(!e){ /* IE7, IE8, Chrome, Safari */ 
@@ -739,7 +771,7 @@
 					$(document).unbind('mousewheel DOMMouseScroll');
 				});
 				//*****
-				//add listener for orientation change
+				//add listener for orientation change.
 				//*****
 				window.addEventListener("orientationchange", function() {
 					// Announce the new orientation number
@@ -747,9 +779,8 @@
 					iframeReady();
 				}, false);
 				//*****
-				//add listener for resize changes
+				//add listener for resize changes.
 				//*****
-				// Listen for resize changes
 				window.addEventListener("resize", function() {
 					window.addEventListener('DOMContentLoaded', function() {
 						// Get screen size (inner/outerWidth, inner/outerHeight)
@@ -757,67 +788,17 @@
 					});
 				}, false);
 				//*****
-				//stop pointer events on iframe
+				//stop pointer events on iframe.
 				//*****
 				$(document).on('scrollstart', function() {
 					$('#resp-frame-container, iframe').css({
 						'pointer-events' : 'none'
 					});
 				});
-				
 				$(document).on('scrollend', function() {
 					$('#resp-frame-container, iframe').css({
 						'pointer-events' : 'auto'
 					});
-				});
-				//*****
-				//resize functions
-				//*****
-				$(window).on('resize', function() {
-					window.addEventListener('DOMContentLoaded', function() {
-						//fixes resize event triggered on mobile by browser bars hiding bug
-						//if(screenwidth !== $(window).width() ) {
-							//*****
-							//responsive iframe for badge
-							//*****
-							var windowWidth = $(window).width();
-							var notFrame = $('iframe:not(.resp-iframe), div:not(.resp-container)');
-							if( deviceWidth !== windowWidth && notFrame ) {
-								deviceWidth = $(window).width();
-								// Do something
-								iframeReady();
-							}
-						//}
-						if( $(window).width() >= 720 ) {
-							$('.match-height').each(function() {
-								$(this).find('.col').equalHeights()
-							});
-						}
-					});
-				});
-				
-				$(window).on('load', function() {
-				//$(window).on('pageshow', function() {
-				//window.addEventListener('DOMContentLoaded', function() {
-					//fixes resize event triggered on mobile by browser bars hiding bug
-					//if(screenwidth !== $(window).width() ) {
-						//*****
-						//responsive iframe for badge
-						//*****
-						var windowWidth = $(window).width();
-						var notFrame = $('iframe:not(.resp-iframe), div:not(.resp-container)');
-						if( deviceWidth !== windowWidth && notFrame ) {
-							deviceWidth = $(window).width();
-							// Do something
-							iframeReady();
-						}
-					//}
-					if( $(window).width() >= 720 ) {
-						$('.match-height').each(function() {
-							$(this).find('.col').equalHeights()
-						});
-					}
-				//});
 				});
 				//*****
 				//touch simulation events if needed.

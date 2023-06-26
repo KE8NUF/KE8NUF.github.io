@@ -70,7 +70,8 @@ function checkBoxCheck() {
 	}
 }
 
-var iframe = $('#frame-badge');
+//var iframe = $('#frame-badge');
+var iframe = document.getElementById('frame-badge');
 function iframeReady() {
 //$(window).on('load', function () {
 	if( isMobile.any() ) {
@@ -166,11 +167,11 @@ console.log('actual iframe height is ' + frameHolderHeight);
 				var $viewportWidth = window.outerWidth;
 				$('body').prepend('<div id="viewport-size" style="position:fixed; bottom:10px; left:10px; display:none; z-index:9999; padding:10px; text-align:center; font-size: 1.0em; background:rgba(35, 35, 35, 0.75); color:#fff;">W: '+ $viewportWidth +' <br /> H: '+ $viewportHeight +'</div>');
 				$(window).on('resize', function() {
-					window.addEventListener('DOMContentLoaded', function() {
+					//window.addEventListener('DOMContentLoaded', function() {
 						var $viewportHeight = window.outerHeight;
 						var $viewportWidth = window.outerWidth;
 						$('#viewport-size').html('W: ' + $viewportWidth + ' <br /> H: ' + $viewportHeight );
-					});
+					//});
 				});
 				console.log('W: ' + $viewportWidth + ' H: ' + $viewportHeight );
 			}
@@ -265,21 +266,7 @@ console.log('actual iframe height is ' + frameHolderHeight);
 		});
 		
 		$(window).on('load', function() {
-		//$(window).on('pageshow', function() {
-			//$('body').removeClass('lightTheme');
-			//$('body').addClass('darkTheme');
-			
-			// old no use$("#themeCheckToggle").prop("checked", false);
-			//odl no use if( ($('input:checkbox[name=toggleTheme]').is(':checked')) ) {
-				
-				//$('input:checkbox[name=toggleTheme]').attr('checked', false);
-				//document.getElementById("toggleTheme").checked = false;
-			//old no use}
-			//old no use $('#textInput').prop('disabled', true);
 		});
-		
-		//$('input[type="checkbox"]:checked').prop('checked', false);
-		
 		//*****
 		//parallax function
 		//*****
@@ -395,32 +382,12 @@ console.log('actual iframe height is ' + frameHolderHeight);
 		//*****
 		$(window).on('resize', function() {
 			window.addEventListener('DOMContentLoaded', function() {
-				if( $(window).width() >= 720 ) {
-					$('.match-height').each(function() {
-						$(this).find('.col').equalHeights();
-					});
-					//$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
-				}
-				//$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
-				//$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
-				//$(document).find('#col-left').css({ 'height': frameHolderHeight + 'px' });
-				//$(document).find('#frame-badge').attr('height', frameHolderHeight);
 			});
 		});
 		
 		$(window).on('load', function() {
 		//$(window).on('pageshow', function () {
 			//window.addEventListener('DOMContentLoaded', function() {
-				if( $(window).width() >= 720 ) {
-					$('.match-height').each(function() {
-						$(this).find('.col').equalHeights();
-					});
-					//$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
-				}
-				//$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
-				//$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
-				//$(document).find('#col-left').css({ 'height': frameHolderHeight + 'px' });
-				//$(document).find('#frame-badge').attr('height', frameHolderHeight);
 			//});
 		});
 		//});
