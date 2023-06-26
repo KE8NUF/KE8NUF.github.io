@@ -755,9 +755,6 @@
 				//*****
 				//resize functions
 				//*****
-				var frameHolderHeight = $('#badge-frame-insert').outerHeight(true);
-				console.log('actual iframe height is ' + frameHolderHeight);
-				
 				$(window).on('resize load', function() {
 					//fixes resize event triggered on mobile by browser bars hiding bug
 					//if(screenwidth !== $(window).width() ) {
@@ -777,19 +774,7 @@
 							$(this).find('.col').equalHeights()
 						});
 					}
-					
-					$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
-					$(document).find('#badge-frame-content:first-child').css({ 'height': frameHolderHeight + 'px' });
-					$(document).find('#frame-badge').attr('height', frameHolderHeight);
 				});
-				
-				$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
-				$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
-				$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
-				if( $(window).width() >= 720 ) {
-					$(document).find('#col-left').css({ 'height': frameHolderHeight + 'px' });
-				}
-				$(document).find('#frame-badge').attr('height', frameHolderHeight);
 				//*****
 				//touch simulation events if needed.
 				//*****
