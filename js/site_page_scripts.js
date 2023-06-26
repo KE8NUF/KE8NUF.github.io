@@ -81,11 +81,6 @@ function iframeReady() {
 				var iframe = document.getElementById('frame-badge');
 				var styleAdd = document.createElement('style');
 				styleAdd.textContent =
-					'@media only screen and (max-width : 960px), only screen and (max-device-width : 960px){' +
-					'.card-front img {' +
-					'max-height: 283px;' +
-					'}' +
-					'}' +
 					'@media only screen and (max-width : 720px), only screen and (max-device-width : 720px){' +
 					'.resp-container {' +
 					'padding-top: 117%;' +
@@ -111,11 +106,6 @@ function iframeReady() {
 			var iframe = document.getElementById('frame-badge');
 			var styleAdd = document.createElement('style');
 			styleAdd.textContent =
-					'@media only screen and (max-width : 960px), only screen and (max-device-width : 960px){' +
-					'.card-front img {' +
-					'max-height: 283px;' +
-					'}' +
-					'}' +
 					'@media only screen and (max-width : 720px), only screen and (max-device-width : 720px){' +
 					'.resp-container {' +
 					'padding-top: 117%;' +
