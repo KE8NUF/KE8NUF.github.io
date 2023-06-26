@@ -168,9 +168,11 @@ console.log('actual iframe height is ' + frameHolderHeight);
 				var $viewportWidth = window.outerWidth;
 				$('body').prepend('<div id="viewport-size" style="position:fixed; bottom:10px; left:10px; display:none; z-index:9999; padding:10px; text-align:center; font-size: 1.0em; background:rgba(35, 35, 35, 0.75); color:#fff;">W: '+ $viewportWidth +' <br /> H: '+ $viewportHeight +'</div>');
 				$(window).on('resize', function() {
-					var $viewportHeight = window.outerHeight;
-					var $viewportWidth = window.outerWidth;
-					$('#viewport-size').html('W: ' + $viewportWidth + ' <br /> H: ' + $viewportHeight );
+					window.addEventListener('DOMContentLoaded', function() {
+						var $viewportHeight = window.outerHeight;
+						var $viewportWidth = window.outerWidth;
+						$('#viewport-size').html('W: ' + $viewportWidth + ' <br /> H: ' + $viewportHeight );
+					});
 				});
 				console.log('W: ' + $viewportWidth + ' H: ' + $viewportHeight );
 			}
