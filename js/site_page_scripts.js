@@ -77,7 +77,7 @@ function iframeReady() {
 	//if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		//$(window).bind('load',function(){
 		setTimeout( function() {
-			if($(window).width() <= 960) {
+			if($(window).width() <= 720) {
 				var iframe = document.getElementById('frame-badge');
 				var styleAdd = document.createElement('style');
 				styleAdd.textContent =
