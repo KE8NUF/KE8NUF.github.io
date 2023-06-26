@@ -151,7 +151,9 @@ function iframeReady() {
 });
 */
 
-var frameHolderHeight = $('#badge-frame-insert').outerHeight(true);
+var frameHolderHeight = document.getElementById('badge-frame-insert');
+var frameHolderHeight = frameHolderHeight.outerHeight(true);
+//var frameHolderHeight = $('#badge-frame-insert').outerHeight(true);
 console.log('actual iframe height is ' + frameHolderHeight);
 
 (function($){
