@@ -383,8 +383,8 @@
 										//$(document).ready(function (){
 											
 												if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-													//$(window).bind('load', function(){
-													$(window).bind('pageshow', function () {
+													$(window).bind('load', function(){
+													//$(window).bind('pageshow', function () {
 														//var newWindowWidth = $(window).width();
 														//fixes resize event triggered on mobile by browser bars hiding bug
 														//if(screenwidth !== $(window).width() ) {
@@ -784,7 +784,8 @@
 					});
 				});
 				
-				$(window).bind('pageshow', function() {
+				$(window).bind('load', function() {
+				//$(window).bind('pageshow', function() {
 				//window.addEventListener('DOMContentLoaded', function() {
 					//fixes resize event triggered on mobile by browser bars hiding bug
 					//if(screenwidth !== $(window).width() ) {
