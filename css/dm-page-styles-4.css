@@ -707,11 +707,17 @@ body.darkTheme {
 .radials-background {
 	width: 100%;
 	max-width: 100%;
-	height: 37.5em;
+	height: 37.5em; /* 600px */
+	height: 50em; /* 800px */
 	position: absolute;
 	top: 0;
+	left: 0;
+	right: 0;
 	z-index: -1;
+	overflow-x: hidden;
+	overflow-y: visible;
 	
+	/* old */
 	background: var(--grainDark),
 		radial-gradient(ellipse at 45% 10%,
 		rgba(0, 81, 255, 1) 0%, transparent 60%),
@@ -725,14 +731,66 @@ body.darkTheme {
 		radial-gradient(at top right,
 		rgba(126, 16, 186, 1) 0%, transparent 35%);
 	
+	background: transparent;
+	
+	/* old
 	-webkitfilter: blur(15px);
 	filter: blur(15px);
+	*/
+	
+	-webkit-mask: linear-gradient(360deg, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 1) 100% );
+	mask: linear-gradient(360deg, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 1) 100% );
 		
 	background-repeat: no-repeat;
+	/* old */
 	mix-blend-mode: overlay;
-	opacity: .6;
+	mix-blend-mode: color;
+	opacity: .4;
 }
 
+.radials-background:before {
+	content: "";
+	position: absolute;
+	width: 105%;
+	height: 105%;
+	top: -5%;
+	left: 0;
+	right: 0;
+	
+	background:
+		radial-gradient(ellipse 200% 130% at 100% 50%,
+			rgba(255, 228, 198, 1) 0%, transparent 60%
+		),
+		radial-gradient(ellipse 200% 200% at 0% 75%,
+			rgba(204, 230, 255, 1) 0%, transparent 60%
+		),
+		radial-gradient(ellipse 60% 50% at 35% 35%, 
+			rgba(113, 240, 229, 1) 0%, transparent 60%
+		),
+		radial-gradient(ellipse 80% 80% at 10% 20%,
+			rgba(229, 211, 249, 1) 0%, transparent 60%
+		),
+		radial-gradient(ellipse 50% 50% at -10% 55%,
+			rgba(190, 178, 224, 1) 0%, transparent 60%
+		),
+		radial-gradient(ellipse 40% 60% at 75% 35%,
+			rgba(190, 178, 224, 1) 0%, transparent 60%
+		),
+		radial-gradient(ellipse 60% 50% at 45% 90%,
+			rgba(197, 239, 222, 1) 0%, transparent 60%
+		),
+		radial-gradient(ellipse 30% 20% at 75% 5%,
+			rgba(197, 239, 222, 1) 0%, transparent 60%
+		);
+	
+	background-repeat: no-repeat;
+	background-blend-mode: darken, color-burn, color-burn, color-burn, multiply, multiply, color-burn, overlay;
+	
+	-webkit-filter: blur(25px);
+	filter: blur(25px);
+}
+
+/* old
 .lightTheme .radials-background {
 	background: var(--grainLight),
 		radial-gradient(ellipse at 45% 10%,
@@ -749,6 +807,10 @@ body.darkTheme {
 		
 	mix-blend-mode: multiply;
 	opacity: .2;
+} */
+
+.lightTheme .radials-background {
+	mix-blend-mode: multiply;
 }
 	
 /* === END SITE RADIAL GRADIENT STYLES === */
@@ -3519,7 +3581,8 @@ only screen and (max-device-width : 740px) {
 only screen and (max-device-width : 720px) {
 	
 	.radials-background {
-		height: 18.75em;
+		height: 18.75em; /* 300px */
+		height: 25em; /* 400px */
 	}
 	
 	.section {
