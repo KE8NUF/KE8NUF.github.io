@@ -389,7 +389,7 @@
 														//if(screenwidth !== $(window).width() ) {
 														//if(newWindowWidth !== cachedWindowWidth) {
 															$('.resp-container').remove();
-															console.log("The orientation has changed!");
+															console.log("The page is loaded loaded frame content!");
 																
 															if($(window).width() <= 720) {
 																//code to execute
@@ -403,14 +403,15 @@
 															//cachedWindowWidth = newWindowWidth;
 														//}
 													});
-													var cacheWidth = $(window).width();
+													
+													//var cacheWidth = $(window).width();
 													
 													$(window).bind('resize', function() {
 														window.addEventListener('DOMContentLoaded', function() {
 															var currentWidth = $(window).width();
 															//if(cacheWidth !== currentWidth) {
 																$('.resp-container').remove();
-																console.log("The orientation has changed!");
+																console.log("The orientation has changed frame content!");
 																	
 																if($(window).width() <= 720) {
 																	//code to execute
