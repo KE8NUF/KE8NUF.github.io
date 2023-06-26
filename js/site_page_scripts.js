@@ -393,27 +393,31 @@ console.log('actual iframe height is ' + frameHolderHeight);
 		//equal height content script
 		//*****
 		$(window).on('resize', function() {
-			if( $(window).width() >= 720 ) {
-				$('.match-height').each(function() {
-					$(this).find('.col').equalHeights();
-				});
-			}
-			$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
-			$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
-			$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
-			$(document).find('#frame-badge').attr('height', frameHolderHeight);
+			window.addEventListener('DOMContentLoaded', function() {
+				if( $(window).width() >= 720 ) {
+					$('.match-height').each(function() {
+						$(this).find('.col').equalHeights();
+					});
+				}
+				$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
+				$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
+				$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
+				$(document).find('#frame-badge').attr('height', frameHolderHeight);
+			});
 		});
 		
-		$(window).on('load', function() {
-			if( $(window).width() >= 720 ) {
-				$('.match-height').each(function() {
-					$(this).find('.col').equalHeights();
-				});
-			}
-			$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
-			$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
-			$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
-			$(document).find('#frame-badge').attr('height', frameHolderHeight);
-		});
+		//$(window).on('load', function() {
+			window.addEventListener('DOMContentLoaded', function() {
+				if( $(window).width() >= 720 ) {
+					$('.match-height').each(function() {
+						$(this).find('.col').equalHeights();
+					});
+				}
+				$(document).find('#badge-frame-content').css({ 'height': frameHolderHeight + 'px' });
+				$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
+				$(document).find('#col-right').css({ 'height': frameHolderHeight + 'px' });
+				$(document).find('#frame-badge').attr('height', frameHolderHeight);
+			});
+		//});
 	});
 })(jQuery);
