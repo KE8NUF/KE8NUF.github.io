@@ -215,7 +215,7 @@
 	--myBlueLight: rgba(17, 91, 191, 1); /* #115bbf */
 	--glassLight: linear-gradient(145deg, #fff8, #efefef80, #aeaeae80, #9998);
 	--borderRadius: 0.475em;
-	--filterBlur: 9px;
+	--filterBlur: 14px;
 	--filterSaturation: 155%;
 	--filterBrightness: 107.5%;
 	--filterGrayscale: 20%;
