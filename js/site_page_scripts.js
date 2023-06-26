@@ -392,7 +392,7 @@ function iframeReady() {
 		$(window).on('load resize', function() {
 			if( $(window).width() >= 720 ) {
 				$('.match-height').each(function() {
-					$(this).find('.col').equalHeights()
+					$(this).find('.col').equalHeights();
 				});
 			}
 		});
