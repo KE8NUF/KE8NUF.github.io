@@ -745,7 +745,7 @@ body.darkTheme {
 	/* old */
 	mix-blend-mode: overlay;
 	mix-blend-mode: color;
-	opacity: .4;
+	opacity: .65;
 }
 
 .radials-background:before {
