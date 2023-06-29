@@ -2825,9 +2825,11 @@ body.darkTheme {
 		background-image: url("../images/soft-with-iridescent-color-contemporary-abstract-background_231311-17.avif");
 		background-image: url("../images/my-holo-foil-texture.jpg");
 		background-image: url("https://damienmillard.net/images/holo-foil-background.jpg");
+		background-image: url("../images/poker-card-holographic.jpg");
 		
 		background-size: 250% 250%;
 		background-size: 500% 500%;
+		background-size: 200% 350%;
 		
 		-webkit-background-clip: text;
 		background-clip: text;
