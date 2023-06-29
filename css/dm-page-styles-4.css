@@ -2228,6 +2228,7 @@ body.darkTheme {
 	.lightTheme .glass {
 		border-radius: inherit;
 		background: rgb(25 33 36 / 9%);
+		background: rgb(159 166 173 / 0.25%);
 	}
 	
 	.glass:before {
