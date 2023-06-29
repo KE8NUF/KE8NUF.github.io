@@ -47,7 +47,7 @@ $.fn.equalHeights = function(){
 
 $('.match-height').each(function() {
 	$(this).find('.col').equalHeights();
-})
+});
 
 function checkBoxCheck() {
 	//get checkbox

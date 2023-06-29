@@ -692,6 +692,9 @@
 						//$(document).find('#badge-frame-content div:first-child').css({ 'height': frameHolderHeight + 'px' });
 						//$(document).find('#col-left').css({ 'height': frameHolderHeight + 'px' });
 						//$(document).find('#frame-badge').attr('height', frameHolderHeight);
+						$('.match-height').each(function() {
+							$(this).find('.col').equalHeights();
+						});
 					//});
 				});
 				//*****
@@ -732,6 +735,10 @@
 							//$(document).find('#col-left').css({ 'height': frameHolderHeight + 'px' });
 							//$(document).find('#frame-badge').attr('height', frameHolderHeight);
 						}
+						
+						$('.match-height').each(function() {
+							$(this).find('.col').equalHeights();
+						});
 					//});
 				});
 				
@@ -774,7 +781,7 @@
 				//*****
 				//add listener for orientation change.
 				//*****
-				window.addEventListener("orientationchange", function() {
+				window.addEventListener('orientationchange', function() {
 					// Announce the new orientation number
 					//alert(screen.orientation);
 					iframeReady();
@@ -782,7 +789,7 @@
 				//*****
 				//add listener for resize changes.
 				//*****
-				window.addEventListener("resize", function() {
+				window.addEventListener('resize', function() {
 					window.addEventListener('DOMContentLoaded', function() {
 						// Get screen size (inner/outerWidth, inner/outerHeight)
 						iframeReady();
