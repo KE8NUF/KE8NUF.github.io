@@ -2226,9 +2226,12 @@ body.darkTheme {
 	}
 	
 	.lightTheme .glass {
+		--filterSaturation: 135%;
+		--filterBrightnes: 103%;
 		border-radius: inherit;
 		background: rgb(25 33 36 / 9%);
 		background: rgb(159 166 173 / 0.25%);
+		background: rgb(173 183 194 / 0.15);
 	}
 	
 	.glass:before {
