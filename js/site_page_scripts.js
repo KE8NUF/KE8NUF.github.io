@@ -360,6 +360,9 @@ console.log('actual iframe height is ' + frameHolderHeight);
 			}
 		});				
 		$('.progress-wrap').on('click', function(event) {
+			$('.menu-icon').removeClass('menuSelect');
+			$('.menu').removeClass('showMenu');
+			$('.bodyBlur').removeClass('fadeIn');
 			event.preventDefault();
 			$('html, body').animate({scrollTop: 0}, duration);
 			return false;
