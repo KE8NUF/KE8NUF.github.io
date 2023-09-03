@@ -1,0 +1,687 @@
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;800;900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;800;900&family=Raleway:wght@100;300;600;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<!-- https://fontawesome.com/icons ICON REFERENCE SHEET -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+<meta name="format-detection" content="telephone=no" /><!-- remove credit card link on iOS showing link in blue -->
+
+<style>
+/* ROOT STYLES FOR VARIABLES */
+:root {
+	--system-ui: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--fontPoppins: 'Poppins', sans-serif;
+	
+	--borderRadius: 3.125rem;
+}
+/* ROOT STYLES FOR VARIABLES */
+
+/* PAGE RESET STYLES */
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	outline: 0.063em solid rgba(0, 0, 0, 0);
+	
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+html, body {
+	min-height: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	border-spacing: 0em;
+}
+
+html {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100vh;
+	min-height: 100vh;
+	width: 100vw;
+	min-width: 100vw;
+	overflow-x: hidden;
+	
+	display: table-cell;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	
+	font-family: var(--fontPoppins);
+	font-weight: 400;
+	
+	font-size: 1em;
+}
+
+body.darkTheme {
+	background: rgba(25, 27, 34, 1);
+}
+
+body.lightTheme {
+	background: rgba(235, 236, 240, 1);
+}
+/* PAGE RESET STYLES */
+
+.card {
+	position: relative;
+	width: 300px;
+	height: 190px;
+	border-radius: 1.3em;
+	transition: all 500ms ease;
+	
+	border: 1px solid rgba(97, 98, 107, 1);
+	border-bottom: 2px solid rgba(128, 128, 128, 1);
+	border-bottom: 2px solid rgba(192, 192, 192, 1);
+	
+	background: rgba(4, 13, 21, 1);
+	background:
+	linear-gradient(-62deg, 
+		rgba(255, 255, 255, 0.0), 
+		rgba(255, 255, 255, 0.00) 70%, 71%, 
+		rgba(255, 255, 255, 0.052)
+	),
+	radial-gradient(ellipse at top left,
+		rgba(25, 41, 54, 1) 0%,
+		rgba(4, 13, 21, 1) 100%
+	);
+	
+	box-shadow: 0 1px 0px rgba(0, 0, 0, .4), 
+		0 0 2px rgba(0, 0, 0, .2), 
+		0 2px 2px rgba(0, 0, 0, .2), 
+		0 4px 8px rgba(0, 0, 0, .2);
+	
+	overflow: hidden;
+	background-blend-mode: screen normal;
+	background-repeat: no-repeat;
+	background-size: 200% 100%, 100% 100%;
+}
+
+.card:hover,
+.card:focus {
+	animation: backgroundMove 200ms forwards ease;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes backgroundMove {
+	0% { background-size: 200% 100%, 100%, 100%; }
+	100% { background-size: 25% 100%, 100%, 100%; }
+}
+
+/* Standard syntax */
+@keyframes backgroundMove {
+	0% { background-size: 200% 100%, 100%, 100%; }
+	100% { background-size: 25% 100%, 100%, 100%; }
+}
+
+.card:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	
+	background: radial-gradient(at 50% 50%, 
+		rgba(96, 16, 48, 0) 2px, 
+		rgba(0, 0, 0, .2) 3px, 
+		rgba(96, 16, 48, 0) 3px),
+		
+		radial-gradient(at 40% 40%, 
+		rgba(96, 16, 48, 0) 2px, 
+		rgba(255, 255, 255, .15) 3px, 
+		rgba(96, 16, 48, 0) 3px), 
+		
+		radial-gradient(ellipse at 45% 45%, 
+		rgba(96, 16, 48, .10) 0px, 
+		rgba(255, 255, 255, .10) 2px, 
+		rgba(96, 16, 48, 0) 0px);
+	background-size: 8px 8px;
+	mix-blend-mode: overlay;
+}
+
+.charge-name-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.charge-name-text {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.4em;
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: 800;
+	text-align: center;
+	position: absolute;
+	top: 9%;
+	left: 0;
+	right: 0;
+	font-variant: small-caps;
+	font-style: italic;
+}
+
+.card-name-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.card-name,
+.card-name-foil,
+.card-name-foil-second {
+	position: absolute;
+	font-weight: 400;
+	font-family: var(--Poppins);
+	font-size: 1.15em;
+	text-align: left;
+	top: 32%;
+	left: 6%;
+	display: block;
+}
+
+.card-name {
+	color: rgba(105, 106, 113, 1);
+	text-shadow: 0 0 3px rgba(0, 0, 0, .7), -.5px -1px 1px rgba(255, 255, 255, .3), .5px 1px 1px rgba(0, 0, 0, .9);
+}
+
+.card-name-foil,
+.card-name-foil-second {
+	width: 300%;
+	
+	background: linear-gradient(var(--bgAngle),
+		rgba(193, 200, 209, 1) 0%,
+		rgba(253, 253, 253, 1) 3%,
+		rgba(253, 253, 253, 1) 9%, 
+		rgba(193, 200, 209, 1) 17%, 
+		rgba(253, 253, 253, 1) 25%, 
+		rgba(193, 200, 209, 1) 34%, 
+		rgba(253, 253, 253, 1) 41%,
+		rgba(193, 200, 209, 1) 46%,
+		rgba(193, 200, 209, 1) 50%,
+		rgba(193, 200, 209, 1) 53%,
+		rgba(253, 253, 253, 1) 55%, 
+		rgba(161, 167, 175, 1) 60%, 
+		rgba(239, 213, 202, 1) 65%, 
+		rgba(241, 238, 211, 1) 70%, 
+		rgba(221, 237, 225, 1) 75%, 
+		rgba(213, 226, 220, 1) 80%, 
+		rgba(219, 224, 235, 1) 85%, 
+		rgba(247, 225, 232, 1) 90%, 
+		rgba(253, 253, 253, 1) 95%, 
+		rgba(193, 200, 209, 1) 100%
+	);
+	
+	background-size: 100% 100%;
+	background-position: var(--bgPosition-x), var(--bgPosition-y);
+	background-blend-mode: difference;
+	mix-blend-mode: overlay;
+	
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+	color: transparent;
+}
+
+.card-name-foil-second {
+	mix-blend-mode: color-burn;
+}
+
+.number-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.card-number {
+	position: absolute;
+	display: block;
+	top: 50%;
+	right: 5%;
+	font-weight: 300;
+	font-family: var(--Poppins);
+	font-family: 'Overpass Mono', monospace;
+	font-size: 1.15em;
+	text-align: right;
+	text-shadow: 0 0 3px rgba(0, 0, 0, .7), -.5px -1px 1px rgba(255, 255, 255, .3), .5px 1px 1px rgba(0, 0, 0, .9);
+	
+	color: rgba(97, 98, 107, 1);
+	
+	transition: all 300ms ease;
+}
+
+.card-number-foil {
+	position: absolute;
+	display: block;
+	width: 480%;
+	top: 50%;
+	right: 5%;
+	font-weight: 300;
+	font-family: var(--Poppins);
+	font-family: 'Overpass Mono', monospace;
+	font-size: 1.15em;
+	text-align: right;
+	
+	transition: all 300ms ease;
+	
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(182, 246, 174, 1) 20%, /* green */
+		rgba(249, 193, 161, 1) 26%, /* orange */
+		rgba(231, 132, 187, 1) 32%, /* pink */
+		rgba(174, 129, 228, 1) 38%, /* purple */
+		rgba(124, 194, 246, 1) 44%, /* blue */
+		rgba(129, 232, 222, 1) 50%, /* aqua */
+		rgba(124, 194, 246, 1) 56%, /* blue */
+		rgba(174, 129, 228, 1) 62%, /* purple */
+		rgba(231, 132, 187, 1) 68%, /* pink */
+		rgba(249, 193, 161, 1) 74%, /* orange */
+		rgba(182, 246, 174, 1) 80%, /* green */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
+	/* first gradient */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgb(194, 255, 182), /* green */
+		rgb(255, 163, 182), /* pink */
+		rgb(221, 169, 255), /* purple */
+		rgb(162, 209, 255), /* blue */
+		rgb(221, 169, 255), /* purple */
+		rgb(255, 163, 182), /* pink */
+		rgb(194, 255, 182), /* green */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
+	/* second gradient */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(0, 131, 222, 1), /* my add */
+		rgba(0, 89, 222, 1), /* my add */
+		rgba(0, 222, 114, 1),
+		rgba(255, 226, 28, 1),
+		rgba(255, 141, 6, 1),
+		rgba(251, 42, 63, 1),
+		rgba(178, 1, 238, 1),
+		rgba(109, 9, 25, 1),
+		rgba(0, 131, 222, 1), /* my add */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
+	background-size: 100% 100%;
+	background-position: var(--bgPosition-x), var(--bgPosition-y);
+	
+	mix-blend-mode: hard-light; /* use with first gradient */
+	mix-blend-mode: color-dodge; /* use with second gradient */
+	
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+	color: transparent;
+}
+
+.card-valid-warpper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.card-valid-warpper .card-valid-date {
+	position: absolute;
+	font-weight: 400;
+	font-family: var(--Poppins);
+	font-size: 0.7em;
+	text-align: left;
+	line-height: 1em;
+	top: 67%;
+	left: 16%;
+	color: rgba(255, 255, 255, .85);
+	display: inline-block;
+}
+
+.card-valid-warpper .valid-text {
+	font-size: 0.5em;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.card-flag {
+	position: absolute;
+	right: 7px;
+	top: 45%;
+	border-radius: .5em;
+	transform: translate(0, 51px);
+	height: 45px;
+	width: 65px;
+	border: 1px solid rgba(97, 98, 107, 1);
+}
+
+.card-flag .card-security {
+	--margin: 5px;
+    width: calc(100% - (var(--margin) * 2));
+	width: 85%;
+	height: calc(100% - (var(--margin) * 2));
+	height: 85%;
+    background-color: rgba(97, 98, 107, 1);
+    border-radius: .5em;
+    /* margin: var(--margin); */
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    background: repeating-linear-gradient( 0deg, rgba(97, 98, 107, 1), rgba(97, 98, 107, 1) 5px, rgba(178, 170, 181, .8) 7px, rgba(178, 170, 181, .8) 5px );
+	overflow: hidden;
+	background-blend-mode: color-dodge;
+}
+
+.card-flag .card-security:before,
+.card-flag .card-security:after {
+	content: "\f0ac";
+    font-family: FontAwesome;
+	position: absolute;
+	top: 10%;
+	left: -7%;
+    color: rgba(178, 170, 181, .65);
+    font-size: 1.65em;
+	mix-blend-mode: multiply;
+	z-index: 3;
+}
+
+.card-flag .card-security:before {
+	transform: translateX(25px);
+}
+
+.card-flag .card-security:after {
+	transform: translateX(10px);
+}
+
+.card-flag .card-security-foil {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0%;
+    width: 720%;
+	height: 250%;
+	transform: translate(0%, -50%);
+	border-radius: .5em;
+	
+	/* first gradient */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgb(194, 255, 182), /* green */
+		rgb(255, 163, 182), /* pink */
+		rgb(221, 169, 255), /* purple */
+		rgb(162, 209, 255), /* blue */
+		rgb(221, 169, 255), /* purple */
+		rgb(255, 163, 182), /* pink */
+		rgb(194, 255, 182), /* green */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
+	/* second gradient */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(0, 131, 222, 1), /* my add */
+		rgba(0, 89, 222, 1), /* my add */
+		rgba(0, 222, 114, 1),
+		rgba(255, 226, 28, 1),
+		rgba(255, 141, 6, 1),
+		rgba(251, 42, 63, 1),
+		rgba(178, 1, 238, 1),
+		rgba(109, 9, 25, 1),
+		rgba(0, 131, 222, 1), /* my add */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
+	background-size: 100% 100%;
+	background-position: var(--bgPosition-x), var(--bgPosition-y);
+	
+	mix-blend-mode: hard-light; /* use with first gradient */
+	mix-blend-mode: soft-light; /* use with second gradient */
+	
+	z-index: 0;
+}
+
+.card-chip-wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.card-chip {
+	position: absolute;
+	width: 46px;
+	height: 35px;
+	overflow: hidden;
+	border-radius: .5em;
+	top: 77%;
+	left: 3%;
+	background: url("https://cdn4.iconfinder.com/data/icons/credit-card-debit-card-payment-shopping/512/N_F07_3Artboard_1_copy_13-512.png"),
+		conic-gradient(from -346deg at 50% 50%,
+		rgba(248, 208, 149, 1),
+		rgba(218, 176, 118, 1),
+		rgba(167, 119, 71, 1),
+		rgba(215, 183, 134, 1),
+		rgba(255, 234, 185, 1),
+		rgba(223, 190, 139, 1),
+		rgba(165, 117, 68, 1),
+		rgba(206, 160, 100, 1),
+		rgba(255, 233, 183, 1),
+		rgba(222, 185, 131, 1),
+		rgba(201, 152, 92, 1),
+		rgba(233, 199, 148, 1),
+		rgba(248, 208, 149, 1)
+	);
+	background-size: 132% 160%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0;
+	padding: 0;
+}
+
+.card-chip-foil {
+	position: absolute;
+	width: 46px;
+	height: 35px;
+	overflow: hidden;
+	border-radius: .5em;
+	top: 77%;
+	left: 3%;
+	background:
+		conic-gradient(from var(--bgAngle) at 50% 50%,
+		rgba(248, 208, 149, 1),
+		rgba(218, 176, 118, 1),
+		rgba(167, 119, 71, 1),
+		rgba(215, 183, 134, 1),
+		rgba(255, 234, 185, 1),
+		rgba(223, 190, 139, 1),
+		rgba(165, 117, 68, 1),
+		rgba(206, 160, 100, 1),
+		rgba(255, 233, 183, 1),
+		rgba(222, 185, 131, 1),
+		rgba(201, 152, 92, 1),
+		rgba(233, 199, 148, 1),
+		rgba(248, 208, 149, 1)
+	);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0;
+	padding: 0;
+	mix-blend-mode: overlay;
+}
+</style>
+
+<div class="card-container">
+	<div class="card">
+		<div class="charge-name-wrapper">
+			<div class="charge-name-text">Credit / Debit Payments</div>
+		</div>
+		
+		<div class="card-name-wrapper">
+			<div class="card-name">
+				JONATHAN DOE
+			</div>
+			
+			<div class="card-name-foil">
+				JONATHAN DOE
+			</div>
+			
+			<div class="card-name-foil-second">
+				JONATHAN DOE
+			</div>
+		</div>
+		
+		<div class="number-wrapper">
+			<div class="card-number">
+				5106 4618 7380 5363
+			</div>
+			
+			<div class="card-number-foil">
+				5106 4618 7380 5363
+			</div>
+		</div>
+		
+		<div class="card-valid-warpper">
+			<div class="card-valid-date"><span class="valid-text">Valid Thru</span> 09/32</div>
+		</div>
+		
+		<div class="card-flag">
+			<div class="card-security">
+				<div class="card-security-foil"></div>
+			</div>
+		</div>
+		
+		<div class="card-chip-wraper">
+			<div class="card-chip"></div>
+			<div class="card-chip-foil"></div>
+		</div>
+	</div>
+</div>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+
+<script>
+if (DeviceMotionEvent.requestPermission) {
+	DeviceMotionEvent.requestPermission().then(response => {
+		if (response === "granted") {
+			window.addEventListener("deviceorientation", function(event) {
+				const { alpha, beta, gamma } = event;
+				// document.getElementById("alpha").innerHTML = alpha.toFixed(0); //equals Z access
+				// document.getElementById("beta").innerHTML = beta.toFixed(0); //equals X access
+				// document.getElementById("gamma").innerHTML = gamma.toFixed(0); //equals Y access
+				
+				var containers = document.querySelectorAll('.card');
+				var mover = document.querySelectorAll('.card');
+				
+				containers.forEach(container => {
+					container.addEventListener('deviceorientation', function(e) {
+						
+						var offset = $(this).offset();
+						var center_x = (offset.left) + ($(this).width() / 2);
+						var center_y = (offset.top) + ($(this).height() / 2);
+						var mouse_x = e.pageX;
+						var mouse_y = e.pageY;
+						var radians = Math.atan2(beta.toFixed(0) - center_x, gamma.toFixed(0) - center_y);
+						var angleBackground = (radians * (180 / Math.PI) * -1) + 90;
+						
+						container.classList.remove('no-more-slidey');
+						this.style.setProperty('--bgPosition-x', `${-beta.toFixed(0) * 6}px`);
+						// this.style.backgroundPositionX = -e.offsetX * 1.8 + "px";
+						this.style.setProperty('--bgPosition-y', `${-gamma.toFixed(0) + 50}px`);
+						// this.style.backgroundPositionY = -e.offsetY + 80 + "px";
+						this.style.setProperty('--bgAngle', angleBackground + 100 + 'deg');
+					});
+					
+					container.addEventListener('pointerout', function(e) {
+						this.style.setProperty('--bgPosition-x', '0px');
+						this.style.setProperty('--bgPosition-y', '0px');
+						this.style.setProperty('--bgAngle', '100deg');
+					});
+					
+					container.style.setProperty('--bgPosition-x', '0px');
+					container.style.setProperty('--bgPosition-y', '0px');
+					container.style.setProperty('--bgAngle', '100deg');
+				});
+			});
+		} else {
+			alert('Sorry Device Orientation Permission Not Granted');
+		}
+	}).catch((err) => {console.log(err)});
+} else {
+	// mouse items, touch items, pointer
+	// pointerdown = mousedown touchstart = mouseover
+	// pointerup = mouseup = touchend
+	// pointermove = mousemove = touchmove
+	// pointerover = mouseover
+	// pointerout = mouseout
+	// pointerenter = mouseenter
+	// pointerleave = mouseleave
+
+	// var container = document.querySelector("#card-number");
+	// var mover = document.querySelector("#card-number");
+
+	var containers = document.querySelectorAll('.card');
+	var mover = document.querySelectorAll('.card');
+
+	var angle = document.querySelectorAll('.card');
+	var position2 = {
+		x: window.innerWidth,
+		y: window.innerHeight
+	};
+
+	containers.forEach(container => {
+		container.addEventListener('pointermove', function(e) {
+			
+			var offset = $(this).offset();
+			var center_x = (offset.left) + ($(this).width() / 2);
+			var center_y = (offset.top) + ($(this).height() / 2);
+			var mouse_x = e.pageX;
+			var mouse_y = e.pageY;
+			var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
+			var angleBackground = (radians * (180 / Math.PI) * -1) + 90;
+			
+			container.classList.remove('no-more-slidey');
+			this.style.setProperty('--bgPosition-x', `${-e.offsetX * 6}px`);
+			// this.style.backgroundPositionX = -e.offsetX * 1.8 + "px";
+			this.style.setProperty('--bgPosition-y', `${-e.offsetY + 50}px`);
+			// this.style.backgroundPositionY = -e.offsetY + 80 + "px";
+			this.style.setProperty('--bgAngle', angleBackground + 100 + 'deg');
+		});
+		
+		container.addEventListener('pointerout', function(e) {
+			this.style.setProperty('--bgPosition-x', '0px');
+			this.style.setProperty('--bgPosition-y', '0px');
+			this.style.setProperty('--bgAngle', '100deg');
+		});
+		
+		container.style.setProperty('--bgPosition-x', '0px');
+		container.style.setProperty('--bgPosition-y', '0px');
+		container.style.setProperty('--bgAngle', '100deg');
+	});
+	
+	console.log("Device motion permission access method not available used regular scripting");
+}
+</script>
