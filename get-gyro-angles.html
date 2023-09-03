@@ -1,0 +1,43 @@
+<button onclick="getGyro();">Permission</button>
+
+<br />
+<br />
+<div id="absolute" class="deviceAbsolute"></div>
+<div id="alpha" class="deviceAlpha"></div>
+<div id="beta" class="deviceBeta"></div>
+<div id="gamma" class="deviceGamma"></div>
+
+<script>
+function handleOrientation(event) {
+    //const absolute = event.absolute;
+    const alpha = event.alpha;
+    const beta = event.beta;
+    const gamma = event.gamma;
+	//document.querySelector(".deviceAbsolute").innerHTML = event.absolute;
+    document.querySelector(".deviceAlpha").innerHTML = event.alpha;
+    document.querySelector(".deviceBeta").innerHTML = event.beta; //event data for X
+    document.querySelector(".deviceGamma").innerHTML = event.gamma; //event data for Y
+}
+
+function getGyro() {
+	if (typeof DeviceMotionEvent.requestPermission === 'function') {
+    // Handle iOS 13+ devices.
+		DeviceMotionEvent.requestPermission().then((state) => {
+			if (state === 'granted') {
+				window.addEventListener('devicemotion', handleOrientation, true);
+				//window.addEventListener('deviceorientation', handleOrientation, true);
+			} else {
+				console.error('Request to access the orientation was rejected');
+			}
+		}).catch(console.error);
+	} else {
+		// Handle regular non iOS 13+ devices.
+		window.addEventListener('devicemotion', handleOrientation, true);
+		//window.addEventListener('deviceorientation', handleOrientation, true);
+	}
+}
+</script>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+
+<script src='https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js'></script>
