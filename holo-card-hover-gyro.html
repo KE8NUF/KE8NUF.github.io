@@ -601,22 +601,22 @@ if (DeviceMotionEvent.requestPermission) {
 				var mover = document.querySelectorAll('.card');
 				
 				containers.forEach(container => {
-					container.addEventListener('deviceorientation', function(e) {
+					container.addEventListener('devicemotion', function(e) {
 						
 						var offset = $(this).offset();
 						var center_x = (offset.left) + ($(this).width() / 2);
 						var center_y = (offset.top) + ($(this).height() / 2);
 						var mouse_x = e.pageX;
 						var mouse_y = e.pageY;
-						var radians = Math.atan2(beta.toFixed(0) - center_x, gamma.toFixed(0) - center_y);
-						var angleBackground = (radians * (180 / Math.PI) * -1) + 90;
+						//var radians = Math.atan2(beta.toFixed(0) - center_x, gamma.toFixed(0) - center_y);
+						//var angleBackground = (radians * (180 / Math.PI) * -1) + 90;
 						
 						container.classList.remove('no-more-slidey');
 						this.style.setProperty('--bgPosition-x', `${-beta.toFixed(0) * 6}px`);
 						// this.style.backgroundPositionX = -e.offsetX * 1.8 + "px";
 						this.style.setProperty('--bgPosition-y', `${-gamma.toFixed(0) + 50}px`);
 						// this.style.backgroundPositionY = -e.offsetY + 80 + "px";
-						this.style.setProperty('--bgAngle', angleBackground + 100 + 'deg');
+						this.style.setProperty('--bgAngle', beta.toFixed(0) + 100 + 'deg');
 					});
 				});
 			});
