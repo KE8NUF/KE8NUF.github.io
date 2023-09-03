@@ -1,0 +1,29 @@
+<button onclick="getGyro();">Permission</button>
+
+<br />
+<br />
+<div id="absolute" class="deviceAbsolute"></div>
+<div id="alpha" class="deviceAlpha"></div>
+<div id="beta" class="deviceBeta"></div>
+<div id="gamma" class="deviceGamma"></div>
+
+<script>
+if (DeviceMotionEvent.requestPermission) {
+	DeviceMotionEvent.requestPermission().then(response => {
+		if (response === "granted") {
+			window.addEventListener("deviceorientation", function(event) {
+				const { alpha, beta, gamma } = event;
+				document.getElementById("alpha").innerHTML = alpha.toFixed(0);
+				document.getElementById("beta").innerHTML = beta.toFixed(0);
+				document.getElementById("gamma").innerHTML = gamma.toFixed(0);
+			});
+		} else {
+			alert('Device orientation permission not granted');
+		}
+	}).catch((err) => {console.log(err)});
+} else {
+   alert("Device motion permission access method not available");
+}
+</script>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
