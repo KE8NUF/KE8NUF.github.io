@@ -70,6 +70,10 @@ body.lightTheme {
 /* PAGE RESET STYLES */
 
 .card {
+	--bgPosition-x: 0px;
+	--bgPosition-y: 0px;
+	--bgAngle: 100deg;
+					
 	position: relative;
 	width: 300px;
 	height: 190px;
@@ -614,16 +618,6 @@ if (DeviceMotionEvent.requestPermission) {
 						// this.style.backgroundPositionY = -e.offsetY + 80 + "px";
 						this.style.setProperty('--bgAngle', angleBackground + 100 + 'deg');
 					});
-					
-					container.addEventListener('pointerout', function(e) {
-						this.style.setProperty('--bgPosition-x', '0px');
-						this.style.setProperty('--bgPosition-y', '0px');
-						this.style.setProperty('--bgAngle', '100deg');
-					});
-					
-					container.style.setProperty('--bgPosition-x', '0px');
-					container.style.setProperty('--bgPosition-y', '0px');
-					container.style.setProperty('--bgAngle', '100deg');
 				});
 			});
 		} else {
