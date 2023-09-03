@@ -585,6 +585,12 @@ body.lightTheme {
 	</div>
 </div>
 
+<br />
+<br />
+<div id="alpha" class="deviceAlpha"></div>
+<div id="beta" class="deviceBeta"></div>
+<div id="gamma" class="deviceGamma"></div>
+
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
 
 <script>
@@ -593,12 +599,12 @@ if (DeviceMotionEvent.requestPermission) {
 		if (response === "granted") {
 			window.addEventListener("deviceorientation", function(event) {
 				const { alpha, beta, gamma } = event;
-				// document.getElementById("alpha").innerHTML = alpha.toFixed(0); //equals Z access
-				// document.getElementById("beta").innerHTML = beta.toFixed(0); //equals X access
-				// document.getElementById("gamma").innerHTML = gamma.toFixed(0); //equals Y access
+				document.getElementById("alpha").innerHTML = alpha.toFixed(0); //equals Z access
+				document.getElementById("beta").innerHTML = beta.toFixed(0); //equals X access
+				document.getElementById("gamma").innerHTML = gamma.toFixed(0); //equals Y access
 				
-				var containers = document.querySelectorAll('.card');
-				var mover = document.querySelectorAll('.card');
+				const containers = document.querySelectorAll('.card');
+				const mover = document.querySelectorAll('.card');
 				
 				containers.forEach(container => {
 					container.classList.remove('no-more-slidey');
