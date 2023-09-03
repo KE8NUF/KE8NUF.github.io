@@ -606,12 +606,12 @@ if (DeviceMotionEvent.requestPermission) {
 				const containers = document.querySelectorAll('.card');
 				const mover = document.querySelectorAll('.card');
 				
-				containers.forEach(container => {
+				//containers.forEach(container => {
 					container.classList.remove('no-more-slidey');
-					this.style.setProperty('--bgPosition-x', -beta.toFixed(0) * 6 + 'px');
-					this.style.setProperty('--bgPosition-y', -gamma.toFixed(0) + 50 + 'px');
-					this.style.setProperty('--bgAngle', alpha.toFixed(0) + 30 + 'deg');
-				});
+					containers.style.setProperty('--bgPosition-x', -beta.toFixed(0) * 6 + 'px');
+					containers.style.setProperty('--bgPosition-y', -gamma.toFixed(0) + 50 + 'px');
+					containers.style.setProperty('--bgAngle', alpha.toFixed(0) + 30 + 'deg');
+				//});
 			});
 		} else {
 			alert('Sorry Device Orientation Permission Not Granted');
