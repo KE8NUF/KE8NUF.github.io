@@ -9,14 +9,22 @@
 
 <script>
 function handleOrientation(event) {
-    //const absolute = event.absolute;
-    const alpha = event.alpha;
-    const beta = event.beta;
-    const gamma = event.gamma;
-	//document.querySelector(".deviceAbsolute").innerHTML = event.absolute;
-    document.querySelector(".deviceAlpha").innerHTML = event.alpha;
-    document.querySelector(".deviceBeta").innerHTML = event.beta; //event data for X
-    document.querySelector(".deviceGamma").innerHTML = event.gamma; //event data for Y
+	if (DeviceMotionEvent.requestPermission) {
+		DeviceMotionEvent.requestPermission().then(response => {
+			if (response == 'granted') {
+				window.addEventListener('deviceorientation', function(event) {
+					const { alpha, beta, gamma } = event;
+					document.getElementById('alpha').innerHTML = alpha.toFixed(0);
+					document.getElementById('beta').innerHTML = beta.toFixed(0);
+					document.getElementById('gamma').innerHTML = gamma.toFixed(0);
+				});
+			} else {
+				alert('Device orientation permission not granted');
+			}
+		}).catch((err) => {console.log(err)});
+	} else {
+	   alert('Device motion permission access method not available');
+	}
 }
 
 function getGyro() {
