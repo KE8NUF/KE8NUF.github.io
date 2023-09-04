@@ -598,12 +598,12 @@ body.lightTheme {
 <script>
 if (DeviceMotionEvent.requestPermission) {
 	DeviceMotionEvent.requestPermission().then(response => {
-		if (response === "granted") {
-			window.addEventListener("deviceorientation", function(event) {
+		if (response == 'granted') {
+			window.addEventListener('deviceorientation', function(event) {
 				const { alpha, beta, gamma } = event;
-				document.getElementById("alpha").innerHTML = alpha.toFixed(0); //equals Z access
-				document.getElementById("beta").innerHTML = beta.toFixed(0); //equals X access
-				document.getElementById("gamma").innerHTML = gamma.toFixed(0); //equals Y access
+				document.getElementById('alpha').innerHTML = alpha.toFixed(0); //equals Z access
+				document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X access
+				document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y access
 				
 				const containers = document.querySelectorAll('.card');
 				const mover = document.querySelectorAll('.card');
@@ -671,6 +671,6 @@ if (DeviceMotionEvent.requestPermission) {
 		container.style.setProperty('--bgAngle', '100deg');
 	});
 	
-	console.log("Device motion permission access method not available used regular scripting");
+	console.log('Device motion permission access method not available used regular scripting');
 }
 </script>
