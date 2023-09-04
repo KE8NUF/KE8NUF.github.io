@@ -585,7 +585,7 @@ body.lightTheme {
 	</div>
 </div>
 
-<button onclick="getGyro();">Permission Butt'on</button>
+<button onclick="getGyro();">Permission Button</button>
 
 <br />
 <br />
@@ -608,8 +608,8 @@ function getGyro(event) {
 					document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position.
 					document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position.
 					
-					document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', -event.beta.toFixed(0) * 6 + 'px');
-					document.getElementById('ccard-demo').style.setProperty('--bgPosition-y', -event.gamma.toFixed(0) + 50 + 'px');
+					document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', -event.beta.toFixed(0) * 9 + 'px');
+					document.getElementById('ccard-demo').style.setProperty('--bgPosition-y', -event.gamma.toFixed(0) + 80 + 'px');
 					document.getElementById('ccard-demo').style.setProperty('--bgAngle', alpaha.toFixed(0) + 100 + 'deg');
 				});
 			} else {
