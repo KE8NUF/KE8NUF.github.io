@@ -596,29 +596,41 @@ body.lightTheme {
 <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 
 <script>
-if (DeviceMotionEvent.requestPermission) {
-	DeviceMotionEvent.requestPermission().then(response => {
-		if (response == 'granted') {
-			window.addEventListener('deviceorientation', function(event) {
-				const { alpha, beta, gamma } = event;
-				document.getElementById('alpha').innerHTML = alpha.toFixed(0); //equals Z access
-				document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X access
-				document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y access
-				
-				const containers = document.querySelectorAll('.card');
-				const mover = document.querySelectorAll('.card');
-				
-				containers.forEach(container => {
-					container.classList.remove('no-more-slidey');
-					containers.style.setProperty('--bgPosition-x', -beta.toFixed(0) * 6 + 'px');
-					containers.style.setProperty('--bgPosition-y', -gamma.toFixed(0) + 50 + 'px');
-					containers.style.setProperty('--bgAngle', alpha.toFixed(0) + 30 + 'deg');
+function handleOrientation(event) {
+	if (DeviceMotionEvent.requestPermission) {
+		DeviceMotionEvent.requestPermission().then(response => {
+			if (response == 'granted') {
+				window.addEventListener('deviceorientation', function(event) {
+					const { alpha, beta, gamma } = event;
+					document.getElementById('alpha').innerHTML = alpha.toFixed(0);
+					document.getElementById('beta').innerHTML = beta.toFixed(0);
+					document.getElementById('gamma').innerHTML = gamma.toFixed(0);
 				});
-			});
-		} else {
-			alert('Sorry Device Orientation Permission Not Granted');
-		}
-	}).catch((err) => {console.log(err)});
+			} else {
+				alert('Device orientation permission not granted');
+			}
+		}).catch((err) => {console.log(err)});
+	} else {
+	   alert('Device motion permission access method not available');
+	}
+}
+
+function getGyro() {
+	if (typeof DeviceMotionEvent.requestPermission === 'function') {
+    // Handle iOS 13+ devices.
+		DeviceMotionEvent.requestPermission().then((state) => {
+			if (state === 'granted') {
+				window.addEventListener('devicemotion', handleOrientation, true);
+				//window.addEventListener('deviceorientation', handleOrientation, true);
+			} else {
+				console.error('Request to access the orientation was rejected');
+			}
+		}).catch(console.error);
+	} else {
+		// Handle regular non iOS 13+ devices.
+		window.addEventListener('devicemotion', handleOrientation, true);
+		//window.addEventListener('deviceorientation', handleOrientation, true);
+	}
 } else {
 	// mouse items, touch items, pointer
 	// pointerdown = mousedown touchstart = mouseover
