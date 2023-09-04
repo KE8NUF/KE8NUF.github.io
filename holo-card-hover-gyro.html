@@ -598,7 +598,7 @@ body.lightTheme {
 <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 
 <script>
-function handleOrientation(event) {
+function getGyro(event) {
 	if (DeviceMotionEvent.requestPermission) {
 		DeviceMotionEvent.requestPermission().then(response => {
 			if (response == 'granted') {
@@ -617,78 +617,58 @@ function handleOrientation(event) {
 			}
 		}).catch((err) => {console.log(err)});
 	} else {
-	   alert('Device motion permission access method not available');
-	}
-}
+		// mouse items, touch items, pointer
+		// pointerdown = mousedown touchstart = mouseover
+		// pointerup = mouseup = touchend
+		// pointermove = mousemove = touchmove
+		// pointerover = mouseover
+		// pointerout = mouseout
+		// pointerenter = mouseenter
+		// pointerleave = mouseleave
 
-function getGyro() {
-	if (typeof DeviceMotionEvent.requestPermission === 'function') {
-    // Handle iOS 13+ devices.
-		DeviceMotionEvent.requestPermission().then((state) => {
-			if (state === 'granted') {
-				window.addEventListener('devicemotion', handleOrientation, true);
-				//window.addEventListener('deviceorientation', handleOrientation, true);
-			} else {
-				console.error('Request to access the orientation was rejected');
-			}
-		}).catch(console.error);
-	} else {
-		// Handle regular non iOS 13+ devices.
-		window.addEventListener('devicemotion', handleOrientation, true);
-		//window.addEventListener('deviceorientation', handleOrientation, true);
-	}
-} else {
-	// mouse items, touch items, pointer
-	// pointerdown = mousedown touchstart = mouseover
-	// pointerup = mouseup = touchend
-	// pointermove = mousemove = touchmove
-	// pointerover = mouseover
-	// pointerout = mouseout
-	// pointerenter = mouseenter
-	// pointerleave = mouseleave
+		// var container = document.querySelector("#card-number");
+		// var mover = document.querySelector("#card-number");
 
-	// var container = document.querySelector("#card-number");
-	// var mover = document.querySelector("#card-number");
+		var containers = document.querySelectorAll('.card');
+		var mover = document.querySelectorAll('.card');
 
-	var containers = document.querySelectorAll('.card');
-	var mover = document.querySelectorAll('.card');
+		var angle = document.querySelectorAll('.card');
+		var position2 = {
+			x: window.innerWidth,
+			y: window.innerHeight
+		};
 
-	var angle = document.querySelectorAll('.card');
-	var position2 = {
-		x: window.innerWidth,
-		y: window.innerHeight
-	};
-
-	containers.forEach(container => {
-		container.addEventListener('pointermove', function(e) {
+		containers.forEach(container => {
+			container.addEventListener('pointermove', function(e) {
+				
+				var offset = $(this).offset();
+				var center_x = (offset.left) + ($(this).width() / 2);
+				var center_y = (offset.top) + ($(this).height() / 2);
+				var mouse_x = e.pageX;
+				var mouse_y = e.pageY;
+				var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
+				var angleBackground = (radians * (180 / Math.PI) * -1) + 90;
+				
+				container.classList.remove('no-more-slidey');
+				this.style.setProperty('--bgPosition-x', `${-e.offsetX * 6}px`);
+				// this.style.backgroundPositionX = -e.offsetX * 1.8 + "px";
+				this.style.setProperty('--bgPosition-y', `${-e.offsetY + 50}px`);
+				// this.style.backgroundPositionY = -e.offsetY + 80 + "px";
+				this.style.setProperty('--bgAngle', angleBackground + 100 + 'deg');
+			});
 			
-			var offset = $(this).offset();
-			var center_x = (offset.left) + ($(this).width() / 2);
-			var center_y = (offset.top) + ($(this).height() / 2);
-			var mouse_x = e.pageX;
-			var mouse_y = e.pageY;
-			var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
-			var angleBackground = (radians * (180 / Math.PI) * -1) + 90;
+			container.addEventListener('pointerout', function(e) {
+				this.style.setProperty('--bgPosition-x', '0px');
+				this.style.setProperty('--bgPosition-y', '0px');
+				this.style.setProperty('--bgAngle', '100deg');
+			});
 			
-			container.classList.remove('no-more-slidey');
-			this.style.setProperty('--bgPosition-x', `${-e.offsetX * 6}px`);
-			// this.style.backgroundPositionX = -e.offsetX * 1.8 + "px";
-			this.style.setProperty('--bgPosition-y', `${-e.offsetY + 50}px`);
-			// this.style.backgroundPositionY = -e.offsetY + 80 + "px";
-			this.style.setProperty('--bgAngle', angleBackground + 100 + 'deg');
+			container.style.setProperty('--bgPosition-x', '0px');
+			container.style.setProperty('--bgPosition-y', '0px');
+			container.style.setProperty('--bgAngle', '100deg');
 		});
 		
-		container.addEventListener('pointerout', function(e) {
-			this.style.setProperty('--bgPosition-x', '0px');
-			this.style.setProperty('--bgPosition-y', '0px');
-			this.style.setProperty('--bgAngle', '100deg');
-		});
-		
-		container.style.setProperty('--bgPosition-x', '0px');
-		container.style.setProperty('--bgPosition-y', '0px');
-		container.style.setProperty('--bgAngle', '100deg');
-	});
-	
-	console.log('Device motion permission access method not available used regular scripting');
+		console.log('Device motion permission access method not available used regular scripting');
+	}
 }
 </script>
