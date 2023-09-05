@@ -536,6 +536,16 @@ body.lightTheme {
 	padding: 0;
 	mix-blend-mode: overlay;
 }
+
+.mobile-tap-message {
+	font-size: .8em;
+	text-align: center;
+	padding: 20px 0;
+	margin: 0 auto;
+	color: rgb(97, 98, 107);
+	display: none;
+	opacity: 0;
+}
 </style>
 
 <div class="card-container">
@@ -583,6 +593,8 @@ body.lightTheme {
 			<div class="card-chip-foil"></div>
 		</div>
 	</div>
+	
+	<div class="mobile-tap-message">If Apple mobile tap card.</div>
 </div>
 
 <!-- <button onclick="getGyro();">Permissions Buttons</button>
@@ -670,6 +682,14 @@ function getGyro(event) {
 		
 		console.log('Device motion permission access method not available used regular scripting');
 	}
+}
+
+if(window.orientation !== 'undefined') {
+	//this is a mobile browser.
+	$('.mobile-tap-message').css({
+		'display': 'block',
+		'opacity': '1'
+	});
 }
 
 $('#ccard-demo').on('touchend', function() {
