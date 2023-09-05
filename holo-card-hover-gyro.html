@@ -671,5 +671,8 @@ function getGyro(event) {
 		console.log('Device motion permission access method not available used regular scripting');
 	}
 }
-getGyro();
+
+$('#ccard-demo').on('hover touchend', function() {
+	getGyro();
+});
 </script>
