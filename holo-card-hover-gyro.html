@@ -585,13 +585,13 @@ body.lightTheme {
 	</div>
 </div>
 
-<button onclick="getGyro();">Permissions Buttons</button>
+<!-- <button onclick="getGyro();">Permissions Buttons</button>
 
 <br />
 <br />
 <div id="alpha" class="deviceAlpha"></div>
 <div id="beta" class="deviceBeta"></div>
-<div id="gamma" class="deviceGamma"></div>
+<div id="gamma" class="deviceGamma"></div> -->
 
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
 
@@ -604,9 +604,9 @@ function getGyro(event) {
 			if (response == 'granted') {
 				window.addEventListener('deviceorientation', function(event) {
 					const { alpha, beta, gamma } = event;
-					document.getElementById('alpha').innerHTML = alpha.toFixed(0); //rotation of device in degrees.
-					document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position.
-					document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position.
+					//document.getElementById('alpha').innerHTML = alpha.toFixed(0); //rotation of device in degrees.
+					//document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position.
+					//document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position.
 					
 					document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', -event.beta.toFixed(0) * 12 + 'px');
 					document.getElementById('ccard-demo').style.setProperty('--bgPosition-y', -event.gamma.toFixed(0) + 100 + 'px');
@@ -671,4 +671,5 @@ function getGyro(event) {
 		console.log('Device motion permission access method not available used regular scripting');
 	}
 }
+getGyro();
 </script>
