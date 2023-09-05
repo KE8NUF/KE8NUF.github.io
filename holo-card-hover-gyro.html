@@ -608,9 +608,9 @@ function getGyro(event) {
 					//document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position.
 					//document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position.
 					
-					document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', -event.beta.toFixed(0) * 12 + 'px');
+					document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', -event.beta.toFixed(0) * 13 + 'px');
 					document.getElementById('ccard-demo').style.setProperty('--bgPosition-y', -event.gamma.toFixed(0) + 100 + 'px');
-					document.getElementById('ccard-demo').style.setProperty('--bgAngle', alpaha.toFixed(0) -320 + 'deg');
+					document.getElementById('ccard-demo').style.setProperty('--bgAngle', alpaha.toFixed(0) -325 + 'deg');
 				});
 			} else {
 				alert('Device orientation permission not granted');
