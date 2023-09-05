@@ -684,7 +684,7 @@ function getGyro(event) {
 	}
 }
 
-if(window.orientation !== 'undefined') {
+if(navigator.userAgent.indexOf('Mobi') > -1) {
 	//this is a mobile browser.
 	$('.mobile-tap-message').css({
 		'display': 'block',
