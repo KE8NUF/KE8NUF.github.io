@@ -617,7 +617,7 @@ function getGyro(event) {
 				window.addEventListener('deviceorientation', function(event) {
 					const { alpha, beta, gamma } = event;
 					const compassAngle = -event.alpha.toFixed(0) + event.beta.toFixed(0) * event.gamma.toFixed(0) / 90;
-						compassAngle -= Math.floor(compass / 360) * 360);
+					compassAngle -= Math.floor(compass / 360) * 360;
 					//document.getElementById('alpha').innerHTML = alpha.toFixed(0); //rotation of device in degrees.
 					//document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position.
 					//document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position.
