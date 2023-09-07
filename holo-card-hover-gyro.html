@@ -329,11 +329,27 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
 	
+	/* third gradient */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(158, 119, 252, 1), /* darker purple */
+		rgba(171, 104, 221, 1), /* purple */
+		rgba(113, 164, 232, 1), /* blue */
+		rgba(128, 224, 198, 1), /* teal */
+		rgba(171, 229, 159, 1), /* green */
+		rgba(218, 195, 128, 1), /* yellow gold */
+		rgba(243, 104, 106, 1), /* red */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
 	background-size: 100% 100%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
 	mix-blend-mode: hard-light; /* use with first gradient */
 	mix-blend-mode: color-dodge; /* use with second gradient */
+	mix-blend-mode: lighten; /* use with third gradient */
 	
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -459,11 +475,27 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
 	
+	/* third gradient */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(158, 119, 252, 1), /* darker purple */
+		rgba(171, 104, 221, 1), /* purple */
+		rgba(113, 164, 232, 1), /* blue */
+		rgba(128, 224, 198, 1), /* teal */
+		rgba(171, 229, 159, 1), /* green */
+		rgba(218, 195, 128, 1), /* yellow gold */
+		rgba(243, 104, 106, 1), /* red */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
 	background-size: 100% 100%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
 	mix-blend-mode: hard-light; /* use with first gradient */
 	mix-blend-mode: overlay; /* use with second gradient */
+	mix-blend-mode: lighten; /* use with third gradient */
 	
 	z-index: 0;
 }
