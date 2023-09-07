@@ -301,21 +301,6 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
 	
-	/* second gradient */
-	background: linear-gradient(var(--bgAngle),
-		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
-		rgba(0, 131, 222, 1), /* my add */
-		rgba(0, 89, 222, 1), /* my add */
-		rgba(0, 222, 114, 1),
-		rgba(255, 226, 28, 1),
-		rgba(255, 141, 6, 1),
-		rgba(251, 42, 63, 1),
-		rgba(178, 1, 238, 1),
-		rgba(109, 9, 25, 1),
-		rgba(0, 131, 222, 1), /* my add */
-		rgba(97, 98, 107, 1) 86.5% /* gray text color */
-	);
-	
 	/* third gradient */
 	background:
 		conic-gradient(
@@ -366,16 +351,32 @@ body.lightTheme {
 		rgb(194, 255, 182), /* green */
 		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
+	
+	/* second gradient */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(0, 131, 222, 1), /* my add */
+		rgba(0, 89, 222, 1), /* my add */
+		rgba(0, 222, 114, 1),
+		rgba(255, 226, 28, 1),
+		rgba(255, 141, 6, 1),
+		rgba(251, 42, 63, 1),
+		rgba(178, 1, 238, 1),
+		rgba(109, 9, 25, 1),
+		rgba(0, 131, 222, 1), /* my add */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
 		
 	background-size: 100% 100%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
-	mix-blend-mode: color-dodge; /* use with second gradient */
 	background-blend-mode: screen, difference, normal; /* use with third gradient */
 	mix-blend-mode: lighten; /* use with third gradient */
 	background-blend-mode: screen, color-dodge, overlay, difference, color-dodge, normal; /* use with fourth gradient */
 	mix-blend-mode: hard-light; /* use with fourth gradient */
 	mix-blend-mode: hard-light; /* use with first gradient */
+	background-blend-mode: normal;
+	mix-blend-mode: hard-light; /* use with second gradient */
 	
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -387,13 +388,7 @@ body.lightTheme {
     text-fill-color: transparent;
 	color: transparent;
 	
-	opacity: 0;
-}
-
-.card:hover .card-number-foil,
-.card:focus .card-number-foil,
-.card.active .card-number-foil {
-	opacity: 1;
+	/* opacity: 0; */
 }
 
 .card-number-foil:before {
@@ -496,21 +491,6 @@ body.lightTheme {
 	border-radius: .5em;
 	transition: all 600ms ease;
 	
-	/* second gradient */
-	background: linear-gradient(var(--bgAngle),
-		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
-		rgba(0, 131, 222, 1), /* my add */
-		rgba(0, 89, 222, 1), /* my add */
-		rgba(0, 222, 114, 1),
-		rgba(255, 226, 28, 1),
-		rgba(255, 141, 6, 1),
-		rgba(251, 42, 63, 1),
-		rgba(178, 1, 238, 1),
-		rgba(109, 9, 25, 1),
-		rgba(0, 131, 222, 1), /* my add */
-		rgba(97, 98, 107, 1) 86.5% /* gray text color */
-	);
-	
 	/* third gradient */
 	background:
 		conic-gradient(
@@ -562,27 +542,37 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
 	
+	/* second gradient */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(0, 131, 222, 1), /* my add */
+		rgba(0, 89, 222, 1), /* my add */
+		rgba(0, 222, 114, 1),
+		rgba(255, 226, 28, 1),
+		rgba(255, 141, 6, 1),
+		rgba(251, 42, 63, 1),
+		rgba(178, 1, 238, 1),
+		rgba(109, 9, 25, 1),
+		rgba(0, 131, 222, 1), /* my add */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
 	background-size: 100% 100%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
-	mix-blend-mode: soft-light; /* use with second gradient */
 	background-blend-mode: screen, difference, normal; /* use with third gradient */
 	mix-blend-mode: lighten; /* use with third gradient */
 	background-blend-mode: screen, color-dodge, overlay, difference, color-dodge, normal; /* use with fourth gradient */
 	mix-blend-mode: hard-light; /* use with fourth gradient */
 	mix-blend-mode: hard-light; /* use with first gradient */
+	background-blend-mode: normal;
+	mix-blend-mode: hard-light; /* use with second gradient */
 	
 	-webkit-filter: blur(10px);
 	filter: blur(10px);
 	
 	z-index: 0;
-	opacity: 0;
-}
-
-.card:hover .card-flag .card-security-foil,
-.card:focus .card-flag .card-security-foil,
-.card.active .card-flag .card-security-foil {
-	opacity: 1;
+	/* opacity: 0; */
 }
 
 .card-chip-wrapper {
@@ -744,7 +734,7 @@ function getGyro(event) {
 					//old working
 					document.getElementById('ccard-demo').style.setProperty('--bgAngle', -alpaha.toFixed(0) / 2 + 60 + 'deg');
 					// document.getElementByID('ccard-demo').style.setProperty('--bgAngle', compassAngle / 2 + 60 + 'deg');
-					document.getElementByID('ccard-demo').classList.add('active');
+					// document.getElementByID('ccard-demo').classList.add('active');
 				});
 			} else {
 				alert('Device orientation permission not granted');
@@ -789,14 +779,14 @@ function getGyro(event) {
 				this.style.setProperty('--bgPosition-y', `${-e.offsetY + 50}px`);
 				// this.style.backgroundPositionY = -e.offsetY + 80 + "px";
 				this.style.setProperty('--bgAngle', angleBackground + 100 + 'deg');
-				this.classList.add('active');
+				// this.classList.add('active');
 			});
 			
 			container.addEventListener('pointerout', function(e) {
 				this.style.setProperty('--bgPosition-x', '0px');
 				this.style.setProperty('--bgPosition-y', '0px');
 				this.style.setProperty('--bgAngle', '100deg');
-				this.classList.remove('active');
+				// this.classList.remove('active');
 			});
 			
 			container.style.setProperty('--bgPosition-x', '0px');
