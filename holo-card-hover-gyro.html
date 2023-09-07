@@ -283,7 +283,7 @@ body.lightTheme {
 	font-size: 1.15em;
 	text-align: right;
 	
-	transition: all 400ms ease;
+	transition: all 300ms ease;
 	
 	background: linear-gradient(var(--bgAngle),
 		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
@@ -301,44 +301,6 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
 	
-	/* third gradient */
-	background:
-		conic-gradient(
-			from var(--bgAngle) at 50% 50%,
-			rgba(0, 0, 0, 1) 0deg,
-			rgba(255, 255, 255, 0.7) 17deg,
-			rgba(0, 0, 0, 1) 88deg,
-			rgba(255, 255, 255, 0.7) 152deg,
-			rgba(0, 0, 0, 1) 225deg,
-			rgba(255, 255, 255, 0.7) 289deg,
-			rgba(0, 0, 0, 1) 360deg
-		),
-		conic-gradient(
-			from var(--bgAngle) at 50% 50%,
-			rgba(0, 0, 0, 1) 0deg,
-			rgba(255, 255, 255, 1) 30deg,
-			rgba(0, 0, 0, 1) 96deg,
-			rgba(255, 255, 255, 1) 169deg,
-			rgba(0, 0, 0, 1) 229deg,
-			rgba(255, 255, 255, 1) 285deg,
-			rgba(0, 0, 0, 1) 360deg
-		),
-		radial-gradient(
-			88% 127% at 13% 13%,
-			rgba(248, 110, 251, 1) 8%,
-			rgba(115, 66, 255, 1) 35%,
-			rgba(66, 232, 255, 1) 63%,
-			rgba(66, 255, 107, 1) 100%
-		);
-	
-	/* fourth gradient */
-	background: radial-gradient(50% 123.47% at 50% 50%, rgba(0, 255, 148, 1) 0%, rgba(255, 0, 199, 1) 100%), 
-		linear-gradient(calc(var(--bgAngle) * 2), rgba(33, 49, 0, 1) 0%, rgba(255, 0, 0, 1) 100%), 
-		linear-gradient(360deg, rgba(0, 41, 255, 1) 0%, rgba(143, 255, 0, 1) 100%), 
-		linear-gradient(calc(var(--bgAngle) / 2), rgba(0, 198, 162, 1) 0%, rgba(106, 69, 168, 1) 100%), 
-		radial-gradient(100% 148.07% at 0% 0%, rgba(255, 255, 255, 1) 0%, rgba(29, 205, 0, 1) 100%),
-		linear-gradient(var(--bgAngle), rgba(97, 98, 107, 1) 20%, transparent 40%, rgba(97, 98, 107, 1) 60%, transparent 80%, rgba(97, 98, 107, 1) 100%);
-		
 	/* first gradient */
 	background: linear-gradient(var(--bgAngle),
 		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
@@ -366,17 +328,12 @@ body.lightTheme {
 		rgba(0, 131, 222, 1), /* my add */
 		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
-		
+	
 	background-size: 100% 100%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
-	background-blend-mode: screen, difference, normal; /* use with third gradient */
-	mix-blend-mode: lighten; /* use with third gradient */
-	background-blend-mode: screen, color-dodge, overlay, difference, color-dodge, normal; /* use with fourth gradient */
-	mix-blend-mode: hard-light; /* use with fourth gradient */
 	mix-blend-mode: hard-light; /* use with first gradient */
-	background-blend-mode: normal;
-	mix-blend-mode: hard-light; /* use with second gradient */
+	mix-blend-mode: color-dodge; /* use with second gradient */
 	
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -387,22 +344,6 @@ body.lightTheme {
     background-clip: text;
     text-fill-color: transparent;
 	color: transparent;
-	
-	/* opacity: 0; */
-}
-
-.card-number-foil:before {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	
-	-webkit-backdrop-filter: blur(2px);
-	backdrop-filter: blur(2px);
-	
 }
 
 .card-valid-warpper {
@@ -489,46 +430,7 @@ body.lightTheme {
 	height: 250%;
 	transform: translate(0%, -50%);
 	border-radius: .5em;
-	transition: all 600ms ease;
 	
-	/* third gradient */
-	background:
-		conic-gradient(
-			from var(--bgAngle) at 50% 50%,
-			rgba(0, 0, 0, 1) 0deg,
-			rgba(255, 255, 255, 0.7) 17deg,
-			rgba(0, 0, 0, 1) 88deg,
-			rgba(255, 255, 255, 0.7) 152deg,
-			rgba(0, 0, 0, 1) 225deg,
-			rgba(255, 255, 255, 0.7) 289deg,
-			rgba(0, 0, 0, 1) 360deg
-		),
-		conic-gradient(
-			from var(--bgAngle) at 50% 50%,
-			rgba(0, 0, 0, 1) 0deg,
-			rgba(255, 255, 255, 1) 30deg,
-			rgba(0, 0, 0, 1) 96deg,
-			rgba(255, 255, 255, 1) 169deg,
-			rgba(0, 0, 0, 1) 229deg,
-			rgba(255, 255, 255, 1) 285deg,
-			rgba(0, 0, 0, 1) 360deg
-		),
-		radial-gradient(
-			88% 127% at 13% 13%,
-			rgba(248, 110, 251, 1) 8%,
-			rgba(115, 66, 255, 1) 35%,
-			rgba(66, 232, 255, 1) 63%,
-			rgba(66, 255, 107, 1) 100%
-		);
-		
-	/* fourth gradient */
-	background: radial-gradient(50% 123.47% at 50% 50%, rgba(0, 255, 148, 1) 0%, rgba(255, 0, 199, 1) 100%), 
-		linear-gradient(calc(var(--bgAngle) * 2), rgba(33, 49, 0, 1) 0%, rgba(255, 0, 0, 1) 100%), 
-		linear-gradient(360deg, rgba(0, 41, 255, 1) 0%, rgba(143, 255, 0, 1) 100%), 
-		linear-gradient(calc(var(--bgAngle) / 2), rgba(0, 198, 162, 1) 0%, rgba(106, 69, 168, 1) 100%), 
-		radial-gradient(100% 148.07% at 0% 0%, rgba(255, 255, 255, 1) 0%, rgba(29, 205, 0, 1) 100%),
-		linear-gradient(var(--bgAngle), rgba(97, 98, 107, 1) 20%, transparent 40%, rgba(97, 98, 107, 1) 60%, transparent 80%, rgba(97, 98, 107, 1) 100%);
-		
 	/* first gradient */
 	background: linear-gradient(var(--bgAngle),
 		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
@@ -560,19 +462,10 @@ body.lightTheme {
 	background-size: 100% 100%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
-	background-blend-mode: screen, difference, normal; /* use with third gradient */
-	mix-blend-mode: lighten; /* use with third gradient */
-	background-blend-mode: screen, color-dodge, overlay, difference, color-dodge, normal; /* use with fourth gradient */
-	mix-blend-mode: hard-light; /* use with fourth gradient */
 	mix-blend-mode: hard-light; /* use with first gradient */
-	background-blend-mode: normal;
-	mix-blend-mode: hard-light; /* use with second gradient */
-	
-	-webkit-filter: blur(10px);
-	filter: blur(10px);
+	mix-blend-mode: soft-light; /* use with second gradient */
 	
 	z-index: 0;
-	/* opacity: 0; */
 }
 
 .card-chip-wrapper {
@@ -723,18 +616,13 @@ function getGyro(event) {
 			if (response == 'granted') {
 				window.addEventListener('deviceorientation', function(event) {
 					const { alpha, beta, gamma } = event;
-					const compassAngle = -event.alpha.toFixed(0) + event.beta.toFixed(0) * event.gamma.toFixed(0) / 90;
-					compassAngle -= Math.floor(compassAngle / 360) * 360;
-					//document.getElementById('alpha').innerHTML = alpha.toFixed(0); //rotation of device in degrees Z access {0 to 360 }.
-					//document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position {-180 to 180 }.
-					//document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position {-90 to 90 }.
+					//document.getElementById('alpha').innerHTML = alpha.toFixed(0); //rotation of device in degrees.
+					//document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position.
+					//document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position.
 					
 					document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', -event.beta.toFixed(0) * 14 + 'px');
-					document.getElementById('ccard-demo').style.setProperty('--bgPosition-y', -event.gamma.toFixed(0) * 1.8 + 'px');
-					//old working
+					document.getElementById('ccard-demo').style.setProperty('--bgPosition-y', -event.gamma.toFixed(0) + 65 + 'px');
 					document.getElementById('ccard-demo').style.setProperty('--bgAngle', -alpaha.toFixed(0) / 2 + 60 + 'deg');
-					// document.getElementByID('ccard-demo').style.setProperty('--bgAngle', compassAngle / 2 + 60 + 'deg');
-					// document.getElementByID('ccard-demo').classList.add('active');
 				});
 			} else {
 				alert('Device orientation permission not granted');
@@ -779,14 +667,12 @@ function getGyro(event) {
 				this.style.setProperty('--bgPosition-y', `${-e.offsetY + 50}px`);
 				// this.style.backgroundPositionY = -e.offsetY + 80 + "px";
 				this.style.setProperty('--bgAngle', angleBackground + 100 + 'deg');
-				// this.classList.add('active');
 			});
 			
 			container.addEventListener('pointerout', function(e) {
 				this.style.setProperty('--bgPosition-x', '0px');
 				this.style.setProperty('--bgPosition-y', '0px');
 				this.style.setProperty('--bgAngle', '100deg');
-				// this.classList.remove('active');
 			});
 			
 			container.style.setProperty('--bgPosition-x', '0px');
