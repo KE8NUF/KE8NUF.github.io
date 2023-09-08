@@ -734,9 +734,36 @@ function getGyro(event) {
 					document.getElementById('ccard-demo').style.setProperty('--bgPosition-y', -event.gamma.toFixed(0) * 6 + 'px');
 					document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-y', event.gamma.toFixed(0) * 6 + 'px');
 					//document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpaha.toFixed(0) / 2 + 100 + 'deg');
-					const compass = -(event.alpha + event.beta * event.gamma / 90);
-					compass -= Math.floor(compass / 360) * 360;
-					document.getElementById('ccard-demo').style.setProperty('--bgAngle', compass + 'deg');
+					
+					//const compass = -(event.alpha + event.beta * event.gamma / 90);
+					//compass -= Math.floor(compass / 360) * 360;
+					//document.getElementById('ccard-demo').style.setProperty('--bgAngle', compass + 'deg');
+					
+					const _x = beta ? beta * degtorad : 0; // beta value
+					const _y = gamma ? gamma * degtorad : 0; // gamma value
+					const _z = alpha ? alpha * degtorad : 0; // alpha value
+					
+					const cX = Math.cos(_x);
+					const cY = Math.cos(_y);
+					const cZ = Math.cos(_z);
+					const sX = Math.sin(_x);
+					const sY = Math.sin(_y);
+					const sZ = Math.sin(_z);
+					
+					// Calculate Vx and Vy components
+					const Vx = - cZ * sY - sZ * sX * cY;
+					const Vy = - sZ * sY + cZ * sX * cY;
+					
+					// Calculate compass heading to use whole unit of circle
+					const compassHeading = Math.atan(Vx / Vy);
+					
+					// Convert compass heading to use hole unit of circle
+					if(Vy < 0) {
+						compassHeading += Math.PI;
+					} else if(Vx < 0) {
+						compassHeading += 2 * Math.PI;
+					}
+					document.getElementById('ccard-demo').style.setProperty('--bgAngle', compassHeading * (180 / Math.PI) + 'deg');
 				});
 			} else {
 				alert('Device orientation permission not granted');
