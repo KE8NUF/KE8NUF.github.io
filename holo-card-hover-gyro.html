@@ -292,6 +292,7 @@ body.lightTheme {
 	margin: 0px;
 	padding: 0px;
 	border: 0 solid transparent;
+	overflow: hidden;
 	
 	transition: all 300ms ease;
 	
@@ -386,6 +387,7 @@ body.lightTheme {
 	margin: 0px;
 	padding: 0px;
 	border: 0 solid transparent;
+	overflow: hidden;
 	
 	transition: all 300ms ease;
 	
@@ -727,8 +729,8 @@ function getGyro(event) {
 					//document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position.
 					//document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position.
 					
-					document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', -event.beta.toFixed(0) * 20 + 'px');
-					document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-x', event.beta.toFixed(0) * 18 + 'px');
+					document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', -event.beta.toFixed(0) * 16 + 'px');
+					document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-x', event.beta.toFixed(0) * 14 + 'px');
 					document.getElementById('ccard-demo').style.setProperty('--bgPosition-y', -event.gamma.toFixed(0) * 6 + 'px');
 					document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-y', event.gamma.toFixed(0) * 6 + 'px');
 					document.getElementById('ccard-demo').style.setProperty('--bgAngle', -alpaha.toFixed(0) / 2 + 100 + 'deg');
