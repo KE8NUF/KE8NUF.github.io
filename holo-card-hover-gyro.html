@@ -723,8 +723,8 @@ function getGyro(event) {
 					//document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position.
 					//document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position.
 					
-					document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', -event.beta.toFixed(0) * 30 + 'px');
-					document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-x', event.beta.toFixed(0) * 30 + 'px');
+					document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', -event.beta.toFixed(0) * 28 + 'px');
+					document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-x', event.beta.toFixed(0) * 28 + 'px');
 					document.getElementById('ccard-demo').style.setProperty('--bgPosition-y', -event.gamma.toFixed(0) * 6 + 'px');
 					document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-y', event.gamma.toFixed(0) * 6 + 'px');
 					document.getElementById('ccard-demo').style.setProperty('--bgAngle', -alpaha.toFixed(0) / 2 + 100 + 'deg');
