@@ -703,7 +703,7 @@ body.lightTheme {
 		</div>
 	</div>
 	
-	<div class="mobile-tap-message">If Apple/mobile tap card.</div>
+	<div class="mobile-tap-message">If Apple/mobile tap card..</div>
 </div>
 
 <!-- <button onclick="getGyro();">Permissions Buttons</button>
@@ -738,22 +738,12 @@ function getGyro(event) {
 					//const compass = -(event.alpha + event.beta * event.gamma / 90);
 					//compass -= Math.floor(compass / 360) * 360;
 					//document.getElementById('ccard-demo').style.setProperty('--bgAngle', compass + 'deg');
-					const x = event.beta; // In degree in the range [-180,180], x, front to back
-					const y = event.gamma; // In degree in the range [-90, 90], y, left to right
-					const z = event.alpha; // In 0-360, z, compass orientation
 					
-					// Calculate the angle
-					const rad = Math.atan2(y, x);
-					const deg = rad * (180 / Math.PI);
+					const radions = Math.PI / 180;
 					
-					// Take into account if phone is held sideways / landscape mode
-					const screenOrientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
-					// 90, -90, or 0
-					const angle = screenOrientation.angle || window.orientation || 0;
+					var qCSS = Quaternion.fromEuler(event.alpha * radions, event.beta * radions, event.gamma * radions, 'ZXY');
 					
-					deg = deg + angle;
-					
-					document.getElementById('ccard-demo').style.setProperty('--bgAngle', -deg + 'deg');
+					document.getElementById('ccard-demo').style.setProperty('--bgAngle', qCSS.conjugate().toMatrix4() 'deg');
 				});
 			} else {
 				alert('Device orientation permission not granted');
