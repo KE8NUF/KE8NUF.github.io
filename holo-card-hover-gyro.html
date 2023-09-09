@@ -703,7 +703,7 @@ body.lightTheme {
 		</div>
 	</div>
 	
-	<div class="mobile-tap-message">!If Apple/mobile tap card.</div>
+	<div class="mobile-tap-message">If Apple/mobile tap card.</div>
 </div>
 
 <!-- <button onclick="getGyro();">Permissions Buttons</button>
@@ -739,7 +739,14 @@ function getGyro(event) {
 					//compass -= Math.floor(compass / 360) * 360;
 					//document.getElementById('ccard-demo').style.setProperty('--bgAngle', compass + 'deg');
 					
-					document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpha + 32 + 'deg');
+					if(event.alpha > 180) {
+						document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpha / 2 + 32 + 'deg');
+					}else if(event.alpha < 22) {
+						document.getElementById('ccard-demo').style.setProperty('--bgAngle', event.alpha + 12 + 'deg');
+					}
+					else{
+						document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpha + 'deg');
+					}
 				});
 			} else {
 				alert('Device orientation permission not granted');
