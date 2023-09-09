@@ -703,7 +703,7 @@ body.lightTheme {
 		</div>
 	</div>
 	
-	<div class="mobile-tap-message">If Apple/mobile tap card.</div>
+	<div class="mobile-tap-message">If Apple/mobile tap card..</div>
 </div>
 
 <!-- <button onclick="getGyro();">Permissions Buttons</button>
@@ -738,33 +738,36 @@ function getGyro(event) {
 					//const compass = -(event.alpha + event.beta * event.gamma / 90);
 					//compass -= Math.floor(compass / 360) * 360;
 					//document.getElementById('ccard-demo').style.setProperty('--bgAngle', compass + 'deg');
-					
-					const _x = beta ? beta * degtorad : 0; // beta value
-					const _y = gamma ? gamma * degtorad : 0; // gamma value
-					const _z = alpha ? alpha * degtorad : 0; // alpha value
-					
-					const cX = Math.cos(_x);
-					const cY = Math.cos(_y);
-					const cZ = Math.cos(_z);
-					const sX = Math.sin(_x);
-					const sY = Math.sin(_y);
-					const sZ = Math.sin(_z);
-					
-					// Calculate Vx and Vy components
-					const Vx = - cZ * sY - sZ * sX * cY;
-					const Vy = - sZ * sY + cZ * sX * cY;
-					
-					// Calculate compass heading to use whole unit of circle
-					const compassHeading = Math.atan(Vx / Vy);
-					
-					// Convert compass heading to use hole unit of circle
-					if(Vy < 0) {
-						compassHeading += Math.PI;
-					} else if(Vx < 0) {
-						compassHeading += 2 * Math.PI;
+					const degtorad = Math.PI / 180;
+					function compassHeading(alpha, beta, gamma) {
+						const _x = beta ? beta * degtorad : 0; // beta value
+						const _y = gamma ? gamma * degtorad : 0; // gamma value
+						const _z = alpha ? alpha * degtorad : 0; // alpha value
+						
+						const cX = Math.cos(_x);
+						const cY = Math.cos(_y);
+						const cZ = Math.cos(_z);
+						const sX = Math.sin(_x);
+						const sY = Math.sin(_y);
+						const sZ = Math.sin(_z);
+						
+						// Calculate Vx and Vy components
+						const Vx = - cZ * sY - sZ * sX * cY;
+						const Vy = - sZ * sY + cZ * sX * cY;
+						
+						// Calculate compass heading to use whole unit of circle
+						const compassHeading = Math.atan(Vx / Vy);
+						
+						// Convert compass heading to use hole unit of circle
+						if(Vy < 0) {
+							compassHeading += Math.PI;
+						} else if(Vx < 0) {
+							compassHeading += 2 * Math.PI;
+						}
+						
+						return compassHeading * (180 / Math.PI); // Compass Heading (in degrees)
 					}
-					
-					return compassHeading * (180 / Math.PI); // Compass Heading (in degrees)
+					compassHeading();
 					document.getElementById('ccard-demo').style.setProperty('--bgAngle', compassHeading + 'deg');
 				});
 			} else {
