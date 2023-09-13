@@ -582,7 +582,7 @@ body.lightTheme {
 	border-radius: .5em;
 	top: 77%;
 	left: 3%;
-	background: url("https://cdn4.iconfinder.com/data/icons/credit-card-debit-card-payment-shopping/512/N_F07_3Artboard_1_copy_13-512.png"),
+	background:
 		conic-gradient(from -346deg at 50% 50%,
 		rgba(248, 208, 149, 1),
 		rgba(218, 176, 118, 1),
@@ -613,7 +613,7 @@ body.lightTheme {
 	border-radius: .5em;
 	top: 77%;
 	left: 3%;
-	background:
+	background: url("https://cdn4.iconfinder.com/data/icons/credit-card-debit-card-payment-shopping/512/N_F07_3Artboard_1_copy_13-512.png"),
 		conic-gradient(from var(--bgAngle) at 50% 50%,
 		rgba(248, 208, 149, 1),
 		rgba(218, 176, 118, 1),
@@ -629,12 +629,47 @@ body.lightTheme {
 		rgba(233, 199, 148, 1),
 		rgba(248, 208, 149, 1)
 	);
-	background-size: 100% 100%;
+	background-size: 132% 160%, 100% 100%;
 	background-repeat: no-repeat;
 	background-position: center center;
 	margin: 0;
 	padding: 0;
 	mix-blend-mode: overlay;
+	mix-blend-mode: darken;
+}
+
+.tap-topay-icon {
+	position: absolute;
+	width: 100%;
+	max-width: 25px;
+	height: 100%;
+	max-height: 25px;
+	bottom: 7%;
+	left: 21%;
+}
+
+.tap-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/*
+	background: url("https://firstnebraska.org/wp-content/uploads/2023/06/Tap-to-pay-icon.png");
+    background-repeat: repeat;
+    background-size: auto;
+	background-repeat: no-repeat;
+	*/
+	background-size: 100% 100%;
+}
+
+.tap-icon i {
+	color: rgba(255, 255, 255, 0.8);
+	transform: rotate(90deg) translate(-50%, -0%);
+	vertical-align: middle;
+	position: absolute;
+	top: 58%;
+	left: 0;
 }
 
 .mobile-tap-message {
@@ -701,9 +736,13 @@ body.lightTheme {
 			<div class="card-chip"></div>
 			<div class="card-chip-foil"></div>
 		</div>
+		
+		<div class="tap-topay-icon">
+			<div class="tap-icon"><i class="fa-solid fa-wifi"></i></div>
+		</div>
 	</div>
 	
-	<div class="mobile-tap-message">If Apple/mobile tap card.</div>
+	<div class="mobile-tap-message">If Apple/mobile tap card!</div>
 </div>
 
 <!-- <button onclick="getGyro();">Permissions Buttons</button>
@@ -720,38 +759,67 @@ body.lightTheme {
 
 <script>
 function getGyro(event) {
-	if (DeviceMotionEvent.requestPermission) {
-		DeviceMotionEvent.requestPermission().then(response => {
-			if (response == 'granted') {
-				window.addEventListener('deviceorientation', function(event) {
-					const { alpha, beta, gamma } = event;
-					//document.getElementById('alpha').innerHTML = alpha.toFixed(0); //rotation of device in degrees.
-					//document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position.
-					//document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position.
-					
-					document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', -event.beta.toFixed(0) * 16 + 'px');
-					document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-x', event.beta.toFixed(0) * 15 + 'px');
-					document.getElementById('ccard-demo').style.setProperty('--bgPosition-y', -event.gamma.toFixed(0) * 6 + 'px');
-					document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-y', event.gamma.toFixed(0) * 6 + 'px');
-					//document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpaha.toFixed(0) / 2 + 100 + 'deg');
-					
-					//const compass = -(event.alpha + event.beta * event.gamma / 90);
-					//compass -= Math.floor(compass / 360) * 360;
-					//document.getElementById('ccard-demo').style.setProperty('--bgAngle', compass + 'deg');
-					
-					if(event.alpha > 180) {
-						document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpha / 2 + 32 + 'deg');
-					}else if(event.alpha < 22) {
-						document.getElementById('ccard-demo').style.setProperty('--bgAngle', event.alpha + 12 + 'deg');
-					}
-					else{
-						document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpha + 'deg');
-					}
-				});
-			} else {
-				alert('Device orientation permission not granted');
-			}
-		}).catch((err) => {console.log(err)});
+	if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
+		// handle iOS 13+ devices.
+		if (DeviceMotionEvent.requestPermission) {
+			DeviceMotionEvent.requestPermission().then(response => {
+				if (response == 'granted') {
+					window.addEventListener('deviceorientation', function(event) {
+						const { alpha, beta, gamma } = event;
+						// document.getElementById('alpha').innerHTML = alpha.toFixed(0); //rotation of device in degrees.
+						// document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position.
+						// document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position.
+						
+						document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', -event.beta.toFixed(0) * 16 + 'px');
+						document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-x', event.beta.toFixed(0) * 15 + 'px');
+						document.getElementById('ccard-demo').style.setProperty('--bgPosition-y', -event.gamma.toFixed(0) * 6 + 'px');
+						document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-y', event.gamma.toFixed(0) * 6 + 'px');
+						// document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpaha.toFixed(0) / 2 + 100 + 'deg');
+						
+						// const compass = -(event.alpha + event.beta * event.gamma / 90);
+						// compass -= Math.floor(compass / 360) * 360;
+						// document.getElementById('ccard-demo').style.setProperty('--bgAngle', compass + 'deg');
+						
+						if (event.alpha > 180) {
+							document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpha / 2 + 32 + 'deg');
+						} else if (event.alpha < 22) {
+							document.getElementById('ccard-demo').style.setProperty('--bgAngle', event.alpha + 12 + 'deg');
+						}
+						else {
+							document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpha + 'deg');
+						}
+					});
+				} else {
+					alert('Device orientation permission not granted');
+				}
+			}).catch((err) => {console.log(err)});
+		} else {
+			// handle regular non iOS 13+ devices.
+			window.addEventListener('deviceorientation', function(event) {
+				const { alpha, beta, gamma } = event;
+				// document.getElementById('alpha').innerHTML = alpha.toFixed(0); //rotation of device in degrees.
+				// document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position.
+				// document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position.
+						
+				document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', -event.beta.toFixed(0) * 16 + 'px');
+				document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-x', event.beta.toFixed(0) * 15 + 'px');
+				document.getElementById('ccard-demo').style.setProperty('--bgPosition-y', -event.gamma.toFixed(0) * 6 + 'px');
+				document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-y', event.gamma.toFixed(0) * 6 + 'px');
+				// document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpaha.toFixed(0) / 2 + 100 + 'deg');
+						
+				// const compass = -(event.alpha + event.beta * event.gamma / 90);
+				// compass -= Math.floor(compass / 360) * 360;
+				// document.getElementById('ccard-demo').style.setProperty('--bgAngle', compass + 'deg');
+						
+				if (event.alpha > 180) {
+					document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpha / 2 + 32 + 'deg');
+				} else if(event.alpha < 22) {
+					document.getElementById('ccard-demo').style.setProperty('--bgAngle', event.alpha + 12 + 'deg');
+				} else {
+					document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpha + 'deg');
+				}
+			});
+		}
 	} else {
 		// mouse items, touch items, pointer
 		// pointerdown = mousedown touchstart = mouseover
@@ -762,14 +830,14 @@ function getGyro(event) {
 		// pointerenter = mouseenter
 		// pointerleave = mouseleave
 
-		// var container = document.querySelector("#card-number");
-		// var mover = document.querySelector("#card-number");
+		// const container = document.querySelector("#card-number");
+		// const mover = document.querySelector("#card-number");
 
-		var containers = document.querySelectorAll('.card');
-		var mover = document.querySelectorAll('.card');
+		const containers = document.querySelectorAll('.card');
+		const mover = document.querySelectorAll('.card');
 
-		var angle = document.querySelectorAll('.card');
-		var position2 = {
+		const angle = document.querySelectorAll('.card');
+		const position2 = {
 			x: window.innerWidth,
 			y: window.innerHeight
 		};
@@ -777,13 +845,13 @@ function getGyro(event) {
 		containers.forEach(container => {
 			container.addEventListener('pointermove', function(e) {
 				
-				var offset = $(this).offset();
-				var center_x = (offset.left) + ($(this).width() / 2);
-				var center_y = (offset.top) + ($(this).height() / 2);
-				var mouse_x = e.pageX;
-				var mouse_y = e.pageY;
-				var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
-				var angleBackground = (radians * (180 / Math.PI) * -1) + 90;
+				const offset = $(this).offset();
+				const center_x = (offset.left) + ($(this).width() / 2);
+				const center_y = (offset.top) + ($(this).height() / 2);
+				const mouse_x = e.pageX;
+				const mouse_y = e.pageY;
+				const radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
+				const angleBackground = (radians * (180 / Math.PI) * -1) + 90;
 				
 				container.classList.remove('no-more-slidey');
 				this.style.setProperty('--bgPosition-x', `${-e.offsetX * 6}px`);
@@ -812,10 +880,30 @@ function getGyro(event) {
 		
 		console.log('Device motion permission access method not available used regular scripting');
 	}
+	// device orientation check / class add for mobile devices.
+	// attach event for mobile devices only.
+	if (navigator.userAgent.indexOf('Mobi') > -1) {
+		function orentationCheck(event) {
+
+			if (window.matchMedia('(orientation: portrait)').matches) {
+				// do something portrait
+				document.body.classList.remove('landscape');
+				document.body.classList.add('portrait');
+			}
+			if (window.matchMedia('(orientation: landscape)').matches) {
+				// do something landscape
+				document.body.classList.remove('portrait');
+				document.body.classList.add('landscape');
+			}
+			window.addEventListener("change", orentationCheck);
+			window.addEventListener("resize", orentationCheck);
+		}
+		orentationCheck();
+	}
 }
 
 if(navigator.userAgent.indexOf('Mobi') > -1) {
-	//this is a mobile browser.
+	// this is a mobile browser == true do something.
 	$('.mobile-tap-message').css({
 		'display': 'block',
 		'opacity': '1'
@@ -823,7 +911,7 @@ if(navigator.userAgent.indexOf('Mobi') > -1) {
 }
 
 $('#ccard-demo').on('touchend', function() {
-	getGyro();
+	getGyro(); 
 });
 
 getGyro();
