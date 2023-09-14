@@ -86,14 +86,11 @@ body.lightTheme {
 	
 	background: rgba(4, 13, 21, 1);
 	background:
-	linear-gradient(-62deg, 
-		rgba(255, 255, 255, 0.0), 
-		rgba(255, 255, 255, 0.00) 70%, 71%, 
-		rgba(255, 255, 255, 0.052)
-	),
-	radial-gradient(ellipse at top left,
-		rgba(25, 41, 54, 1) 0%,
-		rgba(4, 13, 21, 1) 100%
+	linear-gradient(-62deg, rgba(255, 255, 255, 0.0), 
+		rgba(255, 255, 255, 0.0) 74%, 75%, 
+		rgba(255, 255, 255, 0.09) ), 
+	radial-gradient(ellipse at top left, 
+		rgb(25, 41, 54) 0%, rgb(4, 13, 21) 100%
 	);
 	
 	box-shadow: 0 1px 0px rgba(0, 0, 0, .4), 
@@ -102,14 +99,14 @@ body.lightTheme {
 		0 4px 8px rgba(0, 0, 0, .2);
 	
 	overflow: hidden;
-	background-blend-mode: screen normal;
+	background-blend-mode: color-dodge, normal;
 	background-repeat: no-repeat;
 	background-size: 200% 100%, 100% 100%;
 }
 
 .card:hover,
 .card:focus {
-	animation: backgroundMove 200ms forwards ease;
+	animation: backgroundMove 350ms forwards ease;
 }
 
 /* Safari 4.0 - 8.0 */
