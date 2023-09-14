@@ -355,12 +355,43 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
 	
+	/* iridecent gradient */
+	/*  fourth gradient */
+	background: linear-gradient(var(--bgAngle), 
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(186, 130, 225, 1), /* purple */
+		rgba(34, 105, 197, 1), /* blue */
+		rgba(48, 227, 206, 1), /* aqua */
+		rgba(145, 234, 188, 1), /* green */
+		rgba(247, 243, 149, 1), /* yellow */
+		rgba(234, 119, 184, 1), /* pink/red */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
+	/* holo gradient 5 */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(133, 91, 229, 1), /* purple */
+		rgba(3, 171, 244, 1), /* blue */
+		rgba(12, 238, 250, 1), /* aqua */
+		rgba(130, 225, 201, 1), /* green */
+		rgba(250, 159, 156, 1), /* orange */
+		rgba(241, 112, 177, 1), /* red */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
 	background-size: 450% 200%;
+	/* use with iridecent gradient */
+	/* fourth gradient */
+	background-size: 555% 200%;
+	/* use with holo gradient 5 */
+	background-size: 625% 200%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
 	mix-blend-mode: hard-light; /* use with first gradient */
 	mix-blend-mode: color-dodge; /* use with second gradient */
 	mix-blend-mode: lighten; /* use with third gradient */
+	mix-blend-mode: overlay; /* use with holo gradient 5 */
 	
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -393,7 +424,7 @@ body.lightTheme {
 	
 	transition: all 300ms ease;
 	
-	/* third gradient */
+	/* third gradient reverse */
 	background: linear-gradient(var(--bgAngle),
 		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
 		rgba(137, 138, 145, 1), /* lighter gray */
@@ -408,10 +439,41 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
 	
+	/* iridecent gradient reverse */
+	/*  fourth gradient */
+	background: linear-gradient(var(--bgAngle), 
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(234, 119, 184, 1), /* pink/red */
+		rgba(247, 243, 149, 1), /* yellow */
+		rgba(145, 234, 188, 1), /* green */
+		rgba(48, 227, 206, 1), /* aqua */
+		rgba(34, 105, 197, 1), /* blue */
+		rgba(186, 130, 225, 1), /* purple */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
+	/* holo gradient 5 */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(241, 112, 177, 1), /* red */
+		rgba(250, 159, 156, 1), /* orange */
+		rgba(130, 225, 201, 1), /* green */
+		rgba(12, 238, 250, 1), /* aqua */
+		rgba(3, 171, 244, 1), /* blue */
+		rgba(133, 91, 229, 1), /* purple */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
 	background-size: 450% 200%;
+	/* use with iridecent gradient */
+	/* fourth gradient */
+	background-size: 555% 200%;
+	/* use with holo gradient 5 */
+	background-size: 625% 200%;
 	background-position: var(--bgPositionReverse-x), var(--bgPositionReverse-y);
 
 	mix-blend-mode: lighten; /* use with third gradient */
+	mix-blend-mode: overlay; /* use with holo gradient 5 */
 	
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -562,12 +624,38 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
 	
+	/* iridecent gradient */
+	/*  fourth gradient */
+	background: linear-gradient(var(--bgAngle), 
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(186, 130, 225, 1), /* purple */
+		rgba(34, 105, 197, 1), /* blue */
+		rgba(48, 227, 206, 1), /* aqua */
+		rgba(145, 234, 188, 1), /* green */
+		rgba(247, 243, 149, 1), /* yellow */
+		rgba(234, 119, 184, 1), /* pink/red */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
+	/* holo gradient 5 */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(133, 91, 229, 1), /* purple */
+		rgba(3, 171, 244, 1), /* blue */
+		rgba(12, 238, 250, 1), /* aqua */
+		rgba(130, 225, 201, 1), /* green */
+		rgba(250, 159, 156, 1), /* orange */
+		rgba(241, 112, 177, 1), /* red */
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
 	background-size: 100% 100%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
 	mix-blend-mode: hard-light; /* use with first gradient */
 	mix-blend-mode: overlay; /* use with second gradient */
 	mix-blend-mode: lighten; /* use with third gradient */
+	mix-blend-mode: overlay; /* use with holo gradient 5 */
 	
 	z-index: 0;
 }
