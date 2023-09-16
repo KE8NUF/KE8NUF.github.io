@@ -382,18 +382,34 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
 	
+	/* original gradient */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 15.5%, /* gray text color */
+		rgba(167, 108, 204, 1), /* purple */
+		rgba(126, 161, 216, 1), /* blue */
+		rgba(147, 225, 222, 1), /* aqua */
+		rgba(149, 212, 179, 1), /* green */
+		rgba(219, 182, 130, 1), /* yellow/orange */
+		rgba(217, 131, 105, 1), /* orange */
+		rgba(221, 103, 108, 1), /* red */
+		rgba(97, 98, 107, 1) 85.5% /* gray text color */
+	);
+	
 	background-size: 450% 200%;
 	/* use with iridecent gradient */
 	/* fourth gradient */
 	background-size: 430% 200%;
 	/* use with holo gradient 5 */
 	background-size: 625% 200%;
+	/* use with original gradient */
+	background-size: 590% 200%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
 	mix-blend-mode: hard-light; /* use with first gradient */
 	mix-blend-mode: color-dodge; /* use with second gradient */
 	mix-blend-mode: lighten; /* use with third gradient */
 	mix-blend-mode: overlay; /* use with holo gradient 5 */
+	mix-blend-mode: lighten; /* use with original gradient */
 	
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -428,7 +444,7 @@ body.lightTheme {
 	
 	/* third gradient reverse */
 	background: linear-gradient(var(--bgAngle),
-		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(97, 98, 107, 1) 15%, /* gray text color */
 		rgba(137, 138, 145, 1), /* lighter gray */
 		rgba(243, 104, 106, 1), /* red */
 		rgba(218, 195, 128, 1), /* yellow gold */
@@ -438,7 +454,7 @@ body.lightTheme {
 		rgba(171, 104, 221, 1), /* purple */
 		rgba(158, 119, 252, 1), /* darker purple */
 		rgba(137, 138, 145, 1), /* lighter gray */
-		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+		rgba(97, 98, 107, 1) 85% /* gray text color */
 	);
 	
 	/* iridecent gradient reverse */
@@ -468,16 +484,32 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
 	
+	/* original gradient */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 16.5%, /* gray text color */
+		rgba(221, 103, 108, 1), /* red */
+		rgba(217, 131, 105, 1), /* orange */
+		rgba(219, 182, 130, 1), /* yellow/orange */
+		rgba(149, 212, 179, 1), /* green */
+		rgba(147, 225, 222, 1), /* aqua */
+		rgba(126, 161, 216, 1), /* blue */
+		rgba(167, 108, 204, 1), /* purple */
+		rgba(97, 98, 107, 1) 84.5% /* gray text color */
+	);
+	
 	background-size: 450% 200%;
 	/* use with iridecent gradient */
 	/* fourth gradient */
 	background-size: 555% 200%;
 	/* use with holo gradient 5 */
 	background-size: 430% 200%;
+	/* use with original gradient */
+	background-size: 590% 200%;
 	background-position: var(--bgPositionReverse-x), var(--bgPositionReverse-y);
 
 	mix-blend-mode: lighten; /* use with third gradient */
 	mix-blend-mode: overlay; /* use with holo gradient 5 */
+	mix-blend-mode: lighten; /* use with original gradient */
 	
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -655,6 +687,19 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
 	
+	/* original gradient */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 15.5%, /* gray text color */
+		rgba(167, 108, 204, 1), /* purple */
+		rgba(126, 161, 216, 1), /* blue */
+		rgba(147, 225, 222, 1), /* aqua */
+		rgba(149, 212, 179, 1), /* green */
+		rgba(219, 182, 130, 1), /* yellow/orange */
+		rgba(217, 131, 105, 1), /* orange */
+		rgba(221, 103, 108, 1), /* red */
+		rgba(97, 98, 107, 1) 85.5% /* gray text color */
+	);
+	
 	background-size: 100% 100%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
@@ -662,6 +707,7 @@ body.lightTheme {
 	mix-blend-mode: overlay; /* use with second gradient */
 	mix-blend-mode: lighten; /* use with third gradient */
 	mix-blend-mode: overlay; /* use with holo gradient 5 */
+	mix-blend-mode: lighten; /* use with original gradient */
 	
 	z-index: 0;
 }
