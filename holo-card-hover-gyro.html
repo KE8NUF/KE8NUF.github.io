@@ -124,7 +124,7 @@ body.lightTheme {
 .card:before {
 	content: "";
 	width: 100%;
-	height: 100%;
+	height: 64%;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -147,6 +147,10 @@ body.lightTheme {
 		rgba(96, 16, 48, 0) 0px);
 	background-size: 8px 8px;
 	mix-blend-mode: overlay;
+	mix-blend-mode: color-dodge;
+	border-radius: inherit;
+	border-bottom: 1px solid rgba(255, 255, 255, .64);
+	opacity: .56;
 }
 
 .charge-name-wrapper {
@@ -395,6 +399,19 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 85.5% /* gray text color */
 	);
 	
+	/* holo gradient 10 */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(182, 160, 243, 1),
+		rgba(157, 227, 141, 1),
+		rgba(171, 190, 255, 1),
+		rgba(177, 239, 138, 1),
+		rgba(254, 197, 108, 1),
+		rgba(255, 160, 106, 1),
+		rgba(255, 124, 156, 1),
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
 	background-size: 450% 200%;
 	/* use with iridecent gradient */
 	/* fourth gradient */
@@ -410,6 +427,7 @@ body.lightTheme {
 	mix-blend-mode: lighten; /* use with third gradient */
 	mix-blend-mode: overlay; /* use with holo gradient 5 */
 	mix-blend-mode: lighten; /* use with original gradient */
+	mix-blend-mode: hard-light; /* use with holo gradient 10 */
 	
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -497,6 +515,19 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 84.5% /* gray text color */
 	);
 	
+	/* holo gradient 10 reverse */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(255, 124, 156, 1),
+		rgba(255, 160, 106, 1),
+		rgba(254, 197, 108, 1),
+		rgba(177, 239, 138, 1),
+		rgba(171, 190, 255, 1),
+		rgba(157, 227, 141, 1),
+		rgba(182, 160, 243, 1),
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
+	);
+	
 	background-size: 450% 200%;
 	/* use with iridecent gradient */
 	/* fourth gradient */
@@ -510,6 +541,7 @@ body.lightTheme {
 	mix-blend-mode: lighten; /* use with third gradient */
 	mix-blend-mode: overlay; /* use with holo gradient 5 */
 	mix-blend-mode: lighten; /* use with original gradient */
+	mix-blend-mode: hard-light; /* use with holo gradient 10 */
 	
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -698,6 +730,19 @@ body.lightTheme {
 		rgba(217, 131, 105, 1), /* orange */
 		rgba(221, 103, 108, 1), /* red */
 		rgba(97, 98, 107, 1) 85.5% /* gray text color */
+	);
+	
+	/* holo gradient 10 */
+	background: linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 14.5%, /* gray text color */
+		rgba(182, 160, 243, 1),
+		rgba(157, 227, 141, 1),
+		rgba(171, 190, 255, 1),
+		rgba(177, 239, 138, 1),
+		rgba(254, 197, 108, 1),
+		rgba(255, 160, 106, 1),
+		rgba(255, 124, 156, 1),
+		rgba(97, 98, 107, 1) 86.5% /* gray text color */
 	);
 	
 	background-size: 100% 100%;
