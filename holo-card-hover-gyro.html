@@ -454,6 +454,20 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 85% /* gray text color */
 	);
 	
+	/* cmy gradient */
+	background:
+	linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 15%, /* gray text color */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(255, 0, 255, 1), /* magenta */
+		rgba(0, 255, 255, 1), /* cyan */
+		rgba(180, 255, 75, 1), /* green */
+		rgba(255, 165, 90, 1), /* orange */
+		rgba(255, 0, 255, 1), /* magenta */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(97, 98, 107, 1) 85% /* gray text color */
+	);
+	
 	background-size: 450% 200%;
 	/* use with iridecent gradient */
 	/* fourth gradient */
@@ -466,6 +480,8 @@ body.lightTheme {
 	background-size: 590% 200%;
 	/* use with holo gradient 13 */
 	background-size: 640% 200%;
+	/* use with cmy gradient */
+	background-size: 500% 200%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
 	mix-blend-mode: hard-light; /* use with first gradient */
@@ -475,6 +491,7 @@ body.lightTheme {
 	mix-blend-mode: overlay; /* use with holo gradient 10 */
 	mix-blend-mode: lighten; /* use with original gradient */
 	mix-blend-mode: hard-light; /* use with holo gradient 12 */
+	mix-blend-mode: lighten; /* use with cmy gradient */
 	
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -617,6 +634,20 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 85% /* gray text color */
 	);
 	
+	/* cmy gradient reverse */
+	background:
+	linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 15%, /* gray text color */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(255, 0, 255, 1), /* magenta */
+		rgba(0, 255, 255, 1), /* cyan */
+		rgba(180, 255, 75, 1), /* green */
+		rgba(255, 165, 90, 1), /* orange */
+		rgba(255, 0, 255, 1), /* magenta */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(97, 98, 107, 1) 85% /* gray text color */
+	);
+	
 	background-size: 450% 200%;
 	/* use with iridecent gradient */
 	/* fourth gradient */
@@ -629,6 +660,8 @@ body.lightTheme {
 	background-size: 590% 200%;
 	/* use with holo gradient 13 */
 	background-size: 675% 235%;
+	/* use with cmy gradient */
+	background-size: 525% 225%;
 	background-position: var(--bgPositionReverse-x), var(--bgPositionReverse-y);
 
 	mix-blend-mode: lighten; /* use with third gradient */
@@ -636,6 +669,7 @@ body.lightTheme {
 	mix-blend-mode: overlay; /* use with holo gradient 10 */
 	mix-blend-mode: lighten; /* use with original gradient */
 	mix-blend-mode: hard-light; /* use with holo gradient 12 */
+	mix-blend-mode: lighten; /* use with cmy gradient */
 	
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -881,6 +915,20 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 85% /* gray text color */
 	);
 	
+	/* cmy gradient */
+	background:
+	linear-gradient(var(--bgAngle),
+		rgba(97, 98, 107, 1) 15%, /* gray text color */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(255, 0, 255, 1), /* magenta */
+		rgba(0, 255, 255, 1), /* cyan */
+		rgba(180, 255, 75, 1), /* green */
+		rgba(255, 165, 90, 1), /* orange */
+		rgba(255, 0, 255, 1), /* magenta */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(97, 98, 107, 1) 85% /* gray text color */
+	);
+	
 	background-size: 100% 100%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
@@ -891,6 +939,7 @@ body.lightTheme {
 	mix-blend-mode: overlay; /* use with holo gradient 10 */
 	mix-blend-mode: lighten; /* use with original gradient */
 	mix-blend-mode: hard-light; /* use with holo gradient 12 */
+	mix-blend-mode: lighten; /* use with cmy gradient */
 	
 	z-index: 0;
 }
@@ -1069,7 +1118,7 @@ body.lightTheme {
 		</div>
 	</div>
 	
-	<div class="mobile-tap-message">If Apple/mobile tap card.</div>
+	<div class="mobile-tap-message">If Apple/mobile tap card...</div>
 </div>
 
 <!-- <button onclick="getGyro();">Permissions Buttons</button>
