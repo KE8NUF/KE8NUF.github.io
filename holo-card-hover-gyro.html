@@ -459,12 +459,24 @@ body.lightTheme {
 	linear-gradient(var(--bgAngle),
 		rgba(97, 98, 107, 1) 15%, /* gray text color */
 		rgba(137, 138, 145, 1), /* lighter gray */
+		/* lighter coloring */
 		rgba(255, 0, 255, 1), /* magenta */
 		rgba(0, 255, 255, 1), /* cyan */
 		rgba(180, 255, 75, 1), /* green */
 		rgba(255, 165, 90, 1), /* orange */
 		rgba(255, 0, 255, 1), /* magenta */
 		rgba(0, 255, 255, 1), /* cyan */
+		/* darker coloring */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(254, 35, 97, 1), /* magenta 2 */
+		rgba(2, 242, 207, 1), /* cyan 2 */
+		rgba(0, 104, 252, 1), /* blue */
+		rgba(0, 231, 123, 1), /* green 2 */
+		rgba(247, 210, 43, 1), /* yellow */
+		rgba(252, 99, 48, 1), /* orange 2 */
+		rgba(254, 35, 97, 1), /* magenta 2 */
+		rgba(107, 3, 241, 1), /* purple */
 		rgba(137, 138, 145, 1), /* lighter gray */
 		rgba(97, 98, 107, 1) 85% /* gray text color */
 	);
@@ -483,6 +495,8 @@ body.lightTheme {
 	background-size: 640% 200%;
 	/* use with cmy gradient */
 	background-size: 500% 200%;
+	/* use with cmy gradient */
+	background-size: 1000% 400%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
 	mix-blend-mode: hard-light; /* use with first gradient */
@@ -492,7 +506,7 @@ body.lightTheme {
 	mix-blend-mode: overlay; /* use with holo gradient 10 */
 	mix-blend-mode: lighten; /* use with original gradient */
 	mix-blend-mode: hard-light; /* use with holo gradient 12 */
-	mix-blend-mode: lighten; /* use with cmy gradient */
+	mix-blend-mode: hard-light; /* use with cmy gradient */
 	
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -640,12 +654,24 @@ body.lightTheme {
 	linear-gradient(var(--bgAngle),
 		rgba(97, 98, 107, 1) 15%, /* gray text color */
 		rgba(137, 138, 145, 1), /* lighter gray */
+		/* lighter coloring */
 		rgba(255, 0, 255, 1), /* magenta */
 		rgba(0, 255, 255, 1), /* cyan */
 		rgba(180, 255, 75, 1), /* green */
 		rgba(255, 165, 90, 1), /* orange */
 		rgba(255, 0, 255, 1), /* magenta */
 		rgba(0, 255, 255, 1), /* cyan */
+		/* darker coloring */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(254, 35, 97, 1), /* magenta 2 */
+		rgba(2, 242, 207, 1), /* cyan 2 */
+		rgba(0, 104, 252, 1), /* blue */
+		rgba(0, 231, 123, 1), /* green 2 */
+		rgba(247, 210, 43, 1), /* yellow */
+		rgba(252, 99, 48, 1), /* orange 2 */
+		rgba(254, 35, 97, 1), /* magenta 2 */
+		rgba(107, 3, 241, 1), /* purple */
 		rgba(137, 138, 145, 1), /* lighter gray */
 		rgba(97, 98, 107, 1) 85% /* gray text color */
 	);
@@ -664,6 +690,8 @@ body.lightTheme {
 	background-size: 675% 235%;
 	/* use with cmy gradient */
 	background-size: 525% 225%;
+	/* use with cmy gradient */
+	background-size: 1302% 450%;
 	background-position: var(--bgPositionReverse-x), var(--bgPositionReverse-y);
 
 	mix-blend-mode: lighten; /* use with third gradient */
@@ -671,7 +699,7 @@ body.lightTheme {
 	mix-blend-mode: overlay; /* use with holo gradient 10 */
 	mix-blend-mode: lighten; /* use with original gradient */
 	mix-blend-mode: hard-light; /* use with holo gradient 12 */
-	mix-blend-mode: lighten; /* use with cmy gradient */
+	mix-blend-mode: hard-light; /* use with cmy gradient */
 	
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -775,9 +803,14 @@ body.lightTheme {
 	top: 50%;
 	left: 0%;
     width: 720%;
+	/* use with cmy gradient */
+	width: 1200%;
 	height: 250%;
+	/* use with cmy gradient */
+	height: 500%;
 	transform: translate(0%, -50%);
 	border-radius: .5em;
+	transition: all 200ms ease;
 	
 	/* first gradient */
 	background: linear-gradient(var(--bgAngle),
@@ -922,12 +955,24 @@ body.lightTheme {
 	linear-gradient(var(--bgAngle),
 		rgba(97, 98, 107, 1) 15%, /* gray text color */
 		rgba(137, 138, 145, 1), /* lighter gray */
+		/* lighter coloring */
 		rgba(255, 0, 255, 1), /* magenta */
 		rgba(0, 255, 255, 1), /* cyan */
 		rgba(180, 255, 75, 1), /* green */
 		rgba(255, 165, 90, 1), /* orange */
 		rgba(255, 0, 255, 1), /* magenta */
 		rgba(0, 255, 255, 1), /* cyan */
+		/* darker coloring */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(137, 138, 145, 1), /* lighter gray */
+		rgba(254, 35, 97, 1), /* magenta 2 */
+		rgba(2, 242, 207, 1), /* cyan 2 */
+		rgba(0, 104, 252, 1), /* blue */
+		rgba(0, 231, 123, 1), /* green 2 */
+		rgba(247, 210, 43, 1), /* yellow */
+		rgba(252, 99, 48, 1), /* orange 2 */
+		rgba(254, 35, 97, 1), /* magenta 2 */
+		rgba(107, 3, 241, 1), /* purple */
 		rgba(137, 138, 145, 1), /* lighter gray */
 		rgba(97, 98, 107, 1) 85% /* gray text color */
 	);
@@ -942,7 +987,7 @@ body.lightTheme {
 	mix-blend-mode: overlay; /* use with holo gradient 10 */
 	mix-blend-mode: lighten; /* use with original gradient */
 	mix-blend-mode: hard-light; /* use with holo gradient 12 */
-	mix-blend-mode: lighten; /* use with cmy gradient */
+	mix-blend-mode: hard-light; /* use with cmy gradient */
 	
 	z-index: 0;
 }
