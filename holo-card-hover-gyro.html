@@ -1169,7 +1169,7 @@ body.lightTheme {
 		</div>
 	</div>
 	
-	<div class="mobile-tap-message">If Apple/mobile tap card...</div>
+	<div class="mobile-tap-message">If Apple/mobile tap card.</div>
 </div>
 
 <!-- <button onclick="getGyro();">Permissions Buttons</button>
@@ -1193,9 +1193,9 @@ function getGyro(event) {
 				if (response == 'granted') {
 					window.addEventListener('deviceorientation', function(event) {
 						const { alpha, beta, gamma } = event;
-						// document.getElementById('alpha').innerHTML = alpha.toFixed(0); //rotation of device in degrees.
-						// document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position.
-						// document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position.
+						// document.getElementById('alpha').innerHTML = alpha.toFixed(0); //rotation of device in degrees (zoom/angle).
+						// document.getElementById('beta').innerHTML = beta.toFixed(0); //equals X of device position (top)  rotateX(${-e.beta.
+						// document.getElementById('gamma').innerHTML = gamma.toFixed(0); //equals Y of device position (left)  rotateY(${e.gamma.
 						
 						document.getElementById('ccard-demo').style.setProperty('--bgPosition-x', event.beta.toFixed(0) * 16 + 50 + 'px');
 						document.getElementById('ccard-demo').style.setProperty('--bgPositionReverse-x', -event.beta.toFixed(0) * 15 + 'px');
@@ -1207,6 +1207,8 @@ function getGyro(event) {
 						// compass -= Math.floor(compass / 360) * 360;
 						// document.getElementById('ccard-demo').style.setProperty('--bgAngle', compass + 'deg');
 						
+						// used with working
+						/* 
 						if (event.alpha > 180) {
 							document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpha / 2 + 32 + 'deg');
 						} else if (event.alpha < 22) {
@@ -1215,6 +1217,10 @@ function getGyro(event) {
 						else {
 							document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpha + 'deg');
 						}
+						*/
+						//xy = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
+						angleBackground = Math.atan2(event.gamma.toFixed(0), event.beta.toFixed(0)) * (180 / Math.PI);
+						document.getElementById('ccard-demo').style.setProperty('--bgAngle', angleBackground + 'deg');
 					});
 				} else {
 					alert('Device orientation permission not granted');
@@ -1238,13 +1244,20 @@ function getGyro(event) {
 				// compass -= Math.floor(compass / 360) * 360;
 				// document.getElementById('ccard-demo').style.setProperty('--bgAngle', compass + 'deg');
 						
+				// used with working
+				/* 
 				if (event.alpha > 180) {
 					document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpha / 2 + 32 + 'deg');
-				} else if(event.alpha < 22) {
+				} else if (event.alpha < 22) {
 					document.getElementById('ccard-demo').style.setProperty('--bgAngle', event.alpha + 12 + 'deg');
-				} else {
+				}
+				else {
 					document.getElementById('ccard-demo').style.setProperty('--bgAngle', -event.alpha + 'deg');
 				}
+				*/
+				//xy = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
+				angleBackground = Math.atan2(event.gamma.toFixed(0), event.beta.toFixed(0)) * (180 / Math.PI);
+				document.getElementById('ccard-demo').style.setProperty('--bgAngle', angleBackground + 'deg');
 			});
 		}
 	} else {
