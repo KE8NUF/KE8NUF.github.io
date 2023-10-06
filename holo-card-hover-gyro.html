@@ -1169,7 +1169,7 @@ body.lightTheme {
 		</div>
 	</div>
 	
-	<div class="mobile-tap-message">If Apple/mobile tap card.</div>
+	<div class="mobile-tap-message">If Apple/mobile tap card...</div>
 </div>
 
 <!-- <button onclick="getGyro();">Permissions Buttons</button>
@@ -1256,8 +1256,9 @@ function getGyro(event) {
 				}
 				*/
 				//xy = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
-				angleBackground = Math.atan2(event.gamma.toFixed(0), event.beta.toFixed(0)) * (180 / Math.PI);
-				document.getElementById('ccard-demo').style.setProperty('--bgAngle', angleBackground + 'deg');
+				radAngleBackground = Math.atan2(gamma.toFixed(0), beta.toFixed(0));
+				degAngleBackground = rad * (180 / Math.PI);
+				document.getElementById('ccard-demo').style.setProperty('--bgAngle', degAngleBackground + 'deg');
 			});
 		}
 	} else {
