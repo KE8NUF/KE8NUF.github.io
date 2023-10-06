@@ -1221,7 +1221,7 @@ function getGyro(event) {
 						if (screen.height > screen.width) {
 							//alert("You are in portrait mode");
 							//xy = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
-							radAngleBackground = Math.atan2(beta.toFixed(0), gamma.toFixed(0));
+							radAngleBackground = Math.atan2(beta.toFixed(0), -gamma.toFixed(0));
 							degAngleBackground = rad * (180 / Math.PI);
 							document.getElementById('ccard-demo').style.setProperty('--bgAngle', degAngleBackground + 'deg');
 						}
@@ -1270,7 +1270,7 @@ function getGyro(event) {
 				if (screen.height > screen.width) {
 					//alert("You are in portrait mode");
 					//xy = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
-					radAngleBackground = Math.atan2(beta.toFixed(0), gamma.toFixed(0));
+					radAngleBackground = Math.atan2(beta.toFixed(0), -gamma.toFixed(0));
 					degAngleBackground = rad * (180 / Math.PI);
 					document.getElementById('ccard-demo').style.setProperty('--bgAngle', degAngleBackground + 'deg');
 				}
