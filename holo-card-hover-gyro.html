@@ -482,6 +482,30 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 85% /* gray text color */
 	);
 	
+	/* gradient interpolation */
+	background:
+	linear-gradient(
+	var(--bgAngle),
+	/* darker gray to ligher gray */
+	#61626b, #65666f, #686972, #6c6d76, #6f7079, #73747d, #767780, #7a7b84, #7e7f87, #81828a, #85868e, #898a91,
+	/* lighter gray to teal */
+	#898a91, #868b9b, #848ea5, #8193ae, #809ab7, #7fa3bf, #7eaec7, #7dbace, #7dc7d5, #7ed5dc, #7fe2e1, #80e8dd,
+	/* teal to blue */
+	#80e8dd, #80e9e3, #7febea, #7fe8ec, #7ee4ed, #7edfef, #7edbf0, #7dd6f1, #7dd1f2, #7dccf4, #7cc7f5, #7cc2f6,
+	/* blue to purple */
+	#7cc2f6, #7cb6f4, #7daaf3, #7d9ff1, #7d94f0, #7e89ee, #7e7fed, #887feb, #937fe9, #9c80e7, #a680e6, #af81e4,
+	/* purple to pink */
+	#af81e4, #b881e4, #c182e5, #cb82e5, #d482e5, #dd82e5, #e683e5, #e683dd, #e683d4, #e683cb, #e784c3, #e784ba,
+	/* pink to orange */
+	#e784ba, #e98ab8, #ea8fb5, #ec95b3, #ee9ab1, #efa0ae, #f1a5ac, #f2aba9, #f4b0a7, #f6b6a5, #f7bba2, #f9c1a0,
+	/* orange to green */
+	#f9c1a0, #f9cea1, #f8daa3, #f8e6a4, #f8f1a6, #f3f8a7, #e8f7a8, #ddf7aa, #d3f7ab, #c9f6ac, #c0f6ae, #b7f6af,
+	/* green to teal */
+	#b7f6af, #acf5aa, #a6f4ab, #a2f3af, #9df2b3, #99f0b7, #95efbc, #90eec2, #8cecc8, #88ebce, #84ead6, #80e8dd,
+	/* lighter gray to darker gray */
+	#898a91, #85868e, #81828a, #7e7f87, #7a7b84, #767780, #73747d, #6f7079, #6c6d76, #686972, #65666f, #61626b
+	);
+	
 	background-size: 450% 200%;
 	/* use with iridecent gradient */
 	/* fourth gradient */
@@ -498,6 +522,8 @@ body.lightTheme {
 	background-size: 500% 200%;
 	/* use with cmy gradient */
 	background-size: 1000% 400%;
+	/* use with interpolation gradient */
+	background-size: 850% 400%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
 	mix-blend-mode: hard-light; /* use with first gradient */
@@ -678,6 +704,30 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 85% /* gray text color */
 	);
 	
+	/* gradient interpolation */
+	background:
+	linear-gradient(
+	var(--bgAngle),
+	/* darker gray to ligher gray */
+	#61626b, #65666f, #686972, #6c6d76, #6f7079, #73747d, #767780, #7a7b84, #7e7f87, #81828a, #85868e, #898a91,
+	/* lighter gray to teal */
+	#898a91, #868b9b, #848ea5, #8193ae, #809ab7, #7fa3bf, #7eaec7, #7dbace, #7dc7d5, #7ed5dc, #7fe2e1, #80e8dd,
+	/* teal to blue */
+	#80e8dd, #80e9e3, #7febea, #7fe8ec, #7ee4ed, #7edfef, #7edbf0, #7dd6f1, #7dd1f2, #7dccf4, #7cc7f5, #7cc2f6,
+	/* blue to purple */
+	#7cc2f6, #7cb6f4, #7daaf3, #7d9ff1, #7d94f0, #7e89ee, #7e7fed, #887feb, #937fe9, #9c80e7, #a680e6, #af81e4,
+	/* purple to pink */
+	#af81e4, #b881e4, #c182e5, #cb82e5, #d482e5, #dd82e5, #e683e5, #e683dd, #e683d4, #e683cb, #e784c3, #e784ba,
+	/* pink to orange */
+	#e784ba, #e98ab8, #ea8fb5, #ec95b3, #ee9ab1, #efa0ae, #f1a5ac, #f2aba9, #f4b0a7, #f6b6a5, #f7bba2, #f9c1a0,
+	/* orange to green */
+	#f9c1a0, #f9cea1, #f8daa3, #f8e6a4, #f8f1a6, #f3f8a7, #e8f7a8, #ddf7aa, #d3f7ab, #c9f6ac, #c0f6ae, #b7f6af,
+	/* green to teal */
+	#b7f6af, #acf5aa, #a6f4ab, #a2f3af, #9df2b3, #99f0b7, #95efbc, #90eec2, #8cecc8, #88ebce, #84ead6, #80e8dd,
+	/* lighter gray to darker gray */
+	#898a91, #85868e, #81828a, #7e7f87, #7a7b84, #767780, #73747d, #6f7079, #6c6d76, #686972, #65666f, #61626b
+	);
+	
 	background-size: 450% 200%;
 	/* use with iridecent gradient */
 	/* fourth gradient */
@@ -694,6 +744,8 @@ body.lightTheme {
 	background-size: 525% 225%;
 	/* use with cmy gradient reverse */
 	background-size: 1035% 435%;
+	/* use with interpolation gradient */
+	background-size: 895% 435%;
 	background-position: var(--bgPositionReverse-x), var(--bgPositionReverse-y);
 
 	mix-blend-mode: lighten; /* use with third gradient */
@@ -980,6 +1032,30 @@ body.lightTheme {
 		rgba(97, 98, 107, 1) 85% /* gray text color */
 	);
 	
+	/* gradient interpolation */
+	background:
+	linear-gradient(
+	var(--bgAngle),
+	/* darker gray to ligher gray */
+	#61626b, #65666f, #686972, #6c6d76, #6f7079, #73747d, #767780, #7a7b84, #7e7f87, #81828a, #85868e, #898a91,
+	/* lighter gray to teal */
+	#898a91, #868b9b, #848ea5, #8193ae, #809ab7, #7fa3bf, #7eaec7, #7dbace, #7dc7d5, #7ed5dc, #7fe2e1, #80e8dd,
+	/* teal to blue */
+	#80e8dd, #80e9e3, #7febea, #7fe8ec, #7ee4ed, #7edfef, #7edbf0, #7dd6f1, #7dd1f2, #7dccf4, #7cc7f5, #7cc2f6,
+	/* blue to purple */
+	#7cc2f6, #7cb6f4, #7daaf3, #7d9ff1, #7d94f0, #7e89ee, #7e7fed, #887feb, #937fe9, #9c80e7, #a680e6, #af81e4,
+	/* purple to pink */
+	#af81e4, #b881e4, #c182e5, #cb82e5, #d482e5, #dd82e5, #e683e5, #e683dd, #e683d4, #e683cb, #e784c3, #e784ba,
+	/* pink to orange */
+	#e784ba, #e98ab8, #ea8fb5, #ec95b3, #ee9ab1, #efa0ae, #f1a5ac, #f2aba9, #f4b0a7, #f6b6a5, #f7bba2, #f9c1a0,
+	/* orange to green */
+	#f9c1a0, #f9cea1, #f8daa3, #f8e6a4, #f8f1a6, #f3f8a7, #e8f7a8, #ddf7aa, #d3f7ab, #c9f6ac, #c0f6ae, #b7f6af,
+	/* green to teal */
+	#b7f6af, #acf5aa, #a6f4ab, #a2f3af, #9df2b3, #99f0b7, #95efbc, #90eec2, #8cecc8, #88ebce, #84ead6, #80e8dd,
+	/* lighter gray to darker gray */
+	#898a91, #85868e, #81828a, #7e7f87, #7a7b84, #767780, #73747d, #6f7079, #6c6d76, #686972, #65666f, #61626b
+	);
+	
 	background-size: 100% 100%;
 	background-position: var(--bgPosition-x), var(--bgPosition-y);
 	
@@ -1169,7 +1245,7 @@ body.lightTheme {
 		</div>
 	</div>
 	
-	<div class="mobile-tap-message">If Apple/mobile tap card.</div>
+	<div class="mobile-tap-message">If Apple/mobile tap card...</div>
 </div>
 
 <!-- <button onclick="getGyro();">Permissions Buttons</button>
@@ -1221,7 +1297,7 @@ function getGyro(event) {
 						if (screen.height > screen.width) {
 							//alert("You are in portrait mode");
 							//xy = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
-							radAngleBackground = Math.atan2(beta.toFixed(0), -gamma.toFixed(0));
+							radAngleBackground = Math.atan2(beta.toFixed(0), gamma.toFixed(0));
 							degAngleBackground = rad * (180 / Math.PI);
 							document.getElementById('ccard-demo').style.setProperty('--bgAngle', degAngleBackground + 'deg');
 						}
@@ -1270,7 +1346,7 @@ function getGyro(event) {
 				if (screen.height > screen.width) {
 					//alert("You are in portrait mode");
 					//xy = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
-					radAngleBackground = Math.atan2(beta.toFixed(0), -gamma.toFixed(0));
+					radAngleBackground = Math.atan2(beta.toFixed(0), gamma.toFixed(0));
 					degAngleBackground = rad * (180 / Math.PI);
 					document.getElementById('ccard-demo').style.setProperty('--bgAngle', degAngleBackground + 'deg');
 				}
