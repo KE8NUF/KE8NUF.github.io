@@ -274,6 +274,11 @@ only screen and (max-device-width : 980px) {
 		width: clamp(80%, 40vmin, 320px);
 		height: clamp(80%, 40vh, 320px);
 	}
+	
+	.card-wrapper:hover,
+	.card-wrapper.hoverOver {
+		transform: perspective(250px) rotateX(var(--ratio-xx)) rotateY(var(--ratio-yy));
+	}
 }
 </style>
 
