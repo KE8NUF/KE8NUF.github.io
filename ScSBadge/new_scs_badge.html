@@ -59,6 +59,7 @@ body {
 	transition: all 40ms linear;
 	overflow-x: hidden;
 	background-color: hsl(0deg 0% 7.45% / 100%);
+	overflow: hidden;
 }
 
 /*
@@ -375,7 +376,11 @@ CARDS.forEach(CARD => {
 		// Calculate the range between the center and the pointer position.
 		const posX = x - BOUNDS.x;
 		const posY = y - BOUNDS.y;
-		const constrain = 35;
+		if(window.innterWidth === 980) {
+			constrain = 15;
+		} else {
+			const constrain = 35;
+		}
 		const ratioX = posX / BOUNDS.width;
 		const ratioY = posY / BOUNDS.height;
 		const ratioXX = -(y - BOUNDS.y - (BOUNDS.height / 2)) / constrain;
