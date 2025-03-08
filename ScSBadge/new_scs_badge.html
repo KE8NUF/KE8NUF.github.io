@@ -369,6 +369,7 @@ const CARDS = document.querySelectorAll('.card-wrapper');
 
 CARDS.forEach(CARD => {
 	let timeoutId;
+	let constrain;
 	
 	const UPDATECARD = ({ x, y }) => {
 		const BOUNDS = CARD.getBoundingClientRect();
@@ -379,7 +380,7 @@ CARDS.forEach(CARD => {
 		if(window.innterWidth === 980) {
 			constrain = 15;
 		} else {
-			const constrain = 35;
+			constrain = 35;
 		}
 		const ratioX = posX / BOUNDS.width;
 		const ratioY = posY / BOUNDS.height;
