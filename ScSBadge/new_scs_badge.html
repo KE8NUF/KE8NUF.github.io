@@ -1,0 +1,460 @@
+<style>
+/* START RESETS */
+:root {
+	--defaultFont: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, SF Pro, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI 
+}
+*, *::before, *::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul, ol, li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+button, input {
+	font-weight: inherit;
+	font-size: inherit;
+	color: inherit;
+	font-family: inherit;
+}
+[type=submit], [type=reset], button, html [type=button] {
+	-webkit-appearance: button;
+	text-transform: none;
+}
+button {
+	cursor: pointer;
+	background-color: inherit;
+}
+
+html, body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-family: var(--defaultFont);
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 1.6;
+	letter-spacing: 0.016em;
+}
+body {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	display: grid;
+	place-items: center;
+	transition: all 40ms linear;
+	overflow-x: hidden;
+	background-color: hsl(0deg 0% 7.45% / 100%);
+}
+
+/*
+content - background: hsl(0deg 0% 15.69% / 100%);
+slight hightlight menu bar - background: hsl(0deg 0% 12.16% / 100%);
+content border - border: 1px solid hsl(0deg 0% 33.73% / 100%);
+content lv2 / hightlight - background: hsl(0deg 0% 23.92% / 100%);
+button base color - background: hsl(0deg 0% 37.25% / 100%);
+text white - color: hsl(0deg 0% 93% / 100%);
+text gray - color: hsl(0deg 0% 61% / 100%);
+*/
+/* END RESETS */
+
+/* COLORS
+BASE GOLD
+cfa954 TO ac7a33
+GOLD HIGHLIGHT GOLD METALS
+f6cc7a
+SHINE METAL
+fdf5c4 TO d3ad64
+PERSIAN BLUE
+12219e
+0e1c7f
+*/
+
+.card-wrapper {
+	--ratio-x: 0;
+	--ratio-y: 0;
+	--ratio-xx: 0;
+	--ratio-yy: 0;
+	--back-x: 0%;
+	--back-y: 0%;
+	--angle: 121deg;
+	
+	/* https://pixelsconverter.com/inches-to-pixels */
+	/* 336 x 480 = 3.5/5 card */
+	/* 288 x 384 = 3/4 card */
+	/* 480 x 672 = 5/7 card */
+	/* font-size: clamp(var(--min-font-size), var(--ratio), var(--max-font-size)); */
+	
+	overflow: hidden;
+	/* aspect-ratio: 3 / 4; */
+	width: clamp(260px, 40vmin, 320px);
+	height: clamp(260px, 40vh, 320px);
+	transform-style: preserve-3d;
+	transition: transform 0.2s;
+	/* testing upload https://postimages.org/ */
+	mask: url("https://i.postimg.cc/Z5d297Xq/scs-badge-clip.png") center / 100% auto no-repeat;
+	mask: url("https://i.postimg.cc/JhCgj3W5/scs-badge-clip-bw.png") center / 100% auto no-repeat;
+	overflow: hidden;
+}
+
+.card-wrapper:hover,
+.card-wrapper.hoverOver {
+	/* USE TRANSLATE FOR PARALLAX */
+	/* translate: calc((var(--ratio-x) - 0.5) * 20%) calc((var(--ratio-y) - 0.5) * 20%); */
+	/* old
+	transform: rotateX(calc((var(--ratio-y) - 0.5) * 50deg)) rotateY(calc((var(--ratio-x) - 0.5) * 30deg));
+	*/
+	transform: perspective(100px) rotateX(var(--ratio-xx)) rotateY(var(--ratio-yy));
+}
+
+.card-front img {
+	width: 100%;
+	object-fit: contain;
+	height: 100%;
+	scale: 1;
+}
+
+.card-shine,
+.card-shine:before,
+.card-shine:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	mix-blend-mode: plus-lighter;
+	mix-blend-mode: overlay;
+	opacity: 56%;
+}
+
+.card-wrapper:hover .card-shine:before,
+.card-wrapper.hoverOver .card-shine:before,
+.card-wrapper:hover .card-shine:after,
+.card-wrapper.hoverOver .card-shine:after {
+	--sunpillar-1: hsl(2, 100%, 73%);
+    --sunpillar-2: hsl(53, 100%, 69%);
+    --sunpillar-3: hsl(93, 100%, 69%);
+    --sunpillar-4: hsl(176, 100%, 76%);
+    --sunpillar-5: hsl(228, 100%, 74%);
+    --sunpillar-6: hsl(283, 100%, 73%);
+	--space: 5%;
+	--imgsize: 300%;
+	--background-x: 50%;
+    --background-y: 50%;
+	
+	/*
+	background: linear-gradient(135deg in oklch longer hue, #0273ff, #f18260, #59ffbe),
+	linear-gradient(135deg in oklch longer hue, #0273ff, #f18260, #59ffbe);
+	background-blend-mode: overlay, multiply;
+	background-size: 300% 100%;
+	mix-blend-mode: hard-light;
+	background-position: var(--back-x) 50%;
+	*/
+	
+	background-image:
+    repeating-linear-gradient(
+		0deg, 
+		var(--sunpillar-1) calc(var(--space) *1 ), 
+		var(--sunpillar-2) calc(var(--space) * 2), 
+		var(--sunpillar-3) calc(var(--space) * 3), 
+		var(--sunpillar-4) calc(var(--space) * 4), 
+		var(--sunpillar-5) calc(var(--space) * 5), 
+		var(--sunpillar-6) calc(var(--space) * 6), 
+		var(--sunpillar-1) calc(var(--space) * 7)
+    ),
+    repeating-linear-gradient( 
+		var(--angle), 
+		#0e152e 0%, 
+		hsl(180, 10%, 60%) 3.8%, 
+		hsl(180, 29%, 66%) 4.5%, 
+		hsl(180, 10%, 60%) 5.2%, 
+		#0e152e 10%, 
+		#0e152e 12% 
+	),
+    radial-gradient(
+		farthest-corner circle 
+		at calc(var(--ratio-x) * 100%) calc(var(--ratio-y) * 100%),
+		hsla(0, 0%, 0%, 0.1) 12%, 
+		hsla(0, 0%, 0%, 0.15) 20%, 
+		hsla(0, 0%, 0%, 0.25) 110%
+    );
+	background-blend-mode: screen, color, hard-light, color-dodge;
+	background-blend-mode: overlay, color, hard-light, color-dodge;
+	background-position: center, 0% var(--background-y), calc(var(--background-x)* -1) calc(var(--background-y)* -1), var(--background-x) var(--background-y);
+	background-position: 0% calc(var(--ratio-y) * 100%), calc(var(--ratio-x) *100% * -1) calc(var(--ratio-y) * 100% * -1), calc(var(--ratio-x) * 100%) calc(var(--ratio-y) * 100%);
+
+	transition: background-position 0.2s ease;
+	mix-blend-mode: hard-light;
+}
+
+.card-wrapper:hover .card-shine:before,
+.card-wrapper.hoverOver .card-shine:before {
+	background-size: 300% 500%, 250% 150%, 200% 100%;
+	filter: brightness(.8) contrast(2.95) saturate(.65);
+}
+
+.card-wrapper:hover .card-shine:after,
+.card-wrapper.hoverOver .card-shine:after {
+	--sunpillar-clr-1: var(--sunpillar-6);
+    --sunpillar-clr-2: var(--sunpillar-1);
+    --sunpillar-clr-3: var(--sunpillar-2);
+    --sunpillar-clr-4: var(--sunpillar-3);
+    --sunpillar-clr-5: var(--sunpillar-4);
+    --sunpillar-clr-6: var(--sunpillar-5);
+	
+    background: 
+	repeating-linear-gradient( 
+		0deg, 
+		var(--sunpillar-clr-1) calc(var(--space) * 1), 
+		var(--sunpillar-clr-2) calc(var(--space) * 2), 
+		var(--sunpillar-clr-3) calc(var(--space) * 3), 
+		var(--sunpillar-clr-4) calc(var(--space) * 4), 
+		var(--sunpillar-clr-5) calc(var(--space) * 5), 
+		var(--sunpillar-clr-6) calc(var(--space) * 6), 
+		var(--sunpillar-clr-1) calc(var(--space) * 7)
+    ),
+    repeating-linear-gradient( 
+		var(--angle), 
+		#0e152e 0%, 
+		hsl(180, 10%, 60%) 3.8%, 
+		hsl(180, 29%, 66%) 4.5%, 
+		hsl(180, 10%, 60%) 5.2%, 
+		#0e152e 10% , 
+		#0e152e 12% 
+	),
+    radial-gradient(
+		farthest-corner circle 
+		at var(--pointer-x) var(--pointer-y),
+		hsla(0, 0%, 0%, 0.1) 12%, 
+		hsla(0, 0%, 0%, 0.15) 20%, 
+		hsla(0, 0%, 0%, 0.25) 120%
+    );
+	background-blend-mode: color, hue, hard-light;
+	background-size: 200% 300%, 150% 150%, 200% 100%;
+	filter: brightness(1) contrast(2.5) saturate(1.75);
+    mix-blend-mode: soft-light;
+	mix-blend-mode: overlay;
+}
+
+
+.card-wrapper:hover .card-glow,
+.card-wrapper.hoverOver .card-glow {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: 
+	radial-gradient(circle at calc(var(--ratio-x) * 100%) calc(var(--ratio-y) * 100%), hsl(46.99deg 86.85% 65.19% / 58%), transparent 50%),
+	radial-gradient(circle at calc(var(--ratio-x) * 100%) calc(var(--ratio-y) * 100%), hsl(0 0% 100% / 0.2), transparent 35%);
+	background-repeat: no-repeat;
+	background-blend-mode: overlay, screen;
+	mix-blend-mode: color-dodge;
+	z-index: 2;
+}
+</style>
+
+<div class="card-wrapper">
+	<div class="card-front">
+		<img src="./scs_badge_base.png" alt="Damien Badge Base Image" />
+	</div>
+	<div class="card-shine"></div>
+	<div class="card-glow"></div>
+</div>
+
+<!--
+COPY RIGHT
+https://danielrosslawfirm.com/2024/01/13/can-i-copyright-my-website-design-insights-from-daniel-ross-and-associates/
+
+background:
+   url(https://assets.codepen.io/605876/code-icon-bg.svg) 0 0 / 18% 18%,
+   linear-gradient(115deg,
+     transparent 20%,
+     var(--green-8) 30%,
+     transparent 48% 52%,
+     var(--indigo-8) 70%,
+     transparent
+   )
+   80% 80% / 300% 300%;
+  filter: brightness(2) contrast(1);
+  background-blend-mode: overlay;
+  mix-blend-mode: color-dodge;
+
+https://poke-holo.simey.me/
+
+/* LONGER HUE HOLO RAINBOW */
+background: linear-gradient(90deg in oklch longer hue, #0273ff, #f18260, #59ffbe);
+
+/* THREE COLOR PURPLE TO YELLOW */
+background: linear-gradient(90deg, rgba(139,64,217,1), rgba(185,93,165,1), rgba(230,171,61,1) );
+
+/* GRADIENT HEAT MAP */
+background: linear-gradient(90deg, rgba(230,92,26,1), rgba(205,203,30,1), rgba(162,227,27,1), rgba(82,225,194,1) );
+
+/* PURPLE/PINK BLUE TEAL TO YELLOW PEACH GOOD USE */
+background: linear-gradient(90deg, rgba(232,144,187,1), rgba(207,57,215,1), rgba(25,158,212,1), rgba(6,190,168,1), rgba(227,178,58,1), rgba(249,177,116,1) );
+
+/* MIND GRADIENT */
+background: linear-gradient(90deg, rgba(141,142,204,1), rgba(111,142,219,1), rgba(198,119,210,1), rgba(214,168,116,1), rgba(226,131,174,1), rgba(170,107,227,1), rgba(176,130,217,1) );
+
+/* BLUE BRIGHT TO BLUE */
+background: linear-gradient(90deg, rgba(26,249,209,1), rgba(5,109,219,1) );
+
+/* BRIGHT GOOD RAINBOW */
+background: linear-gradient(90deg in oklch, #fbe46c, #fe987b, #cd64f1, #6ea3fd, #63cdeb, #afff8a, #fbdc6c);
+
+/* STICKER GRADIENTS */
+base sticker grey
+#a8a79d
+sticker gradient
+background: linear-gradient(90deg, rgba(14,149,215,1) 0%, rgba(207,137,208,1) 12%, rgba(210,184,119,1) 26%, rgba(36,209,228,1) 38%, rgba(37,135,211,1) 48%, rgba(178,88,196,1) 60%, rgba(219,176,134,1) 72%, rgba(126,209,168,1) 82%, rgba(118,128,255,1) 91%, rgba(0,194,224,1) 100%);
+
+
+CALC FONT SIZE FOR DYNAMIC FONTS
+You will need:
+
+Nicely adjusted ratio in some viewport. I used 320 pixels, thus I got 24 pixels high and 224 pixels wide, so the ratio is 9.333... or 28 / 3
+The container width, I had padding: 3em and full width so this got to 100wv - 2 * 3em
+X is the width of container, so replace it with your own expression or adjust the value to get full-page text. R is the ratio you will have. You can get it by adjusting the values in some viewport, inspecting element width and height and replacing them with your own values. Also, it is width / heigth ;)
+
+x = 100vw - 2 * 3em = 100vw - 6em
+r = 224px/24px = 9.333... = 28 / 3
+
+y = x / r
+  = (100vw - 6em) / (28 / 3)
+  = (100vw - 6em) * 3 / 28
+  = (300vw - 18em) / 28
+  = (75vw - 4.5rem) / 7
+And bang! It worked! I wrote
+
+font-size: calc((75vw - 4.5rem) / 7)
+
+TEST
+body{font-size: 10px;}
+.menu{font-size: 2rem;} /* That means 2*10 pixels = 20 pixels */
+.menu li{font-size: 1.5rem;} /* that means 1.5*10 pixels = 15 pixels */
+
+/* PASTELS GRADIENT */
+background: linear-gradient(90deg, rgba(255, 250, 164, 1), rgb(255 205 135), rgb(255 159 156), rgb(206 162 233), rgba(133, 230, 211, 1), rgba(215, 251, 167, 1));
+
+ -->
+
+<script>
+console.clear()
+
+const CARDS = document.querySelectorAll('.card-wrapper');
+
+CARDS.forEach(CARD => {
+	let timeoutId;
+	
+	const UPDATECARD = ({ x, y }) => {
+		const BOUNDS = CARD.getBoundingClientRect();
+		// const BOUNDS = e.target.getBoundingClientRect();
+		// Calculate the range between the center and the pointer position.
+		const posX = x - BOUNDS.x;
+		const posY = y - BOUNDS.y;
+		const constrain = 35;
+		const ratioX = posX / BOUNDS.width;
+		const ratioY = posY / BOUNDS.height;
+		const ratioXX = -(y - BOUNDS.y - (BOUNDS.height / 2)) / constrain;
+		const ratioYY = (x - BOUNDS.x - (BOUNDS.width / 2)) / constrain;
+		const fromCenter = (Math.sqrt((posY - 50) * (posY - 50) + (posX - 50) * (posX - 50)) / 50, 0, 1);
+		const gradientPositionX = (ratioX * 100) / 100;
+		const gradientPositionY = (ratioY * 100) / 100;
+		
+		const middleX = (BOUNDS.right - BOUNDS.left) / 2 + BOUNDS.left;
+		const middleY = (BOUNDS.bottom - BOUNDS.top) / 2 + BOUNDS.top;
+		const yMouse = event.clientY - middleY;
+		const xMouse = event.clientX - middleX;
+		const angleInRadians = Math.atan2(yMouse, xMouse);
+		const angleInDegrees = angleInRadians * 180 / Math.PI;
+		const angleInDegrees360 = (angleInDegrees + 360) % 360;
+		// if (angleInDegrees < 0) {
+			// angleInDegrees += 360;
+		// }
+
+		CARD.style.setProperty('--ratio-x', ratioX);
+		CARD.style.setProperty('--ratio-y', ratioY);
+		CARD.style.setProperty('--ratio-xx', -ratioXX + 'deg');
+		CARD.style.setProperty('--ratio-yy', -ratioYY + 'deg');
+		CARD.style.setProperty('--back-x', gradientPositionX + '%');
+		CARD.style.setProperty('--back-y', gradientPositionY + '%');
+		// CARD.style.setProperty('--angle', angleInRadians + 'rad');
+		timeoutId = setTimeout(() => {
+			CARD.style.setProperty('--angle', angleInDegrees360 + 'deg');
+		}, 400); // Delay in milliseconds (e.g., 200ms)
+		// console.info({ posX, posY })
+	}
+
+	// document.body.addEventListener('pointermove', UPDATECARD);
+	CARD.addEventListener('pointermove', UPDATECARD);
+	CARD.addEventListener('pointermove', (event) => {
+		CARD.classList.add('hoverOver');
+	});
+
+	CARD.addEventListener('pointerenter', (event) => {
+		CARD.dataset.active = "true";
+		clearTimeout(timeoutId);
+	});
+
+	CARD.addEventListener('pointerleave', (event) => {
+		CARD.dataset.active = "false";
+		CARD.dataset.parallax = "false";
+		clearTimeout(timeoutId);
+		CARD.classList.remove('hoverOver');
+	});
+
+	CARD.addEventListener('transitionend', event => {
+		if (event.target === CARD && event.propertyName === 'transform' && CARD.dataset.active === "true") {
+			CARD.dataset.parallax = "true"
+		}
+	});
+});
+</script>
+
+<!--
+
+window.addEventListener('deviceorientation', function(event) {
+	const tiltX = event.beta; // beta represents rotation around the x-axis (in degrees)
+	const tiltY = event.gamma; // gamma represents rotation around the y-axis (in degrees)
+	// alpha = z-axis
+	// console.log('Tilt X:', tiltX);
+	// console.log('Tilt y:', tiltY);
+});
+
+if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+	DeviceOrientationEvent.requestPermission().then(permissionState => {
+		if (permissionState === 'granted') {
+			window.addEventListener('deviceorientation', handleOrientation);
+		} else {
+			// Permission denied
+		}
+	}).catch(console.error);
+} else {
+	// Non-iOS 13+ device
+	window.addEventListener('deviceorientation', handleOrientation);
+}
+
+function handleOrientation(event) {
+	const alpha = event.alpha;
+	const beta = event.beta;
+	const gamma = event.gamma;
+
+	// Process orientation data
+}
+
+-->

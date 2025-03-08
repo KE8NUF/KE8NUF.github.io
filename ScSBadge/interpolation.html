@@ -1,0 +1,59 @@
+<body>
+</body>
+
+<script>
+function interpolateColors(colors, steps) {
+  if (colors.length < 2) {
+    return colors;
+  }
+
+  const totalSteps = steps - 1;
+  const interpolatedColors = [];
+
+  for (let i = 0; i < totalSteps; i++) {
+    const stepRatio = i / totalSteps;
+    const colorIndex = Math.floor(stepRatio * (colors.length - 1));
+    const nextColorIndex = Math.min(colorIndex + 1, colors.length - 1);
+
+    const color1 = hexToRgb(colors[colorIndex]);
+    const color2 = hexToRgb(colors[nextColorIndex]);
+
+    const interpolatedColor = interpolateRgb(color1, color2, (stepRatio * (colors.length - 1)) - colorIndex);
+    interpolatedColors.push(rgbToHex(interpolatedColor));
+  }
+    interpolatedColors.push(colors[colors.length - 1]);
+  return interpolatedColors;
+}
+
+function hexToRgb(hex) {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? {
+    r: parseInt(result[1], 16),
+    g: parseInt(result[2], 16),
+    b: parseInt(result[3], 16)
+  } : null;
+}
+
+function rgbToHex(rgb) {
+  return "#" + ((1 << 24) + (rgb.r << 16) + (rgb.g << 8) + rgb.b).toString(16).slice(1);
+}
+
+function interpolateRgb(color1, color2, ratio) {
+    const r = Math.round(color1.r + (color2.r - color1.r) * ratio);
+    const g = Math.round(color1.g + (color2.g - color1.g) * ratio);
+    const b = Math.round(color1.b + (color2.b - color1.b) * ratio);
+    return { r, g, b };
+}
+
+// Example usage:
+// const colorArray = ["#FF0000", "#00FF00", "#0000FF"]; // Red, Green, Blue
+// const colorArray = ['#fbe46c', '#fe987b', '#cd64f1', '#6ea3fd', '#63cdeb', '#afff8a', '#fbdc6c'];
+const colorArray = ['#fffaa4', '#ffcd87', '#ff9f9c', '#cea2e9', '#85e6d3', '#d7fba7'];
+const steps = 70; 
+const interpolatedPalette = interpolateColors(colorArray, steps);
+const backgroundPalette = interpolateColors(colorArray, steps);
+
+console.log(interpolatedPalette);
+// body.style.setProperty('background'. backgroundPalette);
+document.body.setAttribute('style', 'background:linear-gradient(90deg in oklch, ' + backgroundPalette + ');');
+</script>
