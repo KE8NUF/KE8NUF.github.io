@@ -428,30 +428,30 @@ CARDS.forEach(CARD => {
 	//CARD.addEventListener('touchmove', UPDATECARD);
 	
 	// ['pointermove', 'touchmove'].forEach(event => CARD.addEventListener(event, UPDATECARD));
-	// ['pointermove', 'touchmove'].forEach(event => CARD.addEventListener(event, moveCard));
-	// function moveCard(event) {
-	CARD.addEventListener('pointermove touchmove', (event) => {
+	['pointermove', 'touchmove'].forEach(event => CARD.addEventListener(event, moveCard));
+	function moveCard(event) {
+	// CARD.addEventListener('pointermove touchmove', (event) => {
 		CARD.classList.add('hoverOver');
-	// }
-	});
+	}
+	// });
 	
-	CARD.addEventListener('pointerenter touchstart', (event) => {
-	// ['pointerenter', 'touchstart'].forEach(event => CARD.addEventListener(event, enterCard));
-	// function enterCard(event) {
+	// CARD.addEventListener('pointerenter touchstart', (event) => {
+	['pointerenter', 'touchstart'].forEach(event => CARD.addEventListener(event, enterCard));
+	function enterCard(event) {
 		CARD.dataset.active = "true";
 		clearTimeout(timeoutId);
-	// }
-	});
+	}
+	// });
 	
-	CARD.addEventListener('pointerleave touchend', (event) => {
-	// ['pointerleave', 'touchend'].forEach(event => CARD.addEventListener(event, leaveCard));
-	// function leaveCard(event) {
+	// CARD.addEventListener('pointerleave touchend', (event) => {
+	['pointerleave', 'touchend'].forEach(event => CARD.addEventListener(event, leaveCard));
+	function leaveCard(event) {
 		CARD.dataset.active = "false";
 		CARD.dataset.parallax = "false";
 		clearTimeout(timeoutId);
 		CARD.classList.remove('hoverOver');
-	// }
-	});
+	}
+	// });
 
 	CARD.addEventListener('transitionend', event => {
 		if (event.target === CARD && event.propertyName === 'transform' && CARD.dataset.active === "true") {
