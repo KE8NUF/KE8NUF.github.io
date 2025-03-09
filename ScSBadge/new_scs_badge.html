@@ -441,7 +441,7 @@ CARDS.forEach(CARD => {
 		// CARD.style.setProperty('--angle', angleInRadians + 'rad');
 		timeoutId = setTimeout(() => {
 			CARD.style.setProperty('--angle', angleInDegrees360 + 'deg');
-		}, 400); // Delay in milliseconds (e.g., 200ms)
+		}, 200); // Delay in milliseconds (e.g., 200ms)
 		// console.info({ posX, posY })
 		requestAnimationFrame(initUPDATECARD);
 	};
