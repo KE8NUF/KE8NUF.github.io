@@ -437,7 +437,7 @@ CARDS.forEach(CARD => {
 			CARD.style.setProperty('--angle', angleInDegrees360 + 'deg');
 		}, 400); // Delay in milliseconds (e.g., 200ms)
 		// console.info({ posX, posY })
-	}
+	};
 
 	// document.body.addEventListener('pointermove', UPDATECARD);
 	CARD.addEventListener('pointermove', UPDATECARD);
@@ -448,7 +448,7 @@ CARDS.forEach(CARD => {
 	function moveCard(event) {
 	// CARD.addEventListener('pointermove touchmove', (event) => {
 		CARD.classList.add('hoverOver');
-	}
+	};
 	// });
 	
 	// CARD.addEventListener('pointerenter touchstart', (event) => {
@@ -456,7 +456,7 @@ CARDS.forEach(CARD => {
 	function enterCard(event) {
 		CARD.dataset.active = "true";
 		clearTimeout(timeoutId);
-	}
+	};
 	// });
 	
 	// CARD.addEventListener('pointerleave touchend', (event) => {
@@ -467,7 +467,7 @@ CARDS.forEach(CARD => {
 		clearTimeout(timeoutId);
 		CARD.classList.remove('hoverOver');
 		CARD.removeAttribute('style');
-	}
+	};
 	// });
 
 	// CARD.addEventListener('transitionend', event => {
