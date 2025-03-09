@@ -477,6 +477,20 @@ CARDS.forEach(CARD => {
 	// });
 });
 
+function debounce(callback, delay) {
+	let debounceTimeout;
+	return() => {
+		clearTimeout(debounceTimeout);
+		debounceTimeout = setTimeout(() => {
+			callback();
+		}, delay);
+	}
+};
+
+let doDebounce = debounce(() => leaveCard(), 100);
+
+window.addEventListener('resize', () => doDebounce());
+
 if('addEventListener' in document) {
 	document.addEventListener('DOMContentLoaded', function() {
 		FastClick.attach(document.body);
