@@ -388,106 +388,68 @@ background: linear-gradient(90deg, rgba(255, 250, 164, 1), rgb(255 205 135), rgb
 
  -->
 
+<!-- https://syntha.ai/optimizers/javascript -->
 <script>
-console.clear()
+console.clear();
 
-let frameID;
 const CARDS = document.querySelectorAll('.card-wrapper');
 
-CARDS.forEach(CARD => {
+const updateCard = (card, { x, y }) => {
+	const bounds = card.getBoundingClientRect();
+	const posX = x - bounds.x;
+	const posY = y - bounds.y;
+	const constrain = window.innerWidth === 980 ? 15 : 35;
+	const ratioX = posX / bounds.width;
+	const ratioY = posY / bounds.height;
+	const ratioXX = -(y - bounds.y - (bounds.height / 2)) / constrain;
+	const ratioYY = (x - bounds.x - (bounds.width / 2)) / constrain;
+	const fromCenter = Math.sqrt((posY - 50) * (posY - 50) + (posX - 50) * (posX - 50)) / 50;
+	const gradientPositionX = ratioX * 100;
+	const gradientPositionY = ratioY * 100;
+	
+	const middleX = (bounds.right - bounds.left) / 2 + bounds.left;
+	const middleY = (bounds.bottom - bounds.top) / 2 + bounds.top;
+	const yMouse = event.clientY - middleY;
+	const xMouse = event.clientX - middleX;
+	const angleInRadians = Math.atan2(yMouse, xMouse);
+	const angleInDegrees = (angleInRadians * 180 / Math.PI + 360) % 360;
+
+	card.style.setProperty('--ratio-x', ratioX);
+	card.style.setProperty('--ratio-y', ratioY);
+	card.style.setProperty('--ratio-xx', -ratioXX + 'deg');
+	card.style.setProperty('--ratio-yy', -ratioYY + 'deg');
+	card.style.setProperty('--back-x', gradientPositionX + '%');
+	card.style.setProperty('--back-y', gradientPositionY + '%');
+	card.style.setProperty('--angle', angleInDegrees + 'deg');
+};
+
+const handleCardEvents = (card) => {
 	let timeoutId;
-	let constrain;
-	
-	const UPDATECARD = ({ x, y }) => {
-		const BOUNDS = CARD.getBoundingClientRect();
-		let angleInDegrees360;
-		// const BOUNDS = e.target.getBoundingClientRect();
-		// Calculate the range between the center and the pointer position.
-		const posX = x - BOUNDS.x;
-		const posY = y - BOUNDS.y;
-		if(window.innterWidth === 980) {
-			constrain = 15;
-		} else {
-			constrain = 35;
-		}
-		const ratioX = posX / BOUNDS.width;
-		const ratioY = posY / BOUNDS.height;
-		const ratioXX = -(y - BOUNDS.y - (BOUNDS.height / 2)) / constrain;
-		const ratioYY = (x - BOUNDS.x - (BOUNDS.width / 2)) / constrain;
-		const fromCenter = (Math.sqrt((posY - 50) * (posY - 50) + (posX - 50) * (posX - 50)) / 50, 0, 1);
-		const gradientPositionX = (ratioX * 100) / 100;
-		const gradientPositionY = (ratioY * 100) / 100;
-		
-		const middleX = (BOUNDS.right - BOUNDS.left) / 2 + BOUNDS.left;
-		const middleY = (BOUNDS.bottom - BOUNDS.top) / 2 + BOUNDS.top;
-		const yMouse = event.clientY - middleY;
-		const xMouse = event.clientX - middleX;
-		const initUPDATECARD = () => {
-			const angleInRadians = Math.atan2(yMouse, xMouse);
-			const angleInDegrees = angleInRadians * 180 / Math.PI;
-			angleInDegrees360 = (angleInDegrees + 360) % 360;
-			requestAnimationFrame(initUPDATECARD);
-		};
-		// if (angleInDegrees < 0) {
-			// angleInDegrees += 360;
-		// }
-			
-		CARD.style.setProperty('--ratio-x', ratioX);
-		CARD.style.setProperty('--ratio-y', ratioY);
-		CARD.style.setProperty('--ratio-xx', -ratioXX + 'deg');
-		CARD.style.setProperty('--ratio-yy', -ratioYY + 'deg');
-		CARD.style.setProperty('--back-x', gradientPositionX + '%');
-		CARD.style.setProperty('--back-y', gradientPositionY + '%');
-		// CARD.style.setProperty('--angle', angleInRadians + 'rad');
-		timeoutId = setTimeout(() => {
-			CARD.style.setProperty('--angle', angleInDegrees360 + 'deg');
-		}, 200); // Delay in milliseconds (e.g., 200ms)
-		// console.info({ posX, posY })
-		requestAnimationFrame(initUPDATECARD);
-	};
-		
 
-	// document.body.addEventListener('pointermove', UPDATECARD);
-	CARD.addEventListener('pointermove', UPDATECARD);
-	// CARD.addEventListener('pointermove', smoothAnimation);
-	//CARD.addEventListener('touchmove', UPDATECARD);
-	
-	// ['pointermove', 'touchmove'].forEach(event => CARD.addEventListener(event, UPDATECARD));
-	['pointermove', 'touchmove'].forEach(event => CARD.addEventListener(event, moveCard));
-	function moveCard(event) {
-	// CARD.addEventListener('pointermove touchmove', (event) => {
-		CARD.classList.add('hoverOver');
-		// requestAnimationFrame(UPDATECARD);
+	const handlePointerMove = (event) => {
+		card.classList.add('hoverOver');
+		updateCard(card, { x: event.clientX, y: event.clientY });
 	};
-	// });
-	
-	// CARD.addEventListener('pointerenter touchstart', (event) => {
-	['pointerenter', 'touchstart'].forEach(event => CARD.addEventListener(event, enterCard));
-	function enterCard(event) {
-		CARD.dataset.active = "true";
-		clearTimeout(timeoutId);
-		// requestAnimationFrame(UPDATECARD);
-	};
-	// });
-	
-	// CARD.addEventListener('pointerleave touchend', (event) => {
-	['pointerleave', 'touchend'].forEach(event => CARD.addEventListener(event, leaveCard));
-	function leaveCard(event) {
-		CARD.dataset.active = "false";
-		CARD.dataset.parallax = "false";
-		clearTimeout(timeoutId);
-		CARD.classList.remove('hoverOver');
-		CARD.removeAttribute('style');
-		// requestAnimationFrame(UPDATECARD);
-	};
-	// });
 
-	// CARD.addEventListener('transitionend', event => {
-		// if (event.target === CARD && event.propertyName === 'transform' && CARD.dataset.active === "true") {
-			// CARD.dataset.parallax = "true"
-		// }
-	// });
-});
+	const handlePointerEnter = () => {
+		card.dataset.active = "true";
+		clearTimeout(timeoutId);
+	};
+
+	const handlePointerLeave = () => {
+		card.dataset.active = "false";
+		card.dataset.parallax = "false";
+		clearTimeout(timeoutId);
+		card.classList.remove('hoverOver');
+		card.removeAttribute('style');
+	};
+
+	['pointermove', 'touchmove'].forEach(event => card.addEventListener(event, handlePointerMove));
+	['pointerenter', 'touchstart'].forEach(event => card.addEventListener(event, handlePointerEnter));
+	['pointerleave', 'touchend'].forEach(event => card.addEventListener(event, handlePointerLeave));
+};
+
+CARDS.forEach(handleCardEvents);
 
 /*
 function debounce(callback, delay) {
