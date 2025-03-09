@@ -1,7 +1,7 @@
 <meta name="viewport" content="width-device-width, initial-scale-1" >
 <!-- <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script> -->
-<!-- <script src="https://cdn.tutorialjinni.com/fastclick/1.0.6/fastclick.min.js"></script> -->
-<script src="https://damienmillard.net/ScSBadge/fastclick.min.js"></script>
+<script src="https://cdn.tutorialjinni.com/fastclick/1.0.6/fastclick.min.js"></script>
+<!-- <script src="https://damienmillard.net/ScSBadge/fastclick.min.js"></script> -->
 
 <style>
 /* START RESETS */
@@ -116,6 +116,7 @@ PERSIAN BLUE
 	mask: url("https://i.postimg.cc/JhCgj3W5/scs-badge-clip-bw.png") center / 100% auto no-repeat;
 	will-change: transform;
 	backface-visibility: hidden;
+	touch-action: manipulation;
 	overflow: hidden;
 }
 
@@ -390,6 +391,7 @@ background: linear-gradient(90deg, rgba(255, 250, 164, 1), rgb(255 205 135), rgb
 <script>
 console.clear()
 
+let frameID;
 const CARDS = document.querySelectorAll('.card-wrapper');
 
 CARDS.forEach(CARD => {
@@ -398,6 +400,7 @@ CARDS.forEach(CARD => {
 	
 	const UPDATECARD = ({ x, y }) => {
 		const BOUNDS = CARD.getBoundingClientRect();
+		let angleInDegrees360;
 		// const BOUNDS = e.target.getBoundingClientRect();
 		// Calculate the range between the center and the pointer position.
 		const posX = x - BOUNDS.x;
@@ -419,13 +422,16 @@ CARDS.forEach(CARD => {
 		const middleY = (BOUNDS.bottom - BOUNDS.top) / 2 + BOUNDS.top;
 		const yMouse = event.clientY - middleY;
 		const xMouse = event.clientX - middleX;
-		const angleInRadians = Math.atan2(yMouse, xMouse);
-		const angleInDegrees = angleInRadians * 180 / Math.PI;
-		const angleInDegrees360 = (angleInDegrees + 360) % 360;
+		const initUPDATECARD = () => {
+			const angleInRadians = Math.atan2(yMouse, xMouse);
+			const angleInDegrees = angleInRadians * 180 / Math.PI;
+			angleInDegrees360 = (angleInDegrees + 360) % 360;
+			requestAnimationFrame(initUPDATECARD);
+		};
 		// if (angleInDegrees < 0) {
 			// angleInDegrees += 360;
 		// }
-
+			
 		CARD.style.setProperty('--ratio-x', ratioX);
 		CARD.style.setProperty('--ratio-y', ratioY);
 		CARD.style.setProperty('--ratio-xx', -ratioXX + 'deg');
@@ -437,10 +443,13 @@ CARDS.forEach(CARD => {
 			CARD.style.setProperty('--angle', angleInDegrees360 + 'deg');
 		}, 400); // Delay in milliseconds (e.g., 200ms)
 		// console.info({ posX, posY })
+		requestAnimationFrame(initUPDATECARD);
 	};
+		
 
 	// document.body.addEventListener('pointermove', UPDATECARD);
 	CARD.addEventListener('pointermove', UPDATECARD);
+	// CARD.addEventListener('pointermove', smoothAnimation);
 	//CARD.addEventListener('touchmove', UPDATECARD);
 	
 	// ['pointermove', 'touchmove'].forEach(event => CARD.addEventListener(event, UPDATECARD));
@@ -448,6 +457,7 @@ CARDS.forEach(CARD => {
 	function moveCard(event) {
 	// CARD.addEventListener('pointermove touchmove', (event) => {
 		CARD.classList.add('hoverOver');
+		// requestAnimationFrame(UPDATECARD);
 	};
 	// });
 	
@@ -456,6 +466,7 @@ CARDS.forEach(CARD => {
 	function enterCard(event) {
 		CARD.dataset.active = "true";
 		clearTimeout(timeoutId);
+		// requestAnimationFrame(UPDATECARD);
 	};
 	// });
 	
@@ -467,6 +478,7 @@ CARDS.forEach(CARD => {
 		clearTimeout(timeoutId);
 		CARD.classList.remove('hoverOver');
 		CARD.removeAttribute('style');
+		// requestAnimationFrame(UPDATECARD);
 	};
 	// });
 
@@ -477,6 +489,7 @@ CARDS.forEach(CARD => {
 	// });
 });
 
+/*
 function debounce(callback, delay) {
 	let debounceTimeout;
 	return() => {
@@ -490,6 +503,7 @@ function debounce(callback, delay) {
 let doDebounce = debounce(() => leaveCard(), 100);
 
 window.addEventListener('resize', () => doDebounce());
+*/
 
 if('addEventListener' in document) {
 	document.addEventListener('DOMContentLoaded', function() {
