@@ -388,68 +388,75 @@ background: linear-gradient(90deg, rgba(255, 250, 164, 1), rgb(255 205 135), rgb
 
  -->
 
-<!-- https://www.clouddefense.ai/tools/code-optimizer/javascript -->
 <script>
 console.clear();
 
-let frameID;
 const CARDS = document.querySelectorAll('.card-wrapper');
 
-CARDS.forEach(CARD => {
+CARDS.forEach(card => {
     let timeoutId;
-    let constrain;
-    
-    const UPDATECARD = ({ x, y }) => {
-        const BOUNDS = CARD.getBoundingClientRect();
-        let angleInDegrees360;
-        const posX = x - BOUNDS.x;
-        const posY = y - BOUNDS.y;
-        if(window.innerWidth === 980) {
-            constrain = 15;
-        } else {
-            constrain = 35;
-        }
-        const ratioX = posX / BOUNDS.width;
-        const ratioY = posY / BOUNDS.height;
-        const ratioXX = -(y - BOUNDS.y - (BOUNDS.height / 2)) / constrain;
-        const ratioYY = (x - BOUNDS.x - (BOUNDS.width / 2)) / constrain;
-        const middleX = (BOUNDS.right - BOUNDS.left) / 2 + BOUNDS.left;
-        const middleY = (BOUNDS.bottom - BOUNDS.top) / 2 + BOUNDS.top;
-        const yMouse = event.clientY - middleY;
-        const xMouse = event.clientX - middleX;
-        const initUPDATECARD = () => {
-            const angleInRadians = Math.atan2(yMouse, xMouse);
-            const angleInDegrees = angleInRadians * 180 / Math.PI;
-            angleInDegrees360 = (angleInDegrees + 360) % 360;
-            requestAnimationFrame(initUPDATECARD);
+
+    const updateCardPosition = ({ clientX, clientY }) => {
+        const bounds = card.getBoundingClientRect();
+        const posX = clientX - bounds.x;
+        const posY = clientY - bounds.y;
+        const constrain = window.innerWidth === 980 ? 15 : 35;
+        const ratioX = posX / bounds.width;
+        const ratioY = posY / bounds.height;
+        const ratioXX = -(clientY - bounds.y - (bounds.height / 2)) / constrain;
+        const ratioYY = (clientX - bounds.x - (bounds.width / 2)) / constrain;
+
+        const middleX = (bounds.right + bounds.left) / 2;
+        const middleY = (bounds.bottom + bounds.top) / 2;
+        const yMouse = clientY - middleY;
+        const xMouse = clientX - middleX;
+
+        const animateCard = () => {
+            const angleInDegrees = Math.atan2(yMouse, xMouse) * (180 / Math.PI);
+            const normalizedAngle = (angleInDegrees + 360) % 360;
+
+            card.style.setProperty('--ratio-x', ratioX);
+            card.style.setProperty('--ratio-y', ratioY);
+            card.style.setProperty('--ratio-xx', -ratioXX + 'deg');
+            card.style.setProperty('--ratio-yy', -ratioYY + 'deg');
+            card.style.setProperty('--back-x', (ratioX * 100) + '%');
+            card.style.setProperty('--back-y', (ratioY * 100) + '%');
+
+            timeoutId = setTimeout(() => {
+                card.style.setProperty('--angle', normalizedAngle + 'deg');
+            }, 200); // Delay in milliseconds
+
+            requestAnimationFrame(animateCard);
         };
-        CARD.style.setProperty('--ratio-x', ratioX);
-        CARD.style.setProperty('--ratio-y', ratioY);
-        CARD.style.setProperty('--ratio-xx', -ratioXX + 'deg');
-        CARD.style.setProperty('--ratio-yy', -ratioYY + 'deg');
-        const timeoutCallback = () => {
-            CARD.style.setProperty('--angle', angleInDegrees360 + 'deg');
-        };
-        timeoutId = setTimeout(timeoutCallback, 200);
-        requestAnimationFrame(initUPDATECARD);
+
+        requestAnimationFrame(animateCard);
     };
 
-    CARD.addEventListener('pointermove', UPDATECARD);
-    
-    ['pointerenter', 'touchstart'].forEach(event => CARD.addEventListener(event, enterCard));
-    function enterCard(event) {
-        CARD.dataset.active = 'true';
+    const handlePointerMove = (event) => {
+        card.classList.add('hoverOver');
+        updateCardPosition(event);
+    };
+
+    const handleEnterCard = () => {
+        card.dataset.active = "true";
         clearTimeout(timeoutId);
     };
 
-    ['pointerleave', 'touchend'].forEach(event => CARD.addEventListener(event, leaveCard));
-    function leaveCard(event) {
-        CARD.dataset.active = 'false';
-        CARD.dataset.parallax = 'false';
+    const handleLeaveCard = () => {
+        card.dataset.active = "false";
+        card.dataset.parallax = "false";
         clearTimeout(timeoutId);
-        CARD.classList.remove('hoverOver');
-        CARD.removeAttribute('style');
+        card.classList.remove('hoverOver');
+        card.removeAttribute('style');
     };
+
+    // Attach event listeners
+    card.addEventListener('pointermove', handlePointerMove);
+    card.addEventListener('touchmove', handlePointerMove);
+    card.addEventListener('pointerenter', handleEnterCard);
+    card.addEventListener('touchstart', handleEnterCard);
+    card.addEventListener('pointerleave', handleLeaveCard);
+    card.addEventListener('touchend', handleLeaveCard);
 });
 
 /*
