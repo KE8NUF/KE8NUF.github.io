@@ -442,7 +442,7 @@ CARDS.forEach(CARD => {
 	// });
 	
 	// CARD.addEventListener('pointerleave', 'touchend', (event) => {
-	['pointerleave', 'touchend', 'touchcancel'].forEach(event => CARD.addEventListener(event, leaveCard));
+	['pointerleave', 'touchend'].forEach(event => CARD.addEventListener(event, leaveCard));
 	function leaveCard(event) {
 		CARD.dataset.active = "false";
 		CARD.dataset.parallax = "false";
