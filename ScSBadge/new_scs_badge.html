@@ -453,11 +453,11 @@ CARDS.forEach(CARD => {
 	}
 	// });
 
-	CARD.addEventListener('transitionend', event => {
-		if (event.target === CARD && event.propertyName === 'transform' && CARD.dataset.active === "true") {
-			CARD.dataset.parallax = "true"
-		}
-	});
+	// CARD.addEventListener('transitionend', event => {
+		// if (event.target === CARD && event.propertyName === 'transform' && CARD.dataset.active === "true") {
+			// CARD.dataset.parallax = "true"
+		// }
+	// });
 });
 
 if('addEventListener' in document) {
