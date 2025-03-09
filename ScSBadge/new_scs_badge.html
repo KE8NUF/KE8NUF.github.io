@@ -433,13 +433,18 @@ CARDS.forEach(CARD => {
 		CARD.dataset.active = "true";
 		clearTimeout(timeoutId);
 	});
-
-	CARD.addEventListener('pointerleave', (event) => {
+	
+	
+	// CARD.addEventListener(['pointerleave', 'touchend'], (event) => {
+	const pointerLeaveTouchEnd = function(event) {
 		CARD.dataset.active = "false";
 		CARD.dataset.parallax = "false";
 		clearTimeout(timeoutId);
 		CARD.classList.remove('hoverOver');
-	});
+	//});
+	};
+	document.addEventListener('click', pointerLeaveTouchEnd, false);
+	document.addEventListener('touchend', pointerLeaveTouchEnd, false);
 
 	CARD.addEventListener('transitionend', event => {
 		if (event.target === CARD && event.propertyName === 'transform' && CARD.dataset.active === "true") {
