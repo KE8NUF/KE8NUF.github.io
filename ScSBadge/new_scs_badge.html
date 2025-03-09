@@ -457,6 +457,7 @@ CARDS.forEach(CARD => {
 		CARD.dataset.parallax = "false";
 		clearTimeout(timeoutId);
 		CARD.classList.remove('hoverOver');
+		CARD.removeAttribute('style');
 	}
 	// });
 
