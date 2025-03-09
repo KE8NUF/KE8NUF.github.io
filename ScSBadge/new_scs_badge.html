@@ -426,7 +426,7 @@ CARDS.forEach(CARD => {
 	// document.body.addEventListener('pointermove', UPDATECARD);
 	// CARD.addEventListener('pointermove', UPDATECARD);
 	['pointermove', 'touchmove'].forEach(event => CARD.addEventListener(event, UPDATECARD));
-	['pointermove', 'touchmove'].forEach(event => CARD.addEventListener(event, cardMove));
+	['pointermove', 'touchmove'].forEach(event => CARD.addEventListener(event, moveCard));
 	function moveCard(event) {
 	// CARD.addEventListener('pointermove', (event) => {
 		CARD.classList.add('hoverOver');
