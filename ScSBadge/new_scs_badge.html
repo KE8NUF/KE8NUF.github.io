@@ -129,16 +129,16 @@ PERSIAN BLUE
 	transform: perspective(100px) rotateX(var(--ratio-xx)) rotateY(var(--ratio-yy));
 }
 
-.card-front img {
+.card-wrapper .card-front img {
 	width: 100%;
 	object-fit: contain;
 	height: 100%;
 	scale: 1;
 }
 
-.card-shine,
-.card-shine:before,
-.card-shine:after {
+.card-wrapper .card-shine,
+.card-wrapper .card-shine:before,
+.card-wrapper .card-shine:after {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -148,6 +148,15 @@ PERSIAN BLUE
 	transform: translate(-50%, -50%);
 	mix-blend-mode: plus-lighter;
 	mix-blend-mode: overlay;
+	opacity: 0%;
+}
+
+.card-wrapper:hover .card-shine,
+.card-wrapper:hover .card-shine:before,
+.card-wrapper:hover .card-shine:after,
+.card-wrapper.hoverOver .card-shine,
+.card-wrapper.hoverOver .card-shine:before,
+.card-wrapper.hoverOver .card-shine:after {
 	opacity: 56%;
 }
 
