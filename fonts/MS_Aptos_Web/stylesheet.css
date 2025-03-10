@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Aptos Display';
-    src: url('AptosDisplay-BoldItalic.eot');
-    src: url('AptosDisplay-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('AptosDisplay-BoldItalic.woff2') format('woff2'),
-        url('AptosDisplay-BoldItalic.woff') format('woff'),
-        url('AptosDisplay-BoldItalic.ttf') format('truetype'),
-        url('AptosDisplay-BoldItalic.svg#AptosDisplay-BoldItalic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-BoldItalic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-BoldItalic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-BoldItalic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-BoldItalic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-BoldItalic.svg#AptosDisplay-BoldItalic') format('svg');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -13,12 +13,12 @@
 
 @font-face {
     font-family: 'Aptos Display';
-    src: url('AptosDisplay.eot');
-    src: url('AptosDisplay.eot?#iefix') format('embedded-opentype'),
-        url('AptosDisplay.woff2') format('woff2'),
-        url('AptosDisplay.woff') format('woff'),
-        url('AptosDisplay.ttf') format('truetype'),
-        url('AptosDisplay.svg#AptosDisplay') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay.svg#AptosDisplay') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -26,12 +26,12 @@
 
 @font-face {
     font-family: 'Aptos';
-    src: url('Aptos-Italic.eot');
-    src: url('Aptos-Italic.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-Italic.woff2') format('woff2'),
-        url('Aptos-Italic.woff') format('woff'),
-        url('Aptos-Italic.ttf') format('truetype'),
-        url('Aptos-Italic.svg#Aptos-Italic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Italic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Italic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Italic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Italic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Italic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Italic.svg#Aptos-Italic') format('svg');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -39,12 +39,12 @@
 
 @font-face {
     font-family: 'Aptos Display';
-    src: url('AptosDisplay-Italic.eot');
-    src: url('AptosDisplay-Italic.eot?#iefix') format('embedded-opentype'),
-        url('AptosDisplay-Italic.woff2') format('woff2'),
-        url('AptosDisplay-Italic.woff') format('woff'),
-        url('AptosDisplay-Italic.ttf') format('truetype'),
-        url('AptosDisplay-Italic.svg#AptosDisplay-Italic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-Italic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-Italic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-Italic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-Italic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-Italic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-Italic.svg#AptosDisplay-Italic') format('svg');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -52,12 +52,12 @@
 
 @font-face {
     font-family: 'Aptos';
-    src: url('Aptos-Black.eot');
-    src: url('Aptos-Black.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-Black.woff2') format('woff2'),
-        url('Aptos-Black.woff') format('woff'),
-        url('Aptos-Black.ttf') format('truetype'),
-        url('Aptos-Black.svg#Aptos-Black') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Black.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Black.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Black.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Black.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Black.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Black.svg#Aptos-Black') format('svg');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -65,12 +65,12 @@
 
 @font-face {
     font-family: 'Aptos';
-    src: url('Aptos-ExtraBold.eot');
-    src: url('Aptos-ExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-ExtraBold.woff2') format('woff2'),
-        url('Aptos-ExtraBold.woff') format('woff'),
-        url('Aptos-ExtraBold.ttf') format('truetype'),
-        url('Aptos-ExtraBold.svg#Aptos-ExtraBold') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-ExtraBold.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-ExtraBold.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-ExtraBold.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-ExtraBold.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-ExtraBold.svg#Aptos-ExtraBold') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -78,12 +78,12 @@
 
 @font-face {
     font-family: 'Aptos';
-    src: url('Aptos-BlackItalic.eot');
-    src: url('Aptos-BlackItalic.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-BlackItalic.woff2') format('woff2'),
-        url('Aptos-BlackItalic.woff') format('woff'),
-        url('Aptos-BlackItalic.ttf') format('truetype'),
-        url('Aptos-BlackItalic.svg#Aptos-BlackItalic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-BlackItalic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-BlackItalic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-BlackItalic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-BlackItalic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-BlackItalic.svg#Aptos-BlackItalic') format('svg');
     font-weight: 900;
     font-style: italic;
     font-display: swap;
@@ -91,12 +91,12 @@
 
 @font-face {
     font-family: 'Aptos';
-    src: url('Aptos-Bold.eot');
-    src: url('Aptos-Bold.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-Bold.woff2') format('woff2'),
-        url('Aptos-Bold.woff') format('woff'),
-        url('Aptos-Bold.ttf') format('truetype'),
-        url('Aptos-Bold.svg#Aptos-Bold') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Bold.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Bold.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Bold.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Bold.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Bold.svg#Aptos-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -104,12 +104,12 @@
 
 @font-face {
     font-family: 'Aptos';
-    src: url('Aptos-BoldItalic.eot');
-    src: url('Aptos-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-BoldItalic.woff2') format('woff2'),
-        url('Aptos-BoldItalic.woff') format('woff'),
-        url('Aptos-BoldItalic.ttf') format('truetype'),
-        url('Aptos-BoldItalic.svg#Aptos-BoldItalic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-BoldItalic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-BoldItalic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-BoldItalic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-BoldItalic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-BoldItalic.svg#Aptos-BoldItalic') format('svg');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -117,12 +117,12 @@
 
 @font-face {
     font-family: 'Aptos';
-    src: url('Aptos.eot');
-    src: url('Aptos.eot?#iefix') format('embedded-opentype'),
-        url('Aptos.woff2') format('woff2'),
-        url('Aptos.woff') format('woff'),
-        url('Aptos.ttf') format('truetype'),
-        url('Aptos.svg#Aptos') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos.svg#Aptos') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -130,12 +130,12 @@
 
 @font-face {
     font-family: 'Aptos';
-    src: url('Aptos-ExtraBoldItalic.eot');
-    src: url('Aptos-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-ExtraBoldItalic.woff2') format('woff2'),
-        url('Aptos-ExtraBoldItalic.woff') format('woff'),
-        url('Aptos-ExtraBoldItalic.ttf') format('truetype'),
-        url('Aptos-ExtraBoldItalic.svg#Aptos-ExtraBoldItalic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-ExtraBoldItalic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-ExtraBoldItalic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-ExtraBoldItalic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-ExtraBoldItalic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-ExtraBoldItalic.svg#Aptos-ExtraBoldItalic') format('svg');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -143,12 +143,12 @@
 
 @font-face {
     font-family: 'Aptos';
-    src: url('Aptos-Light.eot');
-    src: url('Aptos-Light.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-Light.woff2') format('woff2'),
-        url('Aptos-Light.woff') format('woff'),
-        url('Aptos-Light.ttf') format('truetype'),
-        url('Aptos-Light.svg#Aptos-Light') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Light.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Light.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Light.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Light.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Light.svg#Aptos-Light') format('svg');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -156,12 +156,12 @@
 
 @font-face {
     font-family: 'Aptos Display';
-    src: url('AptosDisplay-Bold.eot');
-    src: url('AptosDisplay-Bold.eot?#iefix') format('embedded-opentype'),
-        url('AptosDisplay-Bold.woff2') format('woff2'),
-        url('AptosDisplay-Bold.woff') format('woff'),
-        url('AptosDisplay-Bold.ttf') format('truetype'),
-        url('AptosDisplay-Bold.svg#AptosDisplay-Bold') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-Bold.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-Bold.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-Bold.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-Bold.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosDisplay-Bold.svg#AptosDisplay-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -169,12 +169,12 @@
 
 @font-face {
     font-family: 'Aptos';
-    src: url('Aptos-LightItalic.eot');
-    src: url('Aptos-LightItalic.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-LightItalic.woff2') format('woff2'),
-        url('Aptos-LightItalic.woff') format('woff'),
-        url('Aptos-LightItalic.ttf') format('truetype'),
-        url('Aptos-LightItalic.svg#Aptos-LightItalic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-LightItalic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-LightItalic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-LightItalic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-LightItalic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-LightItalic.svg#Aptos-LightItalic') format('svg');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
@@ -182,12 +182,12 @@
 
 @font-face {
     font-family: 'Aptos Narrow';
-    src: url('Aptos-Narrow-Italic.eot');
-    src: url('Aptos-Narrow-Italic.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-Narrow-Italic.woff2') format('woff2'),
-        url('Aptos-Narrow-Italic.woff') format('woff'),
-        url('Aptos-Narrow-Italic.ttf') format('truetype'),
-        url('Aptos-Narrow-Italic.svg#Aptos-Narrow-Italic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Italic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Italic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Italic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Italic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Italic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Italic.svg#Aptos-Narrow-Italic') format('svg');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -195,12 +195,12 @@
 
 @font-face {
     font-family: 'Aptos Serif';
-    src: url('AptosSerif-Bold.eot');
-    src: url('AptosSerif-Bold.eot?#iefix') format('embedded-opentype'),
-        url('AptosSerif-Bold.woff2') format('woff2'),
-        url('AptosSerif-Bold.woff') format('woff'),
-        url('AptosSerif-Bold.ttf') format('truetype'),
-        url('AptosSerif-Bold.svg#AptosSerif-Bold') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Bold.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Bold.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Bold.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Bold.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Bold.svg#AptosSerif-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -208,12 +208,12 @@
 
 @font-face {
     font-family: 'Aptos Mono';
-    src: url('AptosMono-BoldItalic.eot');
-    src: url('AptosMono-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('AptosMono-BoldItalic.woff2') format('woff2'),
-        url('AptosMono-BoldItalic.woff') format('woff'),
-        url('AptosMono-BoldItalic.ttf') format('truetype'),
-        url('AptosMono-BoldItalic.svg#AptosMono-BoldItalic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-BoldItalic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-BoldItalic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-BoldItalic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-BoldItalic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-BoldItalic.svg#AptosMono-BoldItalic') format('svg');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -221,12 +221,12 @@
 
 @font-face {
     font-family: 'Aptos Narrow';
-    src: url('Aptos-Narrow-Bold-Italic.eot');
-    src: url('Aptos-Narrow-Bold-Italic.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-Narrow-Bold-Italic.woff2') format('woff2'),
-        url('Aptos-Narrow-Bold-Italic.woff') format('woff'),
-        url('Aptos-Narrow-Bold-Italic.ttf') format('truetype'),
-        url('Aptos-Narrow-Bold-Italic.svg#Aptos-Narrow-Bold-Italic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Bold-Italic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Bold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Bold-Italic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Bold-Italic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Bold-Italic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Bold-Italic.svg#Aptos-Narrow-Bold-Italic') format('svg');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -234,12 +234,12 @@
 
 @font-face {
     font-family: 'Aptos';
-    src: url('Aptos-SemiBoldItalic.eot');
-    src: url('Aptos-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-SemiBoldItalic.woff2') format('woff2'),
-        url('Aptos-SemiBoldItalic.woff') format('woff'),
-        url('Aptos-SemiBoldItalic.ttf') format('truetype'),
-        url('Aptos-SemiBoldItalic.svg#Aptos-SemiBoldItalic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-SemiBoldItalic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-SemiBoldItalic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-SemiBoldItalic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-SemiBoldItalic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-SemiBoldItalic.svg#Aptos-SemiBoldItalic') format('svg');
     font-weight: 600;
     font-style: italic;
     font-display: swap;
@@ -247,12 +247,12 @@
 
 @font-face {
     font-family: 'Aptos Serif';
-    src: url('AptosSerif-Italic.eot');
-    src: url('AptosSerif-Italic.eot?#iefix') format('embedded-opentype'),
-        url('AptosSerif-Italic.woff2') format('woff2'),
-        url('AptosSerif-Italic.woff') format('woff'),
-        url('AptosSerif-Italic.ttf') format('truetype'),
-        url('AptosSerif-Italic.svg#AptosSerif-Italic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Italic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Italic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Italic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Italic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Italic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Italic.svg#AptosSerif-Italic') format('svg');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -260,12 +260,12 @@
 
 @font-face {
     font-family: 'Aptos Narrow';
-    src: url('Aptos-Narrow.eot');
-    src: url('Aptos-Narrow.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-Narrow.woff2') format('woff2'),
-        url('Aptos-Narrow.woff') format('woff'),
-        url('Aptos-Narrow.ttf') format('truetype'),
-        url('Aptos-Narrow.svg#Aptos-Narrow') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow.svg#Aptos-Narrow') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -273,12 +273,12 @@
 
 @font-face {
     font-family: 'Aptos Mono';
-    src: url('AptosMono.eot');
-    src: url('AptosMono.eot?#iefix') format('embedded-opentype'),
-        url('AptosMono.woff2') format('woff2'),
-        url('AptosMono.woff') format('woff'),
-        url('AptosMono.ttf') format('truetype'),
-        url('AptosMono.svg#AptosMono') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono.svg#AptosMono') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -286,12 +286,12 @@
 
 @font-face {
     font-family: 'Aptos';
-    src: url('Aptos-SemiBold.eot');
-    src: url('Aptos-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-SemiBold.woff2') format('woff2'),
-        url('Aptos-SemiBold.woff') format('woff'),
-        url('Aptos-SemiBold.ttf') format('truetype'),
-        url('Aptos-SemiBold.svg#Aptos-SemiBold') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-SemiBold.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-SemiBold.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-SemiBold.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-SemiBold.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-SemiBold.svg#Aptos-SemiBold') format('svg');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -299,12 +299,12 @@
 
 @font-face {
     font-family: 'Aptos Mono';
-    src: url('AptosMono-Italic.eot');
-    src: url('AptosMono-Italic.eot?#iefix') format('embedded-opentype'),
-        url('AptosMono-Italic.woff2') format('woff2'),
-        url('AptosMono-Italic.woff') format('woff'),
-        url('AptosMono-Italic.ttf') format('truetype'),
-        url('AptosMono-Italic.svg#AptosMono-Italic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-Italic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-Italic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-Italic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-Italic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-Italic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-Italic.svg#AptosMono-Italic') format('svg');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -312,12 +312,12 @@
 
 @font-face {
     font-family: 'Aptos Mono';
-    src: url('AptosMono-Bold.eot');
-    src: url('AptosMono-Bold.eot?#iefix') format('embedded-opentype'),
-        url('AptosMono-Bold.woff2') format('woff2'),
-        url('AptosMono-Bold.woff') format('woff'),
-        url('AptosMono-Bold.ttf') format('truetype'),
-        url('AptosMono-Bold.svg#AptosMono-Bold') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-Bold.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-Bold.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-Bold.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-Bold.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosMono-Bold.svg#AptosMono-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -325,12 +325,12 @@
 
 @font-face {
     font-family: 'Aptos Serif';
-    src: url('AptosSerif-Regular.eot');
-    src: url('AptosSerif-Regular.eot?#iefix') format('embedded-opentype'),
-        url('AptosSerif-Regular.woff2') format('woff2'),
-        url('AptosSerif-Regular.woff') format('woff'),
-        url('AptosSerif-Regular.ttf') format('truetype'),
-        url('AptosSerif-Regular.svg#AptosSerif-Regular') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Regular.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Regular.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Regular.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Regular.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-Regular.svg#AptosSerif-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -338,12 +338,12 @@
 
 @font-face {
     font-family: 'Aptos Narrow';
-    src: url('Aptos-Narrow-Bold.eot');
-    src: url('Aptos-Narrow-Bold.eot?#iefix') format('embedded-opentype'),
-        url('Aptos-Narrow-Bold.woff2') format('woff2'),
-        url('Aptos-Narrow-Bold.woff') format('woff'),
-        url('Aptos-Narrow-Bold.ttf') format('truetype'),
-        url('Aptos-Narrow-Bold.svg#Aptos-Narrow-Bold') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Bold.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Bold.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Bold.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Bold.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/Aptos-Narrow-Bold.svg#Aptos-Narrow-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -351,12 +351,12 @@
 
 @font-face {
     font-family: 'Aptos Serif';
-    src: url('AptosSerif-BoldItalic.eot');
-    src: url('AptosSerif-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('AptosSerif-BoldItalic.woff2') format('woff2'),
-        url('AptosSerif-BoldItalic.woff') format('woff'),
-        url('AptosSerif-BoldItalic.ttf') format('truetype'),
-        url('AptosSerif-BoldItalic.svg#AptosSerif-BoldItalic') format('svg');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-BoldItalic.eot');
+    src: url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-BoldItalic.woff2') format('woff2'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-BoldItalic.woff') format('woff'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-BoldItalic.ttf') format('truetype'),
+        url('https://damienmillard.net/fonts/MS_Aptos_Web/AptosSerif-BoldItalic.svg#AptosSerif-BoldItalic') format('svg');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
