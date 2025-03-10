@@ -270,9 +270,8 @@ PERSIAN BLUE
 	mix-blend-mode: overlay;
 }
 
-
-.card-wrapper:hover .card-glow,
-.card-wrapper.hoverOver .card-glow {
+.card-wrapper .card-glow,
+.card-wrapper .card-glow {
 	content: "";
 	position: absolute;
 	inset: 0;
@@ -283,6 +282,12 @@ PERSIAN BLUE
 	background-blend-mode: overlay, screen;
 	mix-blend-mode: color-dodge;
 	z-index: 2;
+	opacity: 0;
+}
+
+.card-wrapper:hover .card-glow,
+.card-wrapper.hoverOver .card-glow {
+	opacity: 1;
 }
 
 @media only screen and (max-width : 980px), /* 980px */
