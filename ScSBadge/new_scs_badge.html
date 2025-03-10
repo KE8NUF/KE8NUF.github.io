@@ -301,6 +301,17 @@ only screen and (max-device-width : 980px) {
 		transform: perspective(1300px) rotateX(var(--ratio-xx)) rotateY(var(--ratio-yy));
 	}
 }
+
+/* https://hover-pointer-media-query.glitch.me/ */
+@media only screen and (hover: none) and (pointer: coarse){
+	/* Regular CSS rules here*/
+	/* For IOS (IPhone and IPAD) - and Mozilla on Android */
+}
+
+@media only screen and (hover: hover) and (pointer: coarse){
+	/* Regular CSS rules here*/
+	/* Chromium / Chrome on Android */
+}
 </style>
 
 <div class="card-wrapper">
