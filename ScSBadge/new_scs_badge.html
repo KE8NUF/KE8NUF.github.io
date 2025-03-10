@@ -117,7 +117,7 @@ PERSIAN BLUE
 	will-change: transform;
 	backface-visibility: hidden;
 	touch-action: manipulation;
-	overflow: hidden;
+	/* overflow: hidden; */ /* Will break the preserve 3d function in css */
 }
 
 .card-wrapper:hover,
@@ -312,6 +312,19 @@ only screen and (max-device-width : 980px) {
 </div>
 
 <!--
+body  background: #fafafa;
+OR #f5f5f5
+CARD WHITE
+background: #fff;
+border-radius: 16px;
+border: 1px solid #e4e4e7;
+box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, 
+rgba(0, 0, 0, 0.1) 0px 2px 4px -2px;
+-->
+
+<!--
 COPY RIGHT
 https://danielrosslawfirm.com/2024/01/13/can-i-copyright-my-website-design-insights-from-daniel-ross-and-associates/
 
@@ -350,7 +363,7 @@ background: linear-gradient(90deg, rgba(141,142,204,1), rgba(111,142,219,1), rgb
 background: linear-gradient(90deg, rgba(26,249,209,1), rgba(5,109,219,1) );
 
 /* BRIGHT GOOD RAINBOW */
-background: linear-gradient(90deg in oklch, #fbe46c, #fe987b, #cd64f1, #6ea3fd, #63cdeb, #afff8a, #fbdc6c);
+background: linear-gradient(90deg in oklch, #fbd66c, #f69579, #bf79d8, #709be6, #5fc6e3, #96eb6f, #fbe96c);
 
 /* STICKER GRADIENTS */
 base sticker grey
@@ -358,6 +371,21 @@ base sticker grey
 sticker gradient
 background: linear-gradient(90deg, rgba(14,149,215,1) 0%, rgba(207,137,208,1) 12%, rgba(210,184,119,1) 26%, rgba(36,209,228,1) 38%, rgba(37,135,211,1) 48%, rgba(178,88,196,1) 60%, rgba(219,176,134,1) 72%, rgba(126,209,168,1) 82%, rgba(118,128,255,1) 91%, rgba(0,194,224,1) 100%);
 
+/* RAINBOW ICONS SET */
+--gradSpace: 11.11%;
+background: 
+linear-gradient(
+	90deg, 
+	rgba(248, 107, 130, 1) calc(var(--gradSpace)* 1), 
+	rgba(233, 143, 91, 1) calc(var(--gradSpace)* 2), 
+	rgb(197 172 72) calc(var(--gradSpace)* 3), 
+	rgb(141 193 68) calc(var(--gradSpace)* 4), 
+	rgb(30 199 135) calc(var(--gradSpace)* 5), 
+	rgba(51, 177, 210, 1) calc(var(--gradSpace)* 6), 
+	rgba(120, 143, 227, 1) calc(var(--gradSpace)* 7), 
+	rgb(167 89 225) calc(var(--gradSpace)* 8), 
+	rgba(255, 102, 198, 1) calc(var(--gradSpace)* 9)
+);
 
 CALC FONT SIZE FOR DYNAMIC FONTS
 You will need:
