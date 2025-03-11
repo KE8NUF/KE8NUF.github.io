@@ -484,6 +484,7 @@ CARDS.forEach(CARD => {
     };
 
     CARD.addEventListener('pointermove', UPDATECARD);
+	CARD.addEventListener('touchmove', UPDATECARD);
     
     ['pointerenter', 'touchstart'].forEach(event => CARD.addEventListener(event, enterCard));
     function enterCard(event) {
