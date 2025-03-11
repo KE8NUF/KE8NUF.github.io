@@ -484,7 +484,7 @@ CARDS.forEach(CARD => {
     };
 
     CARD.addEventListener('pointermove', UPDATECARD);
-	CARD.addEventListener('touchmove', UPDATECARD);
+	// CARD.addEventListener('touchmove', UPDATECARD);
     
     ['pointerenter', 'touchstart'].forEach(event => CARD.addEventListener(event, enterCard));
     function enterCard(event) {
@@ -519,7 +519,6 @@ let doDebounce = debounce(() => leaveCard(), 100);
 window.addEventListener('resize', () => doDebounce());
 */
 
-/*
 if('addEventListener' in document) {
 	document.addEventListener('DOMContentLoaded', function() {
 		FastClick.attach(document.body);
@@ -541,7 +540,7 @@ document.addEventListener('touchmove', function(event) {
 		return false; // or return event, doesn't matter
 	}
 	// target is a reference to an $altNav element here, event is the event object
-}, { passive:false }); */
+}, { passive:false });
 </script>
 
 <!--
