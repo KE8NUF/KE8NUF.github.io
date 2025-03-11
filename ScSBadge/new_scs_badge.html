@@ -124,7 +124,7 @@ PERSIAN BLUE
 .card-wrapper.hoverOver {
 	/* USE TRANSLATE FOR PARALLAX */
 	/* translate: calc((var(--ratio-x) - 0.5) * 20%) calc((var(--ratio-y) - 0.5) * 20%); */
-	/* old
+	/* old 
 	transform: rotateX(calc((var(--ratio-y) - 0.5) * 50deg)) rotateY(calc((var(--ratio-x) - 0.5) * 30deg));
 	*/
 	transform: perspective(100px) rotateX(var(--ratio-xx)) rotateY(var(--ratio-yy));
@@ -523,6 +523,23 @@ if('addEventListener' in document) {
 		FastClick.attach(document.body);
 	}, false);
 }
+
+document.body.addEventListener('touchmove', function(event) {
+	event = event || window.event;
+	var cardTarget = event.target || event.srcElement;
+	// in case $altNav is a class;
+	// particlar id target.id === 'idname'
+	if(!event.target.classList.contains('card-wrapper')) {
+		event.returnValue = false;
+		event.cancelBubble = true;
+		if(event.preventDefault) {
+			event.preventDefault();
+			event.stopPropagation();
+		}
+		return false; // or return event, doesn't matter
+	}
+	// target is a reference to an $altNav element here, event is the event object
+}, false);
 </script>
 
 <!--
