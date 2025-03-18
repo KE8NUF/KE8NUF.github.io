@@ -319,7 +319,8 @@
 			transform: perspective(100px) rotateX(calc(var(--ratio-xx) / 4)) rotateY(calc(var(--ratio-yy) / 4));
 		}
 		
-		.card-wrapper:hover .check-pattern {
+		.card-wrapper:hover .check-pattern,
+		.card-wrapper.hoverOver .check-pattern {
 			opacity: 71%;
 			transition: 150ms ease-in-out;
 		}
@@ -333,6 +334,18 @@
 			mix-blend-mode: plus-lighter;
 			mix-blend-mode: hard-light;
 			filter: saturate(160%) brightness(1.2) contrast(115%);
+			opacity: 0;
+		}
+		
+		.card-wrapper:hover .check-pattern .check-pattern-one,
+		.card-wrapper:hover .check-pattern .check-pattern-one:before,
+		.card-wrapper:hover .check-pattern .check-pattern-two,
+		.card-wrapper:hover .check-pattern .check-pattern-two:before,
+		.card-wrapper.hoverOver .check-pattern .check-pattern-one,
+		.card-wrapper.hoverOver .check-pattern .check-pattern-one:before,
+		.card-wrapper.hoverOver .check-pattern .check-pattern-two,
+		.card-wrapper.hoverOver .check-pattern .check-pattern-two:before {
+			opacity: 1;
 		}
 		
 		.card-wrapper .check-pattern .check-pattern-one,
