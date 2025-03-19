@@ -314,7 +314,9 @@
 		
 		.card-wrapper .check-pattern,
 		.card-wrapper .check-pattern .check-pattern-one,
-		.card-wrapper .check-pattern .check-pattern-two {
+		.card-wrapper .check-pattern .check-pattern-one:before,
+		.card-wrapper .check-pattern .check-pattern-two,
+		.card-wrapper .check-pattern .check-pattern-two:before {
 			content: "";
 			position: absolute;
 			width: 100%;
@@ -329,7 +331,7 @@
 		
 		.card-wrapper .check-pattern {
 			opacity: 0;
-			transform: perspective(100px) rotateX(calc(var(--ratio-xx) / 2)) rotateY(calc(var(--ratio-yy) / 2));
+			transform: perspective(100px) rotateX(calc(var(--ratio-xx) / -4)) rotateY(calc(var(--ratio-yy) / -4));
 		}
 		
 		.card-wrapper:hover .check-pattern,
@@ -385,6 +387,7 @@
 		.card-wrapper .check-pattern .check-pattern-two:before {
 			filter: blur(.5px) saturate(160%) brightness(1.2) contrast(115%);
 			mix-blend-mode: plus-lighter;
+			mix-blend-mode: difference;
 		}
 
 		@media only screen and (max-width : 980px), /* 980px */
