@@ -665,7 +665,7 @@
 					['pointerleave', 'pointerout'].forEach(event => CARD.addEventListener(event, leaveCard));
 					['pointerleave', 'pointerout'].forEach(event => document.body.addEventListener(event, leaveCard));
 				}
-			}
+			};
 			
 			document.addEventListener( 'DOMContentLoaded', () => {
 				initBadge();
@@ -687,6 +687,8 @@
 
 		window.addEventListener('resize', () => doDebounce());
 		*/
+		
+		window.addEventListener('touchmove', UPDATECARD, {passive: false});
 
 		if('addEventListener' in document) {
 			document.addEventListener('DOMContentLoaded', function() {
