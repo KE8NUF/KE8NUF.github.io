@@ -646,8 +646,8 @@
 					
 					['touchstart', 'pointerenter'].forEach(event => CARD.addEventListener(event, enterCard));
 
-					['touchend', 'touchcancel', 'pointerleave', 'pointerout'].forEach(event => CARD.addEventListener(event, leaveCard));
-					['touchend', 'touchcancel', 'pointerleave', 'pointerout'].forEach(event => document.body.addEventListener(event, leaveCard));
+					['touchend', 'pointerleave', 'pointerout'].forEach(event => CARD.addEventListener(event, leaveCard));
+					['touchend', 'pointerleave', 'pointerout'].forEach(event => document.body.addEventListener(event, leaveCard));
 					
 				} else {
 					CARD.addEventListener('pointermove', UPDATECARD);
