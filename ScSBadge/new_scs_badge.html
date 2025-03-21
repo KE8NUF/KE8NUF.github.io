@@ -623,9 +623,9 @@
 			
 			function initBadge() {
 				if ( isTouchDevice === true ) {
-					CARD.addEventListener('pointermove', UPDATECARD);
+					CARD.addEventListener('touchmove', UPDATECARD);
 					// CARD.addEventListener('touchmove', UPDATECARD);
-					CARD.addEventListener('pointermove', (event) => {
+					CARD.addEventListener('touchmove', (event) => {
 						event.preventDefault();
 						actualTarget = document.elementFromPoint(event.clientX, event.clientY);
 						console.log(actualTarget.tagName);
@@ -635,8 +635,8 @@
 					
 					['touchstart'].forEach(event => CARD.addEventListener(event, enterCard));
 
-					['touchend', 'touchcancel'].forEach(event => CARD.addEventListener(event, leaveCard));
-					['touchend', 'touchcancel'].forEach(event => document.body.addEventListener(event, leaveCard));
+					['touchend'].forEach(event => CARD.addEventListener(event, leaveCard));
+					['touchend'].forEach(event => document.body.addEventListener(event, leaveCard));
 					
 				} else {
 					CARD.addEventListener('pointermove', UPDATECARD);
