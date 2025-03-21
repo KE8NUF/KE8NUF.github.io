@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script> -->
 		<script src="https://cdn.tutorialjinni.com/fastclick/1.0.6/fastclick.min.js"></script>
-		<!-- <script src="https://damienmillard.net/ScSBadge/fastclick.min.js"></script> -->
+		<!-- <script src="https://damienmillard.net/ScSBadge/js/fastclick.min.js"></script> -->
 
 		<style>
 		/* START RESETS */
@@ -132,7 +132,7 @@
 			/* old
 			transform: rotateX(calc((var(--ratio-y) - 0.5) * 50deg)) rotateY(calc((var(--ratio-x) - 0.5) * 30deg));
 			*/
-			transform: perspective(100px) rotateX(var(--ratio-xx)) rotateY(var(--ratio-yy));
+			transform: perspective(75px) rotateX(var(--ratio-xx)) rotateY(var(--ratio-yy));
 		}
 		
 		.card-wrapper .card-front {
@@ -144,7 +144,14 @@
 			width: 100%;
 			object-fit: contain;
 			height: 100%;
+			filter: grayscale(0%);
 			scale: 1;
+		}
+		
+		.card-wrapper:hover .card-front img,
+		.card-wrapper.hoverOver .card-front img {
+			filter: grayscale(26%);
+			filter: grayscale(26%) brightness(.92) contrast(1.1);
 		}
 
 		.card-wrapper .card-shine,
@@ -280,6 +287,7 @@
 			filter: brightness(1) contrast(2.5) saturate(1.75);
 			mix-blend-mode: soft-light;
 			mix-blend-mode: overlay;
+			transition: 300ms linear;
 			
 			mask: url('https://i.postimg.cc/5tXyPRzZ/star-mask-circle-bw.png') 12% 42% / 13% 13% repeat;
 		}
@@ -290,10 +298,10 @@
 			position: absolute;
 			inset: 0;
 			background: 
-			radial-gradient(circle at calc(var(--ratio-x) * 100%) calc(var(--ratio-y) * 100%), hsl(46.99deg 86.85% 65.19% / 58%), transparent 50%),
-			radial-gradient(circle at calc(var(--ratio-x) * 100%) calc(var(--ratio-y) * 100%), hsl(0 0% 100% / 0.2), transparent 35%);
+			radial-gradient(circle at calc(var(--ratio-x) * 100%) calc(var(--ratio-y) * 100%), hsl(46.99deg 86.85% 65.19% / 58%), transparent 40%),
+			radial-gradient(circle at calc(var(--ratio-x) * 100%) calc(var(--ratio-y) * 100%), hsl(0 0% 100% / 0.2), transparent 30%);
 			background-repeat: no-repeat;
-			background-blend-mode: overlay, screen;
+			background-blend-mode: color-dodge, screen;
 			mix-blend-mode: color-dodge;
 			z-index: 2;
 			opacity: 0;
@@ -331,12 +339,15 @@
 		
 		.card-wrapper .check-pattern {
 			opacity: 0;
-			transform: perspective(100px) rotateX(calc(var(--ratio-xx) / -5)) rotateY(calc(var(--ratio-yy) / -5));
+			transform: perspective(100px) rotateX(calc(var(--ratio-xx) / -8)) rotateY(calc(var(--ratio-yy) / -8));
 		}
 		
 		.card-wrapper:hover .check-pattern,
 		.card-wrapper.hoverOver .check-pattern {
 			opacity: 61%;
+			opacity: 86%;
+			opacity: 66%;
+			opacity: 76%;
 			transition: 150ms ease-in-out;
 		}
 		
@@ -352,13 +363,16 @@
 		
 		.card-wrapper:hover .check-pattern .check-pattern-one,
 		.card-wrapper:hover .check-pattern .check-pattern-one:before,
+		.card-wrapper.hoverOver .check-pattern .check-pattern-one,
+		.card-wrapper.hoverOver .check-pattern .check-pattern-one:before {
+			opacity: 1;
+		}
+		
 		.card-wrapper:hover .check-pattern .check-pattern-two,
 		.card-wrapper:hover .check-pattern .check-pattern-two:before,
-		.card-wrapper.hoverOver .check-pattern .check-pattern-one,
-		.card-wrapper.hoverOver .check-pattern .check-pattern-one:before,
 		.card-wrapper.hoverOver .check-pattern .check-pattern-two,
 		.card-wrapper.hoverOver .check-pattern .check-pattern-two:before {
-			opacity: 1;
+			opacity: 72%;
 		}
 		
 		.card-wrapper .check-pattern .check-pattern-one,
@@ -366,9 +380,10 @@
 			background: linear-gradient(90deg in oklch, rgba(0,235,182,1), rgba(67,113,223,1), rgba(207,14,101,1), rgba(252,181,13,1) );
 			background: repeating-linear-gradient(calc(var(--angle) + 30deg), rgba(14,149,215,1), rgba(207,137,208,1), rgba(210,184,119,1), rgba(36,209,228,1), rgba(37,135,211,1), rgba(178,88,196,1), rgba(219,176,134,1), rgba(126,209,168,1), rgba(118,128,255,1), rgba(0,194,224,1) 15% );
 			
-			transition: 100ms linear;
+			transition: 320ms linear;
 			mask: url('https://i.postimg.cc/kXsyC0tz/check-pattern-one.png') center / 100% 100% repeat;
-			mask: url('https://i.postimg.cc/5tXyPRzZ/star-mask-circle-bw.png') 50% center / 16% 16% repeat;
+			mask: url('https://i.postimg.cc/5tXyPRzZ/sohio-silhouette-illustration-hd.pngtar-mask-circle-bw.png') 50% center / 16% 16% repeat;
+			mask: url('https://damienmillard.net/ScSBadge/star-mask-circle-bw.png') 50% center / 16% 16% repeat;
 		}
 		
 		.card-wrapper .check-pattern .check-pattern-two,
@@ -376,9 +391,10 @@
 			background: repeating-linear-gradient(0deg in oklch, rgba(252,181,13,1), rgba(207,14,101,1), rgba(67,113,223,1), rgba(0,235,182,1), rgba(252,181,13,1) );
 			background: repeating-linear-gradient(calc(var(--angle) - 30deg), rgba(0,194,224,1), rgba(118,128,255,1), rgba(126,209,168,1), rgba(219,176,134,1), rgba(178,88,196,1), rgba(37,135,211,1), rgba(36,209,228,1), rgba(210,184,119,1), rgba(207,137,208,1), rgba(14,149,215,1) 18% );
 			
-			transition: 130ms linear;
+			transition: 350ms linear;
 			mask: url('https://i.postimg.cc/fyKYwdkm/check-pattern-two.png') center / 92% 92% repeat;
-			mask: url('https://i.postimg.cc/5tXyPRzZ/star-mask-circle-bw.png') 1% 40.5% / 16% 16% repeat;
+			mask: url('https://i.postimg.cc/5tXyPRzZ/star-mask-circle-bw.png') 4% 40% / 15% 15% repeat;
+			mask: url('https://i.postimg.cc/J4xNDNc8/ohio-silhouette-illustration-hd-Photoroom.png') 5% 39% / 14% 14% repeat;
 		}
 		
 		.card-wrapper .check-pattern .check-pattern-one:before,
@@ -397,7 +413,8 @@
 				height: clamp(80%, 40vh, 320px);
 				*/
 				width: 80%;
-				height: auto;
+				height: 70%;
+				mask: url("https://i.postimg.cc/JhCgj3W5/scs-badge-clip-bw.png") center / auto 100% no-repeat;
 			}
 			
 			.card-wrapper:hover,
@@ -421,7 +438,7 @@
 	<body>
 		<div class="card-wrapper">
 			<div class="card-front">
-				<img src="./scs_badge_base.png" alt="Damien Badge Base Image" />
+				<img src="./images/scs_badge_base.png" alt="Damien Badge Base Image" />
 			</div>
 			<div class="card-shine"></div>
 			<div class="check-pattern">
@@ -541,6 +558,7 @@
 		console.clear();
 
 		let frameID;
+		let initBadge;
 		const CARDS = document.querySelectorAll('.card-wrapper');
 
 		CARDS.forEach(CARD => {
@@ -553,9 +571,9 @@
 				const posX = x - BOUNDS.x;
 				const posY = y - BOUNDS.y;
 				if(window.innerWidth === 980) {
-					constrain = 15;
+					constrain = 14;
 				} else {
-					constrain = 35;
+					constrain = 42;
 				}
 				const ratioX = posX / BOUNDS.width;
 				const ratioY = posY / BOUNDS.height;
@@ -587,25 +605,14 @@
 				timeoutId = setTimeout(timeoutCallback, 200);
 				requestAnimationFrame(initUPDATECARD);
 			};
-
-			CARD.addEventListener('pointermove', UPDATECARD);
-			// CARD.addEventListener('touchmove', UPDATECARD);
-			CARD.addEventListener('pointermove', (event) => {
-				event.preventDefault();
-				actualTarget = document.elementFromPoint(event.clientX, event.clientY);
-				console.log(actualTarget.tagName);
-				// console.log(actualTarget.id);
-				// console.log(actualTarget.className);
-			});
 			
-			['pointerenter', 'touchstart'].forEach(event => CARD.addEventListener(event, enterCard));
+			isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+			
 			function enterCard(event) {
 				CARD.dataset.active = 'true';
 				clearTimeout(timeoutId);
 			};
-
-			['pointerleave', 'touchend', 'touchcancel', 'pointerout'].forEach(event => CARD.addEventListener(event, leaveCard));
-			['pointerleave', 'touchend', 'touchcancel', 'pointerout'].forEach(event => document.body.addEventListener(event, leaveCard));
+			
 			function leaveCard(event) {
 				CARD.dataset.active = 'false';
 				CARD.dataset.parallax = 'false';
@@ -613,6 +620,45 @@
 				CARD.classList.remove('hoverOver');
 				CARD.removeAttribute('style');
 			};
+			
+			function initBadge() {
+				if ( isTouchDevice === true ) {
+					CARD.addEventListener('pointermove', UPDATECARD);
+					// CARD.addEventListener('touchmove', UPDATECARD);
+					CARD.addEventListener('pointermove', (event) => {
+						event.preventDefault();
+						actualTarget = document.elementFromPoint(event.clientX, event.clientY);
+						console.log(actualTarget.tagName);
+						// console.log(actualTarget.id);
+						// console.log(actualTarget.className);
+					});
+					
+					['touchstart'].forEach(event => CARD.addEventListener(event, enterCard));
+
+					['touchend', 'touchcancel'].forEach(event => CARD.addEventListener(event, leaveCard));
+					['touchend', 'touchcancel'].forEach(event => document.body.addEventListener(event, leaveCard));
+					
+				} else {
+					CARD.addEventListener('pointermove', UPDATECARD);
+					// CARD.addEventListener('touchmove', UPDATECARD);
+					CARD.addEventListener('pointermove', (event) => {
+						event.preventDefault();
+						actualTarget = document.elementFromPoint(event.clientX, event.clientY);
+						console.log(actualTarget.tagName);
+						// console.log(actualTarget.id);
+						// console.log(actualTarget.className);
+					});
+					
+					['pointerenter'].forEach(event => CARD.addEventListener(event, enterCard));
+
+					['pointerleave', 'pointerout'].forEach(event => CARD.addEventListener(event, leaveCard));
+					['pointerleave', 'pointerout'].forEach(event => document.body.addEventListener(event, leaveCard));
+				}
+			}
+			
+			document.addEventListener( 'DOMContentLoaded', () => {
+				initBadge();
+			});
 		});
 
 		/*
@@ -631,12 +677,6 @@
 		window.addEventListener('resize', () => doDebounce());
 		*/
 
-		if('addEventListener' in document) {
-			document.addEventListener('DOMContentLoaded', function() {
-				FastClick.attach(document.body);
-			}, false);
-		}
-		
 		if('addEventListener' in document) {
 			document.addEventListener('DOMContentLoaded', function() {
 				FastClick.attach(document.body);
@@ -767,6 +807,33 @@
 
 		background: linear-gradient(41deg, rgba(245,131,189,1), rgba(207,190,110,1), rgba(67,227,157,1), rgba(64,215,206,1), rgba(169,164,249,1) );
 		
+		-------------------------------------------------------------------------------------------------------------
+				
+				/* ORANGE TO GOLD HBH */
+		background: radial-gradient(100% 150% at 0% 50%, #de4510, #ff8917);
+		text accent color --main-color: #FE5B3D;
+		text dark - #444444
+		aqua blue accent secondary #008691
+
+
+		/* PASTEL GOOD */
+		background: linear-gradient(45deg, #edff2d 0%, #ff2bf7 43%, #3f14ff 79%, #14d0ff 100%);
+
+		background: linear-gradient(45deg, rgba(167,236,220,1), rgba(192,176,232,1), rgba(244,173,213,1), rgba(230,242,171,1) );
+
+
+
+		--h: rgba(255, 255, 255, 0.4);
+		--base: #d4d4d4;
+		color: #313131;
+		background: 
+		linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent 60%, rgba(0, 0, 0, 0.1)), 
+		conic-gradient(from 135deg, transparent, var(--h)), 
+		conic-gradient(from 225deg, transparent, var(--h)), 
+		conic-gradient(from 45deg, transparent, var(--h)), 
+		conic-gradient(from -45deg, var(--h), transparent), var(--base);
+			box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.1), 0 0 1rem rgba(0, 0, 0, 0.1);
+			
 		-->
 	</body>
 </html>
