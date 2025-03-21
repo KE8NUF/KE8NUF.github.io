@@ -413,13 +413,24 @@
 				height: clamp(80%, 40vh, 320px);
 				*/
 				width: 80%;
-				height: 70%;
+				/* height: 70%; */
+				overflow: hidden;
 				mask: url("https://damienmillard.net/ScSBadge/images/scs-badge-clip-bw.png") center / 100% auto no-repeat;
 			}
 			
 			.card-wrapper:hover,
 			.card-wrapper.hoverOver {
 				transform: perspective(113px) rotateX(var(--ratio-xx)) rotateY(var(--ratio-yy));
+			}
+			
+			.card-wrapper .check-pattern .check-pattern-one, 
+			.card-wrapper .check-pattern .check-pattern-one::before {
+				mask: url('https://damienmillard.net/ScSBadge/images/star-mask-circle-bw.png') 50% center / 12% 12% repeat;
+			}
+			
+			.card-wrapper .check-pattern .check-pattern-two, 
+			.card-wrapper .check-pattern .check-pattern-two::before {
+				mask: url('https://damienmillard.net/ScSBadge/images/ohio-silhouette-bw-cut.png') 6% 40% / 10% 10% repeat;
 			}
 		}
 
