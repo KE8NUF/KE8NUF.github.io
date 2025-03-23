@@ -357,6 +357,7 @@
 			height: 200%;
 			mix-blend-mode: plus-lighter;
 			mix-blend-mode: hard-light;
+			mix-blend-mode: color-dodge;
 			filter: saturate(160%) brightness(1.1) contrast(105%);
 			opacity: 0;
 		}
@@ -372,13 +373,29 @@
 		.card-wrapper:hover .check-pattern .check-pattern-two:before,
 		.card-wrapper.hoverOver .check-pattern .check-pattern-two,
 		.card-wrapper.hoverOver .check-pattern .check-pattern-two:before {
-			opacity: 72%;
+			opacity: 85%;
 		}
 		
 		.card-wrapper .check-pattern .check-pattern-one,
 		.card-wrapper .check-pattern .check-pattern-one:before {
 			background: linear-gradient(90deg in oklch, rgba(0,235,182,1), rgba(67,113,223,1), rgba(207,14,101,1), rgba(252,181,13,1) );
 			background: repeating-linear-gradient(calc(var(--angle) + 30deg), rgba(14,149,215,1), rgba(207,137,208,1), rgba(210,184,119,1), rgba(36,209,228,1), rgba(37,135,211,1), rgba(178,88,196,1), rgba(219,176,134,1), rgba(126,209,168,1), rgba(118,128,255,1), rgba(0,194,224,1) 15% );
+			
+			background: repeating-linear-gradient(calc(var(--angle) + 30deg) in oklch, 
+				rgba(110,116,121,1), /* gray base */ 
+				rgba(116,125,226,1), /* blue */ 
+				rgba(92,176,122,1), /* green */ 
+				rgba(164,185,85,1), /* yellow green */ 
+				rgba(212,162,88,1), /* yellow orange */ 
+				rgba(224,129,108,1), /* red */ 
+				rgba(110,116,121,1), /* gray base */
+				rgba(116,125,226,1), /* blue */ 
+				rgba(92,176,122,1), /* green */ 
+				rgba(164,185,85,1), /* yellow green */ 
+				rgba(212,162,88,1), /* yellow orange */ 
+				rgba(224,129,108,1), /* red */
+				rgba(110,116,121,1) 20% /* gray base */ 
+			);
 			
 			transition: 320ms linear;
 			mask: url('https://damienmillard.net/ScSBadge/images/check-pattern-one.png') center / 100% 100% repeat;
@@ -390,6 +407,22 @@
 		.card-wrapper .check-pattern .check-pattern-two:before {
 			background: repeating-linear-gradient(0deg in oklch, rgba(252,181,13,1), rgba(207,14,101,1), rgba(67,113,223,1), rgba(0,235,182,1), rgba(252,181,13,1) );
 			background: repeating-linear-gradient(calc(var(--angle) - 30deg), rgba(0,194,224,1), rgba(118,128,255,1), rgba(126,209,168,1), rgba(219,176,134,1), rgba(178,88,196,1), rgba(37,135,211,1), rgba(36,209,228,1), rgba(210,184,119,1), rgba(207,137,208,1), rgba(14,149,215,1) 18% );
+			
+			background: repeating-linear-gradient(calc(var(--angle) - 30deg) in oklch, 
+				rgba(110,116,121,1), /* gray base */ 
+				rgba(116,125,226,1), /* blue */ 
+				rgba(92,176,122,1), /* green */ 
+				rgba(164,185,85,1), /* yellow green */ 
+				rgba(212,162,88,1), /* yellow orange */ 
+				rgba(224,129,108,1), /* red */ 
+				rgba(110,116,121,1), /* gray base */
+				rgba(116,125,226,1), /* blue */ 
+				rgba(92,176,122,1), /* green */ 
+				rgba(164,185,85,1), /* yellow green */ 
+				rgba(212,162,88,1), /* yellow orange */ 
+				rgba(224,129,108,1), /* red */
+				rgba(110,116,121,1) 20% /* gray base */ 
+			);
 			
 			transition: 350ms linear;
 			mask: url('https://damienmillard.net/ScSBadge/images/check-pattern-two.png') center / 92% 92% repeat;
@@ -460,6 +493,16 @@
 		</div>	
 
 		<!--
+		background: linear-gradient(60deg, 
+			rgba(110,116,121,1), /* gray base */ 
+			rgba(116,125,226,1), /* blue */ 
+			rgba(92,176,122,1), /* green */ 
+			rgba(164,185,85,1), /* yellow green */ 
+			rgba(212,162,88,1), /* yellow orange */ 
+			rgba(224,129,108,1), /* red */ 
+			rgba(110,116,121,1) /* gray base */
+		);
+		
 		body  background: #fafafa;
 		OR #f5f5f5
 		CARD WHITE
