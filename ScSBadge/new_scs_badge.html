@@ -348,7 +348,8 @@
 			opacity: 86%;
 			opacity: 66%;
 			opacity: 75%;
-			transition: 150ms ease-in-out;
+			opacity: 70%;
+			transition: 150ms linear;
 		}
 		
 		.card-wrapper .check-pattern .check-pattern-one,
@@ -366,14 +367,14 @@
 		.card-wrapper:hover .check-pattern .check-pattern-one:before,
 		.card-wrapper.hoverOver .check-pattern .check-pattern-one,
 		.card-wrapper.hoverOver .check-pattern .check-pattern-one:before {
-			opacity: 1;
+			opacity: 100%;
 		}
 		
 		.card-wrapper:hover .check-pattern .check-pattern-two,
 		.card-wrapper:hover .check-pattern .check-pattern-two:before,
 		.card-wrapper.hoverOver .check-pattern .check-pattern-two,
 		.card-wrapper.hoverOver .check-pattern .check-pattern-two:before {
-			opacity: 85%;
+			opacity: 100%;
 		}
 		
 		.card-wrapper .check-pattern .check-pattern-one,
@@ -430,12 +431,18 @@
 			mask: url('https://damienmillard.net/ScSBadge/images/ohio-silhouette-bw-cut.png') 5% 39% / 14% 14% repeat;
 		}
 		
-		.card-wrapper .check-pattern .check-pattern-one:before,
+		.card-wrapper .check-pattern .check-pattern-one:before {
+			filter: blur(.5px) saturate(160%) brightness(1.2) contrast(115%);
+			mix-blend-mode: difference;
+			mix-blend-mode: lighten;
+			opacity: 75%;
+		}
+		
 		.card-wrapper .check-pattern .check-pattern-two:before {
 			filter: blur(.5px) saturate(160%) brightness(1.2) contrast(115%);
 			mix-blend-mode: difference;
-			mix-blend-mode: plus-lighter;
-			display: none;
+			mix-blend-mode: lighten;
+			opacity: 75%;
 		}
 
 		@media only screen and (max-width : 980px), /* 980px */
