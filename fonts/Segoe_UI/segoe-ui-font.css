@@ -12,7 +12,7 @@
 @font-face {
     font-family: 'Segoe UI';
     src:
-        local("Segoe UI Semilight"),
+        local('Segoe UI Semilight'),
         url('https://damienmillard.net/fonts/Segoe_UI/SegoeUI-Light.woff2') format("woff2"),
         url('https://damienmillard.net/fonts/Segoe_UI/SegoeUI-Light.woff') format("woff"),
         url('https://damienmillard.net/fonts/Segoe_UI/SegoeUI-Light.ttf') format("truetype");
@@ -23,7 +23,7 @@
 @font-face {
     font-family: 'Segoe UI';
     src:
-        local("Segoe UI"),
+        local('Segoe UI'),
         url('https://damienmillard.net/fonts/Segoe_UI/SegoeUI.woff2') format("woff2"),
         url('https://damienmillard.net/fonts/Segoe_UI/SegoeUI.woff') format("woff"),
         url('https://damienmillard.net/fonts/Segoe_UI/SegoeUI.ttf') format("truetype");
@@ -34,7 +34,7 @@
 @font-face {
     font-family: 'Segoe UI';
     src:
-        local("Segoe UI Bold"),
+        local('Segoe UI Bold'),
         url('https://damienmillard.net/fonts/Segoe_UI/SegoeUI-Bold.woff2') format("woff2"),
         url('https://damienmillard.net/fonts/Segoe_UI/SegoeUI-Bold.woff') format("woff"),
         url('https://damienmillard.net/fonts/Segoe_UI/SegoeUI-Bold.ttf') format("truetype");
@@ -45,7 +45,7 @@
 @font-face {
     font-family: 'Segoe UI';
     src:
-        local("Segoe UI Semibold"),
+        local('Segoe UI Semibold'),
         url('https://damienmillard.net/fonts/Segoe_UI/SegoeUI-SemiBold.woff2') format("woff2"),
         url('https://damienmillard.net/fonts/Segoe_UI/SegoeUI-SemiBold.woff') format("woff"),
         url('https://damienmillard.net/fonts/Segoe_UI/SegoeUI-SemiBold.ttf') format("truetype");
