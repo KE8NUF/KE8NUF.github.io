@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url('Inter-Regular.svg#Inter-Regular') format('svg'),
+       url('Inter-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-VariableFont_slnt,wght';
+  src: url('Inter-VariableFont_slnt,wght.eot');
+  src: url('Inter-VariableFont_slnt,wght.eot?#iefix') format('embedded-opentype'),
+       url('Inter-VariableFont_slnt,wght.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Thin';
+  src: url('Inter-Thin.eot');
+  src: url('Inter-Thin.eot?#iefix') format('embedded-opentype'),
+       url('Inter-Thin.svg#Inter-Thin') format('svg'),
+       url('Inter-Thin.woff') format('woff'),
+       url('Inter-Thin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-SemiBold';
+  src: url('Inter-SemiBold.eot');
+  src: url('Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('Inter-SemiBold.svg#Inter-SemiBold') format('svg'),
+       url('Inter-SemiBold.woff') format('woff'),
+       url('Inter-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Medium';
+  src: url('Inter-Medium.eot');
+  src: url('Inter-Medium.eot?#iefix') format('embedded-opentype'),
+       url('Inter-Medium.svg#Inter-Medium') format('svg'),
+       url('Inter-Medium.woff') format('woff'),
+       url('Inter-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Light';
+  src: url('Inter-Light.eot');
+  src: url('Inter-Light.eot?#iefix') format('embedded-opentype'),
+       url('Inter-Light.svg#Inter-Light') format('svg'),
+       url('Inter-Light.woff') format('woff'),
+       url('Inter-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-ExtraLight';
+  src: url('Inter-ExtraLight.eot');
+  src: url('Inter-ExtraLight.eot?#iefix') format('embedded-opentype'),
+       url('Inter-ExtraLight.svg#Inter-ExtraLight') format('svg'),
+       url('Inter-ExtraLight.woff') format('woff'),
+       url('Inter-ExtraLight.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-ExtraBold';
+  src: url('Inter-ExtraBold.eot');
+  src: url('Inter-ExtraBold.eot?#iefix') format('embedded-opentype'),
+       url('Inter-ExtraBold.svg#Inter-ExtraBold') format('svg'),
+       url('Inter-ExtraBold.woff') format('woff'),
+       url('Inter-ExtraBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url('Inter-Bold.eot');
+  src: url('Inter-Bold.eot?#iefix') format('embedded-opentype'),
+       url('Inter-Bold.svg#Inter-Bold') format('svg'),
+       url('Inter-Bold.woff') format('woff'),
+       url('Inter-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Black';
+  src: url('Inter-Black.eot');
+  src: url('Inter-Black.eot?#iefix') format('embedded-opentype'),
+       url('Inter-Black.svg#Inter-Black') format('svg'),
+       url('Inter-Black.woff') format('woff'),
+       url('Inter-Black.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
