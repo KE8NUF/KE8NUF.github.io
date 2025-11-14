@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Neue Montreal';
+    font-family: 'Neue Montreal', sans-serif;
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-BoldItalic.eot');
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-BoldItalic.eot?#iefix') format('embedded-opentype'),
         url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-BoldItalic.woff2') format('woff2'),
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
+    font-family: 'Neue Montreal', sans-serif;
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Italic.eot');
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Italic.eot?#iefix') format('embedded-opentype'),
         url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Italic.woff2') format('woff2'),
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
+    font-family: 'Neue Montreal', sans-serif;
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Regular.eot');
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Regular.eot?#iefix') format('embedded-opentype'),
         url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Regular.woff2') format('woff2'),
@@ -35,7 +35,7 @@
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
+    font-family: 'Neue Montreal', sans-serif;
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Light.eot');
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Light.eot?#iefix') format('embedded-opentype'),
         url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Light.woff2') format('woff2'),
@@ -47,7 +47,7 @@
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
+    font-family: 'Neue Montreal', sans-serif;
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-MediumItalic.eot');
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-MediumItalic.eot?#iefix') format('embedded-opentype'),
         url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-MediumItalic.woff2') format('woff2'),
@@ -59,7 +59,7 @@
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
+    font-family: 'Neue Montreal', sans-serif;
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Bold.eot');
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Bold.eot?#iefix') format('embedded-opentype'),
         url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Bold.woff2') format('woff2'),
@@ -71,7 +71,7 @@
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
+    font-family: 'Neue Montreal', sans-serif;
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-LightItalic.eot');
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-LightItalic.eot?#iefix') format('embedded-opentype'),
         url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-LightItalic.woff2') format('woff2'),
@@ -83,7 +83,7 @@
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
+    font-family: 'Neue Montreal', sans-serif;
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Medium.eot');
     src: url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Medium.eot?#iefix') format('embedded-opentype'),
         url('https://damienmillard.net/fonts/neue-montreal-web/NeueMontreal-Medium.woff2') format('woff2'),
